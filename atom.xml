@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>AseaBlog</title>
-  
-  
+  <icon>https://www.gravatar.com/avatar/2ab32513ce6dc86cc9542de0cb40ddbe</icon>
+  <subtitle>OvO</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://aseamy.gitee.io/blog/"/>
@@ -11,7 +11,7 @@
   
   <author>
     <name>Asea</name>
-    
+    <email>gyvip001@126.com</email>
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
