@@ -3,7 +3,7 @@
   <title>AseaBlog</title>
   <icon>https://www.gravatar.com/avatar/2ab32513ce6dc86cc9542de0cb40ddbe</icon>
   <subtitle>我的个人博客</subtitle>
-  <link href="/aaaasea.github.io/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
   <link href="https://aaaasea.github.io/"/>
   <updated>2020-07-26T08:22:12.094Z</updated>
