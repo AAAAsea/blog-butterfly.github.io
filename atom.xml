@@ -3,11 +3,11 @@
   <title>AseaBlog</title>
   <icon>https://www.gravatar.com/avatar/2ab32513ce6dc86cc9542de0cb40ddbe</icon>
   <subtitle>我的个人博客</subtitle>
-  <link href="/blog/atom.xml" rel="self"/>
+  <link href="/aseablog.coding.me/atom.xml" rel="self"/>
   
-  <link href="http://aseablog.coding.me/blog/"/>
+  <link href="http://aseablog.coding.me/aseablog.coding.me/"/>
   <updated>2020-07-26T08:22:12.094Z</updated>
-  <id>http://aseablog.coding.me/blog/</id>
+  <id>http://aseablog.coding.me/aseablog.coding.me/</id>
   
   <author>
     <name>Asea</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>采访（一）</title>
-    <link href="http://aseablog.coding.me/blog/2020/07/26/2%E3%80%81%E9%87%87%E8%AE%BF%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>http://aseablog.coding.me/blog/2020/07/26/2%E3%80%81%E9%87%87%E8%AE%BF%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <link href="http://aseablog.coding.me/aseablog.coding.me/2020/07/26/2%E3%80%81%E9%87%87%E8%AE%BF%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://aseablog.coding.me/aseablog.coding.me/2020/07/26/2%E3%80%81%E9%87%87%E8%AE%BF%EF%BC%88%E4%B8%80%EF%BC%89/</id>
     <published>2020-07-25T16:30:00.000Z</published>
     <updated>2020-07-26T08:22:12.094Z</updated>
     
@@ -36,14 +36,14 @@
     
     
     
-      <category term="采访 小说" scheme="http://aseablog.coding.me/blog/tags/%E9%87%87%E8%AE%BF-%E5%B0%8F%E8%AF%B4/"/>
+      <category term="采访 小说" scheme="http://aseablog.coding.me/aseablog.coding.me/tags/%E9%87%87%E8%AE%BF-%E5%B0%8F%E8%AF%B4/"/>
     
   </entry>
   
   <entry>
     <title>xx的第一篇blog</title>
-    <link href="http://aseablog.coding.me/blog/2020/07/26/1%E3%80%81firstBlog/"/>
-    <id>http://aseablog.coding.me/blog/2020/07/26/1%E3%80%81firstBlog/</id>
+    <link href="http://aseablog.coding.me/aseablog.coding.me/2020/07/26/1%E3%80%81firstBlog/"/>
+    <id>http://aseablog.coding.me/aseablog.coding.me/2020/07/26/1%E3%80%81firstBlog/</id>
     <published>2020-07-25T16:25:00.000Z</published>
     <updated>2020-07-26T08:22:19.049Z</updated>
     
@@ -60,7 +60,7 @@
     
     
     
-      <category term="Blog 记录" scheme="http://aseablog.coding.me/blog/tags/Blog-%E8%AE%B0%E5%BD%95/"/>
+      <category term="Blog 记录" scheme="http://aseablog.coding.me/aseablog.coding.me/tags/Blog-%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
