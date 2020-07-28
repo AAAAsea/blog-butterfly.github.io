@@ -3,109 +3,91 @@
 //   full_page[0].style.background = "transparent";
 // }
 
-! function() {    
-  //封装方法，压缩之后减少文件大小    
-  function get_attribute(node, attr, default_value) {    
-      return node.getAttribute(attr) || default_value;    
-  }    
-  //封装方法，压缩之后减少文件大小    
-  function get_by_tagname(name) {    
-      return document.getElementsByTagName(name);    
-  }    
-  //获取配置参数    
-  function get_config_option() {    
-      var scripts = get_by_tagname("script"),    
-          script_len = scripts.length,    
-          script = scripts[script_len - 1]; //当前加载的script    
-      return {    
-          l: script_len, //长度，用于生成id用    
-          z: get_attribute(script, "zIndex", -1), //z-index    
-          o: get_attribute(script, "opacity", 0.5), //opacity    
-          c: get_attribute(script, "color", "0,0,0"), //color    
-          n: get_attribute(script, "count", 99) //count    
-      };    
-  }    
-  //设置canvas的高宽    
-  function set_canvas_size() {    
-      canvas_width = the_canvas.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,     
-      canvas_height = the_canvas.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;    
-  }    
-  
-  //绘制过程    
-  function draw_canvas() {    
-      context.clearRect(0, 0, canvas_width, canvas_height);    
-      //随机的线条和当前位置联合数组    
-      var all_array = [current_point].concat(random_lines);    
-      var e, i, d, x_dist, y_dist, dist; //临时节点    
-      //遍历处理每一个点    
-      random_lines.forEach(function(r) {    
-          r.x += r.xa,     
-          r.y += r.ya, //移动    
-          r.xa *= r.x > canvas_width || r.x < 0 ? -1 : 1,     
-          r.ya *= r.y > canvas_height || r.y < 0 ? -1 : 1, //碰到边界，反向反弹    
-          context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); //绘制一个宽高为1的点    
-          for (i = 0; i < all_array.length; i++) {    
-              e = all_array[i];    
-              //不是当前点    
-              if (r !== e && null !== e.x && null !== e.y) {    
-                      x_dist = r.x - e.x, //x轴距离 l    
-                      y_dist = r.y - e.y, //y轴距离 n    
-                      dist = x_dist * x_dist + y_dist * y_dist; //总距离, m    
-                  dist < e.max && (e === current_point && dist >= e.max / 2 && (r.x -= 0.03 * x_dist, r.y -= 0.03 * y_dist), //靠近的时候加速    
-                      d = (e.max - dist) / e.max,     
-                      context.beginPath(),     
-                      context.lineWidth = d / 2,     
-                      context.strokeStyle = "rgba(" + config.c + "," + (d + 0.2) + ")",     
-                      context.moveTo(r.x, r.y),     
-                      context.lineTo(e.x, e.y),     
-                      context.stroke());    
-              }    
-          }    
-          all_array.splice(all_array.indexOf(r), 1);    
-  
-      }), frame_func(draw_canvas);    
-  }    
-  //创建画布，并添加到body中    
-  var the_canvas = document.createElement("canvas"), //画布    
-      config = get_config_option(), //配置    
-      canvas_id = "c_n" + config.l, //canvas id    
-      context = the_canvas.getContext("2d"), canvas_width, canvas_height,     
-      frame_func = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(func) {    
-          window.setTimeout(func, 1000 / 45);    
-      }, random = Math.random,     
-      current_point = {    
-          x: null, //当前鼠标x    
-          y: null, //当前鼠标y    
-          max: 20000    
-      };    
-  the_canvas.id = canvas_id;    
-  the_canvas.style.cssText = "position:fixed;top:0;left:0;z-index:" + config.z + ";opacity:" + config.o;    
-  get_by_tagname("body")[0].appendChild(the_canvas);    
-  //初始化画布大小    
-  
-  set_canvas_size(), window.onresize = set_canvas_size;    
-  //当时鼠标位置存储，离开的时候，释放当前位置信息    
-  window.onmousemove = function(e) {    
-      e = e || window.event, current_point.x = e.clientX, current_point.y = e.clientY;    
-  }, window.onmouseout = function() {    
-      current_point.x = null, current_point.y = null;    
-  };    
-  //随机生成config.n条线位置信息    
-  for (var random_lines = [], i = 0; config.n > i; i++) {    
-      var x = random() * canvas_width, //随机位置    
-          y = random() * canvas_height,    
-          xa = 2 * random() - 1, //随机运动方向    
-          ya = 2 * random() - 1;    
-      random_lines.push({    
-          x: x,    
-          y: y,    
-          xa: xa,    
-          ya: ya,    
-          max: 6000 //沾附距离    
-      });    
-  }    
-  //重绘
-  setTimeout(function() {    
-      draw_canvas();    
-  }, 100);    
-}();    
+! function () {
+  var cn = document.getElementById('canvas_nest');
+  var mb = cn.getAttribute("mobile");
+
+  if (mb == 'false' && (/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent))) {
+    return;
+  }
+
+  function o(w, v, i) {
+    return w.getAttribute(v) || i
+  }
+
+  function j(i) {
+    return document.getElementsByTagName(i)
+  }
+
+  function l() {
+    var i = j("script"),
+      w = i.length,
+      v = i[w - 1];
+    return {
+      l: w,
+      z: o(v, "zIndex", -1),
+      o: o(v, "opacity", 0.5),
+      c: o(v, "color", "0,0,0"),
+      n: o(v, "count", 99)
+    }
+  }
+
+  function k() {
+    r = u.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, n = u.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+  }
+
+  function b() {
+    e.clearRect(0, 0, r, n);
+    var w = [f].concat(t);
+    var x, v, A, B, z, y;
+    t.forEach(function (i) {
+      i.x += i.xa, i.y += i.ya, i.xa *= i.x > r || i.x < 0 ? -1 : 1, i.ya *= i.y > n || i.y < 0 ? -1 : 1, e.fillRect(i.x - 0.5, i.y - 0.5, 1, 1);
+      for (v = 0; v < w.length; v++) {
+        x = w[v];
+        if (i !== x && null !== x.x && null !== x.y) {
+          B = i.x - x.x, z = i.y - x.y, y = B * B + z * z;
+          y < x.max && (x === f && y >= x.max / 2 && (i.x -= 0.03 * B, i.y -= 0.03 * z), A = (x.max - y) / x.max, e.beginPath(), e.lineWidth = A / 2, e.strokeStyle = "rgba(" + s.c + "," + (A + 0.2) + ")", e.moveTo(i.x, i.y), e.lineTo(x.x, x.y), e.stroke())
+        }
+      }
+      w.splice(w.indexOf(i), 1)
+    }), m(b)
+  }
+  var u = document.createElement("canvas"),
+    s = l(),
+    c = "c_n" + s.l,
+    e = u.getContext("2d"),
+    r, n, m = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (i) {
+      window.setTimeout(i, 1000 / 45)
+    },
+    a = Math.random,
+    f = {
+      x: null,
+      y: null,
+      max: 20000
+    };
+  u.id = c;
+  u.style.cssText = "position:fixed;top:0;left:0;z-index:" + s.z + ";opacity:" + s.o;
+  j("body")[0].appendChild(u);
+  k(), window.onresize = k;
+  window.onmousemove = function (i) {
+    i = i || window.event, f.x = i.clientX, f.y = i.clientY
+  }, window.onmouseout = function () {
+    f.x = null, f.y = null
+  };
+  for (var t = [], p = 0; s.n > p; p++) {
+    var h = a() * r,
+      g = a() * n,
+      q = 2 * a() - 1,
+      d = 2 * a() - 1;
+    t.push({
+      x: h,
+      y: g,
+      xa: q,
+      ya: d,
+      max: 6000
+    })
+  }
+  setTimeout(function () {
+    b()
+  }, 100)
+}();
