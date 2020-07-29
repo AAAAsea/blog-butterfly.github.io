@@ -45,6 +45,3 @@
     /* 修改大小 */
     font-size: 25px;
   }
-.card_pic:before{
-    content: url(https://tva2.sinaimg.cn/mw690/67dd74e0gy1g50xzg1s11g20b405zaqq.gif);
-}
