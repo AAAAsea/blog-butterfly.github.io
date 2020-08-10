@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://asea.fun/"/>
-  <updated>2020-08-09T01:46:05.426Z</updated>
+  <updated>2020-08-10T01:12:48.011Z</updated>
   <id>https://asea.fun/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你好</title>
+    <link href="https://asea.fun/post/50a2b841.html"/>
+    <id>https://asea.fun/post/50a2b841.html</id>
+    <published>2020-08-10T01:11:45.000Z</published>
+    <updated>2020-08-10T01:12:48.011Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="好了这是个测试"><a href="#好了这是个测试" class="headerlink" title="好了这是个测试"></a>好了这是个测试</h1><h2 id="哈哈哈哈"><a href="#哈哈哈哈" class="headerlink" title="哈哈哈哈"></a>哈哈哈哈</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="test" scheme="https://asea.fun/categories/test/"/>
+    
+    
+      <category term="测试" scheme="https://asea.fun/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>旧时代</title>
