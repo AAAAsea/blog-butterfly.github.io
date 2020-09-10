@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://asea.fun/"/>
-  <updated>2020-09-10T08:33:03.823Z</updated>
+  <updated>2020-09-10T08:53:06.894Z</updated>
   <id>https://asea.fun/</id>
   
   <author>
@@ -17,11 +17,59 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>下载多媒体文件</title>
+    <link href="https://asea.fun/post/undefined.html"/>
+    <id>https://asea.fun/post/undefined.html</id>
+    <published>2020-09-10T08:52:24.000Z</published>
+    <updated>2020-09-10T08:53:06.894Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你是否曾幻想过有这样一个工具，可以一键下载youtube、b站、优酷、爱奇艺、腾讯、斗鱼、土豆、芒果TV……几乎所有网站的视频，以及网易云音乐、酷我音乐、酷狗音乐、虾米音乐等各大音乐平台的音乐，还有所有网上的图片！！！</p><p>从此不需要为了下载电影，而专门去下载爱奇艺、优酷、腾讯客户端，也不需要去找各种各样的youtube视频下载器，有了这个工具，全网视频随便下，一劳永逸。</p><p>强烈推荐黑科技下载工具：you-get，一个超神般的存在！</p><p>you-get是基于python3的媒体内容下载库，在命令行中运行，用于从网络中下载视频、音频、图片，其它下载工具不能下载的它统统能搞定。</p><p>注：快捷键Win + R可以打开命令行cmd</p><p>1、下载安装<br>在安装you-get前，你需要安装python 3.X，因为它是一个python库。</p><p>这里就不讲解python安装方法了，可以上网搜索哈！以下内容对python的要求，默认大家至少是一个会敲“hello world”的python入门选手。</p><p>安装you-get和其它python一样，使用最方便的pip安装：</p><p>pip3 install you-get # 注意在命令行使用pip</p><p>这样就搞定安装了，是不是so easy！</p><p>如果你在安装的过程中出现错误提示，有可能是依赖包的版本太老了，只需要卸载重装就可以。其他的错误类型可自行百度解决，或者发给公众号后台，小编有时间会帮你查查。</p><p>如果你想更新you-get，也很简单：</p><p>pip3 install –upgrade you-get # 注意在命令行使用pip</p><p>2、开始下载视频<br>安装好后，就可以拉出来溜溜！</p><p>比如我想下载b站美食主播大祥哥的视频，那么我只要找到视频链接，然后在命令行键入：</p><p>you-get 视频地址 # 注意在命令行中执行<br>视频地址：<a href="https://www.bilibili.com/video/av49030556?from=search&amp;seid=12693057774032579999" target="_blank" rel="noopener">https://www.bilibili.com/video/av49030556?from=search&amp;seid=12693057774032579999</a></p><p>上图就已经在下载了，可以看到下载进度条、下载速度、视频名称、格式等等信息。</p><p>不指定存储位置情况下，视频默认存放在”C:\Users\user”目录下，打开该目录，会发现刚刚已经下载好的视频和字幕文件</p><p>3、指定存储位置和重命名<br>如果我想设定下载的文件到指定文件夹里，并且给下载的视频重命名，该怎么办？很简单：使用 –output-dir/-o 设置存放路径, 使用–output-filename/-O 设置名称:</p><p>you-get -o 存放绝对路径 -O 新名称 视频地址 # 注意在命令行中执行<br>比如，把刚才的视频下载到E盘的movie文件夹里，并命名为 daxiangge：</p><p>4、查看视频信息<br>查看当前视频的清晰度和格式，可以看看各种视频的信息</p><p>you-get -i 视频地址</p><p>5、选择需要下载的清晰度和格式<br>根据需要的视频格式和清晰度下载视频，上面视频信息里已经展示了各种视频格式和清晰度，选择你需要的下载吧！</p><p>you-get –format=视频格式 视频地址</p><p>6、下载图片<br>下载图片和下载视频一样，只要有图片的地址就可以哦！</p><p>比如我要下载一张车模照片：</p><p>图片地址：<a href="http://photo.tp88.net/pic/20147/9/2014793227-38464610.jpg" target="_blank" rel="noopener">http://photo.tp88.net/pic/20147/9/2014793227-38464610.jpg</a></p><p>在命令行输入：</p><p>you-get 图片地址</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+      <category term="python" scheme="https://asea.fun/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用myqr制作二维码</title>
+    <link href="https://asea.fun/post/a0aaee24.html"/>
+    <id>https://asea.fun/post/a0aaee24.html</id>
+    <published>2020-09-10T08:48:20.000Z</published>
+    <updated>2020-09-10T08:49:31.567Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1、安装myqr<br>在安装之前，你需要保证电脑里已经安装python 3.x，这是基本环境。并且本文是在windows中实验的，其它系统大同小异，问题处请自研解决喽</p><p>安装myqr和安装普通的python一样，很简单，使用pip安装即可</p><p>在命令行键入：</p><p>pip install myqr<br>看到这样提示：</p><p>就安装成功了！！！</p><p>2、使用方式<br>该库在命令行中运行，你只需要传递网址链接、图片地址等参数，就可以生成相应的二维码，二维码图片默认保存在当前目录下面。命令行输入格式：</p><p>myqr  网址链接<br>比如：</p><p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a><br>再按enter键执行，就能生成对应链接的二维码了。</p><p>3、制作普通二维码<br>普通二维码就是常见的的二维码，长这样：</p><p>普通二维码只需在命令行输入：myqr + 链接参数</p><p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a><br>改变二维码边长<br>你可以通过输入边长参数 ‘-v’，改变二维码的尺寸</p><p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a> -v 10<br>-v 控制边长，范围是1至40，数字越大边长越大</p><p>对二维码图片命名<br>参数 ‘-n’可以对生成的二维码图片重命名</p><p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a> -v 10 -n pydatas.jpg<br>设置二维码图片保存地址<br>参数’-d’可以定义二维码图片的保存位置，比如我要保存在c:\picture\</p><p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a> -v 10 -n pydatas.jpg -d c:\picture<br>3、制作艺术二维码<br>艺术二维码是融合了静态图片的二维码，像这样：</p><p>怎么融合图片呢？很简单，传入图片地址参数’-p’</p><p>比如说我d盘有一张海绵宝宝的图片，地址是：d:\hmbb.jpg即传入参数’-pd:\hmbb.jpg’在命令行键入：</p><p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a> -p d:\hmbb.jpg<br>执行就能生成上图的海绵宝宝主题二维码了</p><p>你会发现怎么是黑白的呢？如何变成漂亮的彩色？</p><p>也很简单，在图片地址参数’-d’后面加上色彩参数’-c’，就能使黑白变彩色了</p><p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a> -p d:\hmbb.jpg -c</p><p>你还可以添加对比度参数和亮度参数，来调节艺术二维码图片的视觉效果：</p><p>参数-con 用以调节图片的对比度，1.0 表示原始图片，更小的值表示更低对比度，更大反之。默认为1.0。<br>参数 -bri 用来调节图片的亮度，其余用法和取值与 -con 相同。<br>尺寸调节、图片位置设置等参数和普通二维码一样哦！</p><p>4、制作动态二维码<br>动态二维码是艺术二维码的一种，不过它是可动的，像这样：</p><p>动态二维码的制作和艺术二维码一样，这里不做赘述，只需要传入的图片是gif格式，输出二维码图片也是gif格式。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+      <category term="myqr" scheme="https://asea.fun/tags/myqr/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Git速度慢</title>
     <link href="https://asea.fun/post/90867f75.html"/>
     <id>https://asea.fun/post/90867f75.html</id>
     <published>2020-09-10T08:32:37.000Z</published>
-    <updated>2020-09-10T08:33:03.823Z</updated>
+    <updated>2020-09-10T08:33:35.946Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>把原 URL 中的 github.com 替换为 github.com.cnpmjs.org，其余保持不变。</p>]]></content>
     

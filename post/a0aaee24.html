@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>利用myqr制作二维码 | AseaBlog</title><meta name="description" content="1、安装myqr在安装之前，你需要保证电脑里已经安装python 3.x，这是基本环境。并且本文是在windows中实验的，其它系统大同小异，问题处请自研解决喽 安装myqr和安装普通的python一样，很简单，使用pip安装即可 在命令行键入： pip install myqr看到这样提示： 就安装成功了！！！ 2、使用方式该库在命令行中运行，你只需要传递网址链接、图片地址等参数，就可以生成相应"><meta name="keywords" content="myqr"><meta name="author" content="Asea,gyvip001@126.com"><meta name="copyright" content="Asea"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/%E7%88%B1%E5%BF%83.png"><link rel="canonical" href="https://asea.fun/post/a0aaee24.html"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="利用myqr制作二维码"><meta property="og:url" content="https://asea.fun/post/a0aaee24.html"><meta property="og:site_name" content="AseaBlog"><meta property="og:description" content="1、安装myqr在安装之前，你需要保证电脑里已经安装python 3.x，这是基本环境。并且本文是在windows中实验的，其它系统大同小异，问题处请自研解决喽 安装myqr和安装普通的python一样，很简单，使用pip安装即可 在命令行键入： pip install myqr看到这样提示： 就安装成功了！！！ 2、使用方式该库在命令行中运行，你只需要传递网址链接、图片地址等参数，就可以生成相应"><meta property="og:image" content="https://w.wallhaven.cc/full/j5/wallhaven-j5z66p.jpg"><meta property="article:published_time" content="2020-09-10T08:48:20.000Z"><meta property="article:modified_time" content="2020-09-10T08:49:31.567Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = ''
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="prev" title="下载多媒体文件" href="https://asea.fun/post/undefined.html"><link rel="next" title="Git速度慢" href="https://asea.fun/post/90867f75.html"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"languages":{"author":"作者: Asea","link":"链接: ","source":"来源: AseaBlog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: {"text":"木木,节日,快乐","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="AseaBlog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar1.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">17</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">8</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/photo/"><i class="fa-fw fas fa-photo"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 大朋友们</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言墙</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><header class="post-bg" id="page-header" style="background-image: url(https://w.wallhaven.cc/full/j5/wallhaven-j5z66p.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">AseaBlog</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/photo/"><i class="fa-fw fas fa-photo"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 大朋友们</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言墙</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">利用myqr制作二维码</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-09-10 16:48:20"><i class="far fa-calendar-alt fa-fw"></i> 发表于 2020-09-10</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-09-10 16:49:31"><i class="fas fa-history fa-fw"></i> 更新于 2020-09-10</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta__icon"></i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="far fa-comments fa-fw post-meta__icon"></i><span>评论数:</span><a href="/post/a0aaee24.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/post/a0aaee24.html" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><p>1、安装myqr<br>在安装之前，你需要保证电脑里已经安装python 3.x，这是基本环境。并且本文是在windows中实验的，其它系统大同小异，问题处请自研解决喽</p>
+<p>安装myqr和安装普通的python一样，很简单，使用pip安装即可</p>
+<p>在命令行键入：</p>
+<p>pip install myqr<br>看到这样提示：</p>
+<p>就安装成功了！！！</p>
+<p>2、使用方式<br>该库在命令行中运行，你只需要传递网址链接、图片地址等参数，就可以生成相应的二维码，二维码图片默认保存在当前目录下面。命令行输入格式：</p>
+<p>myqr  网址链接<br>比如：</p>
+<p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a><br>再按enter键执行，就能生成对应链接的二维码了。</p>
+<p>3、制作普通二维码<br>普通二维码就是常见的的二维码，长这样：</p>
+<p>普通二维码只需在命令行输入：myqr + 链接参数</p>
+<p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a><br>改变二维码边长<br>你可以通过输入边长参数 ‘-v’，改变二维码的尺寸</p>
+<p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a> -v 10<br>-v 控制边长，范围是1至40，数字越大边长越大</p>
+<p>对二维码图片命名<br>参数 ‘-n’可以对生成的二维码图片重命名</p>
+<p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a> -v 10 -n pydatas.jpg<br>设置二维码图片保存地址<br>参数’-d’可以定义二维码图片的保存位置，比如我要保存在c:\picture\</p>
+<p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a> -v 10 -n pydatas.jpg -d c:\picture<br>3、制作艺术二维码<br>艺术二维码是融合了静态图片的二维码，像这样：</p>
+<p>怎么融合图片呢？很简单，传入图片地址参数’-p’</p>
+<p>比如说我d盘有一张海绵宝宝的图片，地址是：d:\hmbb.jpg即传入参数’-pd:\hmbb.jpg’在命令行键入：</p>
+<p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a> -p d:\hmbb.jpg<br>执行就能生成上图的海绵宝宝主题二维码了</p>
+<p>你会发现怎么是黑白的呢？如何变成漂亮的彩色？</p>
+<p>也很简单，在图片地址参数’-d’后面加上色彩参数’-c’，就能使黑白变彩色了</p>
+<p>myqr <a href="https://zhuanlan.zhihu.com/pydatalysis" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/pydatalysis</a> -p d:\hmbb.jpg -c</p>
+<p>你还可以添加对比度参数和亮度参数，来调节艺术二维码图片的视觉效果：</p>
+<p>参数-con 用以调节图片的对比度，1.0 表示原始图片，更小的值表示更低对比度，更大反之。默认为1.0。<br>参数 -bri 用来调节图片的亮度，其余用法和取值与 -con 相同。<br>尺寸调节、图片位置设置等参数和普通二维码一样哦！</p>
+<p>4、制作动态二维码<br>动态二维码是艺术二维码的一种，不过它是可动的，像这样：</p>
+<p>动态二维码的制作和艺术二维码一样，这里不做赘述，只需要传入的图片是gif格式，输出二维码图片也是gif格式。</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:gyvip001@126.com">Asea</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://asea.fun/post/a0aaee24.html">https://asea.fun/post/a0aaee24.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://asea.fun" target="_blank">AseaBlog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/myqr/">myqr</a></div><div class="post_share"><div class="social-share" data-image="https://w.wallhaven.cc/full/j5/wallhaven-j5z66p.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><button class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="post-qr-code__img" src="/img/wechat.png" alt="微信" onclick="window.open('/img/wechat.png')"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="post-qr-code__img" src="/img/alipay.png" alt="支付宝" onclick="window.open('/img/alipay.png')"/><div class="post-qr-code__desc">支付宝</div></li></ul></div></button></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/undefined.html"><img class="prev-cover" data-src="https://w.wallhaven.cc/full/j5/wallhaven-j5z66p.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">下载多媒体文件</div></div></a></div><div class="next-post pull-right"><a href="/post/90867f75.html"><img class="next-cover" data-src="https://w.wallhaven.cc/full/j5/wallhaven-j5z66p.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Git速度慢</div></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Valine/Valine-Lete3.2-min.js"></script><script>var requestSetting = function (from,set) {
+  var from = from
+  var setting = set.split(',').filter(function(item){
+  return from.indexOf(item) > -1
+  });
+  setting = setting.length == 0 ? from :setting;
+  return setting
+}
+
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail')
+var requiredFields = requestSetting(['nick','mail'],'nick,mail')
+
+window.valine = new Valine({
+  el:'#vcomment',
+  master:'23bb01d13609d1c0aa413ec0b3a1357a',
+  friends:'27d1605a576a79b3eefb001b993dbeb2',
+  appId: 'dOHV1hJPq1YeCbCtLdF5eb9p-MdYXbMMI',
+  appKey: 'QOrlkdjUOQ1flkinRcXUHH7n',
+  placeholder: '留下邮箱可以快速收到回复噢！！',
+  avatar: 'monsterid',
+  meta: guestInfo,
+  pageSize: '10',
+  lang: 'zh-CN',
+  recordIP: false,
+  serverURLs: '',
+  emojiCDN: '',
+  emojiMaps: {"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_親親":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再見":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_發怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_發財":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可愛":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_嘔吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_壞笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尷尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_驚嚇":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},
+  enableQQ: true,
+  requiredFields: requiredFields,
+  emojiMaps: {
+            "000":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/1.gif",
+            "001":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/001.png",
+            "002":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/002.png",
+            "003":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/003.png",
+            "004":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/004.png",
+            "005":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/005.png",
+            "006":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/006.png",
+            "007":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/103.jpg",
+            "008":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/104.jpg",
+            "009":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/105.jpg",
+            "010":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/106.gif",
+            "011":"http://ww2.sinaimg.cn/bmiddle/ceeb653ejw1fcapt570odg202s02swej.gif",
+            "012":"http://ww3.sinaimg.cn/bmiddle/6af89bc8gw1f8q7hrf2mwj201g01rmwx.jpg",
+            "013":"http://ww3.sinaimg.cn/bmiddle/9150e4e5gw1f9blhhmuz4g201c01c0sm.gif",
+            "014":"http://wx2.sinaimg.cn/bmiddle/006GJQvhgy1g5z0lvcqogg300o00omwx.gif",
+            "015":"http://wx1.sinaimg.cn/bmiddle/006GJQvhgy1g5z3781phrg300t00ujr6.gif",
+            "017":"http://ww1.sinaimg.cn/bmiddle/6af89bc8gw1f8u9b14ozlg203l03c3z8.gif",
+            "018":"http://wx2.sinaimg.cn/bmiddle/006GJQvhgy1g5z0lxhxisg300o00oa9z.gif",
+            "019":"http://wx4.sinaimg.cn/bmiddle/006GJQvhgy1g5z0lur0sug300o00o3y9.gif",
+            "020":"http://wx2.sinaimg.cn/bmiddle/006GJQvhgy1g5z0lxzjqug300o00oaa3.gif",
+            "021":"http://wx4.sinaimg.cn/bmiddle/006GJQvhgy1g5z0lylhaug300o00o3y9.gif",  
+            "022"	:	"http://wx4.sinaimg.cn/bmiddle/006GJQvhgy1g5z378ndnqg300o00oq3d.gif"	,
+            "023"	:	"http://wx4.sinaimg.cn/bmiddle/006GJQvhgy1g6aonuf9nzg300o00omwz.gif"	,
+            "024"	:	"http://wx2.sinaimg.cn/bmiddle/006GJQvhly1g6u94zpau2g300o00o3y9.gif"	,
+            "025"	:	"http://wx4.sinaimg.cn/bmiddle/006GJQvhly1g6vgge7fkng300v00rdfl.gif"	,
+            "026"	:	"http://wx2.sinaimg.cn/bmiddle/006GJQvhgy1g6aonvghg4g300o00o3ye.gif"	,
+            "027"	:	"http://wx3.sinaimg.cn/bmiddle/006GJQvhly1g6u951j1v0g300o00omwx.gif"	,
+            "028"	:	"http://wx3.sinaimg.cn/bmiddle/006GJQvhly1g6ziigiot3g300o00ot8h.gif"	,
+            "029"	:	"http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8u8iz8xxfg206407fkjl.gif"	,
+            "030"	:	"http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8q23b6fl9g202u00z743.gif"	,
+            "031"	:	"http://wx4.sinaimg.cn/bmiddle/006GJQvhly1g6ziihdq4eg300o00o0si.gif"	,
+            "032"	:	"http://wx4.sinaimg.cn/bmiddle/006GJQvhly1g6ziiholrwg300o00ot8h.gif"	,
+            "033"	:	"http://wx3.sinaimg.cn/bmiddle/006GJQvhly1g6ziihy3f2g300o00o3y9.gif"	,
+            "034"	:	"http://wx3.sinaimg.cn/bmiddle/006qOO1Xly1gawevddzydg300m0170sj.gif"	,
+            "035"	:	"http://wx2.sinaimg.cn/bmiddle/ae2c6e1dly1gcay6libw1g201c00oq2r.gif"	,
+            "036"	:	"http://wx2.sinaimg.cn/bmiddle/005J4OU5ly1gceiti8rptj301k01k742.jpg"	,
+            "037"	:	"http://ww2.sinaimg.cn/bmiddle/9150e4e5gw1f94u82zlipg205a050ju1.gif"	,
+            "038"	:	"http://ww1.sinaimg.cn/bmiddle/006r3PQBjw1fao6bg6bctj305i02f744.jpg"	,
+            "039"	:	"http://ww1.sinaimg.cn/bmiddle/9150e4e5ly1fcttd20sf2j202e01edfn.jpg "	,
+            "040"	:	"http://wx3.sinaimg.cn/bmiddle/006oOWahly1flyy5nmkbfj30k00k0jv3.jpg"	,
+            "041"	:	"http://wx4.sinaimg.cn/bmiddle/005J4OU5ly1galytm82t6j30jg0jaacn.jpg"	,
+            "042"	:	"http://wx4.sinaimg.cn/bmiddle/005J4OU5ly1galytmzrduj30jg0jgwgx.jpg"	,
+            "043"	:	"http://wx2.sinaimg.cn/bmiddle/005J4OU5ly1galytgrhoyj30jg0jgaci.jpg"	,
+            "044"	:	"http://ww1.sinaimg.cn/bmiddle/006APoFYjw1fc6mgjxe3zj30c80c8gli.jpg"	,
+            "045"	:	"http://ww1.sinaimg.cn/bmiddle/006APoFYjw1fc6kubqmphj30c80c8a9y.jpg"	,
+            "046"	:	"http://ww2.sinaimg.cn/bmiddle/006APoFYjw1fcwsc6xujgj30c80c80sn.jpg"	,
+            "047"	:	"http://ww1.sinaimg.cn/bmiddle/006r3PQBjw1fcb3h8id5tj30c80c8747.jpg"	,
+            "048"	:	"http://ww2.sinaimg.cn/bmiddle/006r3PQBjw1fc6hntvrskj30c80c8dfq.jpg"	,
+            "049"	:	"http://ww1.sinaimg.cn/bmiddle/006r3PQBjw1fcdqkjt017j30c80c8a9y.jpg"	,
+            "050"	:	"http://ww4.sinaimg.cn/bmiddle/ceeb653ejw1fc4drici8aj20c80c8746.jpg"	,
+            "051"	:	"http://ww4.sinaimg.cn/bmiddle/ceeb653ejw1fc42q10j4jj20c80c8wee.jpg"	,
+            "052" : "http://ww2.sinaimg.cn/bmiddle/6af89bc8gw1f8qz6jp2vkj202601iq2w.jpg"  ,
+            "053":"http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8tvzed5w4j201501cq2y.jpg",
+            "054":"http://ww1.sinaimg.cn/bmiddle/6af89bc8gw1f8t9dy7t14j201m01hgld.jpg",
+            "055":"http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8qznbyddcj2018018t8h.jpg",
+            "056":"http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8t5v71yp1j202901ta9u.jpg",
+            "057":"http://ww1.sinaimg.cn/bmiddle/6af89bc8gw1f8qbegcq6ug201c01ct8m.gif"
+        }
+});</script></div></article></main><footer id="footer" style="background-image: url(https://w.wallhaven.cc/full/j5/wallhaven-j5z66p.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By Asea</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">😳你怎么进来了我的 <a href="https://asea.fun">Blog</a>!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="readmode" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font_plus" title="放大字体"><i class="fas fa-plus"></i></button><button id="font_minus" title="缩小字体"><i class="fas fa-minus"></i></button><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">简</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fas fa-comments"></i></a><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/third-party/click_heart.js"></script><script src="/js/third-party/ClickShowText.js"></script><script src="/js/search/local-search.js"></script><script id="canvas_nest" color="50,255,255" opacity="0.7" zindex="-1" count="140" mobile="false" src="/js/mogai.js"></script></body></html>
