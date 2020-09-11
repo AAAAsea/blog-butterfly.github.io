@@ -1,0 +1,382 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>39-40.NoSQL入门 | AseaBlog</title><meta name="description" content="NoSQL入门NoSQL概述如今，大多数的计算机系统（包括服务器、PC、移动设备等）都会产生庞大的数据量。其实，早在2012年的时候，全世界每天产生的数据量就达到了2.5EB（艾字节，$$1EB\approx10^{18}B$$）。这些数据有很大一部分是由关系型数据库来存储和管理的。 早在1970年，E.F.Codd发表了论述关系型数据库的著名论文“A relational model of da"><meta name="keywords" content="Blog Asea"><meta name="author" content="Asea,gyvip001@126.com"><meta name="copyright" content="Asea"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/%E7%88%B1%E5%BF%83.png"><link rel="canonical" href="https://asea.fun/post/4f025449.html"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="39-40.NoSQL入门"><meta property="og:url" content="https://asea.fun/post/4f025449.html"><meta property="og:site_name" content="AseaBlog"><meta property="og:description" content="NoSQL入门NoSQL概述如今，大多数的计算机系统（包括服务器、PC、移动设备等）都会产生庞大的数据量。其实，早在2012年的时候，全世界每天产生的数据量就达到了2.5EB（艾字节，$$1EB\approx10^{18}B$$）。这些数据有很大一部分是由关系型数据库来存储和管理的。 早在1970年，E.F.Codd发表了论述关系型数据库的著名论文“A relational model of da"><meta property="og:image" content="https://w.wallhaven.cc/full/j5/wallhaven-j5z66p.jpg"><meta property="article:published_time" content="2020-09-11T08:49:44.281Z"><meta property="article:modified_time" content="2020-09-11T08:49:44.467Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = ''
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="next" title="36-38.关系型数据库MySQL" href="https://asea.fun/post/3a0077e5.html"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"languages":{"author":"作者: Asea","link":"链接: ","source":"来源: AseaBlog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: {"text":"木木,节日,快乐","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="AseaBlog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar1.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">37</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">8</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/photo/"><i class="fa-fw fas fa-photo"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 大朋友们</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言墙</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#NoSQL入门"><span class="toc-number">1.</span> <span class="toc-text">NoSQL入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#NoSQL概述"><span class="toc-number">1.1.</span> <span class="toc-text">NoSQL概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis概述"><span class="toc-number">1.2.</span> <span class="toc-text">Redis概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Redis简介"><span class="toc-number">1.2.1.</span> <span class="toc-text">Redis简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Redis的应用场景"><span class="toc-number">1.2.2.</span> <span class="toc-text">Redis的应用场景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Redis的安装和配置"><span class="toc-number">1.2.3.</span> <span class="toc-text">Redis的安装和配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Redis的服务器和客户端"><span class="toc-number">1.2.4.</span> <span class="toc-text">Redis的服务器和客户端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在Python程序中使用Redis"><span class="toc-number">1.2.5.</span> <span class="toc-text">在Python程序中使用Redis</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MongoDB概述"><span class="toc-number">1.3.</span> <span class="toc-text">MongoDB概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MongoDB简介"><span class="toc-number">1.3.1.</span> <span class="toc-text">MongoDB简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MongoDB的安装和配置"><span class="toc-number">1.3.2.</span> <span class="toc-text">MongoDB的安装和配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MongoDB基本概念"><span class="toc-number">1.3.3.</span> <span class="toc-text">MongoDB基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通过Shell操作MongoDB"><span class="toc-number">1.3.4.</span> <span class="toc-text">通过Shell操作MongoDB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在Python程序中操作MongoDB"><span class="toc-number">1.3.5.</span> <span class="toc-text">在Python程序中操作MongoDB</span></a></li></ol></li></ol></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><header class="post-bg" id="page-header" style="background-image: url(https://w.wallhaven.cc/full/j5/wallhaven-j5z66p.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">AseaBlog</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/photo/"><i class="fa-fw fas fa-photo"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 大朋友们</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言墙</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">39-40.NoSQL入门</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-09-11 16:49:44"><i class="far fa-calendar-alt fa-fw"></i> 发表于 2020-09-11</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-09-11 16:49:44"><i class="fas fa-history fa-fw"></i> 更新于 2020-09-11</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta__icon"></i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="far fa-comments fa-fw post-meta__icon"></i><span>评论数:</span><a href="/post/4f025449.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/post/4f025449.html" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h2 id="NoSQL入门"><a href="#NoSQL入门" class="headerlink" title="NoSQL入门"></a>NoSQL入门</h2><h3 id="NoSQL概述"><a href="#NoSQL概述" class="headerlink" title="NoSQL概述"></a>NoSQL概述</h3><p>如今，大多数的计算机系统（包括服务器、PC、移动设备等）都会产生庞大的数据量。其实，早在2012年的时候，全世界每天产生的数据量就达到了2.5EB（艾字节，$$1EB\approx10^{18}B$$）。这些数据有很大一部分是由关系型数据库来存储和管理的。 早在1970年，E.F.Codd发表了论述关系型数据库的著名论文“<em>A relational model of data for large shared data banks</em>”，这篇文章奠定了关系型数据库的基础并在接下来的数十年时间内产生了深远的影响。实践证明，关系型数据库是实现数据持久化最为重要的方式，它也是大多数应用在选择持久化方案时的首选技术。</p>
+<p>NoSQL是一项全新的数据库革命性运动，虽然它的历史可以追溯到1998年，但是NoSQL真正深入人心并得到广泛的应用是在进入大数据时候以后，业界普遍认为NoSQL是更适合大数据存储的技术方案，这才使得NoSQL的发展达到了前所未有的高度。2012年《纽约时报》的一篇专栏中写到，大数据时代已经降临，在商业、经济及其他领域中，决策将不再基于经验和直觉而是基于数据和分析而作出。事实上，在天文学、气象学、基因组学、生物学、社会学、互联网搜索引擎、金融、医疗、社交网络、电子商务等诸多领域，由于数据过于密集和庞大，在数据的分析和处理上也遇到了前所未有的限制和阻碍，这一切都使得对大数据处理技术的研究被提升到了新的高度，也使得各种NoSQL的技术方案进入到了公众的视野。</p>
+<p>NoSQL数据库按照其存储类型可以大致分为以下几类：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>部分代表</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>列族数据库</td>
+<td>HBase<br>Cassandra<br>Hypertable</td>
+<td>顾名思义是按列存储数据的。最大的特点是方便存储结构化和半结构化数据，方便做数据压缩，对针对某一列或者某几列的查询有非常大的I/O优势，适合于批量数据处理和即时查询。</td>
+</tr>
+<tr>
+<td>文档数据库</td>
+<td>MongoDB<br>CouchDB<br>ElasticSearch</td>
+<td>文档数据库一般用类JSON格式存储数据，存储的内容是文档型的。这样也就有机会对某些字段建立索引，实现关系数据库的某些功能，但不提供对参照完整性和分布事务的支持。</td>
+</tr>
+<tr>
+<td>KV数据库</td>
+<td>DynamoDB<br>Redis<br>LevelDB</td>
+<td>可以通过key快速查询到其value，有基于内存和基于磁盘两种实现方案。</td>
+</tr>
+<tr>
+<td>图数据库</td>
+<td>Neo4J<br>FlockDB<br>JanusGraph</td>
+<td>使用图结构进行语义查询的数据库，它使用节点、边和属性来表示和存储数据。图数据库从设计上，就可以简单快速的检索难以在关系系统中建模的复杂层次结构。</td>
+</tr>
+<tr>
+<td>对象数据库</td>
+<td>db4o<br>Versant</td>
+<td>通过类似面向对象语言的语法操作数据库，通过对象的方式存取数据。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>说明</strong>：想了解更多的NoSQL数据库，可以访问<a href="http://nosql-database.org/" target="_blank" rel="noopener">http://nosql-database.org/</a>。</p>
+</blockquote>
+<h3 id="Redis概述"><a href="#Redis概述" class="headerlink" title="Redis概述"></a>Redis概述</h3><p>Redis是一种基于键值对的NoSQL数据库，它提供了对多种数据类型（字符串、哈希、列表、集合、有序集合、位图等）的支持，能够满足很多应用场景的需求。Redis将数据放在内存中，因此读写性能是非常惊人的。与此同时，Redis也提供了持久化机制，能够将内存中的数据保存到硬盘上，在发生意外状况时数据也不会丢掉。此外，Redis还支持键过期、地理信息运算、发布订阅、事务、管道、Lua脚本扩展等功能，总而言之，Redis的功能和性能都非常强大，如果项目中要实现高速缓存和消息队列这样的服务，直接交给Redis就可以了。目前，国内外很多著名的企业和商业项目都使用了Redis，包括：Twitter、Github、StackOverflow、新浪微博、百度、优酷土豆、美团、小米、唯品会等。</p>
+<h4 id="Redis简介"><a href="#Redis简介" class="headerlink" title="Redis简介"></a>Redis简介</h4><p>2008年，一个名为Salvatore Sanfilippo的程序员为他开发的LLOOGG项目定制了专属的数据库（因为之前他无论怎样优化MySQL，系统性能已经无法再提升了），这项工作的成果就是Redis的初始版本。后来他将Redis的代码放到了全球最大的代码托管平台<a href="https://github.com/antirez/redis" target="_blank" rel="noopener">Github</a>，从那以后，Redis引发了大量开发者的好评和关注，继而有数百人参与了Redis的开发和维护，这使得Redis的功能越来越强大和性能越来越好。</p>
+<p>Redis是REmote DIctionary Server的缩写，它是一个用ANSI C编写的高性能的key-value存储系统，与其他的key-value存储系统相比，Redis有以下一些特点（也是优点）：</p>
+<ul>
+<li>Redis的读写性能极高，并且有丰富的特性（发布/订阅、事务、通知等）。</li>
+<li>Redis支持数据的持久化（RDB和AOF两种方式），可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用。</li>
+<li>Redis支持多种数据类型，包括：string、hash、list、set，zset、bitmap、hyperloglog等。</li>
+<li>Redis支持主从复制（实现读写分析）以及哨兵模式（监控master是否宕机并自动调整配置）。</li>
+<li>Redis支持分布式集群，可以很容易的通过水平扩展来提升系统的整体性能。</li>
+<li>Redis基于TCP提供的可靠传输服务进行通信，很多编程语言都提供了Redis客户端支持。</li>
+</ul>
+<h4 id="Redis的应用场景"><a href="#Redis的应用场景" class="headerlink" title="Redis的应用场景"></a>Redis的应用场景</h4><ol>
+<li>高速缓存  - 将不常变化但又经常被访问的热点数据放到Redis数据库中，可以大大降低关系型数据库的压力，从而提升系统的响应性能。</li>
+<li>排行榜 - 很多网站都有排行榜功能，利用Redis中的列表和有序集合可以非常方便的构造各种排行榜系统。</li>
+<li>商品秒杀/投票点赞 - Redis提供了对计数操作的支持，网站上常见的秒杀、点赞等功能都可以利用Redis的计数器通过+1或-1的操作来实现，从而避免了使用关系型数据的<code>update</code>操作。</li>
+<li>分布式锁 - 利用Redis可以跨多台服务器实现分布式锁（类似于线程锁，但是能够被多台机器上的多个线程或进程共享）的功能，用于实现一个阻塞式操作。</li>
+<li>消息队列 - 消息队列和高速缓存一样，是一个大型网站不可缺少的基础服务，可以实现业务解耦和非实时业务削峰等特性，这些我们都会在后面的项目中为大家展示。</li>
+</ol>
+<h4 id="Redis的安装和配置"><a href="#Redis的安装和配置" class="headerlink" title="Redis的安装和配置"></a>Redis的安装和配置</h4><p>可以使用Linux系统的包管理工具（如yum）来安装Redis，也可以通过在Redis的<a href="https://redis.io/" target="_blank" rel="noopener">官方网站</a>下载Redis的源代码，解压缩解归档之后通过make工具对源代码进行构建并安装，在更新这篇文档时，Redis官方提供的最新稳定版本是<a href="http://download.redis.io/releases/redis-5.0.4.tar.gz" target="_blank" rel="noopener">Redis 5.0.4</a>。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://download.redis.io/releases/redis-5.0.4.tar.gz</span><br><span class="line">gunzip redis-5.0.4.tar.gz</span><br><span class="line">tar -xvf redis-5.0.4.tar</span><br><span class="line">cd redis-5.0.4</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p>在redis源代码目录下有一个名为redis.conf的配置文件，我们可以先查看一下该文件。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim redis.conf</span><br></pre></td></tr></table></figure>
+
+<p>配置将Redis服务绑定到指定的IP地址和端口。</p>
+<p><img src= "/img/loading2.gif" data-src="./res/redis-bind-and-port.png" alt=""></p>
+<p>配置底层有多少个数据库。</p>
+<p><img src= "/img/loading2.gif" data-src="./res/redis-databases.png" alt=""></p>
+<p>配置Redis的持久化机制 - RDB。</p>
+<p><img src= "/img/loading2.gif" data-src="./res/redis-rdb-1.png" alt=""></p>
+<p><img src= "/img/loading2.gif" data-src="./res/redis-rdb-3.png" alt=""></p>
+<p>配置Redis的持久化机制 - AOF。</p>
+<p><img src= "/img/loading2.gif" data-src="./res/redis-aof.png" alt=""></p>
+<p>配置访问Redis服务器的验证口令。</p>
+<p><img src= "/img/loading2.gif" data-src="./res/redis-security.png" alt=""></p>
+<p>配置Redis的主从复制，通过主从复制可以实现读写分离。</p>
+<p><img src= "/img/loading2.gif" data-src="./res/redis-replication.png" alt=""></p>
+<p>配置慢查询。</p>
+<p><img src= "/img/loading2.gif" data-src="./res/redis-slow-logs.png" alt=""></p>
+<p>上面这些内容就是Redis的基本配置，如果你对上面的内容感到困惑也没有关系，先把Redis用起来再回头去推敲这些内容就行了。如果想找一些参考书，<a href="https://item.jd.com/12121730.html" target="_blank" rel="noopener">《Redis开发与运维》</a>是一本不错的入门读物，而<a href="https://item.jd.com/11791607.html" target="_blank" rel="noopener">《Redis实战》</a>是不错的进阶读物。</p>
+<h4 id="Redis的服务器和客户端"><a href="#Redis的服务器和客户端" class="headerlink" title="Redis的服务器和客户端"></a>Redis的服务器和客户端</h4><p>接下来启动Redis服务器，下面的方式将以默认的配置启动Redis服务。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">redis-server</span><br></pre></td></tr></table></figure>
+
+<p>如果希望修改Redis的配置（如端口、认证口令、持久化方式等），可以通过下面两种方式。</p>
+<p>方式一：通过参数指定认证口令和AOF持久化方式。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">redis-server --requirepass yourpass --appendonly yes</span><br></pre></td></tr></table></figure>
+
+<p>方式二：通过指定的配置文件来修改Redis的配置。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">redis-server /root/redis-5.0.4/redis.conf</span><br></pre></td></tr></table></figure>
+
+<p>下面我们使用第一种方式来启动Redis并将其置于后台运行，将Redis产生的输出重定向到名为redis.log的文件中。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">redis-server --requirepass yourpass &gt; redis.log &amp;</span><br></pre></td></tr></table></figure>
+
+<p>可以通过ps或者netstat来检查Redis服务器是否启动成功。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ps -ef | grep redis-server</span><br><span class="line">netstat -nap | grep redis-server</span><br></pre></td></tr></table></figure>
+
+<p>接下来，我们尝试用Redis客户端去连接服务器。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">redis-cli</span><br><span class="line">127.0.0.1:6379&gt; auth yourpass</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; ping</span><br><span class="line">PONG</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Redis有着非常丰富的数据类型，也有很多的命令来操作这些数据，具体的内容可以查看<a href="http://redisdoc.com/" target="_blank" rel="noopener">Redis命令参考</a>，在这个网站上，除了Redis的命令参考，还有Redis的详细文档，其中包括了通知、事务、主从复制、持久化、哨兵、集群等内容。</p>
+<p><img src= "/img/loading2.gif" data-src="./res/redis-data-types.png" alt=""></p>
+<blockquote>
+<p><strong>说明</strong>：上面的插图来自付磊和张益军先生编著的《Redis开发与运维》一书。</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">127.0.0.1:6379&gt; set username admin</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; get username</span><br><span class="line">"admin"</span><br><span class="line">127.0.0.1:6379&gt; set password "123456" ex 300</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; get password</span><br><span class="line">"123456"</span><br><span class="line">127.0.0.1:6379&gt; ttl username</span><br><span class="line">(integer) -1</span><br><span class="line">127.0.0.1:6379&gt; ttl password</span><br><span class="line">(integer) 286</span><br><span class="line">127.0.0.1:6379&gt; hset stu1 name hao</span><br><span class="line">(integer) 0</span><br><span class="line">127.0.0.1:6379&gt; hset stu1 age 38</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; hset stu1 gender male</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; hgetall stu1</span><br><span class="line">1) "name"</span><br><span class="line">2) "hao"</span><br><span class="line">3) "age"</span><br><span class="line">4) "38"</span><br><span class="line">5) "gender"</span><br><span class="line">6) "male"</span><br><span class="line">127.0.0.1:6379&gt; hvals stu1</span><br><span class="line">1) "hao"</span><br><span class="line">2) "38"</span><br><span class="line">3) "male"</span><br><span class="line">127.0.0.1:6379&gt; hmset stu2 name wang age 18 gender female tel 13566778899</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; hgetall stu2</span><br><span class="line">1) "name"</span><br><span class="line">2) "wang"</span><br><span class="line">3) "age"</span><br><span class="line">4) "18"</span><br><span class="line">5) "gender"</span><br><span class="line">6) "female"</span><br><span class="line">7) "tel"</span><br><span class="line">8) "13566778899"</span><br><span class="line">127.0.0.1:6379&gt; lpush nums 1 2 3 4 5</span><br><span class="line">(integer) 5</span><br><span class="line">127.0.0.1:6379&gt; lrange nums 0 -1</span><br><span class="line">1) "5"</span><br><span class="line">2) "4"</span><br><span class="line">3) "3"</span><br><span class="line">4) "2"</span><br><span class="line">5) "1"</span><br><span class="line">127.0.0.1:6379&gt; lpop nums</span><br><span class="line">"5"</span><br><span class="line">127.0.0.1:6379&gt; lpop nums</span><br><span class="line">"4"</span><br><span class="line">127.0.0.1:6379&gt; rpop nums</span><br><span class="line">"1"</span><br><span class="line">127.0.0.1:6379&gt; rpop nums</span><br><span class="line">"2"</span><br><span class="line">127.0.0.1:6379&gt; sadd fruits apple banana orange apple grape grape</span><br><span class="line">(integer) 4</span><br><span class="line">127.0.0.1:6379&gt; scard fruits</span><br><span class="line">(integer) 4</span><br><span class="line">127.0.0.1:6379&gt; smembers fruits</span><br><span class="line">1) "grape"</span><br><span class="line">2) "orange"</span><br><span class="line">3) "banana"</span><br><span class="line">4) "apple"</span><br><span class="line">127.0.0.1:6379&gt; sismember fruits apple</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; sismember fruits durian</span><br><span class="line">(integer) 0</span><br><span class="line">127.0.0.1:6379&gt; sadd nums1 1 2 3 4 5</span><br><span class="line">(integer) 5</span><br><span class="line">127.0.0.1:6379&gt; sadd nums2 2 4 6 8</span><br><span class="line">(integer) 4</span><br><span class="line">127.0.0.1:6379&gt; sinter nums1 nums2</span><br><span class="line">1) "2"</span><br><span class="line">2) "4"</span><br><span class="line">127.0.0.1:6379&gt; sunion nums1 nums2</span><br><span class="line">1) "1"</span><br><span class="line">2) "2"</span><br><span class="line">3) "3"</span><br><span class="line">4) "4"</span><br><span class="line">5) "5"</span><br><span class="line">6) "6"</span><br><span class="line">7) "8"</span><br><span class="line">127.0.0.1:6379&gt; sdiff nums1 nums2</span><br><span class="line">1) "1"</span><br><span class="line">2) "3"</span><br><span class="line">3) "5"</span><br><span class="line">127.0.0.1:6379&gt; zadd topsinger 5234 zhangxy 1978 chenyx 2235 zhoujl 3520 xuezq</span><br><span class="line">(integer) 4</span><br><span class="line">127.0.0.1:6379&gt; zrange topsinger 0 -1 withscores</span><br><span class="line">1) "chenyx"</span><br><span class="line">2) "1978"</span><br><span class="line">3) "zhoujl"</span><br><span class="line">4) "2235"</span><br><span class="line">5) "xuezq"</span><br><span class="line">6) "3520"</span><br><span class="line">7) "zhangxy"</span><br><span class="line">8) "5234"</span><br><span class="line">127.0.0.1:6379&gt; zrevrange topsinger 0 -1</span><br><span class="line">1) "zhangxy"</span><br><span class="line">2) "xuezq"</span><br><span class="line">3) "zhoujl"</span><br><span class="line">4) "chenyx"</span><br><span class="line">127.0.0.1:6379&gt; geoadd pois 116.39738549206541 39.90862689286386 tiananmen 116.27172936413572 39.99</span><br><span class="line">135172904494 yiheyuan 117.27766503308104 40.65332064313784 gubeishuizhen</span><br><span class="line">(integer) 3</span><br><span class="line">127.0.0.1:6379&gt; geodist pois tiananmen gubeishuizhen km</span><br><span class="line">"111.5333"</span><br><span class="line">127.0.0.1:6379&gt; geodist pois tiananmen yiheyuan km</span><br><span class="line">"14.1230"</span><br><span class="line">127.0.0.1:6379&gt; georadius pois 116.86499108288572 40.40149669363615 50 km withdist</span><br><span class="line">1) 1) "gubeishuizhen"</span><br><span class="line">   2) "44.7408"</span><br></pre></td></tr></table></figure>
+
+<h4 id="在Python程序中使用Redis"><a href="#在Python程序中使用Redis" class="headerlink" title="在Python程序中使用Redis"></a>在Python程序中使用Redis</h4><p>可以使用pip安装redis模块。redis模块的核心是名为Redis的类，该类的对象代表一个Redis客户端，通过该客户端可以向Redis服务器发送命令并获取执行的结果。上面我们在Redis客户端中使用的命令基本上就是Redis对象可以接收的消息，所以如果了解了Redis的命令就可以在Python中玩转Redis。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip3 install redis</span><br><span class="line">python3</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> redis</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>client = redis.Redis(host=<span class="string">'1.2.3.4'</span>, port=<span class="number">6379</span>, password=<span class="string">'yourpass'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>client.set(<span class="string">'username'</span>, <span class="string">'admin'</span>)</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>client.hset(<span class="string">'student'</span>, <span class="string">'name'</span>, <span class="string">'hao'</span>)</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>client.hset(<span class="string">'student'</span>, <span class="string">'age'</span>, <span class="number">38</span>)</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>client.keys(<span class="string">'*'</span>)</span><br><span class="line">[<span class="string">b'username'</span>, <span class="string">b'student'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>client.get(<span class="string">'username'</span>)</span><br><span class="line"><span class="string">b'admin'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>client.hgetall(<span class="string">'student'</span>)</span><br><span class="line">&#123;<span class="string">b'name'</span>: <span class="string">b'hao'</span>, <span class="string">b'age'</span>: <span class="string">b'38'</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="MongoDB概述"><a href="#MongoDB概述" class="headerlink" title="MongoDB概述"></a>MongoDB概述</h3><h4 id="MongoDB简介"><a href="#MongoDB简介" class="headerlink" title="MongoDB简介"></a>MongoDB简介</h4><p>MongoDB是2009年问世的一个面向文档的数据库管理系统，由C++语言编写，旨在为Web应用提供可扩展的高性能数据存储解决方案。虽然在划分类别的时候后，MongoDB被认为是NoSQL的产品，但是它更像一个介于关系数据库和非关系数据库之间的产品，在非关系数据库中它功能最丰富，最像关系数据库。</p>
+<p>MongoDB将数据存储为一个文档，一个文档由一系列的“键值对”组成，其文档类似于JSON对象，但是MongoDB对JSON进行了二进制处理（能够更快的定位key和value），因此其文档的存储格式称为BSON。关于JSON和BSON的差别大家可以看看MongoDB官方网站的文章<a href="https://www.mongodb.com/json-and-bson" target="_blank" rel="noopener">《JSON and BSON》</a>。</p>
+<p>目前，MongoDB已经提供了对Windows、macOS、Linux、Solaris等多个平台的支持，而且也提供了多种开发语言的驱动程序，Python当然是其中之一。</p>
+<h4 id="MongoDB的安装和配置"><a href="#MongoDB的安装和配置" class="headerlink" title="MongoDB的安装和配置"></a>MongoDB的安装和配置</h4><p>可以从MongoDB的<a href="https://www.mongodb.com/download-center#community" target="_blank" rel="noopener">官方下载链接</a>下载MongoDB，官方为Windows系统提供了一个Installer程序，而Linux和MacOS则提供了压缩文件。下面简单说一下Linux系统如何安装和配置MongoDB。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-amazon-3.6.5.tgz</span><br><span class="line">gunzip mongodb-linux-x86_64-amazon-3.6.5.tgz</span><br><span class="line">mkdir mongodb-3.6.5</span><br><span class="line">tar -xvf mongodb-linux-x86_64-amazon-3.6.5.tar --strip-components 1 -C mongodb-3.6.5/</span><br><span class="line">export PATH=$PATH:~/mongodb-3.6.5/bin</span><br><span class="line">mkdir -p /data/db</span><br><span class="line">mongod --bind_ip 172.18.61.250</span><br><span class="line"></span><br><span class="line">2018-06-03T18:03:28.232+0800 I CONTROL  [initandlisten] MongoDB starting : pid=1163 port=27017 dbpath=/data/db 64-bit host=iZwz97tbgo9lkabnat2lo8Z</span><br><span class="line">2018-06-03T18:03:28.232+0800 I CONTROL  [initandlisten] db version v3.6.5</span><br><span class="line">2018-06-03T18:03:28.232+0800 I CONTROL  [initandlisten] git version: a20ecd3e3a174162052ff99913bc2ca9a839d618</span><br><span class="line">2018-06-03T18:03:28.232+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.0-fips29 Mar 2010</span><br><span class="line">...</span><br><span class="line">2018-06-03T18:03:28.945+0800 I NETWORK  [initandlisten] waiting for connections on port 27017</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：上面的操作中，export命令是设置PATH环境变量，这样可以在任意路径下执行mongod来启动MongoDB服务器。MongoDB默认保存数据的路径是/data/db目录，为此要提前创建该目录。此外，在使用mongod启动MongoDB服务器时，–bind_ip参数用来将服务绑定到指定的IP地址，也可以用–port参数来指定端口，默认端口为27017。</p>
+</blockquote>
+<h4 id="MongoDB基本概念"><a href="#MongoDB基本概念" class="headerlink" title="MongoDB基本概念"></a>MongoDB基本概念</h4><p>我们通过与关系型数据库进行对照的方式来说明MongoDB中的一些概念。</p>
+<table>
+<thead>
+<tr>
+<th>SQL</th>
+<th>MongoDB</th>
+<th>解释（SQL/MongoDB）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>database</td>
+<td>database</td>
+<td>数据库/数据库</td>
+</tr>
+<tr>
+<td>table</td>
+<td>collection</td>
+<td>二维表/集合</td>
+</tr>
+<tr>
+<td>row</td>
+<td>document</td>
+<td>记录（行）/文档</td>
+</tr>
+<tr>
+<td>column</td>
+<td>field</td>
+<td>字段（列）/域</td>
+</tr>
+<tr>
+<td>index</td>
+<td>index</td>
+<td>索引/索引</td>
+</tr>
+<tr>
+<td>table joins</td>
+<td>—</td>
+<td>表连接/嵌套文档</td>
+</tr>
+<tr>
+<td>primary key</td>
+<td>primary key</td>
+<td>主键/主键（<code>_id</code>字段）</td>
+</tr>
+</tbody></table>
+<h4 id="通过Shell操作MongoDB"><a href="#通过Shell操作MongoDB" class="headerlink" title="通过Shell操作MongoDB"></a>通过Shell操作MongoDB</h4><p>启动服务器后可以使用交互式环境跟服务器通信，如下所示。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mongo --host 172.18.61.250</span><br><span class="line"></span><br><span class="line">MongoDB shell version v3.6.5</span><br><span class="line">connecting to: mongodb://172.18.61.250:27017/</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>查看、创建和删除数据库。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&gt; <span class="comment">// 显示所有数据库</span></span><br><span class="line">&gt; show dbs</span><br><span class="line">admin   <span class="number">0.000</span>GB</span><br><span class="line">config  <span class="number">0.000</span>GB</span><br><span class="line">local   <span class="number">0.000</span>GB</span><br><span class="line">&gt; <span class="comment">// 创建并切换到school数据库</span></span><br><span class="line">&gt; use school</span><br><span class="line">switched to db school</span><br><span class="line">&gt; <span class="comment">// 删除当前数据库</span></span><br><span class="line">&gt; db.dropDatabase()</span><br><span class="line">&#123; <span class="string">"ok"</span> : <span class="number">1</span> &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建、删除和查看集合。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&gt; <span class="comment">// 创建并切换到school数据库</span></span><br><span class="line">&gt; use school</span><br><span class="line">switched to db school</span><br><span class="line">&gt; <span class="comment">// 创建colleges集合</span></span><br><span class="line">&gt; db.createCollection(<span class="string">'colleges'</span>)</span><br><span class="line">&#123; <span class="string">"ok"</span> : <span class="number">1</span> &#125;</span><br><span class="line">&gt; <span class="comment">// 创建students集合</span></span><br><span class="line">&gt; db.createCollection(<span class="string">'students'</span>)</span><br><span class="line">&#123; <span class="string">"ok"</span> : <span class="number">1</span> &#125;</span><br><span class="line">&gt; <span class="comment">// 查看所有集合</span></span><br><span class="line">&gt; show collections</span><br><span class="line">colleges</span><br><span class="line">students</span><br><span class="line">&gt; <span class="comment">// 删除colleges集合</span></span><br><span class="line">&gt; db.colleges.drop()</span><br><span class="line"><span class="literal">true</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>说明：在MongoDB中插入文档时如果集合不存在会自动创建集合，所以也可以按照下面的方式通过创建文档来创建集合。</p>
+</blockquote>
+</li>
+<li><p>文档的CRUD操作。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&gt; <span class="comment">// 向students集合插入文档</span></span><br><span class="line">&gt; db.students.insert(&#123;<span class="attr">stuid</span>: <span class="number">1001</span>, <span class="attr">name</span>: <span class="string">'骆昊'</span>, <span class="attr">age</span>: <span class="number">38</span>&#125;)</span><br><span class="line">WriteResult(&#123; <span class="string">"nInserted"</span> : <span class="number">1</span> &#125;)</span><br><span class="line">&gt; <span class="comment">// 向students集合插入文档</span></span><br><span class="line">&gt; db.students.save(&#123;<span class="attr">stuid</span>: <span class="number">1002</span>, <span class="attr">name</span>: <span class="string">'王大锤'</span>, <span class="attr">tel</span>: <span class="string">'13012345678'</span>, <span class="attr">gender</span>: <span class="string">'男'</span>&#125;)</span><br><span class="line">WriteResult(&#123; <span class="string">"nInserted"</span> : <span class="number">1</span> &#125;)</span><br><span class="line">&gt; <span class="comment">// 查看所有文档</span></span><br><span class="line">&gt; db.students.find()</span><br><span class="line">&#123; <span class="string">"_id"</span> : ObjectId(<span class="string">"5b13c72e006ad854460ee70b"</span>), <span class="string">"stuid"</span> : <span class="number">1001</span>, <span class="string">"name"</span> : <span class="string">"骆昊"</span>, <span class="string">"age"</span> : <span class="number">38</span> &#125;</span><br><span class="line">&#123; <span class="string">"_id"</span> : ObjectId(<span class="string">"5b13c790006ad854460ee70c"</span>), <span class="string">"stuid"</span> : <span class="number">1002</span>, <span class="string">"name"</span> : <span class="string">"王大锤"</span>, <span class="string">"tel"</span> : <span class="string">"13012345678"</span>, <span class="string">"gender"</span> : <span class="string">"男"</span> &#125;</span><br><span class="line">&gt; <span class="comment">// 更新stuid为1001的文档</span></span><br><span class="line">&gt; db.students.update(&#123;<span class="attr">stuid</span>: <span class="number">1001</span>&#125;, &#123;<span class="string">'$set'</span>: &#123;<span class="attr">tel</span>: <span class="string">'13566778899'</span>, <span class="attr">gender</span>: <span class="string">'男'</span>&#125;&#125;)</span><br><span class="line">WriteResult(&#123; <span class="string">"nMatched"</span> : <span class="number">1</span>, <span class="string">"nUpserted"</span> : <span class="number">0</span>, <span class="string">"nModified"</span> : <span class="number">1</span> &#125;)</span><br><span class="line">&gt; <span class="comment">// 插入或更新stuid为1003的文档</span></span><br><span class="line">&gt; db.students.update(&#123;<span class="attr">stuid</span>: <span class="number">1003</span>&#125;, &#123;<span class="string">'$set'</span>: &#123;<span class="attr">name</span>: <span class="string">'白元芳'</span>, <span class="attr">tel</span>: <span class="string">'13022223333'</span>, <span class="attr">gender</span>: <span class="string">'男'</span>&#125;&#125;,  upsert=<span class="literal">true</span>)</span><br><span class="line">WriteResult(&#123;</span><br><span class="line">        <span class="string">"nMatched"</span> : <span class="number">0</span>,</span><br><span class="line">        <span class="string">"nUpserted"</span> : <span class="number">1</span>,</span><br><span class="line">        <span class="string">"nModified"</span> : <span class="number">0</span>,</span><br><span class="line">        <span class="string">"_id"</span> : ObjectId(<span class="string">"5b13c92dd185894d7283efab"</span>)</span><br><span class="line">&#125;)</span><br><span class="line">&gt; <span class="comment">// 查询所有文档</span></span><br><span class="line">&gt; db.students.find().pretty()</span><br><span class="line">&#123;</span><br><span class="line">        <span class="string">"_id"</span> : ObjectId(<span class="string">"5b13c72e006ad854460ee70b"</span>),</span><br><span class="line">        <span class="string">"stuid"</span> : <span class="number">1001</span>,</span><br><span class="line">        <span class="string">"name"</span> : <span class="string">"骆昊"</span>,</span><br><span class="line">        <span class="string">"age"</span> : <span class="number">38</span>,</span><br><span class="line">        <span class="string">"gender"</span> : <span class="string">"男"</span>,</span><br><span class="line">        <span class="string">"tel"</span> : <span class="string">"13566778899"</span></span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">        <span class="string">"_id"</span> : ObjectId(<span class="string">"5b13c790006ad854460ee70c"</span>),</span><br><span class="line">        <span class="string">"stuid"</span> : <span class="number">1002</span>,</span><br><span class="line">        <span class="string">"name"</span> : <span class="string">"王大锤"</span>,</span><br><span class="line">        <span class="string">"tel"</span> : <span class="string">"13012345678"</span>,</span><br><span class="line">        <span class="string">"gender"</span> : <span class="string">"男"</span></span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">        <span class="string">"_id"</span> : ObjectId(<span class="string">"5b13c92dd185894d7283efab"</span>),</span><br><span class="line">        <span class="string">"stuid"</span> : <span class="number">1003</span>,</span><br><span class="line">        <span class="string">"gender"</span> : <span class="string">"男"</span>,</span><br><span class="line">        <span class="string">"name"</span> : <span class="string">"白元芳"</span>,</span><br><span class="line">        <span class="string">"tel"</span> : <span class="string">"13022223333"</span></span><br><span class="line">&#125;</span><br><span class="line">&gt; <span class="comment">// 查询stuid大于1001的文档</span></span><br><span class="line">&gt; db.students.find(&#123;<span class="attr">stuid</span>: &#123;<span class="string">'$gt'</span>: <span class="number">1001</span>&#125;&#125;).pretty()</span><br><span class="line">&#123;</span><br><span class="line">        <span class="string">"_id"</span> : ObjectId(<span class="string">"5b13c790006ad854460ee70c"</span>),</span><br><span class="line">        <span class="string">"stuid"</span> : <span class="number">1002</span>,</span><br><span class="line">        <span class="string">"name"</span> : <span class="string">"王大锤"</span>,</span><br><span class="line">        <span class="string">"tel"</span> : <span class="string">"13012345678"</span>,</span><br><span class="line">        <span class="string">"gender"</span> : <span class="string">"男"</span></span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">        <span class="string">"_id"</span> : ObjectId(<span class="string">"5b13c92dd185894d7283efab"</span>),</span><br><span class="line">        <span class="string">"stuid"</span> : <span class="number">1003</span>,</span><br><span class="line">        <span class="string">"gender"</span> : <span class="string">"男"</span>,</span><br><span class="line">        <span class="string">"name"</span> : <span class="string">"白元芳"</span>,</span><br><span class="line">        <span class="string">"tel"</span> : <span class="string">"13022223333"</span></span><br><span class="line">&#125;</span><br><span class="line">&gt; <span class="comment">// 查询stuid大于1001的文档只显示name和tel字段</span></span><br><span class="line">&gt; db.students.find(&#123;<span class="attr">stuid</span>: &#123;<span class="string">'$gt'</span>: <span class="number">1001</span>&#125;&#125;, &#123;<span class="attr">_id</span>: <span class="number">0</span>, <span class="attr">name</span>: <span class="number">1</span>, <span class="attr">tel</span>: <span class="number">1</span>&#125;).pretty()</span><br><span class="line">&#123; <span class="string">"name"</span> : <span class="string">"王大锤"</span>, <span class="string">"tel"</span> : <span class="string">"13012345678"</span> &#125;</span><br><span class="line">&#123; <span class="string">"name"</span> : <span class="string">"白元芳"</span>, <span class="string">"tel"</span> : <span class="string">"13022223333"</span> &#125;</span><br><span class="line">&gt; <span class="comment">// 查询name为“骆昊”或者tel为“13022223333”的文档</span></span><br><span class="line">&gt; db.students.find(&#123;<span class="string">'$or'</span>: [&#123;<span class="attr">name</span>: <span class="string">'骆昊'</span>&#125;, &#123;<span class="attr">tel</span>: <span class="string">'13022223333'</span>&#125;]&#125;, &#123;<span class="attr">_id</span>: <span class="number">0</span>, <span class="attr">name</span>: <span class="number">1</span>, <span class="attr">tel</span>: <span class="number">1</span>&#125;).pretty()</span><br><span class="line">&#123; <span class="string">"name"</span> : <span class="string">"骆昊"</span>, <span class="string">"tel"</span> : <span class="string">"13566778899"</span> &#125;</span><br><span class="line">&#123; <span class="string">"name"</span> : <span class="string">"白元芳"</span>, <span class="string">"tel"</span> : <span class="string">"13022223333"</span> &#125;</span><br><span class="line">&gt; <span class="comment">// 查询学生文档跳过第1条文档只查1条文档</span></span><br><span class="line">&gt; db.students.find().skip(<span class="number">1</span>).limit(<span class="number">1</span>).pretty()</span><br><span class="line">&#123;</span><br><span class="line">        <span class="string">"_id"</span> : ObjectId(<span class="string">"5b13c790006ad854460ee70c"</span>),</span><br><span class="line">        <span class="string">"stuid"</span> : <span class="number">1002</span>,</span><br><span class="line">        <span class="string">"name"</span> : <span class="string">"王大锤"</span>,</span><br><span class="line">        <span class="string">"tel"</span> : <span class="string">"13012345678"</span>,</span><br><span class="line">        <span class="string">"gender"</span> : <span class="string">"男"</span></span><br><span class="line">&#125;</span><br><span class="line">&gt; <span class="comment">// 对查询结果进行排序(1表示升序，-1表示降序)</span></span><br><span class="line">&gt; db.students.find(&#123;&#125;, &#123;<span class="attr">_id</span>: <span class="number">0</span>, <span class="attr">stuid</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="number">1</span>&#125;).sort(&#123;<span class="attr">stuid</span>: <span class="number">-1</span>&#125;)</span><br><span class="line">&#123; <span class="string">"stuid"</span> : <span class="number">1003</span>, <span class="string">"name"</span> : <span class="string">"白元芳"</span> &#125;</span><br><span class="line">&#123; <span class="string">"stuid"</span> : <span class="number">1002</span>, <span class="string">"name"</span> : <span class="string">"王大锤"</span> &#125;</span><br><span class="line">&#123; <span class="string">"stuid"</span> : <span class="number">1001</span>, <span class="string">"name"</span> : <span class="string">"骆昊"</span> &#125;</span><br><span class="line">&gt; <span class="comment">// 在指定的一个或多个字段上创建索引</span></span><br><span class="line">&gt; db.students.ensureIndex(&#123;<span class="attr">name</span>: <span class="number">1</span>&#125;)</span><br><span class="line">&#123;</span><br><span class="line">        <span class="string">"createdCollectionAutomatically"</span> : <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"numIndexesBefore"</span> : <span class="number">1</span>,</span><br><span class="line">        <span class="string">"numIndexesAfter"</span> : <span class="number">2</span>,</span><br><span class="line">        <span class="string">"ok"</span> : <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>使用MongoDB可以非常方便的配置数据复制，通过冗余数据来实现数据的高可用以及灾难恢复，也可以通过数据分片来应对数据量迅速增长的需求。关于MongoDB更多的操作可以查阅<a href="https://mongodb-documentation.readthedocs.io/en/latest/" target="_blank" rel="noopener">官方文档</a> ，同时推荐大家阅读Kristina Chodorow写的<a href="http://www.ituring.com.cn/book/1172" target="_blank" rel="noopener">《MongoDB权威指南》</a>。</p>
+<h4 id="在Python程序中操作MongoDB"><a href="#在Python程序中操作MongoDB" class="headerlink" title="在Python程序中操作MongoDB"></a>在Python程序中操作MongoDB</h4><p>可以通过pip安装pymongo来实现对MongoDB的操作。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip3 install pymongo</span><br><span class="line">python3</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>client = MongoClient(<span class="string">'mongodb://127.0.0.1:27017'</span>) </span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>db = client.school</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> student <span class="keyword">in</span> db.students.find():</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'学号:'</span>, student[<span class="string">'stuid'</span>])</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'姓名:'</span>, student[<span class="string">'name'</span>])</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'电话:'</span>, student[<span class="string">'tel'</span>])</span><br><span class="line"><span class="meta">... </span></span><br><span class="line">学号: <span class="number">1001.0</span></span><br><span class="line">姓名: 骆昊</span><br><span class="line">电话: <span class="number">13566778899</span></span><br><span class="line">学号: <span class="number">1002.0</span></span><br><span class="line">姓名: 王大锤</span><br><span class="line">电话: <span class="number">13012345678</span></span><br><span class="line">学号: <span class="number">1003.0</span></span><br><span class="line">姓名: 白元芳</span><br><span class="line">电话: <span class="number">13022223333</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>db.students.find().count()</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>db.students.remove()</span><br><span class="line">&#123;<span class="string">'n'</span>: <span class="number">3</span>, <span class="string">'ok'</span>: <span class="number">1.0</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>db.students.find().count()</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>coll = db.students</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> pymongo <span class="keyword">import</span> ASCENDING</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>coll.create_index([(<span class="string">'name'</span>, ASCENDING)], unique=<span class="literal">True</span>)</span><br><span class="line"><span class="string">'name_1'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>coll.insert_one(&#123;<span class="string">'stuid'</span>: int(<span class="number">1001</span>), <span class="string">'name'</span>: <span class="string">'骆昊'</span>, <span class="string">'gender'</span>: <span class="literal">True</span>&#125;)</span><br><span class="line">&lt;pymongo.results.InsertOneResult object at <span class="number">0x1050cc6c8</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>coll.insert_many([&#123;<span class="string">'stuid'</span>: int(<span class="number">1002</span>), <span class="string">'name'</span>: <span class="string">'王大锤'</span>, <span class="string">'gender'</span>: <span class="literal">False</span>&#125;, &#123;<span class="string">'stuid'</span>: int(<span class="number">1003</span>), <span class="string">'name'</span>: <span class="string">'白元芳'</span>, <span class="string">'gender'</span>: <span class="literal">True</span>&#125;])</span><br><span class="line">&lt;pymongo.results.InsertManyResult object at <span class="number">0x1050cc8c8</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> student <span class="keyword">in</span> coll.find(&#123;<span class="string">'gender'</span>: <span class="literal">True</span>&#125;):</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'学号:'</span>, student[<span class="string">'stuid'</span>])</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'姓名:'</span>, student[<span class="string">'name'</span>])</span><br><span class="line"><span class="meta">... </span>    print(<span class="string">'性别:'</span>, <span class="string">'男'</span> <span class="keyword">if</span> student[<span class="string">'gender'</span>] <span class="keyword">else</span> <span class="string">'女'</span>)</span><br><span class="line"><span class="meta">... </span></span><br><span class="line">学号: <span class="number">1001</span></span><br><span class="line">姓名: 骆昊</span><br><span class="line">性别: 男</span><br><span class="line">学号: <span class="number">1003</span></span><br><span class="line">姓名: 白元芳</span><br><span class="line">性别: 男</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>关于PyMongo更多的知识可以通过它的<a href="https://api.mongodb.com/python/current/tutorial.html" target="_blank" rel="noopener">官方文档</a>进行了解，也可以使用<a href="https://pypi.org/project/mongoengine/" target="_blank" rel="noopener">MongoEngine</a>这样的库来简化Python程序对MongoDB的操作，除此之外，还有以异步I/O方式访问MongoDB的三方库<a href="https://pypi.org/project/motor/" target="_blank" rel="noopener">motor</a>都是不错的选择。</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:gyvip001@126.com">Asea</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://asea.fun/post/4f025449.html">https://asea.fun/post/4f025449.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://asea.fun" target="_blank">AseaBlog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://w.wallhaven.cc/full/j5/wallhaven-j5z66p.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><button class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="post-qr-code__img" src="/img/wechat.png" alt="微信" onclick="window.open('/img/wechat.png')"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="post-qr-code__img" src="/img/alipay.png" alt="支付宝" onclick="window.open('/img/alipay.png')"/><div class="post-qr-code__desc">支付宝</div></li></ul></div></button></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/post/3a0077e5.html"><img class="next-cover" data-src="https://w.wallhaven.cc/full/j5/wallhaven-j5z66p.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">36-38.关系型数据库MySQL</div></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Valine/Valine-Lete3.2-min.js"></script><script>var requestSetting = function (from,set) {
+  var from = from
+  var setting = set.split(',').filter(function(item){
+  return from.indexOf(item) > -1
+  });
+  setting = setting.length == 0 ? from :setting;
+  return setting
+}
+
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail')
+var requiredFields = requestSetting(['nick','mail'],'nick,mail')
+
+window.valine = new Valine({
+  el:'#vcomment',
+  master:'23bb01d13609d1c0aa413ec0b3a1357a',
+  friends:'27d1605a576a79b3eefb001b993dbeb2',
+  appId: 'dOHV1hJPq1YeCbCtLdF5eb9p-MdYXbMMI',
+  appKey: 'QOrlkdjUOQ1flkinRcXUHH7n',
+  placeholder: '留下邮箱可以快速收到回复噢！！',
+  avatar: 'monsterid',
+  meta: guestInfo,
+  pageSize: '10',
+  lang: 'zh-CN',
+  recordIP: false,
+  serverURLs: '',
+  emojiCDN: '',
+  emojiMaps: {"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_親親":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再見":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_發怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_發財":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可愛":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_嘔吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_壞笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尷尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_驚嚇":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},
+  enableQQ: true,
+  requiredFields: requiredFields,
+  emojiMaps: {
+            "000":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/1.gif",
+            "001":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/001.png",
+            "002":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/002.png",
+            "003":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/003.png",
+            "004":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/004.png",
+            "005":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/005.png",
+            "006":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/006.png",
+            "007":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/103.jpg",
+            "008":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/104.jpg",
+            "009":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/105.jpg",
+            "010":"https://cdn.jsdelivr.net/gh/lete114/CDN/emoji/106.gif",
+            "011":"http://ww2.sinaimg.cn/bmiddle/ceeb653ejw1fcapt570odg202s02swej.gif",
+            "012":"http://ww3.sinaimg.cn/bmiddle/6af89bc8gw1f8q7hrf2mwj201g01rmwx.jpg",
+            "013":"http://ww3.sinaimg.cn/bmiddle/9150e4e5gw1f9blhhmuz4g201c01c0sm.gif",
+            "014":"http://wx2.sinaimg.cn/bmiddle/006GJQvhgy1g5z0lvcqogg300o00omwx.gif",
+            "015":"http://wx1.sinaimg.cn/bmiddle/006GJQvhgy1g5z3781phrg300t00ujr6.gif",
+            "017":"http://ww1.sinaimg.cn/bmiddle/6af89bc8gw1f8u9b14ozlg203l03c3z8.gif",
+            "018":"http://wx2.sinaimg.cn/bmiddle/006GJQvhgy1g5z0lxhxisg300o00oa9z.gif",
+            "019":"http://wx4.sinaimg.cn/bmiddle/006GJQvhgy1g5z0lur0sug300o00o3y9.gif",
+            "020":"http://wx2.sinaimg.cn/bmiddle/006GJQvhgy1g5z0lxzjqug300o00oaa3.gif",
+            "021":"http://wx4.sinaimg.cn/bmiddle/006GJQvhgy1g5z0lylhaug300o00o3y9.gif",  
+            "022"	:	"http://wx4.sinaimg.cn/bmiddle/006GJQvhgy1g5z378ndnqg300o00oq3d.gif"	,
+            "023"	:	"http://wx4.sinaimg.cn/bmiddle/006GJQvhgy1g6aonuf9nzg300o00omwz.gif"	,
+            "024"	:	"http://wx2.sinaimg.cn/bmiddle/006GJQvhly1g6u94zpau2g300o00o3y9.gif"	,
+            "025"	:	"http://wx4.sinaimg.cn/bmiddle/006GJQvhly1g6vgge7fkng300v00rdfl.gif"	,
+            "026"	:	"http://wx2.sinaimg.cn/bmiddle/006GJQvhgy1g6aonvghg4g300o00o3ye.gif"	,
+            "027"	:	"http://wx3.sinaimg.cn/bmiddle/006GJQvhly1g6u951j1v0g300o00omwx.gif"	,
+            "028"	:	"http://wx3.sinaimg.cn/bmiddle/006GJQvhly1g6ziigiot3g300o00ot8h.gif"	,
+            "029"	:	"http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8u8iz8xxfg206407fkjl.gif"	,
+            "030"	:	"http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8q23b6fl9g202u00z743.gif"	,
+            "031"	:	"http://wx4.sinaimg.cn/bmiddle/006GJQvhly1g6ziihdq4eg300o00o0si.gif"	,
+            "032"	:	"http://wx4.sinaimg.cn/bmiddle/006GJQvhly1g6ziiholrwg300o00ot8h.gif"	,
+            "033"	:	"http://wx3.sinaimg.cn/bmiddle/006GJQvhly1g6ziihy3f2g300o00o3y9.gif"	,
+            "034"	:	"http://wx3.sinaimg.cn/bmiddle/006qOO1Xly1gawevddzydg300m0170sj.gif"	,
+            "035"	:	"http://wx2.sinaimg.cn/bmiddle/ae2c6e1dly1gcay6libw1g201c00oq2r.gif"	,
+            "036"	:	"http://wx2.sinaimg.cn/bmiddle/005J4OU5ly1gceiti8rptj301k01k742.jpg"	,
+            "037"	:	"http://ww2.sinaimg.cn/bmiddle/9150e4e5gw1f94u82zlipg205a050ju1.gif"	,
+            "038"	:	"http://ww1.sinaimg.cn/bmiddle/006r3PQBjw1fao6bg6bctj305i02f744.jpg"	,
+            "039"	:	"http://ww1.sinaimg.cn/bmiddle/9150e4e5ly1fcttd20sf2j202e01edfn.jpg "	,
+            "040"	:	"http://wx3.sinaimg.cn/bmiddle/006oOWahly1flyy5nmkbfj30k00k0jv3.jpg"	,
+            "041"	:	"http://wx4.sinaimg.cn/bmiddle/005J4OU5ly1galytm82t6j30jg0jaacn.jpg"	,
+            "042"	:	"http://wx4.sinaimg.cn/bmiddle/005J4OU5ly1galytmzrduj30jg0jgwgx.jpg"	,
+            "043"	:	"http://wx2.sinaimg.cn/bmiddle/005J4OU5ly1galytgrhoyj30jg0jgaci.jpg"	,
+            "044"	:	"http://ww1.sinaimg.cn/bmiddle/006APoFYjw1fc6mgjxe3zj30c80c8gli.jpg"	,
+            "045"	:	"http://ww1.sinaimg.cn/bmiddle/006APoFYjw1fc6kubqmphj30c80c8a9y.jpg"	,
+            "046"	:	"http://ww2.sinaimg.cn/bmiddle/006APoFYjw1fcwsc6xujgj30c80c80sn.jpg"	,
+            "047"	:	"http://ww1.sinaimg.cn/bmiddle/006r3PQBjw1fcb3h8id5tj30c80c8747.jpg"	,
+            "048"	:	"http://ww2.sinaimg.cn/bmiddle/006r3PQBjw1fc6hntvrskj30c80c8dfq.jpg"	,
+            "049"	:	"http://ww1.sinaimg.cn/bmiddle/006r3PQBjw1fcdqkjt017j30c80c8a9y.jpg"	,
+            "050"	:	"http://ww4.sinaimg.cn/bmiddle/ceeb653ejw1fc4drici8aj20c80c8746.jpg"	,
+            "051"	:	"http://ww4.sinaimg.cn/bmiddle/ceeb653ejw1fc42q10j4jj20c80c8wee.jpg"	,
+            "052" : "http://ww2.sinaimg.cn/bmiddle/6af89bc8gw1f8qz6jp2vkj202601iq2w.jpg"  ,
+            "053":"http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8tvzed5w4j201501cq2y.jpg",
+            "054":"http://ww1.sinaimg.cn/bmiddle/6af89bc8gw1f8t9dy7t14j201m01hgld.jpg",
+            "055":"http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8qznbyddcj2018018t8h.jpg",
+            "056":"http://ww4.sinaimg.cn/bmiddle/6af89bc8gw1f8t5v71yp1j202901ta9u.jpg",
+            "057":"http://ww1.sinaimg.cn/bmiddle/6af89bc8gw1f8qbegcq6ug201c01ct8m.gif"
+        }
+});</script></div></article></main><footer id="footer" style="background-image: url(https://w.wallhaven.cc/full/j5/wallhaven-j5z66p.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By Asea</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">😳你怎么进来了我的 <a href="https://asea.fun">Blog</a>!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="readmode" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font_plus" title="放大字体"><i class="fas fa-plus"></i></button><button id="font_minus" title="缩小字体"><i class="fas fa-minus"></i></button><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">简</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fas fa-comments"></i></a><button class="close" id="mobile-toc-button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/third-party/click_heart.js"></script><script src="/js/third-party/ClickShowText.js"></script><script src="/js/search/local-search.js"></script><script id="canvas_nest" color="50,255,255" opacity="0.7" zindex="-1" count="140" mobile="false" src="/js/mogai.js"></script></body></html>
