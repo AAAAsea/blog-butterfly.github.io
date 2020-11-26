@@ -9,6 +9,7 @@
 
 .icon-QQ:before {
   content: "\e664";
+  font-size: 23px;
 }
 .icon-ziyuan:before {
   content: "\e657";
