@@ -23,7 +23,7 @@
     <published>2020-11-26T08:13:06.000Z</published>
     <updated>2020-11-26T08:13:06.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="域名解析（以阿里云为例）"><a href="#域名解析（以阿里云为例）" class="headerlink" title="域名解析（以阿里云为例）"></a><code>域名解析（以阿里云为例）</code></h1><p><img src="/img/%E8%A7%A3%E6%9E%90%E9%85%8D%E7%BD%AE.png" alt=""></p><h1 id="vercel-domain-配置"><a href="#vercel-domain-配置" class="headerlink" title="vercel domain 配置"></a><code>vercel domain 配置</code></h1><p><img src="/img/vercel%E9%85%8D%E7%BD%AE.png" alt=""><br><font color='#265489'> 另外直接利用gitpages的记得在主题<strong>source</strong>文件夹下添加<strong>CNAME</strong>文件，否则github每次都要重新配置domain。</font></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note primary simple"><p>这里记录一些有关域名配置的问题</p></div><h1 id="域名解析（以阿里云为例）"><a href="#域名解析（以阿里云为例）" class="headerlink" title="域名解析（以阿里云为例）"></a><code>域名解析（以阿里云为例）</code></h1><p><img src="/img/%E8%A7%A3%E6%9E%90%E9%85%8D%E7%BD%AE.png" alt=""></p><h1 id="vercel-domain-配置"><a href="#vercel-domain-配置" class="headerlink" title="vercel domain 配置"></a><code>vercel domain 配置</code></h1><p><img src="/img/vercel%E9%85%8D%E7%BD%AE.png" alt=""><br><font color='#265489'> 另外直接利用gitpages的记得在主题<strong>source</strong>文件夹下添加<strong>CNAME</strong>文件，否则github每次都要重新配置domain。</font></p>]]></content>
     
     <summary type="html">
     
@@ -38,7 +38,7 @@
       <category term="域名" scheme="https://asea.fun/categories/%E5%9F%9F%E5%90%8D/"/>
     
     
-      <category term="域名 vercel 解析" scheme="https://asea.fun/tags/%E5%9F%9F%E5%90%8D-vercel-%E8%A7%A3%E6%9E%90/"/>
+      <category term="域名" scheme="https://asea.fun/tags/%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   
@@ -49,7 +49,7 @@
     <published>2020-11-24T15:40:00.000Z</published>
     <updated>2020-11-24T15:40:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这次打算认真处理一下这个网站了<br>从查找问题到一步步排除修正<br>相当于又从头布局了一下网站<br>butterfly更新了所以还遇到很多问题<br>主要是太久没管过了<br>总而言之<br>这次打算简洁点</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center><p>这次打算认真处理一下这个网站了<br>从查找问题到一步步排除修正<br>相当于又从头布局了一下网站<br>butterfly更新了所以还遇到很多问题<br>主要是太久没管过了<br>总而言之<br>这次打算简洁点</p></center>]]></content>
     
     <summary type="html">
     
