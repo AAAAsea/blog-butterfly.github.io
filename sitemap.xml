@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://asea.fun/post/2244254b.html</loc>
+    
+    <lastmod>2020-11-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://asea.fun/Gallery/life/index.html</loc>
     
     <lastmod>2020-11-26</lastmod>
@@ -37,20 +44,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/categories/index.html</loc>
-    
-    <lastmod>2020-11-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/about/index.html</loc>
-    
-    <lastmod>2020-11-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://asea.fun/link/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
@@ -58,7 +51,21 @@
   </url>
   
   <url>
+    <loc>https://asea.fun/categories/index.html</loc>
+    
+    <lastmod>2020-11-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://asea.fun/tags/index.html</loc>
+    
+    <lastmod>2020-11-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/about/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
@@ -129,10 +136,24 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://asea.fun/tags/%E5%9F%9F%E5%90%8D-vercel-%E8%A7%A3%E6%9E%90/</loc>
+    <lastmod>2020-11-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
     <loc>https://asea.fun/categories/%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2020-11-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/categories/%E5%9F%9F%E5%90%8D/</loc>
     <lastmod>2020-11-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
