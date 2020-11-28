@@ -75,3 +75,7 @@ span:first-child {
     width: auto;
     min-width: 50%;
 }
+/* 播放器位置 */
+#toggle-sidebar {
+    bottom: 80px
+}

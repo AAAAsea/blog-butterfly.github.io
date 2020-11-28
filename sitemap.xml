@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://asea.fun/music/index-1.html</loc>
+    
+    <lastmod>2020-11-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/music/index.html</loc>
+    
+    <lastmod>2020-11-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://asea.fun/Gallery/cover/index.html</loc>
     
     <lastmod>2020-11-28</lastmod>
@@ -58,6 +72,13 @@
   </url>
   
   <url>
+    <loc>https://asea.fun/about/index.html</loc>
+    
+    <lastmod>2020-11-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://asea.fun/categories/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
@@ -72,13 +93,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/about/index.html</loc>
-    
-    <lastmod>2020-11-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://asea.fun/message/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
@@ -87,13 +101,6 @@
   
   <url>
     <loc>https://asea.fun/tags/index.html</loc>
-    
-    <lastmod>2020-11-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/music/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
