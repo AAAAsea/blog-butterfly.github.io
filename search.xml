@@ -22,15 +22,6 @@
       </tags>
   </entry>
   <entry>
-    <title>第一篇</title>
-    <url>/post/5a8a6c8d.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>总算把主题和基本写作的操作摸索敲定了<br>暂且先这样<br>美化工作还有很多要做<br>先记录一下</p>
-]]></content>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>旧时代</title>
     <url>/post/754b5343.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="罗永浩"><a href="#罗永浩" class="headerlink" title="罗永浩"></a>罗永浩</h2><p>很长时间以来都只是只闻其名，细细研究一下才发现他的的确确是很多人的精神领袖，或者说精神鸦片也未尝不可。辍学打工，办培训机构，打假，做手机。面对了很多争议、嘲讽。你很难看见一个人十几年来都是这一个模样，不单单是外貌，那股精神气似乎从来都没有消减。但是这显然不太现实，面对理想主义的不如意，你好好观察一下，也能发现某些被磨平的棱角。但是不管怎样，他的高度自律、行动力、成熟的价值观体系、理性的做事规则都无比吸引人。</p>
@@ -46,8 +37,8 @@
     <url>/post/2244254b.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note primary simple"><p>这里记录一些有关域名配置的问题</p>
 </div>
-<h1 id="域名解析（以阿里云为例）"><a href="#域名解析（以阿里云为例）" class="headerlink" title="域名解析（以阿里云为例）"></a><code>域名解析（以阿里云为例）</code></h1><p><img src="/img/%E8%A7%A3%E6%9E%90%E9%85%8D%E7%BD%AE.png" alt=""></p>
-<h1 id="vercel-domain-配置"><a href="#vercel-domain-配置" class="headerlink" title="vercel domain 配置"></a><code>vercel domain 配置</code></h1><p><img src="/img/vercel%E9%85%8D%E7%BD%AE.png" alt=""><br><font color='#265489'> 另外直接利用gitpages的记得在主题<strong>source</strong>文件夹下添加<strong>CNAME</strong>文件，否则github每次都要重新配置domain。</font></p>
+<h1 id="域名解析（以阿里云为例）"><a href="#域名解析（以阿里云为例）" class="headerlink" title="域名解析（以阿里云为例）"></a>域名解析（以阿里云为例）</h1><p><img src="/img/%E8%A7%A3%E6%9E%90%E9%85%8D%E7%BD%AE.png" alt=""></p>
+<h1 id="vercel-domain-配置"><a href="#vercel-domain-配置" class="headerlink" title="vercel domain 配置"></a>vercel domain 配置</h1><p><img src="/img/vercel%E9%85%8D%E7%BD%AE.png" alt=""><br><font color='#265489'> 另外直接利用gitpages的记得在主题<strong>source</strong>文件夹下添加<strong>CNAME</strong>文件，否则github每次都要重新配置domain。</font></p>
 ]]></content>
       <categories>
         <category>域名</category>
@@ -57,11 +48,34 @@
       </tags>
   </entry>
   <entry>
+    <title>第一篇</title>
+    <url>/post/5a8a6c8d.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>总算把主题和基本写作的操作摸索敲定了<br>暂且先这样<br>美化工作还有很多要做<br>先记录一下</p>
+]]></content>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>重生</title>
     <url>/post/454cee63.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>
 
 <p>这次打算认真处理一下这个网站了<br>从查找问题到一步步排除修正<br>相当于又从头布局了一下网站<br>butterfly更新了所以还遇到很多问题<br>主要是太久没管过了<br>总而言之<br>这次打算简洁点</p>
 </center>]]></content>
+  </entry>
+  <entry>
+    <title>部署技巧</title>
+    <url>/post/c4266d98.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo-clean-amp-amp-hexo-generate-amp-amp-hexo-deploy-三命令统一"><a href="#hexo-clean-amp-amp-hexo-generate-amp-amp-hexo-deploy-三命令统一" class="headerlink" title="hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy 三命令统一"></a>hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy 三命令统一</h1><p>可在根目录下建立bat文件，写入“hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy”或简洁点“hexo cl&amp;hexo g&amp;hexo d（注意：如果装了豆瓣插件则必须用hexo deploy）”。<br>以后部署只用在命令行敲入你bat的文件名即可执行。<br><img src="/img/deploy1.png" alt=""></p>
+<h1 id="关于deploy每次都要输入账号密码的问题"><a href="#关于deploy每次都要输入账号密码的问题" class="headerlink" title="关于deploy每次都要输入账号密码的问题"></a>关于deploy每次都要输入账号密码的问题</h1><p>博主已经尝试了SSH，但还是需要输入密码（账号可以不用输入）。</p>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>修改_config.yml，将部署方式从https方式修改为ssh方式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;XXXXXX&#x2F;XXXXXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:XXXXXX&#x2F;XXXXXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>deploy</tag>
+      </tags>
   </entry>
 </search>
