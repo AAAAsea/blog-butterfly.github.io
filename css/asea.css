@@ -97,3 +97,6 @@ span:first-child {
 }
 
 /* .aplayer .aplayer-lrc p */
+/* .aplayer no-destroy {
+    display: inline !important;
+} */
