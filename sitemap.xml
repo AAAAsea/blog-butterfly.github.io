@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://asea.fun/post/416212f.html</loc>
+    
+    <lastmod>2020-11-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/link/link.json</loc>
+    
+    <lastmod>2020-11-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/movies/index.html</loc>
+    
+    <lastmod>2020-11-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://asea.fun/music/index.html</loc>
     
     <lastmod>2020-11-28</lastmod>
@@ -30,13 +51,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/movies/index.html</loc>
-    
-    <lastmod>2020-11-27</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://asea.fun/Gallery/life/index.html</loc>
     
     <lastmod>2020-11-27</lastmod>
@@ -54,13 +68,6 @@
     <loc>https://asea.fun/post/2244254b.html</loc>
     
     <lastmod>2020-11-26</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/link/link.json</loc>
-    
-    <lastmod>2020-11-25</lastmod>
     
   </url>
   
@@ -144,14 +151,21 @@
 
   
   <url>
-    <loc>https://asea.fun/tags/%E6%97%A5%E5%B8%B8/</loc>
+    <loc>https://asea.fun/tags/life/</loc>
     <lastmod>2020-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/%E5%9F%9F%E5%90%8D/</loc>
+    <loc>https://asea.fun/tags/literature/</loc>
+    <lastmod>2020-11-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/domain/</loc>
     <lastmod>2020-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -174,7 +188,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/categories/%E5%9F%9F%E5%90%8D/</loc>
+    <loc>https://asea.fun/categories/%E6%96%87%E5%AD%A6/</loc>
+    <lastmod>2020-11-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2020-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
