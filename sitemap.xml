@@ -72,13 +72,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/categories/index.html</loc>
-    
-    <lastmod>2020-11-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://asea.fun/about/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
@@ -87,6 +80,13 @@
   
   <url>
     <loc>https://asea.fun/link/index.html</loc>
+    
+    <lastmod>2020-11-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/categories/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
@@ -158,14 +158,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/literature/</loc>
+    <loc>https://asea.fun/tags/domain/</loc>
     <lastmod>2020-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/domain/</loc>
+    <loc>https://asea.fun/tags/literature/</loc>
     <lastmod>2020-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -188,14 +188,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/categories/%E6%96%87%E5%AD%A6/</loc>
+    <loc>https://asea.fun/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2020-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://asea.fun/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://asea.fun/categories/%E6%96%87%E5%AD%A6/</loc>
     <lastmod>2020-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
