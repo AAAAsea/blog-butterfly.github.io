@@ -1,117 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>生日快乐</title>
-    <url>/post/42dbb1c3.html</url>
-    <content><![CDATA[<p>生日快乐呢<br>是不是很快呢<br>2020年是不是很神奇的一年呢<br>奇奇怪怪的<br>你看发生了这么多奇怪的事<br>但是出不去了<br>嘎嘎嘎<br>看了那么多酒店有机会一定要去<br>小宝贝生日快乐呀<br>蛋糕可以不吃<br>酒店可以不住<br>旅行可以不去<br>但是要快乐<br>给你一些可爱的图：<br>吹个蜡烛吧<br>生日快乐！</p>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>意象&amp;组合</title>
+      <link href="post/416212f.html"/>
+      <url>post/416212f.html</url>
+      
+        <content type="html"><![CDATA[<center><h1 id="记录一些意象"><a href="#记录一些意象" class="headerlink" title="记录一些意象"></a>记录一些意象</h1></center><h2 id="窗含西岭和风力发电扇叶"><a href="#窗含西岭和风力发电扇叶" class="headerlink" title="窗含西岭和风力发电扇叶"></a>窗含西岭和风力发电扇叶</h2><p>看了别人写在城市五楼看雪山的景，才想起来五年前也在五楼天天下课看山上的扇叶。至今还会记起来面部汹涌的物理老师口中扇叶的巨大。那时候成绩远远不是我该担心的问题。</p><h2 id="老酸奶和没有盖上的面霜"><a href="#老酸奶和没有盖上的面霜" class="headerlink" title="老酸奶和没有盖上的面霜"></a>老酸奶和没有盖上的面霜</h2><p>早上用的吧，晚上八点才看到面霜没盖，其实也没什么，只是当时正在嚼老酸奶，于是萌生出老酸奶涂脸上的想法。但是奶这东西珍贵的很，还是吃了为好。我哪有那么多钱喂脸。不过或许有君乐宝面霜，回头试试未尝不可。</p><h2 id="盆栽和狗"><a href="#盆栽和狗" class="headerlink" title="盆栽和狗"></a>盆栽和狗</h2><p>Leon的盆栽是他除了Mathilda最珍贵的东西吧，是他之前平面化性格的唯一突起。直到难以逃命的那刻他抱着盆栽乱窜，倒确实是像怀抱小狗，乖得很，不动，也乱动。</p><h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>很久没有去刻意找好片子看了，之前看完一部片子还会疑惑，这到底是不是一部好w片子啊，为什么众说纷纭。害，其实一部好片子，是个正常人都觉得好看的。真的能代入真的能让你心跳加速的，不由自主的，还会存疑吗？也考虑过写个影评的，我最近不怎么擅长写东西，现在只会：wnm，真好看！</p>]]></content>
+      
+      
       <categories>
-        <category>日常</category>
+          
+          <category> 文学 </category>
+          
       </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第一篇</title>
-    <url>/post/5a8a6c8d.html</url>
-    <content><![CDATA[<p>总算把主题和基本写作的操作摸索敲定了<br>暂且先这样<br>美化工作还有很多要做<br>先记录一下</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> literature </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>部署技巧</title>
+      <link href="post/c4266d98.html"/>
+      <url>post/c4266d98.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="hexo-clean-amp-amp-hexo-generate-amp-amp-hexo-deploy-三命令统一"><a href="#hexo-clean-amp-amp-hexo-generate-amp-amp-hexo-deploy-三命令统一" class="headerlink" title="hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy 三命令统一"></a>hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy 三命令统一</h1><p>可在根目录下建立bat文件，写入“hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy”或简洁点“hexo cl&amp;hexo g&amp;hexo d（注意：如果装了豆瓣插件则必须用hexo deploy）”。<br>以后部署只用在命令行敲入你bat的文件名即可执行。</p><h1 id="关于deploy每次都要输入账号密码的问题"><a href="#关于deploy每次都要输入账号密码的问题" class="headerlink" title="关于deploy每次都要输入账号密码的问题"></a>关于deploy每次都要输入账号密码的问题</h1><p>博主已经尝试了SSH，但还是需要输入密码（账号可以不用输入）。</p><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>修改_config.yml，将部署方式从https方式修改为ssh方式。</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;XXXXXX&#x2F;XXXXXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>修改为</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:XXXXXX&#x2F;XXXXXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
       <categories>
-        <category>日常</category>
+          
+          <category> 技术 </category>
+          
       </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>疼</title>
-    <url>/post/5a8a6c8d.html</url>
-    <content><![CDATA[<p>疼一怎么疼了这么久了还是不好，一直以为咬伤的很快就会好的。这么多天居然不见丝毫好转，现在喝水都成问题了，又饿又疼。晚上耐着性子做了米饭，炒了很难吃的菜，但是一粒也吃不成，一碰到就疼。二韩寒大概看的差不多了，剩下还有一些电影和书需要看，反正记录了好多事情待完成，不知道啥时候可以。看的时候会有很多感受，不记录下来就会消失。总体来说不记录相当于白看。三动物真可爱，一看动物就停不下来。以后一定要好好养动物。除了一只，还要养猫、狗、蛇。。算了。够了。想看猫狗大战，想看狗狗大战，想看猫猫大战。四陌生人很难交流。能说得上话的除了年纪遭遇相仿的，别的基本都讲不通逻辑。这个时代变化很快。也不知道什么时候该被淘汰，但现在还不必担心，因为我们是把淘汰者。一点小愿望希望日子赶紧有所好转；积累的事情赶紧做完；少看报纸多读书。</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> deploy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>域名解析与vercel配置</title>
+      <link href="post/2244254b.html"/>
+      <url>post/2244254b.html</url>
+      
+        <content type="html"><![CDATA[<div class="note primary simple"><p>这里记录一些有关域名配置的问题</p></div><h1 id="域名解析（以阿里云为例）"><a href="#域名解析（以阿里云为例）" class="headerlink" title="域名解析（以阿里云为例）"></a>域名解析（以阿里云为例）</h1><p><img src="/post/2244254b.htm/%E8%A7%A3%E6%9E%90%E9%85%8D%E7%BD%AE.png" alt></p><h1 id="vercel-domain-配置"><a href="#vercel-domain-配置" class="headerlink" title="vercel domain 配置"></a>vercel domain 配置</h1><p><img src="/post/2244254b.htm/vercel%E9%85%8D%E7%BD%AE.png" alt><br><font color="#265489"> 另外直接利用gitpages的记得在主题<strong>source</strong>文件夹下添加<strong>CNAME</strong>文件，否则github每次都要重新配置domain。</font></p>]]></content>
+      
+      
       <categories>
-        <category>日常</category>
+          
+          <category> 技术 </category>
+          
       </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>旧时代</title>
-    <url>/post/754b5343.html</url>
-    <content><![CDATA[<h2 id="罗永浩"><a href="#罗永浩" class="headerlink" title="罗永浩"></a>罗永浩</h2><p>很长时间以来都只是只闻其名，细细研究一下才发现他的的确确是很多人的精神领袖，或者说精神鸦片也未尝不可。辍学打工，办培训机构，打假，做手机。面对了很多争议、嘲讽。你很难看见一个人十几年来都是这一个模样，不单单是外貌，那股精神气似乎从来都没有消减。但是这显然不太现实，面对理想主义的不如意，你好好观察一下，也能发现某些被磨平的棱角。但是不管怎样，他的高度自律、行动力、成熟的价值观体系、理性的做事规则都无比吸引人。</p>
-<h2 id="韩寒"><a href="#韩寒" class="headerlink" title="韩寒"></a>韩寒</h2><p>不去深入了解，大多数略有耳闻的人都对韩寒有一些误解：叛逆、不听话、我行我素、大骂教育制度、暴躁。但其实完全不是，他尊重人和事、面对他人谦逊无比、虚心接受其它有价值的意见。他很善良，有爱，不管是从一言一行还是从他的小说里的字里行间，无论你能看得出多少痞气，你都不能想当然。那是媒体过分渲染的韩寒，他们把一个孩子想得太简单了。大人们习惯这样，把比自己年龄小的人想得简单。</p>
-<h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>以前为了安慰自己一直都有一套理论：<br>人不可能长时间保持一种状态，无论你多么有自制力，还是免不了被改变，人就是一个阶段一个阶段的，哪有不忘初心。<br>现在又发现其实人可以长时间保持一种状态，不过所依赖的条件是：你必须不停的汲取知识，不是科学知识，而是经历。这种经历可以从过来的人身上看到，也可以从虚构的人和事上看到，简单说就是多读书。</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> domain </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>重生</title>
+      <link href="post/454cee63.html"/>
+      <url>post/454cee63.html</url>
+      
+        <content type="html"><![CDATA[<center><p>这次打算认真处理一下这个网站了<br>从查找问题到一步步排除修正<br>相当于又从头布局了一下网站<br>butterfly更新了所以还遇到很多问题<br>主要是太久没管过了<br>总而言之<br>这次打算简洁点</p></center>]]></content>
+      
+      
       <categories>
-        <category>日常</category>
+          
+          <category> 日常 </category>
+          
       </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>意象&amp;组合</title>
-    <url>/post/416212f.html</url>
-    <content><![CDATA[<center>
-
-<h1 id="记录一些意象"><a href="#记录一些意象" class="headerlink" title="记录一些意象"></a>记录一些意象</h1></center>
-
-<h2 id="窗含西岭和风力发电扇叶"><a href="#窗含西岭和风力发电扇叶" class="headerlink" title="窗含西岭和风力发电扇叶"></a>窗含西岭和风力发电扇叶</h2><p>看了别人写在城市五楼看雪山的景，才想起来五年前也在五楼天天下课看山上的扇叶。至今还会记起来面部汹涌的物理老师口中扇叶的巨大。那时候成绩远远不是我该担心的问题。</p>
-<h2 id="老酸奶和没有盖上的面霜"><a href="#老酸奶和没有盖上的面霜" class="headerlink" title="老酸奶和没有盖上的面霜"></a>老酸奶和没有盖上的面霜</h2><p>早上用的吧，晚上八点才看到面霜没盖，其实也没什么，只是当时正在嚼老酸奶，于是萌生出老酸奶涂脸上的想法。但是奶这东西珍贵的很，还是吃了为好。我哪有那么多钱喂脸。不过或许有君乐宝面霜，回头试试未尝不可。</p>
-<h2 id="盆栽和狗"><a href="#盆栽和狗" class="headerlink" title="盆栽和狗"></a>盆栽和狗</h2><p>Leon的盆栽是他除了Mathilda最珍贵的东西吧，是他之前平面化性格的唯一突起。直到难以逃命的那刻他抱着盆栽乱窜，倒确实是像怀抱小狗，乖得很，不动，也乱动。</p>
-<h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>很久没有去刻意找好片子看了，之前看完一部片子还会疑惑，这到底是不是一部好w片子啊，为什么众说纷纭。害，其实一部好片子，是个正常人都觉得好看的。真的能代入真的能让你心跳加速的，不由自主的，还会存疑吗？也考虑过写个影评的，我最近不怎么擅长写东西，现在只会：wnm，真好看！</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> life </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>生日快乐</title>
+      <link href="post/42dbb1c3.html"/>
+      <url>post/42dbb1c3.html</url>
+      
+        <content type="html"><![CDATA[<p>生日快乐呢<br>是不是很快呢<br>2020年是不是很神奇的一年呢<br>奇奇怪怪的<br>你看发生了这么多奇怪的事<br>但是出不去了<br>嘎嘎嘎<br>看了那么多酒店有机会一定要去<br>小宝贝生日快乐呀<br>蛋糕可以不吃<br>酒店可以不住<br>旅行可以不去<br>但是要快乐<br>给你一些可爱的图：<br>吹个蜡烛吧<br>生日快乐！</p>]]></content>
+      
+      
       <categories>
-        <category>文学</category>
+          
+          <category> 日常 </category>
+          
       </categories>
-      <tags>
-        <tag>literature</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>域名解析与vercel配置</title>
-    <url>/post/2244254b.html</url>
-    <content><![CDATA[<div class="note primary simple"><p>这里记录一些有关域名配置的问题</p>
-</div>
-<h1 id="域名解析（以阿里云为例）"><a href="#域名解析（以阿里云为例）" class="headerlink" title="域名解析（以阿里云为例）"></a>域名解析（以阿里云为例）</h1><p><img src="/post/2244254b.htm/%E8%A7%A3%E6%9E%90%E9%85%8D%E7%BD%AE.png" alt></p>
-<h1 id="vercel-domain-配置"><a href="#vercel-domain-配置" class="headerlink" title="vercel domain 配置"></a>vercel domain 配置</h1><p><img src="/post/2244254b.htm/vercel%E9%85%8D%E7%BD%AE.png" alt><br><font color="#265489"> 另外直接利用gitpages的记得在主题<strong>source</strong>文件夹下添加<strong>CNAME</strong>文件，否则github每次都要重新配置domain。</font></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> life </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>旧时代</title>
+      <link href="post/754b5343.html"/>
+      <url>post/754b5343.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="罗永浩"><a href="#罗永浩" class="headerlink" title="罗永浩"></a>罗永浩</h2><p>很长时间以来都只是只闻其名，细细研究一下才发现他的的确确是很多人的精神领袖，或者说精神鸦片也未尝不可。辍学打工，办培训机构，打假，做手机。面对了很多争议、嘲讽。你很难看见一个人十几年来都是这一个模样，不单单是外貌，那股精神气似乎从来都没有消减。但是这显然不太现实，面对理想主义的不如意，你好好观察一下，也能发现某些被磨平的棱角。但是不管怎样，他的高度自律、行动力、成熟的价值观体系、理性的做事规则都无比吸引人。</p><h2 id="韩寒"><a href="#韩寒" class="headerlink" title="韩寒"></a>韩寒</h2><p>不去深入了解，大多数略有耳闻的人都对韩寒有一些误解：叛逆、不听话、我行我素、大骂教育制度、暴躁。但其实完全不是，他尊重人和事、面对他人谦逊无比、虚心接受其它有价值的意见。他很善良，有爱，不管是从一言一行还是从他的小说里的字里行间，无论你能看得出多少痞气，你都不能想当然。那是媒体过分渲染的韩寒，他们把一个孩子想得太简单了。大人们习惯这样，把比自己年龄小的人想得简单。</p><h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>以前为了安慰自己一直都有一套理论：<br>人不可能长时间保持一种状态，无论你多么有自制力，还是免不了被改变，人就是一个阶段一个阶段的，哪有不忘初心。<br>现在又发现其实人可以长时间保持一种状态，不过所依赖的条件是：你必须不停的汲取知识，不是科学知识，而是经历。这种经历可以从过来的人身上看到，也可以从虚构的人和事上看到，简单说就是多读书。</p>]]></content>
+      
+      
       <categories>
-        <category>技术</category>
+          
+          <category> 日常 </category>
+          
       </categories>
-      <tags>
-        <tag>domain</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>部署技巧</title>
-    <url>/post/c4266d98.html</url>
-    <content><![CDATA[<h1 id="hexo-clean-amp-amp-hexo-generate-amp-amp-hexo-deploy-三命令统一"><a href="#hexo-clean-amp-amp-hexo-generate-amp-amp-hexo-deploy-三命令统一" class="headerlink" title="hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy 三命令统一"></a>hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy 三命令统一</h1><p>可在根目录下建立bat文件，写入“hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy”或简洁点“hexo cl&amp;hexo g&amp;hexo d（注意：如果装了豆瓣插件则必须用hexo deploy）”。<br>以后部署只用在命令行敲入你bat的文件名即可执行。</p>
-<h1 id="关于deploy每次都要输入账号密码的问题"><a href="#关于deploy每次都要输入账号密码的问题" class="headerlink" title="关于deploy每次都要输入账号密码的问题"></a>关于deploy每次都要输入账号密码的问题</h1><p>博主已经尝试了SSH，但还是需要输入密码（账号可以不用输入）。</p>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>修改_config.yml，将部署方式从https方式修改为ssh方式。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;XXXXXX&#x2F;XXXXXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:XXXXXX&#x2F;XXXXXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+        <tags>
+            
+            <tag> life </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>疼</title>
+      <link href="post/5a8a6c8d.html"/>
+      <url>post/5a8a6c8d.html</url>
+      
+        <content type="html"><![CDATA[<p>疼一怎么疼了这么久了还是不好，一直以为咬伤的很快就会好的。这么多天居然不见丝毫好转，现在喝水都成问题了，又饿又疼。晚上耐着性子做了米饭，炒了很难吃的菜，但是一粒也吃不成，一碰到就疼。二韩寒大概看的差不多了，剩下还有一些电影和书需要看，反正记录了好多事情待完成，不知道啥时候可以。看的时候会有很多感受，不记录下来就会消失。总体来说不记录相当于白看。三动物真可爱，一看动物就停不下来。以后一定要好好养动物。除了一只，还要养猫、狗、蛇。。算了。够了。想看猫狗大战，想看狗狗大战，想看猫猫大战。四陌生人很难交流。能说得上话的除了年纪遭遇相仿的，别的基本都讲不通逻辑。这个时代变化很快。也不知道什么时候该被淘汰，但现在还不必担心，因为我们是把淘汰者。一点小愿望希望日子赶紧有所好转；积累的事情赶紧做完；少看报纸多读书。</p>]]></content>
+      
+      
       <categories>
-        <category>技术</category>
+          
+          <category> 日常 </category>
+          
       </categories>
-      <tags>
-        <tag>deploy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>重生</title>
-    <url>/post/454cee63.html</url>
-    <content><![CDATA[<center>
-
-<p>这次打算认真处理一下这个网站了<br>从查找问题到一步步排除修正<br>相当于又从头布局了一下网站<br>butterfly更新了所以还遇到很多问题<br>主要是太久没管过了<br>总而言之<br>这次打算简洁点</p>
-</center>]]></content>
+      
+      
+        <tags>
+            
+            <tag> life </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第一篇</title>
+      <link href="post/5a8a6c8d.html"/>
+      <url>post/5a8a6c8d.html</url>
+      
+        <content type="html"><![CDATA[<p>总算把主题和基本写作的操作摸索敲定了<br>暂且先这样<br>美化工作还有很多要做<br>先记录一下</p>]]></content>
+      
+      
       <categories>
-        <category>日常</category>
+          
+          <category> 日常 </category>
+          
       </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> life </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
