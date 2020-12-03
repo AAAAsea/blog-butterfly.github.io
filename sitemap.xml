@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://asea.fun/movies/index.html</loc>
+    
+    <lastmod>2020-12-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://asea.fun/movies/Hachi/index.html</loc>
     
     <lastmod>2020-12-03</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>https://asea.fun/movies/Schindler/index.html</loc>
-    
-    <lastmod>2020-12-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/movies/index.html</loc>
     
     <lastmod>2020-12-03</lastmod>
     
@@ -107,13 +107,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/link/index.html</loc>
-    
-    <lastmod>2020-11-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://asea.fun/about/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
@@ -121,7 +114,7 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/index.html</loc>
+    <loc>https://asea.fun/link/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
@@ -129,6 +122,13 @@
   
   <url>
     <loc>https://asea.fun/message/index.html</loc>
+    
+    <lastmod>2020-11-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
