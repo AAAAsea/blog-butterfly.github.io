@@ -100,13 +100,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/categories/index.html</loc>
-    
-    <lastmod>2020-11-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://asea.fun/about/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
@@ -122,6 +115,13 @@
   
   <url>
     <loc>https://asea.fun/message/index.html</loc>
+    
+    <lastmod>2020-11-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/categories/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
