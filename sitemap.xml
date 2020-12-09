@@ -221,13 +221,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/System/</loc>
-    <lastmod>2020-12-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://asea.fun/tags/domain/</loc>
     <lastmod>2020-12-09</lastmod>
     <changefreq>daily</changefreq>
@@ -235,7 +228,7 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/deploy/</loc>
+    <loc>https://asea.fun/tags/System/</loc>
     <lastmod>2020-12-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -243,6 +236,13 @@
   
   <url>
     <loc>https://asea.fun/tags/literature/</loc>
+    <lastmod>2020-12-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/deploy/</loc>
     <lastmod>2020-12-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
