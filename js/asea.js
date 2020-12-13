@@ -47,3 +47,8 @@ document.addEventListener('visibilitychange', function() {
 //     card_category_list[i].previousSibling.innerHTML +=
 //         '<i class="fa fa-chevron-up menus-expand  menus-closed" aria-hidden="true" style="margin-left:20px;" onclick="toggle(this)"></i>';
 // }
+// 去掉banner图
+var full_page = document.getElementsByClassName("full_page");
+if (full_page.length != 0) {
+  full_page[0].style.background = "transparent";
+}
