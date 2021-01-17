@@ -23,7 +23,7 @@
     <published>2021-01-17T15:22:21.000Z</published>
     <updated>2021-01-17T15:22:21.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="这里收录一些小技巧"><a href="#这里收录一些小技巧" class="headerlink" title="这里收录一些小技巧"></a><font color="#495969">这里收录一些小技巧</font></h2><blockquote><ul><li>网页长截图可以F12——&gt;Ctrl Shift P——&gt;Capture full size screenshot</li><li>new post 的格式在root\scafflods里面修改</li><li>利用bat快速生成newpost,可以参考 <code>hexo new post newpost&&code E:\blog\source_posts\newpost.md&&rd E:\blog\source_posts\newpost<\code></\code></code></li></ul></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="这里收录一些小技巧"><a href="#这里收录一些小技巧" class="headerlink" title="这里收录一些小技巧"></a><font color="#495969">这里收录一些小技巧</font></h2><blockquote><ul><li>网页长截图可以F12——&gt;Ctrl Shift P——&gt;Capture full size screenshot</li><li>new post 的格式在root\scafflods里面修改</li><li>利用bat快速生成newpost,可以参考 <code>hexo new post newpost&&code E:\blog\source_posts\newpost.md&&rd E:\blog\source_posts\newpost<code></code></code></li></ul></blockquote>]]></content>
     
     <summary type="html">
     
