@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://asea.fun/post/35baf9b8.html</loc>
+    <loc>https://asea.fun/post/2ee0f961.html</loc>
     
     <lastmod>2021-01-19</lastmod>
     
@@ -11,7 +11,21 @@
   <url>
     <loc>https://asea.fun/post/cf7f39c3.html</loc>
     
-    <lastmod>2021-01-17</lastmod>
+    <lastmod>2021-01-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/talk/index.html</loc>
+    
+    <lastmod>2021-01-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/post/35baf9b8.html</loc>
+    
+    <lastmod>2021-01-19</lastmod>
     
   </url>
   
@@ -170,14 +184,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/about/index.html</loc>
+    <loc>https://asea.fun/categories/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/categories/index.html</loc>
+    <loc>https://asea.fun/about/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
@@ -270,6 +284,13 @@
   </url>
   
   <url>
+    <loc>https://asea.fun/tags/update/</loc>
+    <lastmod>2021-01-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://asea.fun/tags/tools/</loc>
     <lastmod>2021-01-19</lastmod>
     <changefreq>daily</changefreq>
@@ -301,6 +322,13 @@
   
   <url>
     <loc>https://asea.fun/categories/%E6%96%87%E5%AD%A6/</loc>
+    <lastmod>2021-01-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/categories/%E6%9B%B4%E6%96%B0/</loc>
     <lastmod>2021-01-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -32,6 +32,21 @@
       </tags>
   </entry>
   <entry>
+    <title>域名解析与vercel配置</title>
+    <url>/post/2244254b.html</url>
+    <content><![CDATA[<div class="note primary simple"><p>这里记录一些有关域名配置的问题</p>
+</div>
+<h1 id="域名解析（以阿里云为例）"><a href="#域名解析（以阿里云为例）" class="headerlink" title="域名解析（以阿里云为例）"></a>域名解析（以阿里云为例）</h1><p><img src="/post/2244254b.htm/%E8%A7%A3%E6%9E%90%E9%85%8D%E7%BD%AE.png" alt></p>
+<h1 id="vercel-domain-配置"><a href="#vercel-domain-配置" class="headerlink" title="vercel domain 配置"></a>vercel domain 配置</h1><p><img src="/post/2244254b.htm/vercel%E9%85%8D%E7%BD%AE.png" alt><br><font color="#265489"> 另外直接利用gitpages的记得在主题<strong>source</strong>文件夹下添加<strong>CNAME</strong>文件，否则github每次都要重新配置domain。</font></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>domain</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2021年的大瓜</title>
     <url>/post/35baf9b8.html</url>
     <content><![CDATA[<h2 id="🍉"><a href="#🍉" class="headerlink" title="🍉"></a>🍉</h2><p>不追星，但喜欢一种仪式感。体现在对薛之谦新歌的期待，尽管不好听；体现在关注的某个up更新；体现在他刚好符合我的某个理想中的状态，这算不算追星？不算吧，顶多是从生活里找乐子，也是一种临时逃避生活的借口。<br>当开始认真关注一些人，目标不限于室友，囊括偶像在内的所有人，都会开始发现，对方比你了解的复杂很多。接着我会对就近的采取策略，而且还卓有成效。至于远处诗和远方，偶像不是诗和远方，充其量是个载体，没了载体理想依然能存在。我回想起来高中搬个凳子在狭小的厕所里写日记，有段时间话题无不关于陆之昂立夏几人。说白了就是我把很大一部分纯粹放在电视剧里，放在其中某个人身上了，但绝不是演员身上。这种纯粹每个人或多或少都有一些，而且纯粹的载体是随着时间不断更迭不断推陈的。我发现年龄增长带来了纯粹的减少，但好在记忆还在，它独有的积累效果不言而喻，多年以前的两平米里的冷和感动至今历历在目。这些很珍贵。<br>这两天的爆料很雷人，但我没难过。我又发现一些小的道理：当一个人的能力越来越大，就越来越容易干坏事。想起来限制与自由的论述，恰好符合。身为普通人，幻想着腰缠万贯或者惨遭封禁都是遥不可及的事情，而当有一天你发现你已经腰缠万贯，这时候就要十分警惕，你是否要悬崖勒马，甚至调个头往回走几步了。<br>这是一点想法。</p>
@@ -86,21 +101,6 @@
       </tags>
   </entry>
   <entry>
-    <title>域名解析与vercel配置</title>
-    <url>/post/2244254b.html</url>
-    <content><![CDATA[<div class="note primary simple"><p>这里记录一些有关域名配置的问题</p>
-</div>
-<h1 id="域名解析（以阿里云为例）"><a href="#域名解析（以阿里云为例）" class="headerlink" title="域名解析（以阿里云为例）"></a>域名解析（以阿里云为例）</h1><p><img src="/post/2244254b.htm/%E8%A7%A3%E6%9E%90%E9%85%8D%E7%BD%AE.png" alt></p>
-<h1 id="vercel-domain-配置"><a href="#vercel-domain-配置" class="headerlink" title="vercel domain 配置"></a>vercel domain 配置</h1><p><img src="/post/2244254b.htm/vercel%E9%85%8D%E7%BD%AE.png" alt><br><font color="#265489"> 另外直接利用gitpages的记得在主题<strong>source</strong>文件夹下添加<strong>CNAME</strong>文件，否则github每次都要重新配置domain。</font></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>domain</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>怎样才能有好的状态</title>
     <url>/post/86d480d6.html</url>
     <content><![CDATA[<h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>昨天更新了第一个<a href="https://www.bilibili.com/video/BV18h411f72x"><b>vlog</b></a>，从剪辑上来说还算凑合，达到七八十分的样子，所以就算做vlog的开端。这个开端想了很久了，以前也录了很多素材，但都在某天不知所以然地灰飞烟灭了。所以一直没有下手。这次反倒是借个机会，因为我的生活的单调性是毋庸置疑的，这点从辅导员找我谈话的问答中就可以看出来。这次拍的很随意，也是临时起意，我觉得vlog是一种认证生活质量的一种方式，或者说，他不单能够认证，还能升华。这种欢乐应该是每一个做vlog的人都能体会到的。我希望这是个良好的开始。<br><img src="https://pic.downk.cc/item/5fe5fabd3ffa7d37b311afc0.jpg" alt></p>
@@ -135,6 +135,34 @@
       </tags>
   </entry>
   <entry>
+    <title>更新帖</title>
+    <url>/post/2ee0f961.html</url>
+    <content><![CDATA[<h2 id="这里记录网站更新内容"><a href="#这里记录网站更新内容" class="headerlink" title="这里记录网站更新内容"></a><font color="#495969">这里记录网站更新内容</font></h2><blockquote>
+<ul>
+<li>更新文章界面两篇置顶，开通说说界面。（2021.01.20）</li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>更新</category>
+      </categories>
+      <tags>
+        <tag>update</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>生日快乐</title>
+    <url>/post/42dbb1c3.html</url>
+    <content><![CDATA[<p>生日快乐呢<br>是不是很快呢<br>2020年是不是很神奇的一年呢<br>奇奇怪怪的<br>你看发生了这么多奇怪的事<br>但是出不去了<br>嘎嘎嘎<br>看了那么多酒店有机会一定要去<br>小宝贝生日快乐呀<br>蛋糕可以不吃<br>酒店可以不住<br>旅行可以不去<br>但是要快乐<br>给你一些可爱的图：<br>吹个蜡烛吧<br>生日快乐！</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>技术贴</title>
     <url>/post/cf7f39c3.html</url>
     <content><![CDATA[<h2 id="这里收录一些小技巧"><a href="#这里收录一些小技巧" class="headerlink" title="这里收录一些小技巧"></a><font color="#495969">这里收录一些小技巧</font></h2><blockquote>
@@ -150,18 +178,6 @@
       </categories>
       <tags>
         <tag>tools</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>生日快乐</title>
-    <url>/post/42dbb1c3.html</url>
-    <content><![CDATA[<p>生日快乐呢<br>是不是很快呢<br>2020年是不是很神奇的一年呢<br>奇奇怪怪的<br>你看发生了这么多奇怪的事<br>但是出不去了<br>嘎嘎嘎<br>看了那么多酒店有机会一定要去<br>小宝贝生日快乐呀<br>蛋糕可以不吃<br>酒店可以不住<br>旅行可以不去<br>但是要快乐<br>给你一些可爱的图：<br>吹个蜡烛吧<br>生日快乐！</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
       </tags>
   </entry>
   <entry>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://asea.fun/"/>
-  <updated>2021-01-19T12:45:06.000Z</updated>
+  <updated>2021-01-19T17:12:51.000Z</updated>
   <id>https://asea.fun/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>更新帖</title>
+    <link href="https://asea.fun/post/2ee0f961.html"/>
+    <id>https://asea.fun/post/2ee0f961.html</id>
+    <published>2021-01-19T17:12:51.000Z</published>
+    <updated>2021-01-19T17:12:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="这里记录网站更新内容"><a href="#这里记录网站更新内容" class="headerlink" title="这里记录网站更新内容"></a><font color="#495969">这里记录网站更新内容</font></h2><blockquote><ul><li>更新文章界面两篇置顶，开通说说界面。（2021.01.20）</li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;这里记录网站更新内容&quot;&gt;&lt;a href=&quot;#这里记录网站更新内容&quot; class=&quot;headerlink&quot; title=&quot;这里记录网站更新内容&quot;&gt;&lt;/a&gt;&lt;font color=&quot;#495969&quot;&gt;这里记录网站更新内容&lt;/font&gt;&lt;/h2&gt;&lt;blockquote&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="更新" scheme="https://asea.fun/categories/%E6%9B%B4%E6%96%B0/"/>
+    
+    
+      <category term="update" scheme="https://asea.fun/tags/update/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>技术贴</title>
+    <link href="https://asea.fun/post/cf7f39c3.html"/>
+    <id>https://asea.fun/post/cf7f39c3.html</id>
+    <published>2021-01-19T17:10:21.000Z</published>
+    <updated>2021-01-19T17:10:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="这里收录一些小技巧"><a href="#这里收录一些小技巧" class="headerlink" title="这里收录一些小技巧"></a><font color="#495969">这里收录一些小技巧</font></h2><blockquote><ul><li>网页长截图可以F12——&gt;Ctrl Shift P——&gt;Capture full size screenshot</li><li>new post 的格式在root\scafflods里面修改</li><li>利用bat快速生成newpost,可以参考 <code>hexo new post newpost&&code E:\blog\source_posts\newpost.md&&rd E:\blog\source_posts\newpost<code></code></code></li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;这里收录一些小技巧&quot;&gt;&lt;a href=&quot;#这里收录一些小技巧&quot; class=&quot;headerlink&quot; title=&quot;这里收录一些小技巧&quot;&gt;&lt;/a&gt;&lt;font color=&quot;#495969&quot;&gt;这里收录一些小技巧&lt;/font&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://asea.fun/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="tools" scheme="https://asea.fun/tags/tools/"/>
+    
+  </entry>
   
   <entry>
     <title>2021年的大瓜</title>
@@ -39,33 +92,6 @@
     
     
       <category term="life" scheme="https://asea.fun/tags/life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>技术贴</title>
-    <link href="https://asea.fun/post/cf7f39c3.html"/>
-    <id>https://asea.fun/post/cf7f39c3.html</id>
-    <published>2021-01-17T15:22:21.000Z</published>
-    <updated>2021-01-17T15:22:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="这里收录一些小技巧"><a href="#这里收录一些小技巧" class="headerlink" title="这里收录一些小技巧"></a><font color="#495969">这里收录一些小技巧</font></h2><blockquote><ul><li>网页长截图可以F12——&gt;Ctrl Shift P——&gt;Capture full size screenshot</li><li>new post 的格式在root\scafflods里面修改</li><li>利用bat快速生成newpost,可以参考 <code>hexo new post newpost&&code E:\blog\source_posts\newpost.md&&rd E:\blog\source_posts\newpost<code></code></code></li></ul></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;这里收录一些小技巧&quot;&gt;&lt;a href=&quot;#这里收录一些小技巧&quot; class=&quot;headerlink&quot; title=&quot;这里收录一些小技巧&quot;&gt;&lt;/a&gt;&lt;font color=&quot;#495969&quot;&gt;这里收录一些小技巧&lt;/font&gt;&lt;/h2&gt;&lt;blockquote&gt;
-&lt;ul
-      
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://asea.fun/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="tools" scheme="https://asea.fun/tags/tools/"/>
     
   </entry>
   
