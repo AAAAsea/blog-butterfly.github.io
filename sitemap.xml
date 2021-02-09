@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://asea.fun/baidu_verify_code-CufsbNto8H.html</loc>
-    
-    <lastmod>2021-02-09</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://asea.fun/post/2ee0f961.html</loc>
     
     <lastmod>2021-01-19</lastmod>
@@ -40,13 +33,6 @@
     <loc>https://asea.fun/post/b6976a.html</loc>
     
     <lastmod>2021-01-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/post/16fab331.html</loc>
-    
-    <lastmod>2020-12-27</lastmod>
     
   </url>
   
@@ -205,13 +191,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/categories/index.html</loc>
-    
-    <lastmod>2020-11-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://asea.fun/link/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
@@ -220,6 +199,13 @@
   
   <url>
     <loc>https://asea.fun/message/index.html</loc>
+    
+    <lastmod>2020-11-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/categories/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
@@ -277,14 +263,14 @@
 
   
   <url>
-    <loc>https://asea.fun/tags/life/</loc>
+    <loc>https://asea.fun/tags/domain/</loc>
     <lastmod>2021-02-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/domain/</loc>
+    <loc>https://asea.fun/tags/life/</loc>
     <lastmod>2021-02-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -321,14 +307,14 @@
 
   
   <url>
-    <loc>https://asea.fun/categories/%E6%97%A5%E5%B8%B8/</loc>
+    <loc>https://asea.fun/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-02-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://asea.fun/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://asea.fun/categories/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2021-02-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
