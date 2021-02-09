@@ -86,6 +86,21 @@
       </tags>
   </entry>
   <entry>
+    <title>域名解析与vercel配置</title>
+    <url>/post/2244254b.html</url>
+    <content><![CDATA[<div class="note primary simple"><p>这里记录一些有关域名配置的问题</p>
+</div>
+<h1 id="域名解析（以阿里云为例）"><a href="#域名解析（以阿里云为例）" class="headerlink" title="域名解析（以阿里云为例）"></a>域名解析（以阿里云为例）</h1><p><img src="/post/2244254b.htm/%E8%A7%A3%E6%9E%90%E9%85%8D%E7%BD%AE.png" alt></p>
+<h1 id="vercel-domain-配置"><a href="#vercel-domain-配置" class="headerlink" title="vercel domain 配置"></a>vercel domain 配置</h1><p><img src="/post/2244254b.htm/vercel%E9%85%8D%E7%BD%AE.png" alt><br><font color="#265489"> 另外直接利用gitpages的记得在主题<strong>source</strong>文件夹下添加<strong>CNAME</strong>文件，否则github每次都要重新配置domain。</font></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>domain</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>怎样才能有好的状态</title>
     <url>/post/86d480d6.html</url>
     <content><![CDATA[<h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>昨天更新了第一个<a href="https://www.bilibili.com/video/BV18h411f72x"><b>vlog</b></a>，从剪辑上来说还算凑合，达到七八十分的样子，所以就算做vlog的开端。这个开端想了很久了，以前也录了很多素材，但都在某天不知所以然地灰飞烟灭了。所以一直没有下手。这次反倒是借个机会，因为我的生活的单调性是毋庸置疑的，这点从辅导员找我谈话的问答中就可以看出来。这次拍的很随意，也是临时起意，我觉得vlog是一种认证生活质量的一种方式，或者说，他不单能够认证，还能升华。这种欢乐应该是每一个做vlog的人都能体会到的。我希望这是个良好的开始。<br><img src="https://pic.downk.cc/item/5fe5fabd3ffa7d37b311afc0.jpg" alt></p>
@@ -117,21 +132,6 @@
       </categories>
       <tags>
         <tag>literature</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>域名解析与vercel配置</title>
-    <url>/post/2244254b.html</url>
-    <content><![CDATA[<div class="note primary simple"><p>这里记录一些有关域名配置的问题</p>
-</div>
-<h1 id="域名解析（以阿里云为例）"><a href="#域名解析（以阿里云为例）" class="headerlink" title="域名解析（以阿里云为例）"></a>域名解析（以阿里云为例）</h1><p><img src="/post/2244254b.htm/%E8%A7%A3%E6%9E%90%E9%85%8D%E7%BD%AE.png" alt></p>
-<h1 id="vercel-domain-配置"><a href="#vercel-domain-配置" class="headerlink" title="vercel domain 配置"></a>vercel domain 配置</h1><p><img src="/post/2244254b.htm/vercel%E9%85%8D%E7%BD%AE.png" alt><br><font color="#265489"> 另外直接利用gitpages的记得在主题<strong>source</strong>文件夹下添加<strong>CNAME</strong>文件，否则github每次都要重新配置domain。</font></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>domain</tag>
       </tags>
   </entry>
   <entry>
