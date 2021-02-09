@@ -52,3 +52,5 @@ var full_page = document.getElementsByClassName("full_page");
 if (full_page.length != 0) {
   full_page[0].style.background = "transparent";
 }
+
+<div style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"><canvas width="1920" height="187" style="width: 1536px; height: 150px;"></canvas></div>
