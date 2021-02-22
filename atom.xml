@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://asea.fun/"/>
-  <updated>2021-02-16T04:44:29.000Z</updated>
+  <updated>2021-02-22T06:58:54.000Z</updated>
   <id>https://asea.fun/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>更新帖</title>
-    <link href="https://asea.fun/post/2ee0f961.html"/>
-    <id>https://asea.fun/post/2ee0f961.html</id>
-    <published>2021-02-22T07:04:30.000Z</published>
-    <updated>2021-02-16T04:44:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="这里记录网站更新内容"><a href="#这里记录网站更新内容" class="headerlink" title="这里记录网站更新内容"></a><font color="#495969">这里记录网站更新内容</font></h2><blockquote><ul><li><em>2021-01-20</em><br>更新文章界面两篇置顶；<br>开通说说界面；<br>说说界面优化，增加说说评论功能（访客都可以评论）；<br>新增说说发布权限用户；<br>优化不同用户的头像问题；<br>优化navigationbar；</li><li><em>2021-02-09</em><br>更新post《网站收藏》；<br>优化《网站收藏》的界面；<br>优化文章排序和置顶问题（<a href="https://gsy00517.github.io/hexo20200207151318/">参考文章</a>）；<br>修改主页post图文排版；</li><li><em>2021-02-16</em><br>发布post《老地方》</li><li><em>2021-02-22</em><br>发布post《看垃圾》<br>更新post《技术贴》</li></ul></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;这里记录网站更新内容&quot;&gt;&lt;a href=&quot;#这里记录网站更新内容&quot; class=&quot;headerlink&quot; title=&quot;这里记录网站更新内容&quot;&gt;&lt;/a&gt;&lt;font color=&quot;#495969&quot;&gt;这里记录网站更新内容&lt;/font&gt;&lt;/h2&gt;&lt;blockquote&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="更新" scheme="https://asea.fun/categories/%E6%9B%B4%E6%96%B0/"/>
-    
-    
-      <category term="update" scheme="https://asea.fun/tags/update/"/>
-    
-  </entry>
   
   <entry>
     <title>看垃圾</title>
@@ -65,6 +39,32 @@
     
     
       <category term="literature" scheme="https://asea.fun/tags/literature/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>更新帖</title>
+    <link href="https://asea.fun/post/2ee0f961.html"/>
+    <id>https://asea.fun/post/2ee0f961.html</id>
+    <published>2021-02-16T04:44:29.000Z</published>
+    <updated>2021-02-22T07:04:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="这里记录网站更新内容"><a href="#这里记录网站更新内容" class="headerlink" title="这里记录网站更新内容"></a><font color="#495969">这里记录网站更新内容</font></h2><blockquote><ul><li><em>2021-01-20</em><br>更新文章界面两篇置顶；<br>开通说说界面；<br>说说界面优化，增加说说评论功能（访客都可以评论）；<br>新增说说发布权限用户；<br>优化不同用户的头像问题；<br>优化navigationbar；</li><li><em>2021-02-09</em><br>更新post《网站收藏》；<br>优化《网站收藏》的界面；<br>优化文章排序和置顶问题（<a href="https://gsy00517.github.io/hexo20200207151318/">参考文章</a>）；<br>修改主页post图文排版；</li><li><em>2021-02-16</em><br>发布post《老地方》</li><li><em>2021-02-22</em><br>发布post<a href="https://asea.fun/post/c337a479.html">《看垃圾》</a><br>更新post<a href="https://asea.fun/post/cf7f39c3.html">《技术贴》</a></li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;这里记录网站更新内容&quot;&gt;&lt;a href=&quot;#这里记录网站更新内容&quot; class=&quot;headerlink&quot; title=&quot;这里记录网站更新内容&quot;&gt;&lt;/a&gt;&lt;font color=&quot;#495969&quot;&gt;这里记录网站更新内容&lt;/font&gt;&lt;/h2&gt;&lt;blockquote&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="更新" scheme="https://asea.fun/categories/%E6%9B%B4%E6%96%B0/"/>
+    
+    
+      <category term="update" scheme="https://asea.fun/tags/update/"/>
     
   </entry>
   
@@ -102,7 +102,7 @@
     <published>2021-01-19T17:10:21.000Z</published>
     <updated>2021-02-22T07:04:30.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="这里收录一些小技巧"><a href="#这里收录一些小技巧" class="headerlink" title="这里收录一些小技巧"></a><font color="#495969">这里收录一些小技巧</font></h2><blockquote><ul><li>网页长截图可以F12——&gt;Ctrl Shift P——&gt;Capture full size screenshot</li><li>new post 的格式在root\scafflods里面修改</li><li>利用bat快速生成newpost,可以参考 <code>hexo new post newpost&&code E:\blog\source_posts\newpost.md&&rd E:\blog\source_posts\newpost<code></code></code></li><li>在微软输入法设置里面可以添加自定义短语，例如我输入sj，自动弹出当前时间，具体格式见下面代码块。</li></ul></blockquote><hr><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">关键字需要用 %% 来包裹</span><br><span class="line">yyyy    4 位年</span><br><span class="line">MM    2 位月</span><br><span class="line">dd    2 位日</span><br><span class="line">HH  2 位小时（24 小时制）</span><br><span class="line">mm  2 位分钟数</span><br><span class="line">ss  2 位秒数</span><br><span class="line"></span><br><span class="line"># 结果是这样的格式: 2020-02-07 12:36:52</span><br><span class="line">%yyyy%-%MM%-%dd% %HH%:%mm%:%ss%</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="这里收录一些小技巧"><a href="#这里收录一些小技巧" class="headerlink" title="这里收录一些小技巧"></a><font color="#495969">这里收录一些小技巧</font></h2><blockquote><ul><li>网页长截图可以F12——&gt;Ctrl Shift P——&gt;Capture full size screenshot</li><li>new post 的格式在root\scafflods里面修改</li><li>利用bat快速生成newpost,可以参考 <code>hexo new post newpost&&code E:\blog\source_posts\newpost.md&&rd E:\blog\source_posts\newpost<code></code></code></li><li>在微软输入法设置里面可以添加自定义短语，例如我输入sj，自动弹出当前时间，具体格式见下面代码块。</li></ul></blockquote><hr><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 输入法时间格式 --&gt;</span><br><span class="line">关键字需要用 %% 来包裹</span><br><span class="line">yyyy    4 位年</span><br><span class="line">MM    2 位月</span><br><span class="line">dd    2 位日</span><br><span class="line">HH  2 位小时（24 小时制）</span><br><span class="line">mm  2 位分钟数</span><br><span class="line">ss  2 位秒数</span><br><span class="line">&lt;!-- 示例 --&gt;</span><br><span class="line"># 结果是这样的格式: 2020-02-07 12:36:52</span><br><span class="line">%yyyy%-%MM%-%dd% %HH%:%mm%:%ss%</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
