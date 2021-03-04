@@ -15,6 +15,7 @@
 <li><em>2021-02-25</em><br>置顶post<a href="https://asea.fun/post/cf7f39c3.html">《技术贴》</a></li>
 <li><em>2021-02-28</em><br>发布post<a href="https://asea.fun/post/b6589fc3.html">《返校日记》</a><br>更新post<a href="https://asea.fun/post/6d79d7dd.html">《老地方》</a>,优化排版；</li>
 <li><em>2021-03-02</em><br>增加<a href="https://asea.fun/fun/apesk/">《APESK-荣格理论测试》</a>界面。</li>
+<li><em>2021-03-04</em><br>更新post<a href="https://asea.fun/post/cf7f39c3.html">《技术贴》</a>；</li>
 </ul>
 </blockquote><button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><blockquote>
 <ul>
@@ -28,6 +29,7 @@
 <li><em>2021-02-25</em><br>置顶post<a href="https://next.asea.fun/post/cf7f39c3.html">《技术贴》</a><br>网页底部增加运行时间、访客数、总字数<br>增加看板“猫”<br>关联其它链接<br>增加留言板块</li>
 <li><em>2021-02-28</em><br>发布post<a href="https://next.asea.fun/post/b6589fc3.html">《返校日记》</a><br>更新post<a href="https://next.asea.fun/post/6d79d7dd.html">《老地方》</a>,优化排版；</li>
 <li><em>2021-03-02</em><br>增加<a href="https://next.asea.fun/fun/apesk/">《APESK-荣格理论测试》</a>界面。</li>
+<li><em>2021-03-04</em><br>更新post<a href="https://next.asea.fun/post/cf7f39c3.html">《技术贴》</a>；</li>
 </ul>
 </blockquote><button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div></div></div>
 
@@ -51,6 +53,7 @@
 <li>win10 突然发现某些地方的图标字体变得很大，和分辨率不匹配，可能是因为开机时连接了hdmi线所致，可以拔掉hdmi线然后重启。</li>
 <li>obs录屏如果显卡和节能都调过了，但是某一天突然有黑屏，可以去图形设置里面把obs删了，重新添加一下，因为某些原因可能导致文件路径出错。</li>
 <li>转载csdn的博客：复制<code>&lt;div id=&quot;article_content&quot;&gt;...&lt;/div&gt;</code>里的html代码，粘贴到md文件里就行。</li>
+<li>bilibili等视频网站自定义倍速播放：如在浏览器控制台输入<code>document.getElementsByTagName(&quot;video&quot;)[0].playbackRate = 3</code></li>
 </ul>
 </blockquote>
 <hr>
