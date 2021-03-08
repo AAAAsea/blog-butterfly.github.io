@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://asea.fun/Gallery/cover/index.html</loc>
+    
+    <lastmod>2021-03-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/Gallery/index.html</loc>
+    
+    <lastmod>2021-03-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/Gallery/Hope/index.html</loc>
+    
+    <lastmod>2021-03-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://asea.fun/post/c00b24b1.html</loc>
     
     <lastmod>2021-03-07</lastmod>
@@ -100,63 +121,56 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/moviesScreen/Tree/index.html</loc>
+    <loc>https://asea.fun/Gallery/Tree/index.html</loc>
     
     <lastmod>2020-12-10</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/moviesScreen/Totoro/index.html</loc>
+    <loc>https://asea.fun/Gallery/Totoro/index.html</loc>
     
     <lastmod>2020-12-09</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/moviesScreen/Choristes/index.html</loc>
+    <loc>https://asea.fun/Gallery/Choristes/index.html</loc>
     
     <lastmod>2020-12-06</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/moviesScreen/Burning/index.html</loc>
+    <loc>https://asea.fun/Gallery/Burning/index.html</loc>
     
     <lastmod>2020-12-05</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/moviesScreen/A%20Chinese%20Odyssey/index.html</loc>
+    <loc>https://asea.fun/Gallery/A%20Chinese%20Odyssey/index.html</loc>
     
     <lastmod>2020-12-05</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/moviesScreen/Hachi/index.html</loc>
+    <loc>https://asea.fun/Gallery/Hachi/index.html</loc>
     
     <lastmod>2020-12-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/moviesScreen/Schindler/index.html</loc>
+    <loc>https://asea.fun/Gallery/Schindler/index.html</loc>
     
     <lastmod>2020-12-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/moviesScreen/Hope/index.html</loc>
-    
-    <lastmod>2020-11-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/moviesScreen/Leon/index.html</loc>
+    <loc>https://asea.fun/Gallery/Leon/index.html</loc>
     
     <lastmod>2020-11-30</lastmod>
     
@@ -166,20 +180,6 @@
     <loc>https://asea.fun/post/416212f.html</loc>
     
     <lastmod>2020-11-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/Gallery/cover/index.html</loc>
-    
-    <lastmod>2020-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/Gallery/index.html</loc>
-    
-    <lastmod>2020-11-27</lastmod>
     
   </url>
   
@@ -205,14 +205,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/categories/index.html</loc>
+    <loc>https://asea.fun/about/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/about/index.html</loc>
+    <loc>https://asea.fun/categories/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
@@ -226,14 +226,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/index.html</loc>
+    <loc>https://asea.fun/message/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/message/index.html</loc>
+    <loc>https://asea.fun/tags/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
@@ -277,7 +277,7 @@
 
   <url>
     <loc>https://asea.fun/</loc>
-    <lastmod>2021-03-07</lastmod>
+    <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -285,49 +285,49 @@
   
   <url>
     <loc>https://asea.fun/tags/life/</loc>
-    <lastmod>2021-03-07</lastmod>
+    <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://asea.fun/tags/deploy/</loc>
-    <lastmod>2021-03-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/tags/note/</loc>
-    <lastmod>2021-03-07</lastmod>
+    <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://asea.fun/tags/domain/</loc>
-    <lastmod>2021-03-07</lastmod>
+    <lastmod>2021-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/note/</loc>
+    <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://asea.fun/tags/literature/</loc>
-    <lastmod>2021-03-07</lastmod>
+    <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://asea.fun/tags/tools/</loc>
-    <lastmod>2021-03-07</lastmod>
+    <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://asea.fun/tags/update/</loc>
-    <lastmod>2021-03-07</lastmod>
+    <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -336,42 +336,42 @@
   
   <url>
     <loc>https://asea.fun/categories/%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2021-03-07</lastmod>
+    <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://asea.fun/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2021-03-07</lastmod>
+    <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://asea.fun/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-03-07</lastmod>
+    <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://asea.fun/categories/%E6%96%87%E5%AD%A6/</loc>
-    <lastmod>2021-03-07</lastmod>
+    <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://asea.fun/categories/%E6%9B%B4%E6%96%B0/</loc>
-    <lastmod>2021-03-07</lastmod>
+    <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://asea.fun/categories/%E6%94%B6%E8%97%8F/</loc>
-    <lastmod>2021-03-07</lastmod>
+    <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
