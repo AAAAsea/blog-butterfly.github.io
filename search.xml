@@ -1800,6 +1800,19 @@ table th:nth-of-type(4) {
       </tags>
   </entry>
   <entry>
+    <title>three.js学习笔记</title>
+    <url>/post/afab6017.html</url>
+    <content><![CDATA[<h1 id="程序结构"><a href="#程序结构" class="headerlink" title="程序结构"></a>程序结构</h1><p><img src="/images/three/three%E7%BB%93%E6%9E%84.jpg" alt></p>
+<h1 id="live-server的坑"><a href="#live-server的坑" class="headerlink" title="live-server的坑"></a>live-server的坑</h1><p>html引入本地three.js文件后404，因为我live-server启动的地方没有包含three.js-master。应该在根目录启动。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>three.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python笔记</title>
     <url>/post/c00b24b1.html</url>
     <content><![CDATA[<h1 id="开发环境IDLE"><a href="#开发环境IDLE" class="headerlink" title="开发环境IDLE"></a>开发环境IDLE</h1><p><code>exit() quit()</code><br>shift + 右键打开命令行<br><code>ctrl + o</code><br>ctrl + n<code>#交互界面下</code>ctrl + q<code></code>alt + 3/4<code>注释与解除 注释：##</code>f5` run<br>pypi.org 库网址</p>
@@ -1977,7 +1990,37 @@ table th:nth-of-type(4) {
 </tbody></table>
 <p>函数内部声明<code>global a</code><br><code>if elif else try except for while</code>不会引入新的作用域，其中定义的变量外部也可以访问。 </p>
 <h2 id="基本函数"><a href="#基本函数" class="headerlink" title="基本函数"></a>基本函数</h2><p>斐波那契数列的递归函数<br>input() | age = input(‘your age:’)<br>raw_input() 只存在于python2，不管输入什么的都是字符串<br>print()<br>int()<br>print(value1,value2,value3…,step = ‘\t’,end = ‘\n’, file = ‘sys.stdout’)<br>for i in range(1,5)<br>    print(i,end=’’) 输出不换行<br>写入文件<br>    with open (‘test.txt’,’w’) as file01:<br>        print(‘hello’,file = file01)<br>    with open (‘test02.txt’,’w’) as file02:<br>        file02.write(‘hello’)</p>
-<h2 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h2><h2 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h2><p><img src="/images/python/%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0.jfif" alt></p>
+<h2 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h2><h2 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h2><h2 id><a href="#" class="headerlink" title></a><img src="/images/python/%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0.jfif" alt></h2><h1 id="模拟笔记"><a href="#模拟笔记" class="headerlink" title="模拟笔记"></a>模拟笔记</h1><p>eval(‘代码’) 执行其中的代码，并返回值<br>str.split() 分割，返回列表，默认以空格分割<br>‘{:-&gt;25,}’.format() 格式化输出，注意-&gt;一起使用<br>python3.x input() 返回值是str，如需格式化输出等，可用int()、eval()转换为整数 ，eval()就是去掉引号<br>&lt;填充&gt;&lt;对齐/&lt;宽度&gt;&lt;,&gt;&lt;.精度&gt;&lt;类型&gt;等六个字段，<br>for i in range() i从0开始<br>b = 1,2,3<br>type(b) = tuple<br>type(eval（’1,2,3’)) = tuple<br>jieba.lcut() 返回值是列表<br>list.reverse()  会改变原来的列表，而且没有返回值<br><a href="https://blog.csdn.net/mingyuli/article/details/81604795">print(s[::-1])</a><br><a href="cnblogs.com/wc-chan/p/8080765.html">同时给多个变量赋值</a><br>a, b = 0, 1<br>random 之能生成0.0-1.1之间的数，randint可以指定（1，2）经过实测，是[1,2]<br>ifxxx:<br>elif xxx:<br>elif xxx:<br>else:<br>print(“{:+^11}”.format(chr(n-1)+chr(n)+chr(n+1)))字符串直接相加就行<br>输入多个数  a,b,c = eval(input())<br>try except<br>int(a) == a<br>turtle.seth<br>turtle.left<br>str.split不改变原来值</p>
+<table>
+<thead>
+<tr>
+<th>(元组)</th>
+<th>[列表]</th>
+<th>{字典}</th>
+<th>{集合}</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>不可更改</td>
+<td>可更改</td>
+<td>可更改</td>
+<td>可更改，元素不可重复</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<p> 软件 = 程序+ 文档 = 数据结构+算法+文档</p>
 ]]></content>
       <categories>
         <category>笔记</category>
