@@ -219,13 +219,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/categories/index.html</loc>
-    
-    <lastmod>2020-11-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://asea.fun/link/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
@@ -233,7 +226,7 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/message/index.html</loc>
+    <loc>https://asea.fun/categories/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
@@ -241,6 +234,13 @@
   
   <url>
     <loc>https://asea.fun/tags/index.html</loc>
+    
+    <lastmod>2020-11-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/message/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
@@ -312,14 +312,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/three-js/</loc>
+    <loc>https://asea.fun/tags/domain/</loc>
     <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/domain/</loc>
+    <loc>https://asea.fun/tags/three-js/</loc>
     <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
