@@ -1886,7 +1886,9 @@ table th:nth-of-type(4) {
 </tr>
 </tbody></table>
 <p>对称差集即为<code>(a | b) - (a &amp; b)</code></p>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="字符串的创建"><a href="#字符串的创建" class="headerlink" title="字符串的创建"></a>字符串的创建</h3><ol>
+<h1 id="组合数据"><a href="#组合数据" class="headerlink" title="组合数据"></a>组合数据</h1><p><img src="/images/python/%E7%BB%84%E5%90%88%E6%95%B0%E6%8D%AE.jpg" alt></p>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>str():将其他序列转化为字符串，会把集合完全转化为字符串<br>比如<br>a = str(set1)<br>a[0]<br>‘(‘<br>把字典转化成str的时候好像冒号后面会多个空格</p>
+<h3 id="字符串的创建"><a href="#字符串的创建" class="headerlink" title="字符串的创建"></a>字符串的创建</h3><ol>
 <li>交互式<code>a</code>与<code>print(a)</code>的区别是少个<code>‘’</code></li>
 <li>多行字符串内敲入回车会换行，可以加<code>\</code>防止换行。<code>\n</code>表示换行。</li>
 <li>多行字符串用<code>&#39;&#39;&#39;三单&#39;&#39;&#39;</code>或者<code>&quot;&quot;&quot;三双&quot;&quot;&quot;</code>具体可参考：<a href="https://blog.csdn.net/woainishifu/article/details/76105667">《Python中单引号，双引号，3个单引号及3个双引号的区别》</a></li>
@@ -1966,13 +1968,60 @@ table th:nth-of-type(4) {
 </ol>
  <strong>【有待补充】</strong></li>
 </ol>
-<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>pop<br>if ‘’ in d:<br>for key in d.keys():<br>for key in d.values():<br>.clear</p>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>s = set(‘python’)<br>s = frozenset(‘python’)<br>.add(‘0’)<br>.update([update])<br>.remove()<br>.clear<br>if 2 in s:<br>for e in s:<br>s = s1 | s2 并集<br>s1.union(s2)<br>同理 &amp; 以及 intersection</p>
-<ul>
-<li>difference<br>^差集 symmetric_difference()</li>
-</ul>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p><code>del()</code><br><code>pop</code><br><code>if &#39;&#39; in d:</code><br><code>for key in d.keys():</code><br><code>for value in d.values():</code><br><code>.clear</code></p>
+<p><code>list(dic) = list(dic.keys())</code> 只有keys<br><code>list(dic.values())</code><br><code>list(dic.items())</code><br><code>tuple</code> 一样<br><code>for x in dic:</code><br>    <code>print(x)</code> #输出只有keys<br><code>for x in dic.items():</code> #输出键值对</p>
+<blockquote>
+<p>while不能直接遍历字典 需要转化为tuple/列表，这样才有索引，才能通过索引遍历。</p>
+</blockquote>
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><blockquote>
+<p>集合中间只能包含不可变的数据：如数字、字符串、元组。（唯一性）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set1 &#x3D; &#123;1,2,3,4&#125;</span><br><span class="line">set2 &#x3D; &#123;1,2,1,2&#125; #自动去重</span><br><span class="line">set3 &#x3D; &#123;[3,4],1,2&#125; #报错</span><br><span class="line">&lt;!-- 空集合 空字典 空元组的创建 --&gt;</span><br><span class="line">元组名 &#x3D; ()</span><br><span class="line">字典名 &#x3D; &#123;&#125;</span><br><span class="line">集合名 &#x3D; set()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>字符串转化为集合会拆分字母，且自动去重，无序。字典转化为集合只会呈现keys。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; set(range(1,9))</span><br><span class="line">&#123;1, 2, 3, 4, 5, 6, 7, 8&#125; </span><br><span class="line">&lt;!-- 声明列表 --&gt;</span><br><span class="line">s &#x3D; set(&#39;python&#39;)</span><br><span class="line">s &#x3D; frozenset(&#39;python&#39;)</span><br><span class="line">&lt;!-- 方法 --&gt;</span><br><span class="line">.add(&#39;0&#39;)</span><br><span class="line">.update([update])</span><br><span class="line">.remove()</span><br><span class="line">.clear</span><br><span class="line">if 2 in s:</span><br><span class="line">for e in s:</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>表示</th>
+<th>含义</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>s = s1 | s2</td>
+<td>并集</td>
+<td>s1.union(s2)</td>
+</tr>
+<tr>
+<td>s = s1 &amp; s2</td>
+<td>交集</td>
+<td>s1.intersection(s2)</td>
+</tr>
+<tr>
+<td>s = s1 - s2</td>
+<td>差集</td>
+<td>s1.difference(s2)</td>
+</tr>
+<tr>
+<td>s = s1 ^ s2</td>
+<td>两集合中不重复的元素</td>
+<td>s1.symmetric_difference(s2)</td>
+</tr>
+<tr>
+<td>参考1：<a href="https://blog.csdn.net/weixin_44489823/article/details/100533920">python 集合比较（交集、并集，差集）</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>参考2：<a href="https://www.runoob.com/python3/python3-set.html#setmethod">集合方法参考</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 <h2 id="盲点"><a href="#盲点" class="headerlink" title="盲点"></a>盲点</h2><h2 id="位运算符-优先级-可变长参数"><a href="#位运算符-优先级-可变长参数" class="headerlink" title="位运算符 优先级 可变长参数"></a>位运算符 优先级 可变长参数</h2><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="杂碎知识点"><a href="#杂碎知识点" class="headerlink" title="杂碎知识点"></a>杂碎知识点</h2><p>return多个返回值：<br><code>return sum,product</code><br>返回值默认显示为元组<code>(1,2)</code><br>还可以按需求为其它的形式如：<br>列表：<code>return[sum,product]</code></p>
-<h2 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h2><p>def fun1(x):<br>help(fun1)<br>dir(fun1)<br>fun1.</p>
+<h2 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h2><p><code>def fun1(x):</code><br><code>help(fun1)</code><br><code>dir(fun1)</code><br><code>fun1.</code></p>
 <h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><table>
 <thead>
 <tr>
@@ -1990,8 +2039,18 @@ table th:nth-of-type(4) {
 </tr>
 </tbody></table>
 <p>函数内部声明<code>global a</code><br><code>if elif else try except for while</code>不会引入新的作用域，其中定义的变量外部也可以访问。 </p>
-<h2 id="基本函数"><a href="#基本函数" class="headerlink" title="基本函数"></a>基本函数</h2><p>斐波那契数列的递归函数<br>input() | age = input(‘your age:’)<br>raw_input() 只存在于python2，不管输入什么的都是字符串<br>print()<br>int()<br>print(value1,value2,value3…,step = ‘\t’,end = ‘\n’, file = ‘sys.stdout’)<br>for i in range(1,5)<br>    print(i,end=’’) 输出不换行<br>写入文件<br>    with open (‘test.txt’,’w’) as file01:<br>        print(‘hello’,file = file01)<br>    with open (‘test02.txt’,’w’) as file02:<br>        file02.write(‘hello’)</p>
-<h2 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h2><h2 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h2><h2 id><a href="#" class="headerlink" title></a><img src="/images/python/%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0.jfif" alt></h2><h1 id="模拟笔记"><a href="#模拟笔记" class="headerlink" title="模拟笔记"></a>模拟笔记</h1><p>eval(‘代码’) 执行其中的代码，并返回值<br>str.split() 分割，返回列表，默认以空格分割<br>‘{:-&gt;25,}’.format() 格式化输出，注意-&gt;一起使用<br>python3.x input() 返回值是str，如需格式化输出等，可用int()、eval()转换为整数 ，eval()就是去掉引号<br>&lt;填充&gt;&lt;对齐/&lt;宽度&gt;&lt;,&gt;&lt;.精度&gt;&lt;类型&gt;等六个字段，<br>for i in range() i从0开始<br>b = 1,2,3<br>type(b) = tuple<br>type(eval（’1,2,3’)) = tuple<br>jieba.lcut() 返回值是列表<br>list.reverse()  会改变原来的列表，而且没有返回值<br><a href="https://blog.csdn.net/mingyuli/article/details/81604795">print(s[::-1])</a><br><a href="cnblogs.com/wc-chan/p/8080765.html">同时给多个变量赋值</a><br>a, b = 0, 1<br>random 之能生成0.0-1.1之间的数，randint可以指定（1，2）经过实测，是[1,2]<br>ifxxx:<br>elif xxx:<br>elif xxx:<br>else:<br>print(“{:+^11}”.format(chr(n-1)+chr(n)+chr(n+1)))字符串直接相加就行<br>输入多个数  a,b,c = eval(input())<br>try except<br>int(a) == a<br>turtle.seth<br>turtle.left<br>str.split不改变原来值</p>
+<h2 id="基本函数"><a href="#基本函数" class="headerlink" title="基本函数"></a>基本函数</h2><p>斐波那契数列的递归函数<br><code>input() | age = input(&#39;your age:&#39;)</code><br><code>raw_input()</code>只存在于python2，不管输入什么的都是字符串<br><code>print()</code><br><code>int()</code><br><code>print(value1,value2,value3...,step = &#39;\t&#39;,end = &#39;\n&#39;, file = &#39;sys.stdout&#39;)</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for i in range(1,5)</span><br><span class="line">    print(i,end&#x3D;&#39;&#39;) #输出不换行</span><br></pre></td></tr></table></figure>
+<p>写入文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">with open (&#39;test.txt&#39;,&#39;w&#39;) as file01:</span><br><span class="line">    print(&#39;hello&#39;,file &#x3D; file01)</span><br><span class="line">with open (&#39;test02.txt&#39;,&#39;w&#39;) as file02:</span><br><span class="line">    file02.write(&#39;hello&#39;)</span><br></pre></td></tr></table></figure>
+<h2 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h2><p>工厂函数：<code>list()</code> <code>tuple()</code> <code>dict()</code> <code>set()</code> <code>int()</code> <code>str()</code></p>
+<h2 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h2><h2 id><a href="#" class="headerlink" title></a><img src="/images/python/%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0.jfif" alt></h2><h1 id="模拟笔记"><a href="#模拟笔记" class="headerlink" title="模拟笔记"></a>模拟笔记</h1><p><code>eval(&#39;代码&#39;)</code> 执行其中的代码，并返回值<br><code>str.split()</code> 分割，返回列表，默认以空格分割<br>‘{:-&gt;25,}.format()<code>格式化输出，注意-&gt;一起使用
+python3.x</code>input()<code>返回值是str，如需格式化输出等，可用</code>int()<code>、</code>eval()<code>转换为整数 ，</code>eval()<code>就是**去掉引号**
+&lt;填充&gt;&lt;对齐/&lt;宽度&gt;&lt;,&gt;&lt;.精度&gt;&lt;类型&gt;等六个字段，</code>for i in range()<code>i从0开始</code>b = 1,2,3<code></code>type(b) = tuple<code></code>type(eval（’1,2,3’)) = tuple<code></code>jieba.lcut()<code>返回值是**列表**</code>list.reverse()<code>会改变原来的列表，而且**没有返回值**
+参考1：[print(s[::-1])](https://blog.csdn.net/mingyuli/article/details/81604795)
+参考2[同时给多个变量赋值](cnblogs.com/wc-chan/p/8080765.html)</code>a, b = 0, 1<code></code>random<code>之能生成0.0-1.1之间的数，</code>randint`可以指定（1，2）经过实测，是[1,2]</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ifxxx:</span><br><span class="line">elif xxx:</span><br><span class="line">elif xxx:</span><br><span class="line">else:</span><br></pre></td></tr></table></figure>
+<p><code>print(&quot;&#123;:+^11&#125;&quot;.format(chr(n-1)+chr(n)+chr(n+1)))</code>字符串直接相加就行<br>输入多个数  <code>a,b,c = eval(input())</code><br><code>try except</code><br><code>int(a) == a</code><br><code>turtle.seth</code><br><code>turtle.left</code><br><code>str.split</code>不改变原来值</p>
 <table>
 <thead>
 <tr>
@@ -2007,21 +2066,9 @@ table th:nth-of-type(4) {
 <td>可更改</td>
 <td>可更改，元素不可重复</td>
 </tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 </tbody></table>
 <hr>
-<p> 软件 = 程序+ 文档 = 数据结构+算法+文档</p>
+<h2 id="软件技术基础"><a href="#软件技术基础" class="headerlink" title="软件技术基础"></a>软件技术基础</h2><p> 软件 = 程序+ 文档 = 数据结构+算法+文档</p>
 ]]></content>
       <categories>
         <category>笔记</category>
