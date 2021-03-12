@@ -57,6 +57,7 @@
 <li>转载csdn的博客：复制<code>&lt;div id=&quot;article_content&quot;&gt;...&lt;/div&gt;</code>里的html代码，粘贴到md文件里就行。</li>
 <li>bilibili等视频网站自定义倍速播放：如在浏览器控制台输入<code>document.getElementsByTagName(&quot;video&quot;)[0].playbackRate = 3</code></li>
 <li>gulp压缩参考：<a href="https://blog.csdn.net/GerZhouGengCheng/article/details/106074545">使用Gulp压缩Hexo博客静态资源</a>,imagemin可能比较慢，不报错的话建议耐心点。</li>
+<li>放个订阅地址：<a href="https://l.dabai.pw/link/z2SMogEehRtWyNWq?sub=3&extend=1">地址</a></li>
 </ul>
 </blockquote>
 <hr>
