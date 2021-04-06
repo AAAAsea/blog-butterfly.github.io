@@ -64,7 +64,7 @@
 <li>网页长截图可以F12——&gt;Ctrl Shift P——&gt;Capture full size screenshot</li>
 <li>new post 的格式在root\scafflods里面修改</li>
 <li>利用bat快速生成newpost,可以参考<br><code>hexo new post newpost&amp;&amp;code E:\blog\source\_posts\newpost.md&amp;&amp;rd E:\blog\source\_posts\newpost</code></li>
-<li>在微软输入法设置里面可以添加自定义短语，例如我输入sj，自动弹出当前时间，具体格式见下面代码块。</li>
+<li>在微软输入法设置里面可以添加自定义短语，例如我输入sj，自动弹出当前时间，具体格式:<code>%yyyy%-%MM%-%dd% %HH%:%mm%:%ss%</code>。</li>
 <li>win10 突然发现某些地方的图标字体变得很大，和分辨率不匹配，可能是因为开机时连接了hdmi线所致，可以拔掉hdmi线然后重启。</li>
 <li>obs录屏如果显卡和节能都调过了，但是某一天突然有黑屏，可以去图形设置里面把obs删了，重新添加一下，因为某些原因可能导致文件路径出错。</li>
 <li>转载csdn的博客：复制<code>&lt;div id=&quot;article_content&quot;&gt;...&lt;/div&gt;</code>里的html代码，粘贴到md文件里就行。</li>
@@ -72,10 +72,9 @@
 <li>gulp压缩参考：<a href="https://blog.csdn.net/GerZhouGengCheng/article/details/106074545">使用Gulp压缩Hexo博客静态资源</a>,imagemin可能比较慢，不报错的话建议耐心点。</li>
 <li>放个订阅地址：<a href="https://l.dabai.pw/link/z2SMogEehRtWyNWq?sub=3&extend=1">地址</a></li>
 <li>当需要查看浏览器的密码输入框里面的密码时，可以审查元素将<code>type</code>改成<code>text</code>就可以显示了。</li>
+<li>浏览器快捷键：录屏<code>ctrl+alt+s</code>  元素检查<code>ctrl+shift+c</code></li>
 </ul>
 </blockquote>
-<hr>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 输入法时间格式 --&gt;</span><br><span class="line">关键字需要用 %% 来包裹</span><br><span class="line">yyyy    4 位年</span><br><span class="line">MM	    2 位月</span><br><span class="line">dd	    2 位日</span><br><span class="line">HH  	2 位小时（24 小时制）</span><br><span class="line">mm  	2 位分钟数</span><br><span class="line">ss  	2 位秒数</span><br><span class="line">&lt;!-- 示例 --&gt;</span><br><span class="line"># 结果是这样的格式: 2020-02-07 12:36:52</span><br><span class="line">%yyyy%-%MM%-%dd% %HH%:%mm%:%ss%</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>技术</category>
