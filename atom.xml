@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://asea.fun/"/>
-  <updated>2021-04-05T23:48:32.000Z</updated>
+  <updated>2021-04-13T04:38:52.000Z</updated>
   <id>https://asea.fun/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP学习笔记</title>
+    <link href="https://asea.fun/post/55d182ea.html"/>
+    <id>https://asea.fun/post/55d182ea.html</id>
+    <published>2021-04-13T04:18:56.000Z</published>
+    <updated>2021-04-13T04:38:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>以下是我最近学习php的笔记，主要记录自认为会遗忘的知识点</p></blockquote><h1 id="初识php"><a href="#初识php" class="headerlink" title="初识php"></a>初识php</h1><p>php是一种动态网站开发的脚本语言，有交互性，有数据的传递。</p><h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol><li>标准语法<code>&lt;?php php代码 ?&gt;</code></li><li>最后一句php语言可以不带结束符<code>;</code></li><li>最后可以不写<code>?&gt;</code>，这样就可以避免读取最后的空行</li><li>行注释<code>//</code>或<code>#</code></li><li>块注释<code>/* */</code><h2 id="开始语法"><a href="#开始语法" class="headerlink" title="开始语法"></a>开始语法</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3></li><li>声明<br><code>$var1;</code>或直接赋值<code>$var2 = 1;</code></li><li>删除变量<br><code>unset($var1);</code></li><li>命名规则<ul><li>以$开始</li><li>由字母、数字、下划线组成，但不能以数字开始</li><li>支持中文变量（很不建议你懂的）</li></ul></li><li>预定义变量（均为数组类型）<ul><li>$_GET: 获取所有表单以get方式提交的数据</li><li>$_POST: 提交的数据都会保存在此</li><li>$_REQUEST: GET和POST提交的都会保存</li><li>$GLOBALS: PHP钟所有的全局变量</li><li>$_SERVER: 服务器信息</li><li>$_SESSION: session会话数据</li><li>$_COOKIE: cookie会话数据</li><li>$_ENV: 环境信息</li><li>$_FILES: 用户上传的文件信息</li></ul></li><li>可变变量<br>如果一个变量保存的值刚好是另一个变量的名字，那么可以通过访问一个变量得到另一个变量的值。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$a &#x3D; &#39;b&#39;</span><br><span class="line">$b &#x3D; &#39;bb&#39;</span><br><span class="line">echo $$A</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;以下是我最近学习php的笔记，主要记录自认为会遗忘的知识点&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;初识php&quot;&gt;&lt;a href=&quot;#初识php&quot; class=&quot;headerlink&quot; title=&quot;初识php&quot;&gt;&lt;/a&gt;初识php&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://asea.fun/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="notes" scheme="https://asea.fun/tags/notes/"/>
+    
+      <category term="php" scheme="https://asea.fun/tags/php/"/>
+    
+  </entry>
   
   <entry>
     <title>旅行说走就走，二十岁说走就走</title>
@@ -285,7 +316,7 @@
     <published>2021-01-19T17:10:21.000Z</published>
     <updated>2021-04-06T07:31:28.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="这里收录一些小技巧"><a href="#这里收录一些小技巧" class="headerlink" title="这里收录一些小技巧"></a><font color="#495969">这里收录一些小技巧</font></h2><blockquote><ul><li>网页长截图可以F12——&gt;Ctrl Shift P——&gt;Capture full size screenshot</li><li>new post 的格式在root\scafflods里面修改</li><li>利用bat快速生成newpost,可以参考<br><code>hexo new post newpost&amp;&amp;code E:\blog\source\_posts\newpost.md&amp;&amp;rd E:\blog\source\_posts\newpost</code></li><li>在微软输入法设置里面可以添加自定义短语，例如我输入sj，自动弹出当前时间，具体格式:<code>%yyyy%-%MM%-%dd% %HH%:%mm%:%ss%</code>。</li><li>win10 突然发现某些地方的图标字体变得很大，和分辨率不匹配，可能是因为开机时连接了hdmi线所致，可以拔掉hdmi线然后重启。</li><li>obs录屏如果显卡和节能都调过了，但是某一天突然有黑屏，可以去图形设置里面把obs删了，重新添加一下，因为某些原因可能导致文件路径出错。</li><li>转载csdn的博客：复制<code>&lt;div id=&quot;article_content&quot;&gt;...&lt;/div&gt;</code>里的html代码，粘贴到md文件里就行。</li><li>bilibili等视频网站自定义倍速播放：如在浏览器控制台输入<code>document.getElementsByTagName(&quot;video&quot;)[0].playbackRate = 3</code></li><li>gulp压缩参考：<a href="https://blog.csdn.net/GerZhouGengCheng/article/details/106074545">使用Gulp压缩Hexo博客静态资源</a>,imagemin可能比较慢，不报错的话建议耐心点。</li><li>放个订阅地址：<a href="https://l.dabai.pw/link/z2SMogEehRtWyNWq?sub=3&extend=1">地址</a></li><li>当需要查看浏览器的密码输入框里面的密码时，可以审查元素将<code>type</code>改成<code>text</code>就可以显示了。</li><li>浏览器快捷键：录屏<code>ctrl+alt+s</code>  元素检查<code>ctrl+shift+c</code></li></ul></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="这里收录一些小技巧"><a href="#这里收录一些小技巧" class="headerlink" title="这里收录一些小技巧"></a><font color="#495969">这里收录一些小技巧</font></h2><blockquote><ul><li>网页长截图可以F12——&gt;Ctrl Shift P——&gt;Capture full size screenshot</li><li>new post 的格式在root\scafflods里面修改</li><li>利用bat快速生成newpost,可以参考<br><code>hexo new post newpost&amp;&amp;code E:\blog\source\_posts\newpost.md&amp;&amp;rd E:\blog\source\_posts\newpost</code></li><li>在微软输入法设置里面可以添加自定义短语，例如我输入sj，自动弹出当前时间，具体格式:<code>%yyyy%-%MM%-%dd% %HH%:%mm%:%ss%</code>。</li><li>win10 突然发现某些地方的图标字体变得很大，和分辨率不匹配，可能是因为开机时连接了hdmi线所致，可以拔掉hdmi线然后重启。</li><li>obs录屏如果显卡和节能都调过了，但是某一天突然有黑屏，可以去图形设置里面把obs删了，重新添加一下，因为某些原因可能导致文件路径出错。</li><li>转载csdn的博客：复制<code>&lt;div id=&quot;article_content&quot;&gt;...&lt;/div&gt;</code>里的html代码，粘贴到md文件里就行。</li><li>bilibili等视频网站自定义倍速播放：如在浏览器控制台输入<code>document.getElementsByTagName(&quot;video&quot;)[0].playbackRate = 3</code></li><li>gulp压缩参考：<a href="https://blog.csdn.net/GerZhouGengCheng/article/details/106074545">使用Gulp压缩Hexo博客静态资源</a>,imagemin可能比较慢，不报错的话建议耐心点。</li><li>放个订阅地址：<a href="https://l.dabai.pw/link/z2SMogEehRtWyNWq?sub=3&extend=1">地址</a></li><li>当需要查看浏览器的密码输入框里面的密码时，可以审查元素将<code>type</code>改成<code>text</code>就可以显示了。</li><li>浏览器快捷键：录屏<code>ctrl+alt+s</code>  元素检查<code>ctrl+shift+c</code></li><li>云服务器上python发送邮件连接失败：<code>smtp = smtplib.SMTP(mailserver,port=25)</code>修改成<code>smtp=smtplib.SMTP_SSL(mailserver,port=465)</code>。</li></ul></blockquote>]]></content>
     
     <summary type="html">
     
@@ -513,32 +544,6 @@
 
 &lt;p&gt;这次打算认真处理一下这个网站了&lt;br&gt;从查找问题到一步步排除修正&lt;br&gt;相当于又从头布局了一下网站&lt;br&gt;butterfly更新了所以还遇到很多问题&lt;br&gt;主要是太久没管过了&lt;br&gt;总而言之&lt;br&gt;这次打算简洁点&lt;/p&gt;
 &lt;/center&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="日常" scheme="https://asea.fun/categories/%E6%97%A5%E5%B8%B8/"/>
-    
-    
-      <category term="life" scheme="https://asea.fun/tags/life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>生日快乐</title>
-    <link href="https://asea.fun/post/42dbb1c3.html"/>
-    <id>https://asea.fun/post/42dbb1c3.html</id>
-    <published>2020-09-24T16:00:00.000Z</published>
-    <updated>2020-09-24T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>生日快乐呢<br>是不是很快呢<br>2020年是不是很神奇的一年呢<br>奇奇怪怪的<br>你看发生了这么多奇怪的事<br>但是出不去了<br>嘎嘎嘎<br>看了那么多酒店有机会一定要去<br>小宝贝生日快乐呀<br>蛋糕可以不吃<br>酒店可以不住<br>旅行可以不去<br>但是要快乐<br>给你一些可爱的图：<br>吹个蜡烛吧<br>生日快乐！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;生日快乐呢&lt;br&gt;是不是很快呢&lt;br&gt;2020年是不是很神奇的一年呢&lt;br&gt;奇奇怪怪的&lt;br&gt;你看发生了这么多奇怪的事&lt;br&gt;但是出不去了&lt;br&gt;嘎嘎嘎&lt;br&gt;看了那么多酒店有机会一定要去&lt;br&gt;小宝贝生日快乐呀&lt;br&gt;蛋糕可以不吃&lt;br&gt;酒店可以不住&lt;br&gt;旅行可以不去&lt;
       
     
     </summary>
