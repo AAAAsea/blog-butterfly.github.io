@@ -253,6 +253,33 @@ deploy:
       </tags>
   </entry>
   <entry>
+    <title>node学习笔记</title>
+    <url>/post/129264f1.html</url>
+    <content><![CDATA[<h1 id="Node初步学习（后端入门）"><a href="#Node初步学习（后端入门）" class="headerlink" title="Node初步学习（后端入门）"></a>Node初步学习（后端入门）</h1><h2 id="基础入门"><a href="#基础入门" class="headerlink" title="基础入门"></a>基础入门</h2><ol>
+<li>node安装</li>
+<li>node运行js文件<h2 id="模块使用之fs"><a href="#模块使用之fs" class="headerlink" title="模块使用之fs"></a>模块使用之fs</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"><span class="comment">// 写文件</span></span><br><span class="line">fs.writeFile(path,data,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 读文件</span></span><br><span class="line">fs.readFile(path,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="模块使用之http"><a href="#模块使用之http" class="headerlink" title="模块使用之http"></a>模块使用之http</h2><h3 id="基本使用方法"><a href="#基本使用方法" class="headerlink" title="基本使用方法"></a>基本使用方法</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>)</span><br><span class="line"><span class="keyword">var</span> server = http.createServer()</span><br><span class="line"><span class="comment">// 绑定事件</span></span><br><span class="line">server.on(<span class="string">&#x27;request&#x27;</span>,<span class="function"><span class="title">funtion</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 根据不同路径返回不同response</span></span><br><span class="line">    <span class="keyword">if</span> (url = <span class="string">&#x27;/index&#x27;</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res.url)</span><br><span class="line">        <span class="comment">// 需要end结束，不太常用</span></span><br><span class="line">        res.write(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line">        res.end</span><br><span class="line">        <span class="comment">// 一般不用write</span></span><br><span class="line">        res.end(<span class="string">&#x27;hhh&#x27;</span>) <span class="comment">// 只能是字符串，可以用json. stringify()</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 绑定端口号，启动服务器</span></span><br><span class="line">server.listen()</span><br></pre></td></tr></table></figure>
+<h3 id="关于content-type"><a href="#关于content-type" class="headerlink" title="关于content-type"></a>关于content-type</h3><code>res.setHeader(&#39;Content-Type&#39;,&#39;text/plain;charset-utf-8&#39;)</code><br>具体类型可参照<a href="https://tool.oschina.net/commons">此处链接</a><h2 id="引用自己的模块"><a href="#引用自己的模块" class="headerlink" title="引用自己的模块"></a>引用自己的模块</h2><!-- 核心模块os不讲了 -->
+
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 自制模块，需要用到exports对象，设定不同的属性值达到跨文件引用变量目的</span></span><br><span class="line"><span class="built_in">exports</span>.name = <span class="string">&#x27;Doge&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 引用模块</span></span><br><span class="line"><span class="keyword">var</span> myModule = <span class="built_in">require</span>(<span class="string">&#x27;./a.js&#x27;</span>) <span class="comment">// 后缀可以省略</span></span><br><span class="line"><span class="built_in">console</span>.log(a.name) <span class="comment">// 输出Dog</span></span><br></pre></td></tr></table></figure>
+<h2 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h2><ol>
+<li>JavaScript Style要求tab两个空格</li>
+<li>一般结尾不加<code>;</code> 某些特殊情况要加（很不常见）<h2 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h2></li>
+</ol>
+<p><strong>art-template</strong><br><code>npm install art-template</code><br>暂时跳过</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>three.js学习笔记</title>
     <url>/post/afab6017.html</url>
     <content><![CDATA[<h1 id="程序结构"><a href="#程序结构" class="headerlink" title="程序结构"></a>程序结构</h1><p><img src="/images/three/three%E7%BB%93%E6%9E%84.jpg" alt></p>
@@ -278,6 +305,21 @@ deploy:
       </categories>
       <tags>
         <tag>domain</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>怎样才能有好的状态</title>
+    <url>/post/86d480d6.html</url>
+    <content><![CDATA[<h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>昨天更新了第一个<a href="https://www.bilibili.com/video/BV18h411f72x"><b>vlog</b></a>，从剪辑上来说还算凑合，达到七八十分的样子，所以就算做vlog的开端。这个开端想了很久了，以前也录了很多素材，但都在某天不知所以然地灰飞烟灭了。所以一直没有下手。这次反倒是借个机会，因为我的生活的单调性是毋庸置疑的，这点从辅导员找我谈话的问答中就可以看出来。这次拍的很随意，也是临时起意，我觉得vlog是一种认证生活质量的一种方式，或者说，他不单能够认证，还能升华。这种欢乐应该是每一个做vlog的人都能体会到的。我希望这是个良好的开始。<br><img src="https://pic.downk.cc/item/5fe5fabd3ffa7d37b311afc0.jpg" alt></p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>今天是圣诞节，一般我不会过这样的节日，个中缘由大概有些清高，但最正确的原因还是过于懒惰。节日往往需要很多人的参与才会好玩，我却经常没有资本和习惯去加入。索性写写最近的作为。<br>前段时间刷了阿弥的视频，每次看他的视频就很积极，会不断的想象往他靠拢，我是指那种生活态度上。所以我会很喜欢看他的vlog。可我始终缺少面对镜头的勇气。看了很多，算下来，最大的感受是：自己的积累很鸡肋。陈铭提到了好奇心，说到了心坎上。我本身就是好奇心很大的人，从小就是，但是还有很多复杂的性格以及其它原因导致我没有去发挥出来。失望之余，我在反思，其实我接触的方面不少，但真正能够进入其中的少之又少，我半途而废，我浅尝辄止，我慵懒涣散。这多令人失望。我常常幻想自己能像那些up一样快乐生活（这是我最向往的工作目前为止，其实我还会想假如我从小生活的环境能让我的眼界更加开阔，我将会走一条很好的路，但开阔毕竟没有界限，所以又没有定数，只能归属于瞎想）。我还会幻想，有人给我送礼物，我不知道什么是姜饼人；不知道谁是皮神；文导和我聊起来，我只会回应我没刷鬼灭——总之，我的积累太浅薄了，一戳击破的浅薄。我只会堆叠在一大堆“然后”里，然后退场退场退场。我还经常觉得我就是看到朋友被打的时候去劝架的树先生，只有被人推开的命运，也就是：“你算什么东西。”生活真的会像等不到车却等到龙猫、找不到人却找到龙猫那样简单又奇妙吗？会是失恋了有人帮你撑腰吗？会是亲人被杀，有人能帮你讨回公道吗？会有Hachi在你临终前接球不让你走吗？会有一个女孩看你一眼就喜欢上你吗？会有一个好老师拯救一个学校吗？<br>统统不会。<br>生活没有龙猫也没有那么简单，狗很早就死，学校依旧像个魔鬼，女孩始终讨厌你。<br>况且呢，这甚至只是很少的一部分，这些都属于高级情绪。<br>而我只会真实地开心几秒钟，随后任何不如意的事会立马把我打下地狱。<br>生活啊，多可悲！</p>
+<p>真实的希望在哪呢？<br>大光圈下虚化的酒店背景，人山人海雨衣里呼喊，拍立得咔嚓一下的声音，米11一步步预热，海口人见到东北的雪，有些人还在重蹈我的覆辙不知疲倦的写几千字的高级苦水。<br>这些都是希望。</p>
+<p>最后说一点，vlog带来的效果比blog好。<br>再说一点吧，节日快乐。</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -309,21 +351,6 @@ deploy:
       </categories>
       <tags>
         <tag>literature</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>怎样才能有好的状态</title>
-    <url>/post/86d480d6.html</url>
-    <content><![CDATA[<h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>昨天更新了第一个<a href="https://www.bilibili.com/video/BV18h411f72x"><b>vlog</b></a>，从剪辑上来说还算凑合，达到七八十分的样子，所以就算做vlog的开端。这个开端想了很久了，以前也录了很多素材，但都在某天不知所以然地灰飞烟灭了。所以一直没有下手。这次反倒是借个机会，因为我的生活的单调性是毋庸置疑的，这点从辅导员找我谈话的问答中就可以看出来。这次拍的很随意，也是临时起意，我觉得vlog是一种认证生活质量的一种方式，或者说，他不单能够认证，还能升华。这种欢乐应该是每一个做vlog的人都能体会到的。我希望这是个良好的开始。<br><img src="https://pic.downk.cc/item/5fe5fabd3ffa7d37b311afc0.jpg" alt></p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>今天是圣诞节，一般我不会过这样的节日，个中缘由大概有些清高，但最正确的原因还是过于懒惰。节日往往需要很多人的参与才会好玩，我却经常没有资本和习惯去加入。索性写写最近的作为。<br>前段时间刷了阿弥的视频，每次看他的视频就很积极，会不断的想象往他靠拢，我是指那种生活态度上。所以我会很喜欢看他的vlog。可我始终缺少面对镜头的勇气。看了很多，算下来，最大的感受是：自己的积累很鸡肋。陈铭提到了好奇心，说到了心坎上。我本身就是好奇心很大的人，从小就是，但是还有很多复杂的性格以及其它原因导致我没有去发挥出来。失望之余，我在反思，其实我接触的方面不少，但真正能够进入其中的少之又少，我半途而废，我浅尝辄止，我慵懒涣散。这多令人失望。我常常幻想自己能像那些up一样快乐生活（这是我最向往的工作目前为止，其实我还会想假如我从小生活的环境能让我的眼界更加开阔，我将会走一条很好的路，但开阔毕竟没有界限，所以又没有定数，只能归属于瞎想）。我还会幻想，有人给我送礼物，我不知道什么是姜饼人；不知道谁是皮神；文导和我聊起来，我只会回应我没刷鬼灭——总之，我的积累太浅薄了，一戳击破的浅薄。我只会堆叠在一大堆“然后”里，然后退场退场退场。我还经常觉得我就是看到朋友被打的时候去劝架的树先生，只有被人推开的命运，也就是：“你算什么东西。”生活真的会像等不到车却等到龙猫、找不到人却找到龙猫那样简单又奇妙吗？会是失恋了有人帮你撑腰吗？会是亲人被杀，有人能帮你讨回公道吗？会有Hachi在你临终前接球不让你走吗？会有一个女孩看你一眼就喜欢上你吗？会有一个好老师拯救一个学校吗？<br>统统不会。<br>生活没有龙猫也没有那么简单，狗很早就死，学校依旧像个魔鬼，女孩始终讨厌你。<br>况且呢，这甚至只是很少的一部分，这些都属于高级情绪。<br>而我只会真实地开心几秒钟，随后任何不如意的事会立马把我打下地狱。<br>生活啊，多可悲！</p>
-<p>真实的希望在哪呢？<br>大光圈下虚化的酒店背景，人山人海雨衣里呼喊，拍立得咔嚓一下的声音，米11一步步预热，海口人见到东北的雪，有些人还在重蹈我的覆辙不知疲倦的写几千字的高级苦水。<br>这些都是希望。</p>
-<p>最后说一点，vlog带来的效果比blog好。<br>再说一点吧，节日快乐。</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -379,10 +406,22 @@ deploy:
       </tags>
   </entry>
   <entry>
+    <title>生日快乐</title>
+    <url>/post/42dbb1c3.html</url>
+    <content><![CDATA[<p>生日快乐呢<br>是不是很快呢<br>2020年是不是很神奇的一年呢<br>奇奇怪怪的<br>你看发生了这么多奇怪的事<br>但是出不去了<br>嘎嘎嘎<br>看了那么多酒店有机会一定要去<br>小宝贝生日快乐呀<br>蛋糕可以不吃<br>酒店可以不住<br>旅行可以不去<br>但是要快乐<br>给你一些可爱的图：<br>吹个蜡烛吧<br>生日快乐！</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>更新帖</title>
     <url>/post/2ee0f961.html</url>
     <content><![CDATA[<h2 id="这里记录网站更新内容"><a href="#这里记录网站更新内容" class="headerlink" title="这里记录网站更新内容"></a><font color="#495969">这里记录网站更新内容</font></h2><blockquote>
-<p>想要及时收到网站更新的邮件提醒可在下方留言处留下你的邮箱。</p>
+<p>本贴更新不及时，想要及时收到网站更新的邮件提醒可在下方留言处留下你的邮箱。</p>
 </blockquote>
 <div class="tabs" id><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">Butterfly主题更新内容</button></li><li class="tab"><button type="button" data-href="#-2">Next主题更新内容</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><table><tr><td bgcolor="#f1f5ec">
 
@@ -403,7 +442,8 @@ deploy:
 <li><em>2021-03-20</em><br>使用python增加博客更新邮件提醒功能<br>使用python增加自动修改本贴的更新时间功能<br>更新post<a href="https://blog.asea.fun/post/c00b24b1.html">《python笔记》</a></li>
 <li><em>2021-03-27</em><br>更新post<a href="https://blog.asea.fun/post/c00b24b1.html">《python笔记》</a><br>发布post<a href="https://blog.asea.fun/post/71485f5b.html">《python项目练习》</a></li>
 <li><em>2021-03-30</em><br>调整代码块为默认不展开<br>更新post<a href="https://blog.asea.fun/post/71485f5b.html">《python项目练习》</a><br>更新post<a href="https://blog.asea.fun/post/cf7f39c3.html">《技术贴》</a>；</li>
-<li><em>2021-04-07</em><br>Butterfly博客上线到服务器，因为懒得备案，所以只能用IP地址了。<a href="http://39.103.144.114">地址</a></li></ul></td></tr></table>
+<li><em>2021-04-07</em><br>Butterfly博客上线到服务器，因为懒得备案，所以只能用IP地址了。<a href="http://39.103.144.114">地址</a></li>
+<li><em>2021-04-27</em><br>最近更新的几篇post没来得及放更新帖<br><a href="https://blog.asea.fun/post/55d182ea.html">PHP学习笔记</a><br><a href="https://blog.asea.fun/post/5f7056f2.html">electron学习笔记</a><br><a href="https://blog.asea.fun/post/7e086bda.html">我的记忆只有一扇门</a></li></ul></td></tr></table>
 
 
 <button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><table><tr><td bgcolor="#f6f5ec">
@@ -423,7 +463,8 @@ deploy:
 <li><em>2021-03-13</em><br>更新post<a href="https://next.asea.fun/post/c00b24b1.html">《python笔记》</a><br>修改本页样式</li>
 <li><em>2021-03-20</em><br>使用python增加博客更新邮件提醒功能<br>使用python增加博客更新邮件提醒功能<br>更新post<a href="https://next.asea.fun/post/c00b24b1.html">《python笔记》</a></li>
 <li><em>2021-03-27</em><br>更新post<a href="https://next.asea.fun/post/c00b24b1.html">《python笔记》</a><br>发布post<a href="https://next.asea.fun/post/71485f5b.html">《python项目练习》</a></li>
-<li><em>2021-03-30</em><br>调整代码块为默认不展开<br>更新post<a href="https://next.asea.fun/post/71485f5b.html">《python项目练习》</a><br>更新post<a href="https://next.asea.fun/post/cf7f39c3.html">《技术贴》</a>；
+<li><em>2021-03-30</em><br>调整代码块为默认不展开<br>更新post<a href="https://next.asea.fun/post/71485f5b.html">《python项目练习》</a><br>更新post<a href="https://next.asea.fun/post/cf7f39c3.html">《技术贴》</a></li>
+<li><em>2021-04-27</em><br>最近更新的几篇post没来得及放更新帖<br><a href="https://next.asea.fun/post/55d182ea.html">PHP学习笔记</a><br><a href="https://next.asea.fun/post/5f7056f2.html">electron学习笔记</a><br><a href="https://next.asea.fun/post/7e086bda.html">我的记忆只有一扇门</a>
 </li>
 <button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div></div></div>
 
@@ -433,18 +474,6 @@ deploy:
       </categories>
       <tags>
         <tag>update</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>生日快乐</title>
-    <url>/post/42dbb1c3.html</url>
-    <content><![CDATA[<p>生日快乐呢<br>是不是很快呢<br>2020年是不是很神奇的一年呢<br>奇奇怪怪的<br>你看发生了这么多奇怪的事<br>但是出不去了<br>嘎嘎嘎<br>看了那么多酒店有机会一定要去<br>小宝贝生日快乐呀<br>蛋糕可以不吃<br>酒店可以不住<br>旅行可以不去<br>但是要快乐<br>给你一些可爱的图：<br>吹个蜡烛吧<br>生日快乐！</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -476,9 +505,9 @@ deploy:
       </tags>
   </entry>
   <entry>
-    <title>看小米春季新品发布会有感</title>
-    <url>/post/f32b1748.html</url>
-    <content><![CDATA[<p>从来没看过这么长的发布会，有感于雷总的人格魅力，分为两场的发布会丝毫不觉得劳累。今天的发布会雷总已经嗓子哑得很严重了，只要稍微大声说话便会失声，我以为讲完mix雷总要休息了，没想到后面的笔记本，以及最后的充满激情的造车宣言，他都坚持下来了。我在想，假如我在场，一定会热泪盈眶吧。听了太多的参数，这里我已经不想提产品了。正常发布会看下来，各种新品层出不穷，可谓盛宴，又被人称之为手机界的“春晚”，说实话，毫不为过。但是其实我最喜欢的还是雷总讲起来他的回忆，讲起来他和许知远的对话，那是无比真诚的，一口不是很标准的普通话却感人肺腑。雷总又讲起来了他的以往，从当年笃定要敲代码，到最后代码被格式化，学习管理、金融的知识，16年小米的低谷期，雷总挑起大旗带领大家扛了过来，如今有了“我们又1080亿”的资本这样的豪言，属实让人感叹！今天雷总正式在发布会上宣布要进军智能电动汽车行业，他说到：“这是我人生中最后一次重大的创业项目了。”我一时间还不能接受这样的消息，雷军在我眼里一直是一个年轻帅气充满魅力的成功人士，况且当他将其mix fold的时候还调侃自己还年轻，可是终究逃不了变老的命运。这样的感受让我想起来罗老师，当年他在各行各业闯荡，而现在算算，他还有多少时间可以依旧保持活力探索呢。我真心的希望小米能在汽车行业有一番成就，至少不会辜负一百亿美金的资金调用，至少不会辜负发布会最后两句失声的谢谢。<br><img src="https://img.imgdb.cn/item/606335818322e6675c6e5344.jpg" alt></p>
+    <title>第一篇</title>
+    <url>/post/5a8a6c8d.html</url>
+    <content><![CDATA[<p>总算把主题和基本写作的操作摸索敲定了<br>暂且先这样<br>美化工作还有很多要做<br>先记录一下</p>
 ]]></content>
       <categories>
         <category>日常</category>
@@ -488,9 +517,9 @@ deploy:
       </tags>
   </entry>
   <entry>
-    <title>第一篇</title>
-    <url>/post/5a8a6c8d.html</url>
-    <content><![CDATA[<p>总算把主题和基本写作的操作摸索敲定了<br>暂且先这样<br>美化工作还有很多要做<br>先记录一下</p>
+    <title>看小米春季新品发布会有感</title>
+    <url>/post/f32b1748.html</url>
+    <content><![CDATA[<p>从来没看过这么长的发布会，有感于雷总的人格魅力，分为两场的发布会丝毫不觉得劳累。今天的发布会雷总已经嗓子哑得很严重了，只要稍微大声说话便会失声，我以为讲完mix雷总要休息了，没想到后面的笔记本，以及最后的充满激情的造车宣言，他都坚持下来了。我在想，假如我在场，一定会热泪盈眶吧。听了太多的参数，这里我已经不想提产品了。正常发布会看下来，各种新品层出不穷，可谓盛宴，又被人称之为手机界的“春晚”，说实话，毫不为过。但是其实我最喜欢的还是雷总讲起来他的回忆，讲起来他和许知远的对话，那是无比真诚的，一口不是很标准的普通话却感人肺腑。雷总又讲起来了他的以往，从当年笃定要敲代码，到最后代码被格式化，学习管理、金融的知识，16年小米的低谷期，雷总挑起大旗带领大家扛了过来，如今有了“我们又1080亿”的资本这样的豪言，属实让人感叹！今天雷总正式在发布会上宣布要进军智能电动汽车行业，他说到：“这是我人生中最后一次重大的创业项目了。”我一时间还不能接受这样的消息，雷军在我眼里一直是一个年轻帅气充满魅力的成功人士，况且当他将其mix fold的时候还调侃自己还年轻，可是终究逃不了变老的命运。这样的感受让我想起来罗老师，当年他在各行各业闯荡，而现在算算，他还有多少时间可以依旧保持活力探索呢。我真心的希望小米能在汽车行业有一番成就，至少不会辜负一百亿美金的资金调用，至少不会辜负发布会最后两句失声的谢谢。<br><img src="https://img.imgdb.cn/item/606335818322e6675c6e5344.jpg" alt></p>
 ]]></content>
       <categories>
         <category>日常</category>
@@ -506,72 +535,6 @@ deploy:
 <h2 id="韩寒"><a href="#韩寒" class="headerlink" title="韩寒"></a>韩寒</h2><p>不去深入了解，大多数略有耳闻的人都对韩寒有一些误解：叛逆、不听话、我行我素、大骂教育制度、暴躁。但其实完全不是，他尊重人和事、面对他人谦逊无比、虚心接受其它有价值的意见。他很善良，有爱，不管是从一言一行还是从他的小说里的字里行间，无论你能看得出多少痞气，你都不能想当然。那是媒体过分渲染的韩寒，他们把一个孩子想得太简单了。大人们习惯这样，把比自己年龄小的人想得简单。</p>
 <h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>以前为了安慰自己一直都有一套理论：<br>人不可能长时间保持一种状态，无论你多么有自制力，还是免不了被改变，人就是一个阶段一个阶段的，哪有不忘初心。<br>现在又发现其实人可以长时间保持一种状态，不过所依赖的条件是：你必须不停的汲取知识，不是科学知识，而是经历。这种经历可以从过来的人身上看到，也可以从虚构的人和事上看到，简单说就是多读书。</p>
 ]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>返校日记</title>
-    <url>/post/b6589fc3.html</url>
-    <content><![CDATA[<h1 id="大二下的返校有什么可说道的"><a href="#大二下的返校有什么可说道的" class="headerlink" title="大二下的返校有什么可说道的"></a>大二下的返校有什么可说道的</h1><h2 id="流水账一"><a href="#流水账一" class="headerlink" title="流水账一"></a>流水账一</h2><p>火车站安检的位置改了，改的挺合理，我觉得它本来就应该是这样子。在取票厅见到了很久不见的老同学，一见面其实没认出来，好家伙，那肯定认不出来，不过说了些话后感觉也还熟悉，可能是某些深处的记忆被拔出来了，整个相处还算不尴尬。我们五个人上四号车，结果却往相反的地方走，好在问了问工作人员，赶紧掉头走了很久很久才到。上车后我们坐在下铺攀谈了一会，主人过来了，于是我们便移步到道旁的位置上。没什么事干，我们决定打会牌，然而网络问题，磕磕绊绊进去之后，也就打了一把，还算有意思的结束。我坐在窗户旁边看周遭景致后撤，脑中并无任何想法。</p>
-<h2 id="流水账二"><a href="#流水账二" class="headerlink" title="流水账二"></a>流水账二</h2><p>快到熄灯的时间，我收拾了东西爬上上铺，整个感觉奇妙的很，狭小的空间内时睡时醒，只记得做了很多噩梦，醒来的时候六点多，车上的广播开始有了动静。我翻动了一会下了床洗了脸，牙刷什么的在箱子里，也懒得去拿了。坐在窗户旁边看风景，但也没什么看到，雾气茫茫，不太能看清多远。同行的伙伴递过来面包、🍓，也没什么食欲，捏了个草莓吃了。</p>
-<center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08); width:300px" src="https://img.imgdb.cn/item/603b65385f4313ce25b1d1e4.jpg">
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">剩下的叶子放在了车窗旁拍了照，随即丢到了垃圾桶了，毕竟不太好看——放窗户上。</div>
-</center>
-
-<h2 id="流水账三"><a href="#流水账三" class="headerlink" title="流水账三"></a>流水账三</h2><p>上午没什么事，看了会手机没什么玩的，就站起来站着，车到站的时候咯噔了一下，差点跌倒，还好不至于出丑。后来实在无趣，上了床，开始睡觉了。大约十一点半，乘务员提醒快到站了。拿出浏览器查了查，12：05到，还早，打算再睡会，可也没啥兴致，便下了床。再次坐在窗边，旋即看到“上海站”几个打字向我跑来，原来早点了。那便收拾收拾下车吧。</p>
-<h2 id="流水账四"><a href="#流水账四" class="headerlink" title="流水账四"></a>流水账四</h2><p>一路按照指示牌的方向，给看了健康码，一路来到三四号线的地方，跟我姐分道扬镳，开始了一个多小时的地铁之旅。一路无话，倒是宜山路转9号线，路途之远难以想象，太累了，几十级的台阶，去年帮某人抬了一路，今年换了个人，以后一定提醒带少行李。说起来三号线上看到个有意思的父亲和女儿，那父亲大概三十岁不到，短发、五官都分外精致，手里抱个“长宁美院”的袋子，女儿也六七岁的样子，一会坐下一会站起来。我顿时起了好感。说着她拉起来她爸爸指着墙上的广告说，这两个人怎么长的一样。那美院男子细心的讲解着什么镜像、什么Ps、什么广告，听起来极为有趣。<br>最后面没什么说的了，倒是等公交等不来，打的又堵车，磕磕绊绊算是回了学校，便也开始新的日子了。</p>
-<h2 id="一些图片"><a href="#一些图片" class="headerlink" title="一些图片"></a>一些图片</h2><center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08); width:300px" src="https://img.imgdb.cn/item/603b67ee5f4313ce25b3b2e0.jpg">
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">上海站慢慢靠近</div>
-</center>
-
-<hr>
-<center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08); width:300px" src="https://img.imgdb.cn/item/603b67ee5f4313ce25b3b2e3.jpg">
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">公交车站牌人山人海</div>
-</center>
-
-<hr>
-<center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08); width:300px" src="https://img.imgdb.cn/item/603b67ee5f4313ce25b3b2e7.jpg">
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">到宿舍后一碗泡面草草了事</div>
-</center>
-
-<hr>
-<center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08); width:300px" src="https://img.imgdb.cn/item/603b67ee5f4313ce25b3b2ea.jpg">
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">上铺视角</div>
-</center>]]></content>
       <categories>
         <category>日常</category>
       </categories>
@@ -729,6 +692,72 @@ deploy:
     padding: 2px;">我还记得这颗树，是我家后院的一颗很大很大的榆树。记不清几年级学了榆钱才知道这东西叫榆树，榆钱还能吃，但我记得没啥甜味。后来学到读诗读到“道傍榆荚仍似钱，摘来沽酒君肯否。”，颇有意思。树上那个缝是当时拿锯子锯的时候锯不断，就换了好几个地方，不得不说这东西真硬。</div>
 </center>   
 ]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>返校日记</title>
+    <url>/post/b6589fc3.html</url>
+    <content><![CDATA[<h1 id="大二下的返校有什么可说道的"><a href="#大二下的返校有什么可说道的" class="headerlink" title="大二下的返校有什么可说道的"></a>大二下的返校有什么可说道的</h1><h2 id="流水账一"><a href="#流水账一" class="headerlink" title="流水账一"></a>流水账一</h2><p>火车站安检的位置改了，改的挺合理，我觉得它本来就应该是这样子。在取票厅见到了很久不见的老同学，一见面其实没认出来，好家伙，那肯定认不出来，不过说了些话后感觉也还熟悉，可能是某些深处的记忆被拔出来了，整个相处还算不尴尬。我们五个人上四号车，结果却往相反的地方走，好在问了问工作人员，赶紧掉头走了很久很久才到。上车后我们坐在下铺攀谈了一会，主人过来了，于是我们便移步到道旁的位置上。没什么事干，我们决定打会牌，然而网络问题，磕磕绊绊进去之后，也就打了一把，还算有意思的结束。我坐在窗户旁边看周遭景致后撤，脑中并无任何想法。</p>
+<h2 id="流水账二"><a href="#流水账二" class="headerlink" title="流水账二"></a>流水账二</h2><p>快到熄灯的时间，我收拾了东西爬上上铺，整个感觉奇妙的很，狭小的空间内时睡时醒，只记得做了很多噩梦，醒来的时候六点多，车上的广播开始有了动静。我翻动了一会下了床洗了脸，牙刷什么的在箱子里，也懒得去拿了。坐在窗户旁边看风景，但也没什么看到，雾气茫茫，不太能看清多远。同行的伙伴递过来面包、🍓，也没什么食欲，捏了个草莓吃了。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08); width:300px" src="https://img.imgdb.cn/item/603b65385f4313ce25b1d1e4.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">剩下的叶子放在了车窗旁拍了照，随即丢到了垃圾桶了，毕竟不太好看——放窗户上。</div>
+</center>
+
+<h2 id="流水账三"><a href="#流水账三" class="headerlink" title="流水账三"></a>流水账三</h2><p>上午没什么事，看了会手机没什么玩的，就站起来站着，车到站的时候咯噔了一下，差点跌倒，还好不至于出丑。后来实在无趣，上了床，开始睡觉了。大约十一点半，乘务员提醒快到站了。拿出浏览器查了查，12：05到，还早，打算再睡会，可也没啥兴致，便下了床。再次坐在窗边，旋即看到“上海站”几个打字向我跑来，原来早点了。那便收拾收拾下车吧。</p>
+<h2 id="流水账四"><a href="#流水账四" class="headerlink" title="流水账四"></a>流水账四</h2><p>一路按照指示牌的方向，给看了健康码，一路来到三四号线的地方，跟我姐分道扬镳，开始了一个多小时的地铁之旅。一路无话，倒是宜山路转9号线，路途之远难以想象，太累了，几十级的台阶，去年帮某人抬了一路，今年换了个人，以后一定提醒带少行李。说起来三号线上看到个有意思的父亲和女儿，那父亲大概三十岁不到，短发、五官都分外精致，手里抱个“长宁美院”的袋子，女儿也六七岁的样子，一会坐下一会站起来。我顿时起了好感。说着她拉起来她爸爸指着墙上的广告说，这两个人怎么长的一样。那美院男子细心的讲解着什么镜像、什么Ps、什么广告，听起来极为有趣。<br>最后面没什么说的了，倒是等公交等不来，打的又堵车，磕磕绊绊算是回了学校，便也开始新的日子了。</p>
+<h2 id="一些图片"><a href="#一些图片" class="headerlink" title="一些图片"></a>一些图片</h2><center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08); width:300px" src="https://img.imgdb.cn/item/603b67ee5f4313ce25b3b2e0.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">上海站慢慢靠近</div>
+</center>
+
+<hr>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08); width:300px" src="https://img.imgdb.cn/item/603b67ee5f4313ce25b3b2e3.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">公交车站牌人山人海</div>
+</center>
+
+<hr>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08); width:300px" src="https://img.imgdb.cn/item/603b67ee5f4313ce25b3b2e7.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">到宿舍后一碗泡面草草了事</div>
+</center>
+
+<hr>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08); width:300px" src="https://img.imgdb.cn/item/603b67ee5f4313ce25b3b2ea.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">上铺视角</div>
+</center>]]></content>
       <categories>
         <category>日常</category>
       </categories>
