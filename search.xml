@@ -1853,7 +1853,11 @@ table th:nth-of-type(4) {
 <li>一般结尾不加<code>;</code> 某些特殊情况要加（很不常见）</li>
 </ol>
 <h2 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h2><p><strong>art-template</strong><br><code>npm install art-template</code><br><strong>暂时跳过</strong></p>
-]]></content>
+<h2 id="渲染模式"><a href="#渲染模式" class="headerlink" title="渲染模式"></a>渲染模式</h2><ul>
+<li>服务端渲染（服务端使用模板引擎）<br>SEO优化</li>
+<li>客户端渲染<br>请求更快，但不利于SEO</li>
+</ul>
+<h2 id="静态资源案例"><a href="#静态资源案例" class="headerlink" title="静态资源案例"></a>静态资源案例</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>)</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"></span><br><span class="line">http <span class="comment">//简写方式，默认绑定request</span></span><br><span class="line">  .creatServer(<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">    res.end(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">  .listen(<span class="number">3000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;runing&#x27;</span>) </span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>笔记</category>
       </categories>
