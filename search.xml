@@ -1820,6 +1820,308 @@ table th:nth-of-type(4) {
       </tags>
   </entry>
   <entry>
+    <title>mirai+Graia编写聊天机器人</title>
+    <url>/post/a5130995.html</url>
+    <content><![CDATA[<blockquote>
+<p>本文作者： YOOZIKI<br> 本文链接： <a href="https://yooziki.github.io/2020/08/297095/">https://yooziki.github.io/2020/08/297095/</a></p>
+</blockquote>
+<h2 id="Python版本：py37"><a href="#Python版本：py37" class="headerlink" title="Python版本：py37"></a>Python版本：py37</h2><p>安装相关模块，<a href="https://github.com/GraiaProject/Application">源码在这里</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install graia-application-mirai</span><br><span class="line">pip install graia-broadcast --upgrade</span><br><span class="line">pip install singledispatchmethod</span><br></pre></td></tr></table></figure>
+
+<p>添加选择器子模块</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install graia-component-selector</span><br></pre></td></tr></table></figure>
+
+<h2 id="mirai环境配置"><a href="#mirai环境配置" class="headerlink" title="mirai环境配置"></a>mirai环境配置</h2><h3 id="自定义方式-推荐"><a href="#自定义方式-推荐" class="headerlink" title="自定义方式(推荐)"></a>自定义方式(推荐)</h3><p>在<a href="https://github.com/project-mirai/mirai-repo">mirai仓库中</a>的<code>shadow</code>下找到对应的包体并下载</p>
+<blockquote>
+<p>如果出现无法下载的情况下载文件时将<a href="https://github.com替换成http://github-proxy.yobot.win即可">https://github.com替换成http://github-proxy.yobot.win即可</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;tmp</span><br><span class="line">wget -N -O shadowsocks.tar.gz http:&#x2F;&#x2F;github-proxy.yobot.win&#x2F;heweiye&#x2F;Merlin_Shadowsocks&#x2F;master&#x2F;shadowsocks_3.8.0.tar.gz</span><br><span class="line">tar -zxvf &#x2F;tmp&#x2F;shadowsocks.tar.gz</span><br><span class="line">chmod +x &#x2F;tmp&#x2F;shadowsocks&#x2F;install.sh</span><br><span class="line">sh &#x2F;tmp&#x2F;shadowsocks&#x2F;install.sh</span><br></pre></td></tr></table></figure>
+
+<p>经测试的可用版本:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">console &#x3D; &quot;mirai-console-1.0-M4-dev-3.jar&quot;</span><br><span class="line">pure &#x3D; &quot;mirai-console-pure-1.0-M4-dev-3.jar&quot;</span><br><span class="line">qqandroid &#x3D; &quot;mirai-core-qqandroid-1.2.3.jar&quot;</span><br><span class="line">mirai-api-http &#x3D; &quot;mirai-api-http-v1.8.2.jar&quot;</span><br><span class="line">java &#x3D; &quot;jdk8u265-b01&quot;</span><br></pre></td></tr></table></figure>
+
+<p>使用简易的python启动器即可启动，首次启动后会创建一系列文件夹，使用<code>stop</code>命令正常停止，将<code>mirai-api-http</code>放到<code>plugins</code>下，再次启动plugins会自动生成配置文件存放在<code>config\MiraiAPIHTTP</code>下，使用文本方式打开后可以修改其中的一些配置，完成后再次用<code>stop</code>命令正常停止，之后使用：<code>login user passwd</code>登录即可</p>
+<p>强行停止mirai会造成<code>mirai-api-http</code>没有结束的问题，如果出现请在任务管理器中关闭<code>OpenJDK Platform binary</code>进程</p>
+<blockquote>
+<p>建议只修改autuKey增加安全性，其它改动可能会造成Graia无法连接</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;env python3</span><br><span class="line">#-*- coding: utf-8 -*-</span><br><span class="line"></span><br><span class="line">from os import system, path, makedirs, listdir</span><br><span class="line"></span><br><span class="line">content &#x3D; &quot;.&#x2F;content&quot;</span><br><span class="line"></span><br><span class="line">console &#x3D; &quot;mirai-console-1.0-M4-dev-3.jar&quot;</span><br><span class="line">pure &#x3D; &quot;mirai-console-pure-1.0-M4-dev-3.jar&quot;</span><br><span class="line">qqandroid &#x3D; &quot;mirai-core-qqandroid-1.2.3.jar&quot;</span><br><span class="line">jar_name &#x3D; &#123;console, pure, qqandroid&#125;</span><br><span class="line"></span><br><span class="line">def init(content, jar_name):</span><br><span class="line">    print(&quot;初始化中...&quot;)</span><br><span class="line">    if not path.exists(content):</span><br><span class="line">        makedirs(content)</span><br><span class="line">        raise ValueError(f&quot;请在 &#123;content&#125; 文件夹中放入 &#123;console&#125;, &#123;pure&#125;, &#123;qqandroid&#125; 可在 &#39;https:&#x2F;&#x2F;github.com&#x2F;project-mirai&#x2F;mirai-repo&#39; 处下载&quot;)</span><br><span class="line"></span><br><span class="line">    c &#x3D; set()</span><br><span class="line">    for i in listdir(content):</span><br><span class="line">        if i in (console, pure, qqandroid):</span><br><span class="line">            c.add(i)</span><br><span class="line"></span><br><span class="line">    if len(c) &lt; 3:</span><br><span class="line">        raise ValueError(&quot;目录 &#123;content&#125; 中缺少↓ \n&#123;data&#125;\n可在 &#39;https:&#x2F;&#x2F;github.com&#x2F;project-mirai&#x2F;mirai-repo&#39; 处下载&quot;.format(</span><br><span class="line">            content&#x3D;content,</span><br><span class="line">            data&#x3D;&#39;, &#39;.join(jar_name - c)</span><br><span class="line">        ))</span><br><span class="line">    print(&quot;开始启动 mirai-console ...&quot;)</span><br><span class="line"></span><br><span class="line">def run(content, JClass):</span><br><span class="line">    try:</span><br><span class="line">        system(f&quot;java -cp &#123;content&#125;&#x2F;* &#123;JClass&#125;&quot;)</span><br><span class="line">    except KeyboardInterrupt:</span><br><span class="line">        print(&quot;手动关闭 mirai...&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &quot;__main__&quot;:</span><br><span class="line">    init(content, jar_name)</span><br><span class="line">    run(content, &#39;&quot;net.mamoe.mirai.console.pure.MiraiConsolePureLoader&quot;&#39;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="mirua方式（一键懒人包）"><a href="#mirua方式（一键懒人包）" class="headerlink" title="mirua方式（一键懒人包）"></a>mirua方式（一键懒人包）</h3><p>可以在<a href="https://github.com/ieew/mirua">这里获得</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git colne https:&#x2F;&#x2F;github.com&#x2F;ieew&#x2F;mirua</span><br></pre></td></tr></table></figure>
+
+<h3 id="miraiOK方式"><a href="#miraiOK方式" class="headerlink" title="miraiOK方式"></a>miraiOK方式</h3><p>首先找到<a href="https://github.com/LXY1226/MiraiOK">miraiOK仓库</a>或者使用<a href="https://github.com/yooziki/MiraiOK">我的fork仓库</a>并且根据说明文件下载可执行程序到miraoOK目录下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;LXY1226&#x2F;MiraiOK</span><br></pre></td></tr></table></figure>
+
+<p>执行对应的可执行文件，等待第一次执行结束</p>
+<blockquote>
+<p>为了保证程序的正确性，第一次执行结束后，请创建一个<strong>.nonupdate</strong>文件禁用更新功能，或者可以试试更新一次会不会出问题</p>
+</blockquote>
+<p>对应的mirai相关jar包可以在<a href="https://github.com/project-mirai/mirai-repo">这里查看</a></p>
+<p>执行第一次之后，在miraiOK的目录下会有一个<code>plugins</code>文件夹，将<code>mirai-api-http-version.jar</code>包放到这里，插件<a href="https://github.com/project-mirai/mirai-api-http">源码</a></p>
+<blockquote>
+<p>如果miraiOK给到的./content/中mirai-core版本为1.0一下，则只能使用1.7版本的mirai-api-http</p>
+</blockquote>
+<p>为了保证py程序的正确运行，再次运行可执行文件</p>
+<p>然后回到<code>plugins</code>文件夹下，新生成了一个文件夹，里面有一个yml配置文件，使用txt方式打开即可。(如果没有生成文件夹，则手动创建<code>./MiraiAPIHTTP/setting.yml</code>)</p>
+<p>写入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">##该配置为分段配置，对所有会话有效</span><br><span class="line"></span><br><span class="line">#Graia只能是0.0.0.0</span><br><span class="line">主机: “ 0.0.0.0 ”</span><br><span class="line"></span><br><span class="line">#</span><br><span class="line">端口: 8080</span><br><span class="line"></span><br><span class="line">#Graia需要手动指定，并且和py中保持一致</span><br><span class="line">authKey: 123456780</span><br><span class="line"></span><br><span class="line">#任选，缓存大小，预设4096.缓存过小会导致引用回复和撤回消息失败</span><br><span class="line">cacheSize: 4096</span><br><span class="line"></span><br><span class="line">#任选，是否开启websocket，更改关闭，建议通过会话范围的配置设置</span><br><span class="line">enableWebsocket: true</span><br><span class="line"></span><br><span class="line">#任选，配置CORS跨域，交替为*，即允许所有，可以不做更改</span><br><span class="line">域名cors:</span><br><span class="line">  - &#39; * &#39;</span><br></pre></td></tr></table></figure>
+
+<p>如果希望每次都自动登录，可以在miraiOK更目录下的<code>config.txt</code>中根据模板提示写入内容</p>
+<h1 id="程序框架"><a href="#程序框架" class="headerlink" title="程序框架"></a>程序框架</h1><p>可以从<a href="https://graiaproject.github.io/Application/#/README">这里查看</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 所有事件监听都在entry中可以找到</span><br><span class="line">from graia.application.entry import (</span><br><span class="line">    GraiaMiraiApplication, Session,</span><br><span class="line">    MessageChain,Group,Friend,Member,MemberInfo,</span><br><span class="line">    Plain,Image,AtAll,At,Face</span><br><span class="line">)</span><br><span class="line">from graia.application.entry import (</span><br><span class="line">    BotMuteEvent,BotGroupPermissionChangeEvent</span><br><span class="line">)</span><br><span class="line">from graia.broadcast import Broadcast</span><br><span class="line">#from graia.template import Template     # 模板功能</span><br><span class="line">#from graia.component import Components  # 检索器</span><br><span class="line"></span><br><span class="line">import asyncio</span><br><span class="line">from pathlib import Path</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 监听</span><br><span class="line">loop &#x3D; asyncio.get_event_loop()</span><br><span class="line"></span><br><span class="line">bcc &#x3D; Broadcast(loop&#x3D;loop)</span><br><span class="line">app &#x3D; GraiaMiraiApplication(</span><br><span class="line">    broadcast&#x3D;bcc,</span><br><span class="line">    connect_info&#x3D;Session(</span><br><span class="line">        host&#x3D;&quot;http:&#x2F;&#x2F;localhost:8080&quot;,  # 填入 httpapi 服务运行的地址，如果根据我的配置的话可以不做修改</span><br><span class="line">        authKey&#x3D;&quot;1234567890&quot;,  # 填入 authKey</span><br><span class="line">        account&#x3D;1111111,  # 你的机器人的 qq 号</span><br><span class="line">        websocket&#x3D;True  # Graia 已经可以根据所配置的消息接收的方式来保证消息接收部分的正常运作.</span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>其中的<code>bcc</code>是一个广播，会将从miraiOK获得的信息在程序内广播传递。</p>
+<p><code>app</code>是一个像mirai框架传递信息的通道</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 写入监听事件handler</span><br><span class="line">@bcc.receiver(&quot;FriendMessage&quot;)</span><br><span class="line">async def friend_message_listener(app: GraiaMiraiApplication, friend: Friend):</span><br><span class="line">    await app.sendFriendMessage(friend, MessageChain.create([</span><br><span class="line">        Plain(&quot;谢谢, 非常感谢你对我们服务的满意.&quot;)</span><br><span class="line">    ]))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 程序固定尾</span><br><span class="line">app.launch_blocking()</span><br></pre></td></tr></table></figure>
+
+<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><h2 id="MessageChain"><a href="#MessageChain" class="headerlink" title="MessageChain"></a>MessageChain</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from graia.application.message.chain import MessageChain</span><br></pre></td></tr></table></figure>
+
+<p>用于处理消息的数据结构，包含一个有序列表</p>
+<ul>
+<li>MessageChain.asDisplay()<br>得到字符串形式的消息表示，返回字符串</li>
+<li>MessageChain.<strong>root</strong><br>返回消息链列表</li>
+<li>MessageChain.<strong>doc</strong><br>返回消息链的API文档说明</li>
+<li>MessageChain.<strong>module</strong><br>返回消息链的模块绝对引用</li>
+<li>MessageChain.create(&lt;list/tuple&gt;)<br>创建一个消息链结构，其中list/tuple可以包含能够获取的类型元素，返回创建的消息链</li>
+<li>MessageChain.isImmutable()<br>判断消息链是否为可变，可变返回<code>True</code>，不可变返回<code>False</code>，默认接受的消息为不可变</li>
+<li>MessageChain.asMutable()<br>将消息链转换为可变的，返回可变的消息链</li>
+<li>MessageChain.isSendable()<br>检查消息链是否可以被正确发送，可发送返回<code>True</code>，不可发送返回<code>False</code></li>
+<li>MessageChain.asSendable()<br>将消息链转换为可以发送的新消息链，返回可能可以正确发送的消息链</li>
+<li>MessageChain.has(T)<br>消息链中是否存在某种消息元素，亦可使用<strong>T in MessageChain</strong><br>如果有则返回<code>True</code>否则返回<code>False</code></li>
+<li>MessageChain.get(T)<br>取出消息链中某种消息元素，以列表方式返回<br>亦可以使用<strong>MessageChain[T]</strong></li>
+<li>MessageChain.join(*MessageChains)<br>将多个MessageChain按顺序拼合“<br>返回拼合后的消息链</li>
+<li>MessageChain.plusWith(*MessageChain)<br>方法将在现有的基础上将另一消息链拼接到原来实例的尾部, 并生成, 返回新的实例; 该方法不改变原有和传入的实例.</li>
+<li>MessageChain.plus(*MessageChain)<br>方法将在现有的基础上将另一消息链拼接到原来实例的尾部; 该方法更改了原有的实例, 并要求 <code>isMutable</code> 方法返回 <code>True</code> 才可以执行.</li>
+<li>MessageChain.asSerializationString()<br>将消息链对象转为以 “Mirai 码” 表示特殊对象的字符串<br>返回字符串</li>
+<li>MessageChain.fromSerializationString(string)<br>将以 “Mirai 码” 表示特殊对象的字符串解析为消息链, 不过可能不完整<br>返回消息链，不可变</li>
+<li>MessageChain.asMerged()<br>把相邻的Plain元素合并为一个Plain元素</li>
+<li>MessageChain.subchain(slice)<br>切片操作<br>类似list切片方式<br>返回切片后的MessageChain</li>
+<li>MessageChain.exclude(T)<br>将消息链中某种元素排除<br>返回新的消息链</li>
+<li>MessageChain.include(T)<br>只保留消息链中某种元素<br>返回新消息链</li>
+</ul>
+<h2 id="Elements"><a href="#Elements" class="headerlink" title="Elements"></a>Elements</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import graia.application.message.elements.internal as Elements</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Elements.Plain(string)<br>实例化一个Plain元素，用于承载消息中的文字</p>
+</li>
+<li><p>Elements.Source<br>表示消息在一个特定聊天区域内的唯一标识，收到的消息链中存在，只能够获取</p>
+</li>
+<li><p>Elements.Quote(id,groupID,senderID,targetID,origin)<br>表示消息中回复功能，<br>id:回复的消息在群内的唯一标识，通过Elements.Source得到<br>groupID:群号<br>senderID:原消息发送人<br>targetID:群号<br>oringin:发送的消息链</p>
+<blockquote>
+<p>消息链中应该有：原消息链的<strong><strong>root</strong>列表, At(type=‘At’,target=qq号,display=’@谁谁谁(群内id)’), Plain(’ ‘),Plain(“内容”)</strong></p>
+</blockquote>
+</li>
+<li><p><a href="http://elements.at/">Elements.At</a>(id)<br>表示@某人</p>
+</li>
+<li><p>Elements.AtAll()<br>管理员有效，@全体成员</p>
+</li>
+<li><p>Elements.Face(id)<br>表示一个表现，QQ内置的表情，id是表情的id</p>
+</li>
+<li><p>Elements.ImageType(Enum)<br>Friend = “Friend”<br>Group = “Group”<br>Temp = “Temp”<br>Unknown = “Unknow”<br>是一个类型的定义，不需要直接调用</p>
+</li>
+<li><p>Elements.Image()<br>imageID:是一个16进制字符串<br>url:链接位置<br>path<br>type:图片属于哪里(ImageType定义)<br>[关于Image的方法](# Image)</p>
+</li>
+<li><p>Elements.FlashImage(Image)<br>发送闪照，需要先通过Image方法创建一个Image对象<br>亦可以直接<code>Image.asFlash()</code></p>
+</li>
+<li><p>Elements.Xml(str)<br>xml消息</p>
+</li>
+<li><p>Elements.Json(str)</p>
+</li>
+<li><p>Elements.App(str)<br>app消息</p>
+</li>
+<li><p>Elements.PokeMethods(Enum)<br>是一个类型定义，不需要直接调用<br>Poke = “Poke”<br>ShowLove = “ShowLove”<br>Like =“Like”<br>Heartbroken=“Heartbroken”<br>SixSixSix=“SixSixSix”<br>FangDaZhao = “FangDaZhao”</p>
+</li>
+<li><p>Elements.Poke(PokeMethods)</p>
+</li>
+</ul>
+<h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from graia.application.message.elements.internal import Image</span><br></pre></td></tr></table></figure>
+
+<p>[返回到Elements](# Elements)</p>
+<ul>
+<li>Image.fromLoacalFile(filepath)<br>从本地获取一张图片<br>返回ShadowElement，包含了一个asFlash方法，可以作为闪照发送<code>Image.fromLocalFile(path).asFlash()</code></li>
+<li>Image.fromUnsafePath(filepath)<br>不检查路径安全性，让上层协议(mirai-api-http)处理图片文件</li>
+<li>Image.fromUnsafeBytes()<br>从不保证有效性的bytes中创建一个ShadowElement，并且上传，同样包含一个asFlash方法<br>不推荐，安全性低</li>
+<li>Image.fromNetworkAddress(url)<br>从不保证有效性的网络位置中创建一个ShadowElement，在发送的时候从url获得图片并且上传<br>可能抛出任何形式的网络错误<br>可以使用asFlash方法</li>
+<li>Image.fromUnsafeAddress(url)<br>让上层协议(mirai-apii-http)处理图片文件</li>
+<li>Image.asDisplay()<br>返回字符串”[图片]”</li>
+<li>Image.http_to_bytes(url)<br>从远端服务器获取图片的 bytes, 注意, 你无法获取并不包含 url 属性的本元素的 bytes</li>
+<li>Image.asFlash()<br>设为闪照发送</li>
+<li>Image.asSerializationString()<br>将消息链对象转为以 “Mirai 码” 表示特殊对象的字符串</li>
+</ul>
+<h2 id="Massages"><a href="#Massages" class="headerlink" title="Massages"></a>Massages</h2><p>定义了几种消息的类型</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import graia.application.event.messages as Messages</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>FriendMessage<br>好友对话事件</li>
+<li>GroupMessage<br>群对话事件</li>
+<li>TempMessage<br>临时对话事件</li>
+</ul>
+<h2 id="Friend模块"><a href="#Friend模块" class="headerlink" title="Friend模块"></a>Friend模块</h2><p>定义了friend的几种属性,需要在监听中声明</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from graia.application.friend import Friend</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>id:qq号</li>
+<li>nickname:昵称</li>
+<li><code>remark:好像访问不到？？</code></li>
+</ul>
+<h2 id="Group模块"><a href="#Group模块" class="headerlink" title="Group模块"></a>Group模块</h2><p>定义了group的一些属性,需要在监听中声明，例如：<code>async def group_message_handler(app: GraiaMiraiApplication, message: MessageChain, group: Group,member: Member):</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import graia.application.group as Group</span><br></pre></td></tr></table></figure>
+
+<h3 id="Group-Group"><a href="#Group-Group" class="headerlink" title="Group.Group"></a>Group.Group</h3><ul>
+<li><a href="http://group.group.id/">Group.Group.id</a>:群id</li>
+<li><a href="http://group.group.name/">Group.Group.name</a>:群名称</li>
+<li>Group.Group.accountPerm:账号在群中的权限</li>
+</ul>
+<h3 id="Group-MemberPerm"><a href="#Group-MemberPerm" class="headerlink" title="Group.MemberPerm"></a>Group.MemberPerm</h3><p>作为字典枚举，并不需要主动调用</p>
+<ul>
+<li>.Member # 普通成员</li>
+<li>.Administrator # 管理员</li>
+<li>.Owner # 群主</li>
+</ul>
+<h3 id="Group-Member"><a href="#Group-Member" class="headerlink" title="Group.Member"></a>Group.Member</h3><p>描述用户在群组中所具备的有关状态，包括所在群组，群中昵称，所具备的权限，唯一的ID</p>
+<ul>
+<li>.id:说话人的QQ号</li>
+<li>.name:说话人的群昵称</li>
+<li>.permission:说话人的权限等级</li>
+<li>.group:上面的Group.Group所有内容</li>
+</ul>
+<h3 id="Group-GroupConfig"><a href="#Group-GroupConfig" class="headerlink" title="Group.GroupConfig"></a>Group.GroupConfig</h3><p>描述群内各项功能的设置(使用方法不明)</p>
+<ul>
+<li>name</li>
+<li>announcement</li>
+<li>confessTalk</li>
+<li>allowMemberInvite</li>
+<li>autoApprove</li>
+<li>anonymousChat</li>
+</ul>
+<h3 id="Group-MemberInfo"><a href="#Group-MemberInfo" class="headerlink" title="Group.MemberInfo"></a>Group.MemberInfo</h3><p>描述群组成员的可修改状态，修改需要权限(使用方法不明)</p>
+<ul>
+<li>name</li>
+<li>specialTitle</li>
+</ul>
+<h2 id="GraiaMiraiApplication类"><a href="#GraiaMiraiApplication类" class="headerlink" title="GraiaMiraiApplication类"></a>GraiaMiraiApplication类</h2><p>大多数的功能都被存在这个类中</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from graia.application import GraiaMiraiApplication</span><br></pre></td></tr></table></figure>
+
+<h3 id="getVersion"><a href="#getVersion" class="headerlink" title=".getVersion()"></a>.getVersion()</h3><p>返回<code>mirai-api-http</code>的版本</p>
+<h3 id="getGroup-int"><a href="#getGroup-int" class="headerlink" title=".getGroup(int)"></a>.getGroup(int)</h3><p>返回对应群号的群组信息(为空则None)<br>id,name,accountPerm<code>print(app.getGroup(&lt;Id&gt;))</code></p>
+<h3 id="groupList"><a href="#groupList" class="headerlink" title=".groupList()"></a>.groupList()</h3><p><code>print(await app.groupList())</code></p>
+<h3 id="getMember-Group-int-member-int"><a href="#getMember-Group-int-member-int" class="headerlink" title=".getMember(Group int,member int)"></a>.getMember(Group int,member int)</h3><p>从已知群组和已知成员的id获得成员的信息</p>
+<p><code>print(await app.getMember(&lt;ID&gt;,&lt;ID&gt;))</code></p>
+<h3 id="memberList-Group-int"><a href="#memberList-Group-int" class="headerlink" title=".memberList(Group int)"></a>.memberList(Group int)</h3><p>从已知群组中获取群内所有成员的信息列表</p>
+<h3 id="friendList"><a href="#friendList" class="headerlink" title=".friendList()"></a>.friendList()</h3><p>获取所有好友的信息列表</p>
+<p><code>print(await app.friendList())</code></p>
+<h3 id="getFriend-int"><a href="#getFriend-int" class="headerlink" title=".getFriend(int)"></a>.getFriend(int)</h3><p>根据好友的id获取Friend实例</p>
+<h3 id="sendFriendMessage-Friend-MessageChain-quote"><a href="#sendFriendMessage-Friend-MessageChain-quote" class="headerlink" title=".sendFriendMessage(Friend,MessageChain[,quote])"></a>.sendFriendMessage(Friend,MessageChain[,quote])</h3><p>向好友发送消息,quote为回复信息断，可以选择</p>
+<h3 id="sendGroupMessage-Group-MessageChain-quote"><a href="#sendGroupMessage-Group-MessageChain-quote" class="headerlink" title=".sendGroupMessage(Group,MessageChain[,quote])"></a>.sendGroupMessage(Group,MessageChain[,quote])</h3><p>向群组发送消息</p>
+<h3 id="sendTempMessage-Group-ID-Member-ID-messageChain-quote"><a href="#sendTempMessage-Group-ID-Member-ID-messageChain-quote" class="headerlink" title=".sendTempMessage(Group/ID,Member/ID,messageChain[,quote])"></a>.sendTempMessage(Group/ID,Member/ID,messageChain[,quote])</h3><p>向群内成员发起临时会话</p>
+<h3 id="revokeMessage-target"><a href="#revokeMessage-target" class="headerlink" title=".revokeMessage(target)"></a>.revokeMessage(target)</h3><p>撤回消息(2min以内)</p>
+<p>target (Union[Source, BotMessage, int]): 特定信息的 <code>messageId</code>, 可以是 <code>Source</code> 实例, <code>BotMessage</code> 实例或者是单纯的 int 整数.</p>
+<h3 id="messageFromId-source-Source-int"><a href="#messageFromId-source-Source-int" class="headerlink" title=".messageFromId(source[Source, int])"></a>.messageFromId(source[Source, int])</h3><p>尝试从已知的 <code>messageId</code> 获取缓存中的消息</p>
+<h3 id="muteAll-group-amp-unmuteAll-group"><a href="#muteAll-group-amp-unmuteAll-group" class="headerlink" title=".muteAll(group)&amp;.unmuteAll(group)"></a>.muteAll(group)&amp;.unmuteAll(group)</h3><p>全员禁言</p>
+<h3 id="mute-group-member-time-、unmute-group-membder"><a href="#mute-group-member-time-、unmute-group-membder" class="headerlink" title=".mute(group,member,time)、unmute(group,membder)"></a>.mute(group,member,time)、unmute(group,membder)</h3><p>禁言指定群友</p>
+<p>time指禁言时长</p>
+<h3 id="kick-group-membder"><a href="#kick-group-membder" class="headerlink" title=".kick(group,membder)"></a>.kick(group,membder)</h3><p>群内踢掉某人</p>
+<h3 id="quit-group"><a href="#quit-group" class="headerlink" title=".quit(group)"></a>.quit(group)</h3><p>退群</p>
+<h2 id="Event模块"><a href="#Event模块" class="headerlink" title="Event模块"></a>Event模块</h2><p>通过Graia.application.entry可以导入MiraiApiHttp支持的所有事件类型</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from graia.application.entry import (</span><br><span class="line">   *</span><br><span class="line">)</span><br><span class="line">@bcc.receiver(&quot;xxxEvent&quot;)</span><br><span class="line">async def function(event:xxxEvent):</span><br><span class="line">    print(&quot;EventHappened&quot;)</span><br><span class="line">    event.&lt;可选获得参数&#x2F;方法&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="BotOnlineEvent"><a href="#BotOnlineEvent" class="headerlink" title="BotOnlineEvent"></a>BotOnlineEvent</h3><p>当该事件发生时, 应用实例所辖账号登录成功<br>qq: int</p>
+<h3 id="BotOfflineEventActive"><a href="#BotOfflineEventActive" class="headerlink" title="BotOfflineEventActive"></a>BotOfflineEventActive</h3><p>当该事件发生时, 应用实例所辖账号主动离线<br>qq: int</p>
+<h3 id="BotOfflineEventForce"><a href="#BotOfflineEventForce" class="headerlink" title="BotOfflineEventForce"></a>BotOfflineEventForce</h3><p>当该事件发生时, 应用实例所辖账号被迫离线<br>qq: int</p>
+<h3 id="BotOfflineEventDropped"><a href="#BotOfflineEventDropped" class="headerlink" title="BotOfflineEventDropped"></a>BotOfflineEventDropped</h3><p>当该事件发生时, 应用实例所辖账号与服务器的连接被服务器主动断开, 或因网络原因离线<br>qq: int</p>
+<h3 id="BotReloginEvent"><a href="#BotReloginEvent" class="headerlink" title="BotReloginEvent"></a>BotReloginEvent</h3><p>当该事件发生时, 应用实例所辖账号正尝试重新登录<br>qq: int</p>
+<h3 id="BotGroupPermissionChangeEvent"><a href="#BotGroupPermissionChangeEvent" class="headerlink" title="BotGroupPermissionChangeEvent"></a>BotGroupPermissionChangeEvent</h3><p>当该事件发生时, 应用实例所辖账号在一特定群组内所具有的权限发生变化<br>origin: MemberPerm<br>current: MemberPerm<br>group: Group</p>
+<h3 id="BotMuteEvent"><a href="#BotMuteEvent" class="headerlink" title="BotMuteEvent"></a>BotMuteEvent</h3><p>当该事件发生时, 应用实例所辖账号在一特定群组内被管理员/群主禁言</p>
+<blockquote>
+<p>Allowed Extra Parameters(提供的额外注解支持):<br>GraiaMiraiApplication (annotation): 发布事件的应用实例<br>Member (annotation, optional = None): 执行解除禁言操作的管理员/群主, 若为 None 则为应用实例所辖账号操作<br>Group (annotation, optional = None): 发生该事件的群组</p>
+</blockquote>
+<p>durationSeconds: int<br>operator: Optional[Member]</p>
+<h3 id="BotUnmuteEvent"><a href="#BotUnmuteEvent" class="headerlink" title="BotUnmuteEvent"></a>BotUnmuteEvent</h3><p>当该事件发生时, 应用实例所辖账号在一特定群组内被管理员/群主解除禁言<br>operator: Optional[Member]</p>
+<h3 id="BotJoinGroupEvent"><a href="#BotJoinGroupEvent" class="headerlink" title="BotJoinGroupEvent"></a>BotJoinGroupEvent</h3><p>当该事件发生时, 应用实例所辖账号加入指定群组<br>group: Group</p>
+<h3 id="BotLeaveEventActive"><a href="#BotLeaveEventActive" class="headerlink" title="BotLeaveEventActive"></a>BotLeaveEventActive</h3><p>当该事件发生时, 应用实例所辖账号主动退出了某群组.<br>group: Group</p>
+<h3 id="BotLeaveEventKick"><a href="#BotLeaveEventKick" class="headerlink" title="BotLeaveEventKick"></a>BotLeaveEventKick</h3><p>当该事件发生时, 应用实例所辖账号被某群组的管理员/群主从该群组中删除.<br>group: Group</p>
+<h3 id="GroupRecallEvent"><a href="#GroupRecallEvent" class="headerlink" title="GroupRecallEvent"></a>GroupRecallEvent</h3><p>当该事件发生时, 有群成员在指定群组撤回了一条消息<br>注意, 这里的群成员若具有管理员/群主权限, 则他们可以撤回其他普通群员的消息, 且不受发出时间限制<br>authorId: int<br>messageId: int<br>time: datetime<br>group: Group<br>operator: Optional[Member]</p>
+<h3 id="FriendRecallEvent"><a href="#FriendRecallEvent" class="headerlink" title="FriendRecallEvent"></a>FriendRecallEvent</h3><p>当该事件发生时, 有一位与应用实例所辖账号为好友关系的用户撤回了一条消息<br>authorId: int<br>messageId: int<br>time: int<br>operator: int</p>
+<h3 id="GroupNameChangeEvent"><a href="#GroupNameChangeEvent" class="headerlink" title="GroupNameChangeEvent"></a>GroupNameChangeEvent</h3><p>该事件发生时, 有一群组被修改了群名称<br>origin: str<br>current: str<br>group: Group<br>operator: Optional[Member] = None</p>
+<h3 id="GroupEntranceAnnouncementChangeEvent"><a href="#GroupEntranceAnnouncementChangeEvent" class="headerlink" title="GroupEntranceAnnouncementChangeEvent"></a>GroupEntranceAnnouncementChangeEvent</h3><p>该事件发生时, 有一群组被修改了入群公告<br>origin: str<br>current: str<br>group: Group<br>operator: Optional[Member]</p>
+<h3 id="GroupMuteAllEvent"><a href="#GroupMuteAllEvent" class="headerlink" title="GroupMuteAllEvent"></a>GroupMuteAllEvent</h3><p>该事件发生时, 有一群组开启了全体禁言<br>origin: bool<br>current: bool<br>group: Group<br>operator: Optional[Member]</p>
+<h3 id="GroupAllowAnonymousChatEvent"><a href="#GroupAllowAnonymousChatEvent" class="headerlink" title="GroupAllowAnonymousChatEvent"></a>GroupAllowAnonymousChatEvent</h3><p>该事件发生时, 有一群组修改了有关匿名聊天的相关设定<br>origin: bool<br>current: bool<br>group: Group<br>operator: Optional[Member]</p>
+<h3 id="GroupAllowConfessTalkEvent"><a href="#GroupAllowConfessTalkEvent" class="headerlink" title="GroupAllowConfessTalkEvent"></a>GroupAllowConfessTalkEvent</h3><p>该事件发生时, 有一群组修改了有关坦白说的相关设定<br>origin: bool<br>current: bool<br>group: Group<br>isByBot: bool</p>
+<h3 id="GroupAllowMemberInviteEvent"><a href="#GroupAllowMemberInviteEvent" class="headerlink" title="GroupAllowMemberInviteEvent"></a>GroupAllowMemberInviteEvent</h3><p>该事件发生时, 有一群组修改了有关是否允许已有成员邀请其他用户加入群组的相关设定<br>origin: bool<br>current: bool<br>group: Group<br>operator: Optional[Member]</p>
+<h3 id="MemberJoinEvent"><a href="#MemberJoinEvent" class="headerlink" title="MemberJoinEvent"></a>MemberJoinEvent</h3><p>该事件发生时, 有一新成员加入了一特定群组<br>member: Member</p>
+<h3 id="MemberLeaveEventKick"><a href="#MemberLeaveEventKick" class="headerlink" title="MemberLeaveEventKick"></a>MemberLeaveEventKick</h3><p>该事件发生时, 有一群组成员被管理员/群主从群组中删除, 当 <code>operator</code> 为 <code>None</code> 时, 执行者为应用实例所辖账号.<br>type = “MemberLeaveEventKick”<br>member: Member<br>operator: Optional[Member]</p>
+<h3 id="MemberLeaveEventQuit"><a href="#MemberLeaveEventQuit" class="headerlink" title="MemberLeaveEventQuit"></a>MemberLeaveEventQuit</h3><p>该事件发生时, 有一群组成员主动退出群组.<br>member: Member</p>
+<h3 id="MemberCardChangeEvent"><a href="#MemberCardChangeEvent" class="headerlink" title="MemberCardChangeEvent"></a>MemberCardChangeEvent</h3><p>该事件发生时, 有一群组成员的群名片被更改, 执行者可能是管理员/群主, 该成员自己, 也可能是应用实例所辖账号(这时, <code>operator</code> 为 <code>None</code>).<br>origin: str<br>current: str<br>member: Member<br>operator: Optional[Member]</p>
+<h3 id="MemberSpecialTitleChangeEvent"><a href="#MemberSpecialTitleChangeEvent" class="headerlink" title="MemberSpecialTitleChangeEvent"></a>MemberSpecialTitleChangeEvent</h3><p>该事件发生时, 有一群组成员的群头衔被更改, 执行者只可能是群组的群主.<br>origin: str<br>current: str<br>member: Member</p>
+<h3 id="MemberPermissionChangeEvent"><a href="#MemberPermissionChangeEvent" class="headerlink" title="MemberPermissionChangeEvent"></a>MemberPermissionChangeEvent</h3><p>该事件发生时, 有一群组成员的权限被更改/调整, 执行者只可能是群组的群主.<br>origin: str<br>current: str<br>member: Member</p>
+<h3 id="MemberMuteEvent"><a href="#MemberMuteEvent" class="headerlink" title="MemberMuteEvent"></a>MemberMuteEvent</h3><p>该事件发生时, 有一群组成员被管理员/群组禁言, 当 <code>operator</code> 为 <code>None</code> 时为应用实例所辖账号操作.<br>durationSeconds: int<br>member: Member<br>operator: Optional[Member]</p>
+<h3 id="MemberUnmuteEvent"><a href="#MemberUnmuteEvent" class="headerlink" title="MemberUnmuteEvent"></a>MemberUnmuteEvent</h3><p>该事件发生时, 有一群组成员被管理员/群组解除禁言, 当 <code>operator</code> 为 <code>None</code> 时为应用实例所辖账号操作.<br>member: Member<br>operator: Optional[Member]</p>
+<h3 id="NewFriendRequestEvent"><a href="#NewFriendRequestEvent" class="headerlink" title="NewFriendRequestEvent"></a>NewFriendRequestEvent</h3><p>当该事件发生时, 有一用户向机器人提起好友请求.</p>
+<blockquote>
+<p>该事件的处理需要你获取原始事件实例.</p>
+</blockquote>
+<ol>
+<li>读取该事件的基础信息:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">event.supplicant: int # 发起加好友请求的用户的 ID</span><br><span class="line">event.sourceGroup: Optional[int] # 对方可能是从某个群发起对账号的请求的, mirai 可以解析对方从哪个群发起的请求.</span><br><span class="line">event.nickname: str # 对方的昵称</span><br><span class="line">event.message: str # 对方发起请求时填写的描述</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">同意请求: &#96;await event.accept()&#96;, 具体查看该方法所附带的说明.</span><br><span class="line">拒绝请求: &#96;await event.reject()&#96;, 具体查看该方法所附带的说明.</span><br><span class="line">拒绝并不再接受来自对方的请求: &#96;await event.rejectAndBlock()&#96;, 具体查看该方法所附带的说明.</span><br></pre></td></tr></table></figure>
+<p>requestId: int = Field(…, alias=“eventId”)<br>supplicant: int = Field(…, alias=“fromId”) # 即请求方 QQ<br>sourceGroup: Optional[int] = Field(…, alias=“groupId”)<br>nickname: str = Field(…, alias=“nick”)<br>message: str</p>
+<h3 id="accept-message-str-””"><a href="#accept-message-str-””" class="headerlink" title="accept(message:str=””)"></a>accept(message:str=””)</h3><p>同意对方的加好友请求.<br>message (str, optional): 附带给对方的消息. 默认为 “”.</p>
+<h3 id="reject-message-str-“”"><a href="#reject-message-str-“”" class="headerlink" title="reject(message: str = “”)"></a>reject(message: str = “”)</h3><p>拒绝对方的加好友请求.<br>message (str, optional): 附带给对方的消息. 默认为 “”.</p>
+<h3 id="rejectAndBlock-message-str-“”"><a href="#rejectAndBlock-message-str-“”" class="headerlink" title="rejectAndBlock(message: str = “”)"></a>rejectAndBlock(message: str = “”)</h3><p>拒绝对方的加好友请求, 并不再接受来自对方的加好友请求.<br>message (str, optional): 附带给对方的消息. 默认为 “”.</p>
+<h3 id="MemberJoinRequestEvent"><a href="#MemberJoinRequestEvent" class="headerlink" title="MemberJoinRequestEvent"></a>MemberJoinRequestEvent</h3><p>当该事件发生时, 有一用户向机器人作为管理员/群主的群组申请加入群组.</p>
+<blockquote>
+<p>该事件的处理需要你获取原始事件实例.</p>
+</blockquote>
+<ol>
+<li>读取该事件的基础信息:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5event.supplicant: int # 申请加入群组的用户的 ID</span><br><span class="line">event.groupId: Optional[int] # 对方试图加入的群组的 ID</span><br><span class="line">event.groupName: str # 对方试图加入的群组的名称</span><br><span class="line">event.nickname: str # 对方的昵称</span><br><span class="line">event.message: str # 对方发起请求时填写的描述</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">同意请求: &#96;await event.accept()&#96;, 具体查看该方法所附带的说明.</span><br><span class="line">拒绝请求: &#96;await event.reject()&#96;, 具体查看该方法所附带的说明.</span><br><span class="line">忽略请求: &#96;await event.ignore()&#96;, 具体查看该方法所附带的说明.</span><br><span class="line">拒绝并不再接受来自对方的请求: &#96;await event.rejectAndBlock()&#96;, 具体查看该方法所附带的说明.</span><br><span class="line">忽略并不再接受来自对方的请求: &#96;await event.ignoreAndBlock()&#96;, 具体查看该方法所附带的说明.</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>requestId: int = Field(…, alias=“eventId”)<br>supplicant: int = Field(…, alias=“fromId”) # 即请求方 QQ<br>groupId: Optional[int] = Field(…, alias=“groupId”)<br>groupName: str = Field(…, alias=“groupName”)<br>nickname: str = Field(…, alias=“nick”)<br>message: str</p>
+<h3 id="accept-message-str-“”"><a href="#accept-message-str-“”" class="headerlink" title="accept(message: str = “”)"></a>accept(message: str = “”)</h3><p>同意对方加入群组.<br>message (str, optional): 附带给对方的消息. 默认为 “”.</p>
+<h3 id="reject-message-str-“”-1"><a href="#reject-message-str-“”-1" class="headerlink" title="reject(message: str = “”)"></a>reject(message: str = “”)</h3><p>拒绝对方加入群组.<br>message (str, optional): 附带给对方的消息. 默认为 “”.</p>
+<h3 id="ignore-self-message-str-“”"><a href="#ignore-self-message-str-“”" class="headerlink" title="ignore(self, message: str = “”)"></a>ignore(self, message: str = “”)</h3><p>忽略对方加入群组的请求.<br>message (str, optional): 附带给对方的消息. 默认为 “”.</p>
+<h3 id="rejectAndBlock-self-message-str-“”"><a href="#rejectAndBlock-self-message-str-“”" class="headerlink" title="rejectAndBlock(self, message: str = “”)"></a>rejectAndBlock(self, message: str = “”)</h3><p>拒绝对方加入群组的请求, 并不再接受来自对方加入群组的请求<br>message (str, optional): 附带给对方的消息. 默认为 “”.</p>
+<h3 id="BotInvitedJoinGroupRequestEvent"><a href="#BotInvitedJoinGroupRequestEvent" class="headerlink" title="BotInvitedJoinGroupRequestEvent"></a>BotInvitedJoinGroupRequestEvent</h3><p>当该事件发生时, 应用实例所辖账号接受到来自某个账号的邀请加入某个群组的请求.</p>
+<blockquote>
+<p>该事件的处理需要你获取原始事件实例.</p>
+</blockquote>
+<ol>
+<li>读取该事件的基础信息:<figure class="highlight plain"><figcaption><span>int # 邀请所辖账号加入群组的用户的 ID</span></figcaption><table><tr><td class="code"><pre><span class="line">event.groupId: Optional[int] # 对方邀请所辖账号加入的群组的 ID</span><br><span class="line">event.groupName: str # 对方邀请所辖账号加入的群组的名称</span><br><span class="line">event.nickname: str # 对方的昵称</span><br><span class="line">event.message: str # 对方发起请求时填写的描述</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">同意请求: &#96;await event.accept()&#96;, 具体查看该方法所附带的说明.</span><br><span class="line">拒绝请求: &#96;await event.reject()&#96;, 具体查看该方法所附带的说明.</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>requestId: int = Field(…, alias=“eventId”)<br>supplicant: int = Field(…, alias=“fromId”) # 即请求方 QQ<br>groupId: Optional[int] = Field(…, alias=“groupId”)<br>groupName: str = Field(…, alias=“groupName”)<br>nickname: str = Field(…, alias=“nick”)<br>message: str</p>
+<h3 id="accept-message-str-“”-1"><a href="#accept-message-str-“”-1" class="headerlink" title="accept(message: str = “”)"></a>accept(message: str = “”)</h3><p>同意对方加入群组.<br>message (str, optional): 附带给对方的消息. 默认为 “”.</p>
+<h3 id="reject-message-str-“”-2"><a href="#reject-message-str-“”-2" class="headerlink" title="reject(message: str = “”)"></a>reject(message: str = “”)</h3><p>拒绝对方加入群组.<br>message (str, optional): 附带给对方的消息. 默认为 “”.</p>
+<h2 id="GraiaScheduler模块"><a href="#GraiaScheduler模块" class="headerlink" title="GraiaScheduler模块"></a>GraiaScheduler模块</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from graia.scheduler import (</span><br><span class="line">    timers,</span><br><span class="line">)</span><br><span class="line">import graia.scheduler as scheduler</span><br><span class="line">loop &#x3D; asyncio.get_event_loop()</span><br><span class="line">bcc &#x3D; Broadcast(loop&#x3D;loop)</span><br><span class="line">app &#x3D; GraiaMiraiApplication(</span><br><span class="line">    ...</span><br><span class="line">)</span><br><span class="line">sche &#x3D; scheduler.GraiaScheduler(loop&#x3D;loop,broadcast&#x3D;bcc)</span><br><span class="line"></span><br><span class="line">....</span><br><span class="line">@sche.schedule(timers.every_custom_seconds(60))</span><br><span class="line">async def test():</span><br><span class="line">    print(&quot;60s一次&quot;)</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>timers为一些常用的Scheduler时间设置</p>
+</blockquote>
+<p>对于<code>timers</code>中自造方法，使用<code>croniter</code>模块</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from datetime import datetime, timedelta</span><br><span class="line">from croniter import croniter</span><br><span class="line"></span><br><span class="line">def every(**kwargs):</span><br><span class="line">    while True:</span><br><span class="line">        yield datetime.now() + timedelta(**kwargs)</span><br><span class="line"></span><br><span class="line">def func(n):</span><br><span class="line">    &quot;&quot;&quot;每时间执行一次&quot;&quot;&quot;</span><br><span class="line">    yield from every(seconds&#x3D;n)</span><br><span class="line">    #yield from every(hours&#x3D;n)</span><br><span class="line">    #yield from every(minutes&#x3D;n)</span><br><span class="line"></span><br><span class="line">def crontabify(pattern: str):</span><br><span class="line">    &quot;&quot;&quot;使用类似 crontab 的方式生成计时器</span><br><span class="line"></span><br><span class="line">    Args:</span><br><span class="line">        pattern (str): crontab 的设置, 具体请合理使用搜索引擎</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    base_datetime &#x3D; datetime.now()</span><br><span class="line">    crontab_iter &#x3D; croniter(pattern, base_datetime)</span><br><span class="line">    while True:</span><br><span class="line">        yield crontab_iter.get_next(datetime)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>mirai</tag>
+        <tag>Graia</tag>
+        <tag>robot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>小小总结</title>
     <url>/post/427de4be.html</url>
     <content><![CDATA[<h1 id="目前涉猎内容"><a href="#目前涉猎内容" class="headerlink" title="目前涉猎内容"></a>目前涉猎内容</h1><blockquote>
