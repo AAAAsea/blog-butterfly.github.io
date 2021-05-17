@@ -1820,6 +1820,20 @@ table th:nth-of-type(4) {
       </tags>
   </entry>
   <entry>
+    <title>关于vercel私有域名无法访问</title>
+    <url>/post/3548e590.html</url>
+    <content><![CDATA[<h1 id="记录一下deploy在vercel上的项目忽然无法访问的问题"><a href="#记录一下deploy在vercel上的项目忽然无法访问的问题" class="headerlink" title="记录一下deploy在vercel上的项目忽然无法访问的问题"></a>记录一下deploy在vercel上的项目忽然无法访问的问题</h1><p>这几天没打开，今天偶然打开发现我的个人主页无法访问了（只是私有域名无法访问，但是vercel提供的域名毫无问题，怪哉！），看了半天控制台的域名解析没问题，又到vercel后台查了半天，实在是不行。<br>最后想起来会不会是被墙了，于是科学上网尝试了一下，居然真的成功了。<br>然而我还是不知道该怎么解决，四处询问未果。<br>最后我想会不会是因为github的这个仓库挺久没更新了，于是稍稍修改了一下html文件push上去，嘿嘿，然后就可以访问了，具体原因不清楚，至少可以进去了！！<br>由于问题来的莫名其妙，解决的也莫名其妙，不用再多说什么了。<br>另外，明天加油！（紧张ingngg)</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+        <tag>vercel</tag>
+        <tag>domain</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于部署机器人到linux的一些记录</title>
     <url>/post/b3542778.html</url>
     <content><![CDATA[<h1 id="一下是我踩的坑（不完全记录）"><a href="#一下是我踩的坑（不完全记录）" class="headerlink" title="一下是我踩的坑（不完全记录）"></a>一下是我踩的坑（不完全记录）</h1><h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><ol>
