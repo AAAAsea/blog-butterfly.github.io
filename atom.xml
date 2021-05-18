@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://asea.fun/"/>
-  <updated>2021-05-17T14:56:01.000Z</updated>
+  <updated>2021-05-18T06:00:53.000Z</updated>
   <id>https://asea.fun/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>转专业面试小结</title>
+    <link href="https://asea.fun/post/4d5a8c9b.html"/>
+    <id>https://asea.fun/post/4d5a8c9b.html</id>
+    <published>2021-05-18T05:47:26.000Z</published>
+    <updated>2021-05-18T06:00:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="今天经历了第一次转专业面试"><a href="#今天经历了第一次转专业面试" class="headerlink" title="今天经历了第一次转专业面试"></a>今天经历了第一次转专业面试</h1><p>我提前一个小时到了地点，最近紧张的不行，生怕我说话太多了又条理不清晰。在机房等待叫号，很快就到我了。<br>进门不小心还绊了一跤（太憨了。。。）<br>随后我开始滔滔不绝，我还是没控制住，说完才觉得说的实在太多了！！而且又乱又紧张！<br>绩点排名只在卓越班排实在太难了，大佬都在卓班:(<br>C语言当时真的是挺好玩的，然而实在是大一懵懂没有好好学<br>其实不只C语言，大多数课程都没深入好好学，可能兴趣真的不在那吧…<br>大二做了这么多东西花了不少时间，但在面前的大佬们眼里恐怕啥也不是吧（毕竟都是些小东西）<br>老师提到solidworkd还真的提醒了我，关于这个软件我想到的什么，当时说的好像啥也不是<br>但其实很简单，我觉得实现这个软件真的需要一个很庞大的体系…<br>不管是团队组织，代码之间的耦合，还是什么都很艰难</p><p>完了完了，我考了二级证书我还没说，总共我就没什么证书，哭了<br>虽然这证书也没啥含金量<br>算了，自己表现…只能给个勉强及格<br>希望各位大佬高抬贵手！！<br>表现欠佳实属抱歉！！！</p><p>祈祷…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;今天经历了第一次转专业面试&quot;&gt;&lt;a href=&quot;#今天经历了第一次转专业面试&quot; class=&quot;headerlink&quot; title=&quot;今天经历了第一次转专业面试&quot;&gt;&lt;/a&gt;今天经历了第一次转专业面试&lt;/h1&gt;&lt;p&gt;我提前一个小时到了地点，最近紧张的不行，生怕我说话太
+      
+    
+    </summary>
+    
+    
+      <category term="日常 收藏 文学 技术 笔记 本站" scheme="https://asea.fun/categories/%E6%97%A5%E5%B8%B8-%E6%94%B6%E8%97%8F-%E6%96%87%E5%AD%A6-%E6%8A%80%E6%9C%AF-%E7%AC%94%E8%AE%B0-%E6%9C%AC%E7%AB%99/"/>
+    
+    
+      <category term="life" scheme="https://asea.fun/tags/life/"/>
+    
+      <category term="interview" scheme="https://asea.fun/tags/interview/"/>
+    
+  </entry>
   
   <entry>
     <title>关于vercel私有域名无法访问</title>
@@ -543,33 +571,6 @@
     
     
       <category term="life" scheme="https://asea.fun/tags/life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo deploy——避免重复输入账户密码</title>
-    <link href="https://asea.fun/post/f7b96544.html"/>
-    <id>https://asea.fun/post/f7b96544.html</id>
-    <published>2021-02-23T02:05:28.000Z</published>
-    <updated>2021-02-23T13:48:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="ssh配置"><a href="#ssh配置" class="headerlink" title="ssh配置"></a>ssh配置</h1><h2><a id="1SSH_13"></a>1.生成SSH密钥</h2> <pre class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">cd ~/.ssh<div class="hljs-button &#123;2&#125;" data-title="复制" data-report-click="&#123;&quot;spm&quot;:&quot;1001.2101.3001.4259&quot;&#125;"></div></code><p class="pre-numbering" style><li style="color: rgb(153, 153, 153);">1</li></p></pre> <p>使用ssh -Keygen 生成密钥</p> <pre class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">ssh-keygen -t rsa -C "your_email@example.com"<div class="hljs-button &#123;2&#125;" data-title="复制" data-report-click="&#123;&quot;spm&quot;:&quot;1001.2101.3001.4259&quot;&#125;"></div></code><p class="pre-numbering" style><li style="color: rgb(153, 153, 153);">1</li></p></pre> <p>后面的输入均使用默认值，点击<strong>enter回车</strong>跳过</p> <p>密钥生成成功</p> <pre class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">Your identification has been saved in /home/you/.ssh/id_rsa.Your public key has been saved in /home/you/.ssh/id_rsa.pub.The key fingerprint is:…………………此处是密钥内容…………………… your_email@example.com<div class="hljs-button &#123;2&#125;" data-title="复制" data-report-click="&#123;&quot;spm&quot;:&quot;1001.2101.3001.4259&quot;&#125;"></div></code><p class="pre-numbering" style><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li></p></pre> <p>点击复制</p> <h2><a id="2GitHub_38"></a>2.设置GitHub仓库的密钥</h2> <p>点击SSh and GPG keys，后新建一个SSh key</p> <p><img src="https://img-blog.csdnimg.cn/img_convert/f8c5d3ae311c550857f785e2cd599386.png" alt="image-20210103194924377"></p> <p>输入密钥的title，可自定义输入，下面的key的内容即为刚才生成的密钥内容，将其复制粘贴进去（可能会遇到问题，请继续往后看），后点击add ssh key即可创建成功</p> <p><img src="https://img-blog.csdnimg.cn/img_convert/3b39fd4fdde832109ea9f30f2d85d834.png" alt="image-20210103195020682"></p> <h2><a id="3_48"></a>3.测试配置是否成功</h2> <pre class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">ssh -T git@GitHub.com<div class="hljs-button &#123;2&#125;" data-title="复制" data-report-click="&#123;&quot;spm&quot;:&quot;1001.2101.3001.4259&quot;&#125;"></div></code><p class="pre-numbering" style><li style="color: rgb(153, 153, 153);">1</li></p></pre> <p>如果看到successfully，即为配置完成并且成功</p> <p><img src="https://img-blog.csdnimg.cn/img_convert/cae4224ec411aaff9598cae46dd7d1dd.png" alt="image-20210103195309236"></p> <h2><a id="4Git_60"></a>4.修改博客Git远程提交的地址</h2> <pre class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;"># 修改 https 协议为 ssh 协议(仓库的ssh地址)git remote set-url origin git@github.com:xxx/xxx.git<div class="hljs-button &#123;2&#125;" data-title="复制" data-report-click="&#123;&quot;spm&quot;:&quot;1001.2101.3001.4259&quot;&#125;"></div></code><p class="pre-numbering" style><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li></p></pre> <h2><a id="5hexo_configyml_67"></a>5.修改hexo根目录下的_config.yml文件中的远程仓库设置</h2> <pre class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;"># Deployment## Docs: https://hexo.io/docs/one-command-deploymentdeploy:  type: git  repository: git@github.com:looles/looles.github.io.git  branch: master<div class="hljs-button &#123;2&#125;" data-title="复制" data-report-click="&#123;&quot;spm&quot;:&quot;1001.2101.3001.4259&quot;&#125;"></div></code><p class="pre-numbering" style><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li><li style="color: rgb(153, 153, 153);">6</li></p></pre> <h2><a id="6_78"></a>6.部署推送到远程仓库</h2> <p>ub.com:looles/looles.github.io.git<br> branch: master</p> <pre class="prettyprint"><code class="has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">#### 6.部署推送到远程仓库<div class="hljs-button &#123;2&#125;" data-title="复制" data-report-click="&#123;&quot;spm&quot;:&quot;1001.2101.3001.4259&quot;&#125;"></div></code><p class="pre-numbering" style><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li></p></pre>                <div><div></div></div>                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/markdown_views-d7a94ec6ab.css" rel="stylesheet">                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/style-80ad9b4f5b.css" rel="stylesheet">        <p>转载于: <a href="https://blog.csdn.net/qq_43729277/article/details/112150367?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.control&dist_request_id=ad442711-b6a8-4c52-8eb8-433089bfe963&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.control">2021-01-03-设解决使用hexo deploy推送代码到github仓库时重复输入账户密码</a></p><hr><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><blockquote><p>1、如果之前设置过ssh，但是部署的时候需要输入密码，可能是没有配置好，用<code>ssh -T <a href="mailto:git@GitHub.com">git@GitHub.com</a></code>检查的时候需要输入密码，则代表没有配置好。建议重头配置一次，提示是否要overwrite的时候y就行了。<br>2、另外粘贴密钥的时候可能会遇到问题 <em>“Key is invalid. You must supply a key in OpenSSH public key format github”</em>，请继续往后看。</p></blockquote><hr><h1 id="add-ssh-key报错"><a href="#add-ssh-key报错" class="headerlink" title="add ssh key报错"></a>add ssh key报错</h1><div id="article_content" class="article_content clearfix">        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-b5506197d8.css">                <div id="content_views" class="markdown_views prism-atom-one-light">                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">                        <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/>                    </svg>                    <p>直接复制粘贴 .ssh的文件<strong>会破坏格式</strong><br> 需要打开 git bash<br> <img src="https://img-blog.csdnimg.cn/20200609194954856.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTYwNDI1Nw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> 输入命令<code>clip &lt; ~/.ssh/id_rsa.pub</code><br> 回车后就复制到剪切板了，到github添加ssh keys的地方直接就能粘贴上<br> 如图：<br> <img src="https://img-blog.csdnimg.cn/20200609195404177.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTYwNDI1Nw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>                </div><div><div></div></div>                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/markdown_views-d7a94ec6ab.css" rel="stylesheet">                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/style-80ad9b4f5b.css" rel="stylesheet">        </div><p>转载于：<a href="https://blog.csdn.net/weixin_45604257/article/details/106649576">Key is invalid. You must supply a key in OpenSSH public key format github</a></p><hr><p>以上就完成了对hexo deploy的所有配置。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;ssh配置&quot;&gt;&lt;a href=&quot;#ssh配置&quot; class=&quot;headerlink&quot; title=&quot;ssh配置&quot;&gt;&lt;/a&gt;ssh配置&lt;/h1&gt;&lt;h2&gt;&lt;a id=&quot;1SSH_13&quot;&gt;&lt;/a&gt;1.生成SSH密钥&lt;/h2&gt; 
-&lt;pre class=&quot;prettypri
-      
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://asea.fun/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="deploy" scheme="https://asea.fun/tags/deploy/"/>
     
   </entry>
   
