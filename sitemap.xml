@@ -345,13 +345,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/index.html</loc>
-    
-    <lastmod>2020-11-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://asea.fun/link/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
@@ -360,6 +353,13 @@
   
   <url>
     <loc>https://asea.fun/message/index.html</loc>
+    
+    <lastmod>2020-11-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
@@ -424,13 +424,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/deploy/</loc>
-    <lastmod>2021-05-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://asea.fun/tags/notes/</loc>
     <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
@@ -439,6 +432,13 @@
   
   <url>
     <loc>https://asea.fun/tags/php/</loc>
+    <lastmod>2021-05-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/deploy/</loc>
     <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -480,13 +480,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/summary/</loc>
-    <lastmod>2021-05-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://asea.fun/tags/linux/</loc>
     <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
@@ -495,6 +488,13 @@
   
   <url>
     <loc>https://asea.fun/tags/robot/</loc>
+    <lastmod>2021-05-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/summary/</loc>
     <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -515,13 +515,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/think/</loc>
-    <lastmod>2021-05-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://asea.fun/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
@@ -529,7 +522,7 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/birthday/</loc>
+    <loc>https://asea.fun/tags/think/</loc>
     <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -537,6 +530,13 @@
   
   <url>
     <loc>https://asea.fun/tags/update/</loc>
+    <lastmod>2021-05-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/birthday/</loc>
     <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -637,13 +637,6 @@
   
   <url>
     <loc>https://asea.fun/categories/%E6%9C%AC%E7%AB%99/</loc>
-    <lastmod>2021-05-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/categories/%E6%97%A5%E5%B8%B8-%E6%94%B6%E8%97%8F-%E6%96%87%E5%AD%A6-%E6%8A%80%E6%9C%AF-%E7%AC%94%E8%AE%B0-%E6%9C%AC%E7%AB%99/</loc>
     <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
