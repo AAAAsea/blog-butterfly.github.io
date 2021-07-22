@@ -380,13 +380,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/link/index.html</loc>
-    
-    <lastmod>2020-11-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://asea.fun/tags/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
@@ -395,6 +388,13 @@
   
   <url>
     <loc>https://asea.fun/message/index.html</loc>
+    
+    <lastmod>2020-11-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/link/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
@@ -536,13 +536,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/Java/</loc>
-    <lastmod>2021-07-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://asea.fun/tags/literature/</loc>
     <lastmod>2021-07-22</lastmod>
     <changefreq>daily</changefreq>
@@ -550,7 +543,7 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/Jupyter/</loc>
+    <loc>https://asea.fun/tags/Java/</loc>
     <lastmod>2021-07-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -565,6 +558,13 @@
   
   <url>
     <loc>https://asea.fun/tags/summary/</loc>
+    <lastmod>2021-07-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/Jupyter/</loc>
     <lastmod>2021-07-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -613,6 +613,13 @@
   </url>
   
   <url>
+    <loc>https://asea.fun/tags/hexo/</loc>
+    <lastmod>2021-07-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://asea.fun/tags/selenium/</loc>
     <lastmod>2021-07-22</lastmod>
     <changefreq>daily</changefreq>
@@ -628,13 +635,6 @@
   
   <url>
     <loc>https://asea.fun/tags/cv2/</loc>
-    <lastmod>2021-07-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/tags/hexo/</loc>
     <lastmod>2021-07-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

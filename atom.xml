@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://asea.fun/"/>
-  <updated>2021-07-22T15:33:31.000Z</updated>
+  <updated>2021-07-22T15:33:59.000Z</updated>
   <id>https://asea.fun/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://asea.fun/post/eb0811b7.html"/>
     <id>https://asea.fun/post/eb0811b7.html</id>
     <published>2021-07-21T16:12:40.000Z</published>
-    <updated>2021-07-22T15:33:31.000Z</updated>
+    <updated>2021-07-22T15:33:59.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h2><blockquote><p>推荐环境统一放在一个environment的文件夹下，最新的jdk的jre不用自己配置，只需要配置java_home以及path即可。<br>安装后移动jdk路径，会导致cmd无任何输出，可以重新安装一下（如果你想换位置的话）。</p></blockquote><h2 id="DOS命令"><a href="#DOS命令" class="headerlink" title="DOS命令"></a>DOS命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1. dir</span><br><span class="line">2. cd /d E:\xxx 跨盘操作</span><br><span class="line">3. cls (clear screen)</span><br><span class="line">4. exit</span><br><span class="line">5. ipconfig</span><br><span class="line">6. calc</span><br><span class="line">7. mspaint</span><br><span class="line">8. notepad</span><br><span class="line">9. ping + domain</span><br><span class="line">10. md test</span><br><span class="line">11. cd&gt;a.txt</span><br><span class="line">12. del a.txt</span><br><span class="line">13. rd test</span><br></pre></td></tr></table></figure><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol><li><p>大小写敏感、强类型</p></li><li><p>char c  = ‘\u0061’</p></li><li><p>引用类型比较地址 基本类型比较值</p></li><li><p>高到低：强制转换；低到高：自动转换</p><ol><li>byte-&gt;short-&gt;hcar-&gt;int-&gt;long-&gt;float-&gt;double</li></ol></li><li><p>JDK7后数字可以用下划线分割</p></li><li><p>方法重载（参数类型、个数、排序不同）</p></li><li><p>数组</p><ol><li><p>int[] nums; （首选）</p></li><li><p>int nums[]; （C的风格）</p></li><li><p>int[] nums = new int[10];nums[0] = 1（动态初始化，先声明，后赋值）隐式初始化，int默认0，string默认null</p></li><li><p>int [] nums = {1,2,3}（静态初始化：创建直接赋值）</p></li><li><p>长度是确定的，不可更改，元素类型相同，可以是基本类型也可是引用类型</p></li><li><p>for-each:</p><ol><li><pre><code class="java"><span class="keyword">for</span>(<span class="keyword">int</span> array : arrays)&#123;    System.out.println(array);&#125;</code></pre></li></ol></li><li></li></ol></li></ol>]]></content>
     
