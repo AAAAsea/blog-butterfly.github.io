@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://asea.fun/"/>
-  <updated>2021-07-22T15:33:59.000Z</updated>
+  <updated>2021-07-24T07:04:29.000Z</updated>
   <id>https://asea.fun/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://asea.fun/post/eb0811b7.html"/>
     <id>https://asea.fun/post/eb0811b7.html</id>
     <published>2021-07-21T16:12:40.000Z</published>
-    <updated>2021-07-22T15:33:59.000Z</updated>
+    <updated>2021-07-24T07:04:29.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h2><blockquote><p>推荐环境统一放在一个environment的文件夹下，最新的jdk的jre不用自己配置，只需要配置java_home以及path即可。<br>安装后移动jdk路径，会导致cmd无任何输出，可以重新安装一下（如果你想换位置的话）。</p></blockquote><h2 id="DOS命令"><a href="#DOS命令" class="headerlink" title="DOS命令"></a>DOS命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1. dir</span><br><span class="line">2. cd /d E:\xxx 跨盘操作</span><br><span class="line">3. cls (clear screen)</span><br><span class="line">4. exit</span><br><span class="line">5. ipconfig</span><br><span class="line">6. calc</span><br><span class="line">7. mspaint</span><br><span class="line">8. notepad</span><br><span class="line">9. ping + domain</span><br><span class="line">10. md test</span><br><span class="line">11. cd&gt;a.txt</span><br><span class="line">12. del a.txt</span><br><span class="line">13. rd test</span><br></pre></td></tr></table></figure><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol><li><p>大小写敏感、强类型</p></li><li><p>char c  = ‘\u0061’</p></li><li><p>引用类型比较地址 基本类型比较值</p></li><li><p>高到低：强制转换；低到高：自动转换</p><ol><li>byte-&gt;short-&gt;hcar-&gt;int-&gt;long-&gt;float-&gt;double</li></ol></li><li><p>JDK7后数字可以用下划线分割</p></li><li><p>方法重载（参数类型、个数、排序不同）</p></li><li><p>数组</p><ol><li><p>int[] nums; （首选）</p></li><li><p>int nums[]; （C的风格）</p></li><li><p>int[] nums = new int[10];nums[0] = 1（动态初始化，先声明，后赋值）隐式初始化，int默认0，string默认null</p></li><li><p>int [] nums = {1,2,3}（静态初始化：创建直接赋值）</p></li><li><p>长度是确定的，不可更改，元素类型相同，可以是基本类型也可是引用类型</p></li><li><p>for-each:</p><ol><li><pre><code class="java"><span class="keyword">for</span>(<span class="keyword">int</span> array : arrays)&#123;    System.out.println(array);&#125;</code></pre></li></ol></li><li></li></ol></li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h2><blockquote><p>推荐环境统一放在一个environment的文件夹下，最新的jdk的jre不用自己配置，只需要配置java_home以及path即可。<br>安装后移动jdk路径，会导致cmd无任何输出，可以重新安装一下（如果你想换位置的话）。</p></blockquote><h2 id="DOS命令"><a href="#DOS命令" class="headerlink" title="DOS命令"></a>DOS命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1. dir</span><br><span class="line">2. cd /d E:\xxx 跨盘操作</span><br><span class="line">3. cls (clear screen)</span><br><span class="line">4. exit</span><br><span class="line">5. ipconfig</span><br><span class="line">6. calc</span><br><span class="line">7. mspaint</span><br><span class="line">8. notepad</span><br><span class="line">9. ping + domain</span><br><span class="line">10. md test</span><br><span class="line">11. cd&gt;a.txt</span><br><span class="line">12. del a.txt</span><br><span class="line">13. rd test</span><br></pre></td></tr></table></figure><h2 id="基础知识点"><a href="#基础知识点" class="headerlink" title="基础知识点"></a>基础知识点</h2><ol><li><p>大小写敏感、强类型</p></li><li><p>char c  = ‘\u0061’</p></li><li><p>引用类型比较地址 基本类型比较值</p></li><li><p>高到低：强制转换；低到高：自动转换</p><ol><li>byte-&gt;short-&gt;hcar-&gt;int-&gt;long-&gt;float-&gt;double</li></ol></li><li><p>JDK7后数字可以用下划线分割</p></li><li><p>方法重载（参数类型、个数、排序不同）</p></li><li><p>数组</p><ol><li><p>int[] nums; （首选）</p></li><li><p>int nums[]; （C的风格）</p></li><li><p>int[] nums = new int[10];nums[0] = 1（动态初始化，先声明，后赋值）隐式初始化，int默认0，string默认null</p></li><li><p>int [] nums = {1,2,3}（静态初始化：创建直接赋值）</p></li><li><p>长度是确定的，不可更改，元素类型相同，可以是基本类型也可是引用类型</p></li><li><p>for-each:</p><ol><li><pre><code class="java"><span class="keyword">for</span>(<span class="keyword">int</span> array : arrays)&#123;    System.out.println(array);&#125;</code></pre></li></ol></li><li><p>Arrays类</p><ol><li>Arrays.sort()</li><li>Arrays.fill()</li><li>Arrays.tostring()</li></ol></li><li><p>稀疏数组</p><ol><li>总行 总列 有效值个数</li><li>行 列 值</li><li>…</li></ol></li></ol></li></ol><h2 id="面向对象（OOP）"><a href="#面向对象（OOP）" class="headerlink" title="面向对象（OOP）"></a>面向对象（OOP）</h2><ol><li><p>非静态方法需要实例化才能调用</p></li><li><p>引用传递、值传递</p></li><li><p>构造器（方法名和类名一致）,new本质是在调用构造器</p></li><li><p>无参构造再不定义任何构造时会自动生成，反之必须自己显示定义。</p></li><li><p>idea :  alt+insert 自动生成构造器</p></li><li><p>封装：属性私有，get，set</p></li><li><p>继承：实例化子类时，会先调用父类构造器，如果显式定义构造器，super（）必须在子类构造器的第一行。ctrl + h继承树</p></li><li><p>重写：方法名和参数列表必须一样</p></li><li><p>多态：能调用的方法只看引用类型，且如果子类重写父类方法，则运行子类方法。 多态是方法的多态</p></li><li><p>A instanceof B</p></li><li></li></ol>]]></content>
     
     <summary type="html">
     
@@ -467,16 +467,15 @@
     <link href="https://asea.fun/post/5f7056f2.html"/>
     <id>https://asea.fun/post/5f7056f2.html</id>
     <published>2021-04-14T14:59:41.000Z</published>
-    <updated>2021-04-17T16:13:24.000Z</updated>
+    <updated>2021-07-24T07:02:58.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="记录一下学习electron的坑"><a href="#记录一下学习electron的坑" class="headerlink" title="记录一下学习electron的坑"></a>记录一下学习electron的坑</h1><ol><li>require is not defined<br> 在12版本往后，同时设置<code>nodeIntegration: true</code>及<code>contextIsolation: false</code>解决该问题！</li><li>cannot read property ‘BrowserWindow’ of undefined<br> 在原有的基础上配置<code>enableRemoteModule:true</code></li><li>打包<br> <code>electron-packager . HelloWorld --win --out ../HelloWorldApp --arch=x64 --electron-ersion=1.0.0 --electron-version=12.0.4</code><br> 貌似下载下来一个包要放到哪里来着。。。</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="记录一下学习electron的坑"><a href="#记录一下学习electron的坑" class="headerlink" title="记录一下学习electron的坑"></a>记录一下学习electron的坑</h1><h3 id="旧版笔记（建议看新版，往下翻）"><a href="#旧版笔记（建议看新版，往下翻）" class="headerlink" title="旧版笔记（建议看新版，往下翻）"></a>旧版笔记（建议看新版，往下翻）</h3><ol><li>require is not defined<br> 在12版本往后，同时设置<code>nodeIntegration: true</code>及<code>contextIsolation: false</code>解决该问题！</li><li>cannot read property ‘BrowserWindow’ of undefined<br> 在原有的基础上配置<code>enableRemoteModule:true</code></li><li>打包<br> <code>electron-packager . HelloWorld --win --out ../HelloWorldApp --arch=x64 --electron-ersion=1.0.0 --electron-version=12.0.4</code><br> 貌似下载下来一个包要放到哪里来着。。。</li></ol><h3 id="新版笔记"><a href="#新版笔记" class="headerlink" title="新版笔记"></a>新版笔记</h3><ol><li>认真阅读<a href="https://www.electronjs.org/docs">官方文档</a></li><li>打包失败的原因，除了author、description的报错之外，load file报错，查了好久都没发现问题，最后想到是不是因为路径中包含了中文导致无法加载文件的，md，一试，果然如此。</li><li>另外还有些报错我虽然没遇到，但是记录一下<ol><li>·、<code>npm install --save-dev @electron-forge/cli</code>和<code>npx electron-forge import</code>报错可能是你用了taobao源，建议用华为源<code>npm config set registry https://mirrors.huaweicloud.com/repository/npm/</code>，或者默认源<code>npm config set registry https://registry.npmjs.org</code></li><li>author和description一定要写</li><li>如果还有报错可以试试cnpm（我自己没试过）</li></ol></li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;记录一下学习electron的坑&quot;&gt;&lt;a href=&quot;#记录一下学习electron的坑&quot; class=&quot;headerlink&quot; title=&quot;记录一下学习electron的坑&quot;&gt;&lt;/a&gt;记录一下学习electron的坑&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;require 
+        &lt;h1 id=&quot;记录一下学习electron的坑&quot;&gt;&lt;a href=&quot;#记录一下学习electron的坑&quot; class=&quot;headerlink&quot; title=&quot;记录一下学习electron的坑&quot;&gt;&lt;/a&gt;记录一下学习electron的坑&lt;/h1&gt;&lt;h3 id=&quot;旧版笔记（建议看新
       
     
     </summary>
