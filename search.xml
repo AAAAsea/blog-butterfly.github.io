@@ -2566,10 +2566,10 @@ table th:nth-of-type(4) {
     <title>Github进不去解决方法</title>
     <url>/post/3345821.html</url>
     <content><![CDATA[<h1 id="Github进不去解决方法"><a href="#Github进不去解决方法" class="headerlink" title="Github进不去解决方法"></a>Github进不去解决方法</h1><p>按以下方法修改hosts文件，注意hosts文件只有在管理员权限下才可以修改，hosts文件所在目录为:</p>
-<p>C:\Windows\System32\drivers\etc\hosts，注意修改右下角显示所有文件才可以看到。</p>
-<p><a href="https://www.ipaddress.com/ip-lookup用此网站查找github.com和github.global.ssl.fastly.net对应的ip，然后添加hosts文件以下内容：">https://www.ipaddress.com/ip-lookup用此网站查找github.com和github.global.ssl.fastly.net对应的ip，然后添加hosts文件以下内容：</a></p>
-<p>github.com的ip    github.com</p>
-<p>github.global.ssl.fastly.net的ip    github.global.ssl.fastly.net</p>
+<p><code>C:\Windows\System32\drivers\etc\hosts</code>，注意修改右下角显示所有文件才可以看到。</p>
+<p>用<a href="https://www.ipaddress.com/ip-lookup">此网站</a>查找<code>github.com</code>和<code>github.global.ssl.fastly.net</code>对应的ip，然后添加hosts文件以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">github.com的ip    github.com</span><br><span class="line"></span><br><span class="line">github.global.ssl.fastly.net的ip    github.global.ssl.fastly.net</span><br></pre></td></tr></table></figure>
+
 <p> 注意添加的ip要是你自己本机查到的，用网上其他人查到的可能不管用</p>
 <p>————————————————</p>
 <p>版权声明：本文为CSDN博主「w͏l͏j͏」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。</p>
