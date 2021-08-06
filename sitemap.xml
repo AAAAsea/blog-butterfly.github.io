@@ -408,14 +408,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/index.html</loc>
+    <loc>https://asea.fun/message/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/message/index.html</loc>
+    <loc>https://asea.fun/tags/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
@@ -522,14 +522,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/three-js/</loc>
+    <loc>https://asea.fun/tags/you-get/</loc>
     <lastmod>2021-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/you-get/</loc>
+    <loc>https://asea.fun/tags/three-js/</loc>
     <lastmod>2021-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -550,14 +550,7 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/linux/</loc>
-    <lastmod>2021-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/tags/robot/</loc>
+    <loc>https://asea.fun/tags/Java/</loc>
     <lastmod>2021-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -578,7 +571,21 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/Java/</loc>
+    <loc>https://asea.fun/tags/linux/</loc>
+    <lastmod>2021-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/robot/</loc>
+    <lastmod>2021-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/sources/</loc>
     <lastmod>2021-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -592,7 +599,7 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/sources/</loc>
+    <loc>https://asea.fun/tags/tools/</loc>
     <lastmod>2021-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -614,13 +621,6 @@
   
   <url>
     <loc>https://asea.fun/tags/update/</loc>
-    <lastmod>2021-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/tags/tools/</loc>
     <lastmod>2021-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
