@@ -1,0 +1,342 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>东华大学程序设计基础OJ题目 | AseaBlog</title><meta name="keywords" content="OJ,DHU"><meta name="author" content="Asea,gyvip001@126.com"><meta name="copyright" content="Asea"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="记录一下自己做题的时候遇到的比较困扰的题  数列2问题描述思维的严密性是相当重要的，尤其是在程序设计中，一个小小的错误，就可能导致无法想象的后果。明明的爸爸是一名富有经验的程序设计专家，深知思维严密的重要性，于是在明明很小的时候，就通过游戏的方式，训练明明的思维严密性。今天，明明的爸爸和明明做了一个数列的游戏。这个游戏很简单，就是有一数列，现在需要在这数列中选出一个或者若干个数（可以不连续），要"><meta property="og:type" content="article"><meta property="og:title" content="东华大学程序设计基础OJ题目"><meta property="og:url" content="https://asea.fun/post/5b353da9.html"><meta property="og:site_name" content="AseaBlog"><meta property="og:description" content="记录一下自己做题的时候遇到的比较困扰的题  数列2问题描述思维的严密性是相当重要的，尤其是在程序设计中，一个小小的错误，就可能导致无法想象的后果。明明的爸爸是一名富有经验的程序设计专家，深知思维严密的重要性，于是在明明很小的时候，就通过游戏的方式，训练明明的思维严密性。今天，明明的爸爸和明明做了一个数列的游戏。这个游戏很简单，就是有一数列，现在需要在这数列中选出一个或者若干个数（可以不连续），要"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://pic.imgdb.cn/item/611b5a2b4907e2d39c6c523a.jpg"><meta property="article:published_time" content="2021-08-17T06:40:08.000Z"><meta property="article:modified_time" content="2021-08-17T06:58:52.000Z"><meta property="article:author" content="Asea"><meta property="article:tag" content="OJ"><meta property="article:tag" content="DHU"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://pic.imgdb.cn/item/611b5a2b4907e2d39c6c523a.jpg"><link rel="shortcut icon" href="/img/favicon6.png"><link rel="canonical" href="https://asea.fun/post/5b353da9"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?8b915067ab7284767a0eb5ac8bd1bd26";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Asea","link":"链接: ","source":"来源: AseaBlog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE={isPost:!0,isHome:!1,isHighlightShrink:!1,isToc:!0,postUpdate:"2021-08-17 14:58:52"}</script><noscript><style type="text/css">#nav{opacity:1}.justified-gallery img{opacity:1}#post-meta time,#recent-posts time{display:inline!important}</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="/css/asea.css"><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/tags.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/font-awesome-animation.min.css"><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="AseaBlog" type="application/atom+xml"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar1.png" onerror='onerror=null,src="/img/friend_404.gif"' alt="avatar"></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">46</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">36</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouye"></i> <span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-wenzhang"></i> <span>文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-guidang"></i> <span>归档</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-ziyuan"></i> <span>标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-leimupinleifenleileibie2"></i> <span>分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-duomeiti"></i> <span>媒体</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/Gallery/"><i class="fa-fw iconfont icon-xiangce"></i> <span>图库</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw iconfont icon-shipin1"></i> <span>电影</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw iconfnt icon-BookFormulaRecent-1"></i> <span>书籍</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-youlianguanli"></i> <span>友链</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw iconfont icon-liuyanban"></i> <span>留言</span></a></div><div class="menus_item"><a class="site-page" href="/talk/"><i class="fa-fw iconfont icon-liuyan"></i> <span>说说</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-guanyu"></i> <span>关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-iconnormal"></i> <span>好玩的</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/fun/chi/"><i class="fa-fw iconfont icon-food"></i> <span>吃什么</span></a></li><li><a class="site-page" href="/fun/hua/"><i class="fa-fw iconfont icon-miniconspaint"></i> <span>画板</span></a></li><li><a class="site-page" href="/fun/du/"><i class="fa-fw iconfont icon-jitang"></i> <span>毒鸡汤</span></a></li><li><a class="site-page" href="/fun/mi/"><i class="fa-fw iconfont icon-mima1"></i> <span>随机密码</span></a></li><li><a class="site-page" href="/fun/apesk/"><i class="fa-fw iconfont icon-test-tube-"></i> <span>APESK测试</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image:url(https://pic.imgdb.cn/item/611b5a2b4907e2d39c6c523a.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">AseaBlog</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i> <span>搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouye"></i> <span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-wenzhang"></i> <span>文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-guidang"></i> <span>归档</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-ziyuan"></i> <span>标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-leimupinleifenleileibie2"></i> <span>分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-duomeiti"></i> <span>媒体</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/Gallery/"><i class="fa-fw iconfont icon-xiangce"></i> <span>图库</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw iconfont icon-shipin1"></i> <span>电影</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw iconfnt icon-BookFormulaRecent-1"></i> <span>书籍</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-youlianguanli"></i> <span>友链</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw iconfont icon-liuyanban"></i> <span>留言</span></a></div><div class="menus_item"><a class="site-page" href="/talk/"><i class="fa-fw iconfont icon-liuyan"></i> <span>说说</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-guanyu"></i> <span>关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-iconnormal"></i> <span>好玩的</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/fun/chi/"><i class="fa-fw iconfont icon-food"></i> <span>吃什么</span></a></li><li><a class="site-page" href="/fun/hua/"><i class="fa-fw iconfont icon-miniconspaint"></i> <span>画板</span></a></li><li><a class="site-page" href="/fun/du/"><i class="fa-fw iconfont icon-jitang"></i> <span>毒鸡汤</span></a></li><li><a class="site-page" href="/fun/mi/"><i class="fa-fw iconfont icon-mima1"></i> <span>随机密码</span></a></li><li><a class="site-page" href="/fun/apesk/"><i class="fa-fw iconfont icon-test-tube-"></i> <span>APESK测试</span></a></li></ul></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">东华大学程序设计基础OJ题目</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-17T06:40:08.000Z" title="发表于 2021-08-17 14:40:08">2021-08-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-17T06:58:52.000Z" title="更新于 2021-08-17 14:58:52">2021-08-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数:</span><span class="word-count">2.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">大概要读:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">热度:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote><p>记录一下自己做题的时候遇到的比较困扰的题</p></blockquote><h2 id="数列2"><a href="#数列2" class="headerlink" title="数列2"></a>数列2</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>思维的严密性是相当重要的，尤其是在程序设计中，一个小小的错误，就可能导致无法想象的后果。明明的爸爸是一名富有经验的程序设计专家，深知思维严密的重要性，于是在明明很小的时候，就通过游戏的方式，训练明明的思维严密性。今天，明明的爸爸和明明做了一个数列的游戏。这个游戏很简单，就是有一数列，现在需要在这数列中选出一个或者若干个数（可以不连续），要求这些数的和能被11整除。明明的爸爸想锻炼明明思维的严密性，因此要求明明尽可能多的找出符合条件的数列来，最好一个也不要漏掉。 例如一数列为“11 22 33”，其中11可以被11整除，22可以被11整除，33可以被11整除，11+22=33能被11整除，22+33=55能被11整除，11+33=44能被11整除，11+22+33=66能被11整除。所以以上一数列能被11整除的情况一共有7种。 明明对于这个游戏很感兴趣，高兴地玩了起来。由于粗心，明明总是无法一次就把所有的情况都找出来，这使得他爸爸不是很满意。于是明明爸爸决定先降低游戏的难度，事先告诉明明某一数列总共有多少种符合条件的选择数字的方法，然后再让明明去选。明明的爸爸请你帮一个忙，他不想自己找出所有的情况，因此请你写一个程序，用程序来找出一共有多少种符合选数的情况，并把结果告诉他。</p><p>明明爸爸的问题可以归结为：给你一个数列，从中选出1个或若干个数（可以不连续），要求这些数的和能被11整除，问这样的选数方法一共有多少种。</p><h3 id="输入说明"><a href="#输入说明" class="headerlink" title="输入说明"></a>输入说明</h3><p>你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据有两行，每组测试数据的第一行有一个整数n(1≤n≤15)，表示数列中有多少个整数，每组测试数据的第二行有n个整数，整数的大小都大于等于0且小于等于100，整数之间用一个空格隔开。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</p><h3 id="输出说明"><a href="#输出说明" class="headerlink" title="输出说明"></a>输出说明</h3><p>对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将每组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为一个整数，即表示一共有多少种选数方法。每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。 注：通常，显示屏为标准输出设备。</p><h3 id="输入范例"><a href="#输入范例" class="headerlink" title="输入范例"></a>输入范例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1</span><br><span class="line">11</span><br><span class="line">3</span><br><span class="line">11 22 33</span><br></pre></td></tr></table></figure><h3 id="输出范例"><a href="#输出范例" class="headerlink" title="输出范例"></a>输出范例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1</span><br><span class="line">7</span><br></pre></td></tr></table></figure><h3 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h3><blockquote><p>本题主要考察数组应用和递归思想</p></blockquote><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_num</span><span class="params">(<span class="keyword">int</span> start, <span class="keyword">int</span> num, <span class="keyword">int</span> &amp;sum, <span class="keyword">int</span> n, <span class="keyword">int</span> *arr, <span class="keyword">int</span> countor, <span class="keyword">int</span> num_sum)</span> <span class="comment">//参数意义：遍历起始地址，遍历总个数，满足条件的个数，数组长度，数组，计数器，和</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    countor ++;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = start; i &lt; n-num+countor; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(countor &lt; num)</span><br><span class="line">            get_num(i+<span class="number">1</span>, num, sum, n, arr, countor, num_sum + arr[i]);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>((num_sum+arr[i])% <span class="number">11</span> == <span class="number">0</span> &amp;&amp; (num_sum + arr[i]) != <span class="number">0</span>) &#123;sum++;&#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> arr[<span class="number">15</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">             get_num(<span class="number">0</span>, i, sum, n, arr, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;sum&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="打印十字图"><a href="#打印十字图" class="headerlink" title="打印十字图"></a>打印十字图</h2><h3 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h3><p>小明为某机构设计了一个十字型的徽标（并非红十字会啊），如下所示：</p><p>..$$$$$$$$$$$$$..<br>..$………..$..<br>$$$.$$$$$$$$$.$$$<br>$…$…….$…$<br>$.$$$.$$$$$.$$$.$<br>$.$…$…$…$.$<br>$.$.$$$.$.$$$.$.$<br>$.$.$…$…$.$.$<br>$.$.$.$$$$$.$.$.$<br>$.$.$…$…$.$.$<br>$.$.$$$.$.$$$.$.$<br>$.$…$…$…$.$<br>$.$$$.$$$$$.$$$.$<br>$…$…….$…$<br>$$$.$$$$$$$$$.$$$<br>..$………..$..<br>..$$$$$$$$$$$$$..</p><p>对方同时也需要在电脑dos窗口中以字符的形式输出该标志（图中红色只是为了标记处十字符号，输出时都用黑色），并能任意控十字外面包围的符号的层数。</p><h3 id="输入说明-1"><a href="#输入说明-1" class="headerlink" title="输入说明"></a>输入说明</h3><p>一个正整数 n (n&lt;30) 表示要求打印图形的层数。</p><h3 id="输出说明-1"><a href="#输出说明-1" class="headerlink" title="输出说明"></a>输出说明</h3><p>对应包围层数的该标志。</p><p>比如：</p><p>输入</p><p>1</p><p>输出</p><p>..$$$$$..<br>..$…$..<br>$$$.$.$$$<br>$…$…$<br>$.$$$$$.$<br>$…$…$<br>$$$.$.$$$<br>..$…$..<br>..$$$$$..</p><p>输入</p><p>3</p><p>输出</p><p>..$$$$$$$$$$$$$..<br>..$………..$..<br>$$$.$$$$$$$$$.$$$<br>$…$…….$…$<br>$.$$$.$$$$$.$$$.$<br>$.$…$…$…$.$<br>$.$.$$$.$.$$$.$.$<br>$.$.$…$…$.$.$<br>$.$.$.$$$$$.$.$.$<br>$.$.$…$…$.$.$<br>$.$.$$$.$.$$$.$.$<br>$.$…$…$…$.$<br>$.$$$.$$$$$.$$$.$<br>$…$…….$…$<br>$$$.$$$$$$$$$.$$$<br>..$………..$..<br>..$$$$$$$$$$$$$..</p><p>请仔细观察样例，尤其要注意句点的数量和输出位置。</p><h3 id="输入范例-1"><a href="#输入范例-1" class="headerlink" title="输入范例"></a>输入范例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure><h3 id="输出范例-1"><a href="#输出范例-1" class="headerlink" title="输出范例"></a>输出范例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">..$$$$$$$$$$$$$..</span><br><span class="line">..$...........$..</span><br><span class="line">$$$.$$$$$$$$$.$$$</span><br><span class="line">$...$.......$...$</span><br><span class="line">$.$$$.$$$$$.$$$.$</span><br><span class="line">$.$...$...$...$.$</span><br><span class="line">$.$.$$$.$.$$$.$.$</span><br><span class="line">$.$.$...$...$.$.$</span><br><span class="line">$.$.$.$$$$$.$.$.$</span><br><span class="line">$.$.$...$...$.$.$</span><br><span class="line">$.$.$$$.$.$$$.$.$</span><br><span class="line">$.$...$...$...$.$</span><br><span class="line">$.$$$.$$$$$.$$$.$</span><br><span class="line">$...$.......$...$</span><br><span class="line">$$$.$$$$$$$$$.$$$</span><br><span class="line">..$...........$..</span><br><span class="line">..$$$$$$$$$$$$$..</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="主要代码-1"><a href="#主要代码-1" class="headerlink" title="主要代码"></a>主要代码</h3><blockquote><p>利用好对称，找规律。</p></blockquote><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;<span class="number">2</span>*n+<span class="number">3</span>)</span><br><span class="line">        i = n*<span class="number">4</span>+<span class="number">6</span>-i;</span><br><span class="line">    <span class="keyword">if</span>(j&gt;<span class="number">2</span>*n+<span class="number">3</span>)</span><br><span class="line">        j = n*<span class="number">4</span>+<span class="number">6</span>-j;</span><br><span class="line">        <span class="keyword">if</span>(i == <span class="number">1</span> &amp;&amp; j == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;j)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> temp = i;</span><br><span class="line">        i = j;</span><br><span class="line">        j = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(i%<span class="number">2</span> != <span class="number">0</span> &amp;&amp; j != i + <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(i%<span class="number">2</span> == <span class="number">0</span> &amp;&amp; j == i + <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n*<span class="number">4</span>+<span class="number">5</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n*<span class="number">4</span>+<span class="number">5</span>; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (judge(i, j, n))</span><br><span class="line">                    <span class="built_in">cout</span>&lt;&lt;<span class="string">&#x27;$&#x27;</span>;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    <span class="built_in">cout</span>&lt;&lt;<span class="string">&#x27;.&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="质数的乘积"><a href="#质数的乘积" class="headerlink" title="质数的乘积"></a>质数的乘积</h2><h3 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h3><p>　Torry从小喜爱数学。一天，老师告诉他，像2、3、5、7……这样的数叫做质数。Torry突然想到一个问题，前10、100、1000、10000……个质数的乘积是多少呢？他把这个问题告诉老师。老师愣住了，一时回答不出来。于是Torry求助于会编程的你，请你算出前n个质数的乘积。不过，考虑到你才接触编程不久，Torry只要你算出这个数模上50000的值。</p><h3 id="输入说明-2"><a href="#输入说明-2" class="headerlink" title="输入说明"></a>输入说明</h3><p>仅包含一个正整数n，其中n&lt;=100000。</p><h3 id="输出说明-2"><a href="#输出说明-2" class="headerlink" title="输出说明"></a>输出说明</h3><p>输出一行，即前n个质数的乘积模50000的值。</p><h3 id="输入范例-2"><a href="#输入范例-2" class="headerlink" title="输入范例"></a>输入范例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure><h3 id="输出范例-2"><a href="#输出范例-2" class="headerlink" title="输出范例"></a>输出范例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">30</span><br></pre></td></tr></table></figure><h3 id="主要代码-2"><a href="#主要代码-2" class="headerlink" title="主要代码"></a>主要代码</h3><blockquote><p>如何判断指数，基本数据类型（int 、long long）的取值范围</p></blockquote><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">is_zhi</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a == <span class="number">2</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="built_in">sqrt</span>(a); i++)&#123; <span class="comment">//注意是&lt;=</span></span><br><span class="line">        <span class="keyword">if</span>(a%i == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> sum_arr[<span class="number">100000</span>];</span><br><span class="line">    <span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> sum = <span class="number">1</span>;<span class="comment">//int最大值2^32-1</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; k &lt; <span class="number">100000</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(is_zhi(i)) &#123;sum = sum*i%<span class="number">50000</span>; sum_arr[k++] = sum;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;sum_arr[n<span class="number">-1</span>];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="航班时间"><a href="#航班时间" class="headerlink" title="航班时间"></a>航班时间</h2><h3 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h3><p>【问题背景】</p><p>小h前往美国参加了蓝桥杯国际赛。小h的女朋友发现小h上午十点出发，上午十二点到达美国，于是感叹到“现在飞机飞得真快，两小时就能到美国了”。</p><p>小h对超音速飞行感到十分恐惧。仔细观察后发现飞机的起降时间都是当地时间。由于北京和美国东部有12小时时差，故飞机总共需要14小时的飞行时间。</p><p>不久后小h的女朋友去中东交换。小h并不知道中东与北京的时差。但是小h得到了女朋友来回航班的起降时间。小h想知道女朋友的航班飞行时间是多少。</p><p>【问题描述】</p><p>对于一个可能跨时区的航班，给定来回程的起降时间。假设飞机来回飞行时间相同，求飞机的飞行时间。</p><h3 id="输入说明-3"><a href="#输入说明-3" class="headerlink" title="输入说明"></a>输入说明</h3><p>从标准输入读入数据。</p><p>一个输入包含多组数据。</p><p>输入第一行为一个正整数T，表示输入数据组数。</p><p>每组数据包含两行，第一行为去程的 起降 时间，第二行为回程的 起降 时间。</p><p>起降时间的格式如下</p><p>h1:m1:s1 h2:m2:s2</p><p>或</p><p>h1:m1:s1 h3:m3:s3 (+1)</p><p>或</p><p>h1:m1:s1 h4:m4:s4 (+2)</p><p>表示该航班在当地时间h1时m1分s1秒起飞，</p><p>第一种格式表示在当地时间 当日 h2时m2分s2秒降落</p><p>第二种格式表示在当地时间 次日 h3时m3分s3秒降落。</p><p>第三种格式表示在当地时间 第三天 h4时m4分s4秒降落。</p><p>对于此题目中的所有以 h : m : s形式给出的时间, 保证 ( 0&lt;=h&lt;=23, 0&lt;=m,s&lt;=59 ).</p><p>保证输入时间合法，飞行时间不超过24小时。</p><h3 id="输出说明-3"><a href="#输出说明-3" class="headerlink" title="输出说明"></a>输出说明</h3><p>输出到标准输出。</p><p>对于每一组数据输出一行一个时间hh:mm:ss，表示飞行时间为hh小时mm分ss秒。</p><p>注意，当时间为一位数时，要补齐前导零。如三小时四分五秒应写为03:04:05。</p><h3 id="输入范例-3"><a href="#输入范例-3" class="headerlink" title="输入范例"></a>输入范例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3</span><br><span class="line">17:48:19 21:57:24</span><br><span class="line">11:05:18 15:14:23</span><br><span class="line">17:21:07 00:31:46 (+1)</span><br><span class="line">23:02:41 16:13:20 (+1)</span><br><span class="line">10:19:19 20:41:24</span><br><span class="line">22:19:04 16:41:09 (+1)</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="输出范例-3"><a href="#输出范例-3" class="headerlink" title="输出范例"></a>输出范例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">04:09:05</span><br><span class="line">12:10:39</span><br><span class="line">14:22:05</span><br></pre></td></tr></table></figure><h3 id="主要代码-3"><a href="#主要代码-3" class="headerlink" title="主要代码"></a>主要代码</h3><blockquote><p>两次时间平均可以抵消时区差，算时间最好全都换成秒再一一还原</p></blockquote><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">get_num</span><span class="params">(<span class="built_in">string</span> str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> mutiple = <span class="number">3600</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i+=<span class="number">3</span>)&#123;</span><br><span class="line">        sum += ((str[<span class="number">9</span>+i]-<span class="string">&#x27;0&#x27;</span>)*<span class="number">10</span> + (str[<span class="number">10</span>+i] - <span class="string">&#x27;0&#x27;</span>) - (str[<span class="number">0</span>+i]-<span class="string">&#x27;0&#x27;</span>)*<span class="number">10</span> - (str[<span class="number">1</span>+i]-<span class="string">&#x27;0&#x27;</span>))*mutiple;</span><br><span class="line">        mutiple /= <span class="number">60</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(str.length() &gt; <span class="number">20</span>)&#123;</span><br><span class="line">        sum += <span class="number">86400</span>*(str[<span class="number">20</span>] - <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> n;</span><br><span class="line">  <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">  getchar();</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">      <span class="built_in">string</span> str1, str2;</span><br><span class="line">      getline(<span class="built_in">cin</span>, str1);</span><br><span class="line">      getline(<span class="built_in">cin</span>, str2);</span><br><span class="line">      <span class="keyword">int</span> h = (get_num(str1) + get_num(str2))/<span class="number">2</span>/<span class="number">3600</span>;</span><br><span class="line">      <span class="keyword">int</span> m = (get_num(str1) + get_num(str2))/<span class="number">2</span>%<span class="number">3600</span>/<span class="number">60</span>;<span class="comment">//z</span></span><br><span class="line">      <span class="keyword">int</span> s = (get_num(str1) + get_num(str2))/<span class="number">2</span>%<span class="number">60</span>;</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">&quot;%02d:%02d:%02d\n&quot;</span>,h, m, s);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者:</span> <span class="post-copyright-info"><a href="mailto:gyvip001@126.com">Asea</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接:</span> <span class="post-copyright-info"><a href="https://asea.fun/post/5b353da9.html">https://asea.fun/post/5b353da9.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明:</span> <span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://asea.fun" target="_blank">AseaBlog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/OJ/">OJ</a><a class="post-meta__tags" href="/tags/DHU/">DHU</a></div><div class="post_share"><div class="social-share" data-image="https://pic.imgdb.cn/item/611b5a2b4907e2d39c6c523a.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer="defer"></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/post/c17a20e4.html"><img class="next-cover" src="https://pic.imgdb.cn/item/610ff1fd5132923bf8318d71.jpg" onerror='onerror=null,src="/img/404.jpg"'><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">如何利用CDN加速你的博客</div></div></a></div></nav><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i> <span>评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar1.png" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"><div class="author-info__name">Asea</div><div class="author-info__description">我以為我可以獨自過一生 我還是被打動了</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">46</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">36</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://next.asea.fun"><i class="fab fa-black-tie"></i><span>Blog-Next版</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://aaaasea.github.io/index/" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="http://gyvip001@126.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="tencent://message/?uin=569389750&amp;Site=hexun.com/ngdao&amp;Menu=yes" target="_blank" title="QQ"><i class="iconfont icon-QQ"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content"><h3>呐~欢迎光临（弯腰）</h3><br> <img src="https://tva2.sinaimg.cn/mw690/67dd74e0gy1g50xzg1s11g20b405zaqq.gif"><h4>或许会更新的公众号:</h4><img src="/img/gzh.jpg"></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%88%972"><span class="toc-number">1.</span> <span class="toc-text">数列2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%AF%B4%E6%98%8E"><span class="toc-number">1.2.</span> <span class="toc-text">输入说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E8%AF%B4%E6%98%8E"><span class="toc-number">1.3.</span> <span class="toc-text">输出说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%8C%83%E4%BE%8B"><span class="toc-number">1.4.</span> <span class="toc-text">输入范例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E8%8C%83%E4%BE%8B"><span class="toc-number">1.5.</span> <span class="toc-text">输出范例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E4%BB%A3%E7%A0%81"><span class="toc-number">1.6.</span> <span class="toc-text">主要代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%8D%B0%E5%8D%81%E5%AD%97%E5%9B%BE"><span class="toc-number">2.</span> <span class="toc-text">打印十字图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">2.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%AF%B4%E6%98%8E-1"><span class="toc-number">2.2.</span> <span class="toc-text">输入说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E8%AF%B4%E6%98%8E-1"><span class="toc-number">2.3.</span> <span class="toc-text">输出说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%8C%83%E4%BE%8B-1"><span class="toc-number">2.4.</span> <span class="toc-text">输入范例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E8%8C%83%E4%BE%8B-1"><span class="toc-number">2.5.</span> <span class="toc-text">输出范例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E4%BB%A3%E7%A0%81-1"><span class="toc-number">2.6.</span> <span class="toc-text">主要代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%A8%E6%95%B0%E7%9A%84%E4%B9%98%E7%A7%AF"><span class="toc-number">3.</span> <span class="toc-text">质数的乘积</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-2"><span class="toc-number">3.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%AF%B4%E6%98%8E-2"><span class="toc-number">3.2.</span> <span class="toc-text">输入说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E8%AF%B4%E6%98%8E-2"><span class="toc-number">3.3.</span> <span class="toc-text">输出说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%8C%83%E4%BE%8B-2"><span class="toc-number">3.4.</span> <span class="toc-text">输入范例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E8%8C%83%E4%BE%8B-2"><span class="toc-number">3.5.</span> <span class="toc-text">输出范例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E4%BB%A3%E7%A0%81-2"><span class="toc-number">3.6.</span> <span class="toc-text">主要代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%88%AA%E7%8F%AD%E6%97%B6%E9%97%B4"><span class="toc-number">4.</span> <span class="toc-text">航班时间</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-3"><span class="toc-number">4.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%AF%B4%E6%98%8E-3"><span class="toc-number">4.2.</span> <span class="toc-text">输入说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E8%AF%B4%E6%98%8E-3"><span class="toc-number">4.3.</span> <span class="toc-text">输出说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%8C%83%E4%BE%8B-3"><span class="toc-number">4.4.</span> <span class="toc-text">输入范例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E8%8C%83%E4%BE%8B-3"><span class="toc-number">4.5.</span> <span class="toc-text">输出范例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E4%BB%A3%E7%A0%81-3"><span class="toc-number">4.6.</span> <span class="toc-text">主要代码</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/5b353da9.html" title="东华大学程序设计基础OJ题目"><img src="https://pic.imgdb.cn/item/611b5a2b4907e2d39c6c523a.jpg" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="东华大学程序设计基础OJ题目"></a><div class="content"><a class="title" href="/post/5b353da9.html" title="东华大学程序设计基础OJ题目">东华大学程序设计基础OJ题目</a><time datetime="2021-08-17T06:40:08.000Z" title="发表于 2021-08-17 14:40:08">2021-08-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/c17a20e4.html" title="如何利用CDN加速你的博客"><img src="https://pic.imgdb.cn/item/610ff1fd5132923bf8318d71.jpg" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="如何利用CDN加速你的博客"></a><div class="content"><a class="title" href="/post/c17a20e4.html" title="如何利用CDN加速你的博客">如何利用CDN加速你的博客</a><time datetime="2021-08-08T14:56:19.000Z" title="发表于 2021-08-08 22:56:19">2021-08-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/97862041.html" title="一天的快乐"><img src="https://pic.imgdb.cn/item/610d4cb25132923bf8d79b52.jpg" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="一天的快乐"></a><div class="content"><a class="title" href="/post/97862041.html" title="一天的快乐">一天的快乐</a><time datetime="2021-08-06T14:51:27.000Z" title="发表于 2021-08-06 22:51:27">2021-08-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/5d8c0cb2.html" title="留言本"><img src="https://pic.imgdb.cn/item/610942915132923bf8943c2e.jpg" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="留言本"></a><div class="content"><a class="title" href="/post/5d8c0cb2.html" title="留言本">留言本</a><time datetime="2021-08-03T13:18:45.000Z" title="发表于 2021-08-03 21:18:45">2021-08-03</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image:url(https://pic.imgdb.cn/item/611b5a2b4907e2d39c6c523a.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Asea</div><div class="framework-info"></div><div class="footer_custom_text">栗栗</div><div class="icp"><a href="https://beian.miit.gov.cn/#/Integrated/index"><img class="icp-icon" src="/img/icp.png" alt="ICP"><span>豫ICP备2021012218号-2</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49b1f5">hexo-generator-search</a> <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: 'dOHV1hJPq1YeCbCtLdF5eb9p-MdYXbMMI',
+      appKey: 'QOrlkdjUOQ1flkinRcXUHH7n',
+      placeholder: '在这儿打字！',
+      avatar: 'monsterid',
+      meta: 'nick,mail'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: true,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.17.0/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+    content = content.replace(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|gif|png|webp)/g, '') // remove image link
+    content = content.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi, '') // remove url
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (icon, mail) => {
+    if (icon) return icon 
+    let defaultIcon = '?d=robohash'
+    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    for (let i = 0; i < array.length; i++) {
+      result += '<div class=\'aside-list-item\'>'
+
+      if (false) {
+        result += `<a href='${array[i].url}' class="thumbnail"><img src='${getIcon(array[i].avatar, array[i].mail)}' alt='${array[i].nick}'></a>`
+      }
+
+      result += `<div class='content'>
+      <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+      <div class='name'><span>${array[i].nick}</span><time> / ${btf.diffDate(array[i].date, true)}</time></div>
+      </div></div>`
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getValineData = () => {
+      let serverURL = ''
+      if (false) {
+        serverURL = ''
+      } else {
+        serverURL = 'https://dOHV1hJP.api.lncldglobal.com'
+      }
+
+    var settings = {
+      "url": `${serverURL}/1.1/classes/Comment?limit=5&order=-createdAt`,
+      "method": "GET",
+      "timeout": 0,
+      "headers": {
+        "X-LC-Id": 'dOHV1hJPq1YeCbCtLdF5eb9p-MdYXbMMI',
+        "X-LC-Key": 'QOrlkdjUOQ1flkinRcXUHH7n',
+        "Content-Type": "application/json"
+      },
+    }
+
+    $.ajax(settings).done((response) => {
+      var valineArray = []
+      response.results.forEach((e)=>{
+        valineArray.push({
+          'avatar': e.QQAvatar,
+          'content': changeContent(e.comment),
+          'mail': e.mail,
+          'nick': e.nick,
+          'url': e.url,
+          'date': e.createdAt,
+        })
+      })
+      
+      saveToLocal.set('leancloud-newest-comments', JSON.stringify(valineArray), 10/(60*24))
+      generateHtml(valineArray)
+
+    }).fail(()=>{
+      const $dom = document.querySelector('#card-newest-comments .aside-list')
+      $dom.innerHTML= "无法获取资料，请确认相关配置是否正确"
+    })
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('leancloud-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getValineData()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="5355034595" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listfolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script src="/js/asea.js"><script><script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@master/Hexo/js/hideMobileSidebar.js"><script><script async src="//at.alicdn.com/t/font_2264842_3izu8i5eoc2.js"></script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful=!0,POWERMODE.shake=!0,POWERMODE.mobile=!1,document.body.addEventListener("input",POWERMODE)</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="true"></script><script src="//code.tidio.co/fbdu0dlhqhixz5sheeldy89qq2njqot0.js" async="async"></script><script>function onTidioChatApiReady() {
+  window.tidioChatApi.hide();
+  window.tidioChatApi.on("close", function() {
+    window.tidioChatApi.hide();
+  });
+}
+if (window.tidioChatApi) {
+  window.tidioChatApi.on("ready", onTidioChatApiReady);
+} else {
+  document.addEventListener("tidioChat-ready", onTidioChatApiReady);
+}
+
+var chatBtnFn = () => {
+  document.getElementById("chat_btn").addEventListener("click", function(){
+    window.tidioChatApi.show();
+    window.tidioChatApi.open();
+  });
+}
+chatBtnFn()
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script></div></body></html>
