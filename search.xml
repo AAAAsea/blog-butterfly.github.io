@@ -52,61 +52,6 @@
       </tags>
   </entry>
   <entry>
-    <title>2021年的大瓜</title>
-    <url>/post/35baf9b8.html</url>
-    <content><![CDATA[<h2 id="🍉"><a href="#🍉" class="headerlink" title="🍉"></a>🍉</h2><p>不追星，但喜欢一种仪式感。体现在对薛之谦新歌的期待，尽管不好听；体现在关注的某个up更新；体现在他刚好符合我的某个理想中的状态，这算不算追星？不算吧，顶多是从生活里找乐子，也是一种临时逃避生活的借口。<br>当开始认真关注一些人，目标不限于室友，囊括偶像在内的所有人，都会开始发现，对方比你了解的复杂很多。接着我会对就近的采取策略，而且还卓有成效。至于远处诗和远方，偶像不是诗和远方，充其量是个载体，没了载体理想依然能存在。我回想起来高中搬个凳子在狭小的厕所里写日记，有段时间话题无不关于陆之昂立夏几人。说白了就是我把很大一部分纯粹放在电视剧里，放在其中某个人身上了，但绝不是演员身上。这种纯粹每个人或多或少都有一些，而且纯粹的载体是随着时间不断更迭不断推陈的。我发现年龄增长带来了纯粹的减少，但好在记忆还在，它独有的积累效果不言而喻，多年以前的两平米里的冷和感动至今历历在目。这些很珍贵。<br>这两天的爆料很雷人，但我没难过。我又发现一些小的道理：当一个人的能力越来越大，就越来越容易干坏事。想起来限制与自由的论述，恰好符合。身为普通人，幻想着腰缠万贯或者惨遭封禁都是遥不可及的事情，而当有一天你发现你已经腰缠万贯，这时候就要十分警惕，你是否要悬崖勒马，甚至调个头往回走几步了。<br>这是一点想法。</p>
-<h2 id="✍"><a href="#✍" class="headerlink" title="✍"></a>✍</h2><p>考试结束一直都很想找个机会总结一下这一学年，但是没安下心，一直在补漏下的娱乐。很久没有一个人呆在一个地方了，这样的感觉和高考前两天颇相似，但是却有着截然不同的使命。<br>很多人都总结的很到位，我显然就暗淡很多，不要抱多大希望。<br>这一学年还是没什么可说的，我太没兴趣了，列个表格。</p>
-<table>
-<thead>
-<tr>
-<th>好</th>
-<th>坏</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>小有收益</td>
-<td>四级没过</td>
-</tr>
-<tr>
-<td>打入外卖</td>
-<td>没报四级</td>
-</tr>
-<tr>
-<td>理论力学成绩还行</td>
-<td>工时没做</td>
-</tr>
-<tr>
-<td>看了很多电影</td>
-<td>没有参加比赛</td>
-</tr>
-<tr>
-<td>开了新坑</td>
-<td>崴脚</td>
-</tr>
-<tr>
-<td>尝试了兼职</td>
-<td>但没要我</td>
-</tr>
-<tr>
-<td>书尽量读了三本</td>
-<td>热工不行</td>
-</tr>
-<tr>
-<td>…</td>
-<td>…</td>
-</tr>
-</tbody></table>
-<p>这样单纯的分析利弊好像又没什么意思啊，人单纯就是想看些主观的思考，但说实话我越来越懒了，厌倦思考。所以，如果，真的需要我说点什么的话，我觉得这是幸福的一学期，没有什么大富大贵，但至少无病无灾，在我看来已经极其幸运的了，至少在我活过的十几年里，算是第一梯队的一学期。<br>未来逐渐到来，过去逐渐远去。<br>希望假期能把挖的坑填上，提前祝大家新年快乐。</p>
-<p>3.23修补了一下后台配置。</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PHP学习笔记</title>
     <url>/post/55d182ea.html</url>
     <content><![CDATA[<blockquote>
@@ -177,30 +122,58 @@
       </tags>
   </entry>
   <entry>
-    <title>electron学习笔记</title>
-    <url>/post/5f7056f2.html</url>
-    <content><![CDATA[<h1 id="记录一下学习electron的坑"><a href="#记录一下学习electron的坑" class="headerlink" title="记录一下学习electron的坑"></a>记录一下学习electron的坑</h1><h3 id="旧版笔记（建议看新版，往下翻）"><a href="#旧版笔记（建议看新版，往下翻）" class="headerlink" title="旧版笔记（建议看新版，往下翻）"></a>旧版笔记（建议看新版，往下翻）</h3><ol>
-<li>require is not defined<br> 在12版本往后，同时设置<code>nodeIntegration: true</code>及<code>contextIsolation: false</code>解决该问题！</li>
-<li>cannot read property ‘BrowserWindow’ of undefined<br> 在原有的基础上配置<code>enableRemoteModule:true</code></li>
-<li>打包<br> <code>electron-packager . HelloWorld --win --out ../HelloWorldApp --arch=x64 --electron-ersion=1.0.0 --electron-version=12.0.4</code><br> 貌似下载下来一个包要放到哪里来着。。。</li>
-</ol>
-<h3 id="新版笔记"><a href="#新版笔记" class="headerlink" title="新版笔记"></a>新版笔记</h3><ol>
-<li>认真阅读<a href="https://www.electronjs.org/docs">官方文档</a></li>
-<li>打包失败的原因，除了author、description的报错之外，load file报错，查了好久都没发现问题，最后想到是不是因为路径中包含了中文导致无法加载文件的，md，一试，果然如此。</li>
-<li>另外还有些报错我虽然没遇到，但是记录一下<ol>
-<li>·、<code>npm install --save-dev @electron-forge/cli</code>和<code>npx electron-forge import</code>报错可能是你用了taobao源，建议用华为源<code>npm config set registry https://mirrors.huaweicloud.com/repository/npm/</code>，或者默认源<code>npm config set registry https://registry.npmjs.org</code></li>
-<li>author和description一定要写</li>
-<li>如果还有报错可以试试cnpm（我自己没试过）</li>
-</ol>
-</li>
-</ol>
+    <title>2021年的大瓜</title>
+    <url>/post/35baf9b8.html</url>
+    <content><![CDATA[<h2 id="🍉"><a href="#🍉" class="headerlink" title="🍉"></a>🍉</h2><p>不追星，但喜欢一种仪式感。体现在对薛之谦新歌的期待，尽管不好听；体现在关注的某个up更新；体现在他刚好符合我的某个理想中的状态，这算不算追星？不算吧，顶多是从生活里找乐子，也是一种临时逃避生活的借口。<br>当开始认真关注一些人，目标不限于室友，囊括偶像在内的所有人，都会开始发现，对方比你了解的复杂很多。接着我会对就近的采取策略，而且还卓有成效。至于远处诗和远方，偶像不是诗和远方，充其量是个载体，没了载体理想依然能存在。我回想起来高中搬个凳子在狭小的厕所里写日记，有段时间话题无不关于陆之昂立夏几人。说白了就是我把很大一部分纯粹放在电视剧里，放在其中某个人身上了，但绝不是演员身上。这种纯粹每个人或多或少都有一些，而且纯粹的载体是随着时间不断更迭不断推陈的。我发现年龄增长带来了纯粹的减少，但好在记忆还在，它独有的积累效果不言而喻，多年以前的两平米里的冷和感动至今历历在目。这些很珍贵。<br>这两天的爆料很雷人，但我没难过。我又发现一些小的道理：当一个人的能力越来越大，就越来越容易干坏事。想起来限制与自由的论述，恰好符合。身为普通人，幻想着腰缠万贯或者惨遭封禁都是遥不可及的事情，而当有一天你发现你已经腰缠万贯，这时候就要十分警惕，你是否要悬崖勒马，甚至调个头往回走几步了。<br>这是一点想法。</p>
+<h2 id="✍"><a href="#✍" class="headerlink" title="✍"></a>✍</h2><p>考试结束一直都很想找个机会总结一下这一学年，但是没安下心，一直在补漏下的娱乐。很久没有一个人呆在一个地方了，这样的感觉和高考前两天颇相似，但是却有着截然不同的使命。<br>很多人都总结的很到位，我显然就暗淡很多，不要抱多大希望。<br>这一学年还是没什么可说的，我太没兴趣了，列个表格。</p>
+<table>
+<thead>
+<tr>
+<th>好</th>
+<th>坏</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>小有收益</td>
+<td>四级没过</td>
+</tr>
+<tr>
+<td>打入外卖</td>
+<td>没报四级</td>
+</tr>
+<tr>
+<td>理论力学成绩还行</td>
+<td>工时没做</td>
+</tr>
+<tr>
+<td>看了很多电影</td>
+<td>没有参加比赛</td>
+</tr>
+<tr>
+<td>开了新坑</td>
+<td>崴脚</td>
+</tr>
+<tr>
+<td>尝试了兼职</td>
+<td>但没要我</td>
+</tr>
+<tr>
+<td>书尽量读了三本</td>
+<td>热工不行</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody></table>
+<p>这样单纯的分析利弊好像又没什么意思啊，人单纯就是想看些主观的思考，但说实话我越来越懒了，厌倦思考。所以，如果，真的需要我说点什么的话，我觉得这是幸福的一学期，没有什么大富大贵，但至少无病无灾，在我看来已经极其幸运的了，至少在我活过的十几年里，算是第一梯队的一学期。<br>未来逐渐到来，过去逐渐远去。<br>希望假期能把挖的坑填上，提前祝大家新年快乐。</p>
+<p>3.23修补了一下后台配置。</p>
 ]]></content>
       <categories>
-        <category>笔记</category>
+        <category>日常</category>
       </categories>
       <tags>
-        <tag>notes</tag>
-        <tag>electron</tag>
+        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -280,6 +253,75 @@ deploy:
       </categories>
       <tags>
         <tag>deploy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>electron学习笔记</title>
+    <url>/post/5f7056f2.html</url>
+    <content><![CDATA[<h1 id="记录一下学习electron的坑"><a href="#记录一下学习electron的坑" class="headerlink" title="记录一下学习electron的坑"></a>记录一下学习electron的坑</h1><h3 id="旧版笔记（建议看新版，往下翻）"><a href="#旧版笔记（建议看新版，往下翻）" class="headerlink" title="旧版笔记（建议看新版，往下翻）"></a>旧版笔记（建议看新版，往下翻）</h3><ol>
+<li>require is not defined<br> 在12版本往后，同时设置<code>nodeIntegration: true</code>及<code>contextIsolation: false</code>解决该问题！</li>
+<li>cannot read property ‘BrowserWindow’ of undefined<br> 在原有的基础上配置<code>enableRemoteModule:true</code></li>
+<li>打包<br> <code>electron-packager . HelloWorld --win --out ../HelloWorldApp --arch=x64 --electron-ersion=1.0.0 --electron-version=12.0.4</code><br> 貌似下载下来一个包要放到哪里来着。。。</li>
+</ol>
+<h3 id="新版笔记"><a href="#新版笔记" class="headerlink" title="新版笔记"></a>新版笔记</h3><ol>
+<li>认真阅读<a href="https://www.electronjs.org/docs">官方文档</a></li>
+<li>打包失败的原因，除了author、description的报错之外，load file报错，查了好久都没发现问题，最后想到是不是因为路径中包含了中文导致无法加载文件的，md，一试，果然如此。</li>
+<li>另外还有些报错我虽然没遇到，但是记录一下<ol>
+<li>·、<code>npm install --save-dev @electron-forge/cli</code>和<code>npx electron-forge import</code>报错可能是你用了taobao源，建议用华为源<code>npm config set registry https://mirrors.huaweicloud.com/repository/npm/</code>，或者默认源<code>npm config set registry https://registry.npmjs.org</code></li>
+<li>author和description一定要写</li>
+<li>如果还有报错可以试试cnpm（我自己没试过）</li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
+        <tag>electron</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录一次机器人更新的问题</title>
+    <url>/post/ef959c76.html</url>
+    <content><![CDATA[<blockquote>
+<p>由于这几天图片有时候发不出了，怀疑版本问题，但好久没有重启了，结果一重启mcl，然后自动更新让我彻底崩盘；<br>记录一下目前各包的版本号</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>package</th>
+<th>tag</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mcl</td>
+<td>1.2.1</td>
+</tr>
+<tr>
+<td>mah</td>
+<td>1.12.0</td>
+</tr>
+<tr>
+<td>gam</td>
+<td>0.19.1</td>
+</tr>
+<tr>
+<td>gb</td>
+<td>0.8.11</td>
+</tr>
+</tbody></table>
+<p><strong>以上缩写</strong>：<br>mirai-console-loader<br>mirai-api-http<br>girai-application-mirai<br>girai-broadcast</p>
+<p><strong>中间有个坑：mah版本怎么切换？</strong><br>需要先移除原来的包</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mcl -r net.mamoe:mirai-api-http</span><br></pre></td></tr></table></figure>
+<p>然后下载需要的版本，放到plugins即可。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>robot</tag>
       </tags>
   </entry>
   <entry>
@@ -397,6 +439,20 @@ deploy:
       </tags>
   </entry>
   <entry>
+    <title>关于vercel私有域名无法访问</title>
+    <url>/post/3548e590.html</url>
+    <content><![CDATA[<h1 id="记录一下deploy在vercel上的项目忽然无法访问的问题"><a href="#记录一下deploy在vercel上的项目忽然无法访问的问题" class="headerlink" title="记录一下deploy在vercel上的项目忽然无法访问的问题"></a>记录一下deploy在vercel上的项目忽然无法访问的问题</h1><p>这几天没打开，今天偶然打开发现我的个人主页无法访问了（只是私有域名无法访问，但是vercel提供的域名毫无问题，怪哉！），看了半天控制台的域名解析没问题，又到vercel后台查了半天，实在是不行。<br>最后想起来会不会是被墙了，于是科学上网尝试了一下，居然真的成功了。<br>然而我还是不知道该怎么解决，四处询问未果。<br>最后我想会不会是因为github的这个仓库挺久没更新了，于是稍稍修改了一下html文件push上去，嘿嘿，然后就可以访问了，具体原因不清楚，至少可以进去了！！<br>由于问题来的莫名其妙，解决的也莫名其妙，不用再多说什么了。<br>另外，明天加油！（紧张ingngg)</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+        <tag>vercel</tag>
+        <tag>domain</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于部署机器人到linux的一些记录</title>
     <url>/post/b3542778.html</url>
     <content><![CDATA[<h1 id="一下是我踩的坑（不完全记录）"><a href="#一下是我踩的坑（不完全记录）" class="headerlink" title="一下是我踩的坑（不完全记录）"></a>一下是我踩的坑（不完全记录）</h1><h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><ol>
@@ -420,22 +476,8 @@ deploy:
         <category>技术</category>
       </categories>
       <tags>
-        <tag>linux</tag>
         <tag>robot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于vercel私有域名无法访问</title>
-    <url>/post/3548e590.html</url>
-    <content><![CDATA[<h1 id="记录一下deploy在vercel上的项目忽然无法访问的问题"><a href="#记录一下deploy在vercel上的项目忽然无法访问的问题" class="headerlink" title="记录一下deploy在vercel上的项目忽然无法访问的问题"></a>记录一下deploy在vercel上的项目忽然无法访问的问题</h1><p>这几天没打开，今天偶然打开发现我的个人主页无法访问了（只是私有域名无法访问，但是vercel提供的域名毫无问题，怪哉！），看了半天控制台的域名解析没问题，又到vercel后台查了半天，实在是不行。<br>最后想起来会不会是被墙了，于是科学上网尝试了一下，居然真的成功了。<br>然而我还是不知道该怎么解决，四处询问未果。<br>最后我想会不会是因为github的这个仓库挺久没更新了，于是稍稍修改了一下html文件push上去，嘿嘿，然后就可以访问了，具体原因不清楚，至少可以进去了！！<br>由于问题来的莫名其妙，解决的也莫名其妙，不用再多说什么了。<br>另外，明天加油！（紧张ingngg)</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>github</tag>
-        <tag>vercel</tag>
-        <tag>domain</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -550,21 +592,6 @@ deploy:
       </tags>
   </entry>
   <entry>
-    <title>域名解析与vercel配置</title>
-    <url>/post/2244254b.html</url>
-    <content><![CDATA[<div class="note primary simple"><p>这里记录一些有关域名配置的问题</p>
-</div>
-<h1 id="域名解析（以阿里云为例）"><a href="#域名解析（以阿里云为例）" class="headerlink" title="域名解析（以阿里云为例）"></a>域名解析（以阿里云为例）</h1><p><img src="/post/2244254b.htm/%E8%A7%A3%E6%9E%90%E9%85%8D%E7%BD%AE.png" alt></p>
-<h1 id="vercel-domain-配置"><a href="#vercel-domain-配置" class="headerlink" title="vercel domain 配置"></a>vercel domain 配置</h1><p><img src="/post/2244254b.htm/vercel%E9%85%8D%E7%BD%AE.png" alt><br><font color="#265489"> 另外直接利用gitpages的记得在主题<strong>source</strong>文件夹下添加<strong>CNAME</strong>文件，否则github每次都要重新配置domain。</font></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>domain</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何利用CDN加速你的博客</title>
     <url>/post/c17a20e4.html</url>
     <content><![CDATA[<blockquote>
@@ -594,31 +621,18 @@ deploy:
       </tags>
   </entry>
   <entry>
-    <title>小小总结</title>
-    <url>/post/427de4be.html</url>
-    <content><![CDATA[<h1 id="目前涉猎内容"><a href="#目前涉猎内容" class="headerlink" title="目前涉猎内容"></a>目前涉猎内容</h1><blockquote>
-<p>简单记录一下自己目前所了解到的知识</p>
-</blockquote>
-<ol>
-<li>hexo个人博客</li>
-<li>cocoscreater开发的小游戏</li>
-<li>前端三剑客入门</li>
-<li>计算机二级证书</li>
-<li>python做的几个桌面应用<ol>
-<li>百度网盘链接提取器</li>
-<li>文件批量处理工具</li>
-</ol>
-</li>
-<li>学习通作业提醒、博客更新提醒</li>
-<li>基于mirai和graia的qq机器人（集成包括作业提醒的功能）</li>
-<li>微信小程序（起步）</li>
-</ol>
+    <title>域名解析与vercel配置</title>
+    <url>/post/2244254b.html</url>
+    <content><![CDATA[<div class="note primary simple"><p>这里记录一些有关域名配置的问题</p>
+</div>
+<h1 id="域名解析（以阿里云为例）"><a href="#域名解析（以阿里云为例）" class="headerlink" title="域名解析（以阿里云为例）"></a>域名解析（以阿里云为例）</h1><p><img src="/post/2244254b.htm/%E8%A7%A3%E6%9E%90%E9%85%8D%E7%BD%AE.png" alt></p>
+<h1 id="vercel-domain-配置"><a href="#vercel-domain-配置" class="headerlink" title="vercel domain 配置"></a>vercel domain 配置</h1><p><img src="/post/2244254b.htm/vercel%E9%85%8D%E7%BD%AE.png" alt><br><font color="#265489"> 另外直接利用gitpages的记得在主题<strong>source</strong>文件夹下添加<strong>CNAME</strong>文件，否则github每次都要重新配置domain。</font></p>
 ]]></content>
       <categories>
-        <category>日常</category>
+        <category>技术</category>
       </categories>
       <tags>
-        <tag>summary</tag>
+        <tag>domain</tag>
       </tags>
   </entry>
   <entry>
@@ -645,6 +659,34 @@ deploy:
       </categories>
       <tags>
         <tag>Jupyter</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>小小总结</title>
+    <url>/post/427de4be.html</url>
+    <content><![CDATA[<h1 id="目前涉猎内容"><a href="#目前涉猎内容" class="headerlink" title="目前涉猎内容"></a>目前涉猎内容</h1><blockquote>
+<p>简单记录一下自己目前所了解到的知识</p>
+</blockquote>
+<ol>
+<li>hexo个人博客</li>
+<li>cocoscreater开发的小游戏</li>
+<li>前端三剑客入门</li>
+<li>计算机二级证书</li>
+<li>python做的几个桌面应用<ol>
+<li>百度网盘链接提取器</li>
+<li>文件批量处理工具</li>
+</ol>
+</li>
+<li>学习通作业提醒、博客更新提醒</li>
+<li>基于mirai和graia的qq机器人（集成包括作业提醒的功能）</li>
+<li>微信小程序（起步）</li>
+</ol>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>summary</tag>
       </tags>
   </entry>
   <entry>
@@ -909,23 +951,6 @@ deploy:
       </tags>
   </entry>
   <entry>
-    <title>玛丽怜梦录</title>
-    <url>/post/c0562e47.html</url>
-    <content><![CDATA[<blockquote>
-<p>新开一个记梦的板块Beta</p>
-</blockquote>
-<h2 id="2021-08-31"><a href="#2021-08-31" class="headerlink" title="2021-08-31"></a>2021-08-31</h2><p>和即将毕业的学长打算一起去吃饭，具体缘由已记不清了。学长叫了出租车，我拉开副驾驶门的一瞬间车子突然向前走了一下，差点把我拽倒。上车后我向师傅调侃，走这么着急么。随后我们向目的地驶去。中间经过一道弯曲的桥，但是这师傅却像没看见一样，径直往前开，直到即将撞上护栏才猛打方向，哪里来得及，车辆栽入河里。车子刚没入水中，车内的气压变得不正常了。我迅速摇下来玻璃钻了出去，然而我不会游泳啊！我也不知道自己在水底多深，只能拼命往上狗刨，终于浮上来了，深吸一口气，竟然可以游到岸边。终于，我和学长都得救了，但有个孩子没救上来。<br>车上除了司机不是只有两个人吗？我想。</p>
-]]></content>
-      <categories>
-        <category>文学</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
-        <tag>literature</tag>
-        <tag>dream</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>生日快乐</title>
     <url>/post/42dbb1c3.html</url>
     <content><![CDATA[<p>生日快乐呢<br>是不是很快呢<br>2020年是不是很神奇的一年呢<br>奇奇怪怪的<br>你看发生了这么多奇怪的事<br>但是出不去了<br>嘎嘎嘎<br>看了那么多酒店有机会一定要去<br>小宝贝生日快乐呀<br>蛋糕可以不吃<br>酒店可以不住<br>旅行可以不去<br>但是要快乐<br>给你一些可爱的图：<br>吹个蜡烛吧<br>生日快乐！</p>
@@ -935,6 +960,25 @@ deploy:
       </categories>
       <tags>
         <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>玛丽怜梦录</title>
+    <url>/post/c0562e47.html</url>
+    <content><![CDATA[<blockquote>
+<p>新开一个记梦的板块Beta</p>
+</blockquote>
+<h2 id="2021-08-31"><a href="#2021-08-31" class="headerlink" title="2021-08-31"></a>2021-08-31</h2><p>和即将毕业的学长打算一起去吃饭，具体缘由已记不清了。学长叫了出租车，我拉开副驾驶门的一瞬间车子突然向前走了一下，差点把我拽倒。上车后我向师傅调侃，走这么着急么。随后我们向目的地驶去。中间经过一道弯曲的桥，但是这师傅却像没看见一样，径直往前开，直到即将撞上护栏才猛打方向，哪里来得及，车辆栽入河里。车子刚没入水中，车内的气压变得不正常了。我迅速摇下来玻璃钻了出去，然而我不会游泳啊！我也不知道自己在水底多深，只能拼命往上狗刨，终于浮上来了，深吸一口气，竟然可以游到岸边。终于，我和学长都得救了，但有个孩子没救上来。<br>车上除了司机不是只有两个人吗？我想。</p>
+<h2 id="2021-09-04"><a href="#2021-09-04" class="headerlink" title="2021-09-04"></a>2021-09-04</h2><p>是一个让人害怕一整天的梦。</p>
+<h2 id="2021-09-11"><a href="#2021-09-11" class="headerlink" title="2021-09-11"></a>2021-09-11</h2><p>参加了场史无前例的长跑，已经不是第一次了，很多往届没能成功跑完的人又来参加了比赛。又梦到我跟我爸在开车了，貌似是三轮车，想念小时候一个人坐在三轮车上的感觉，那是小时候的一小块天堂。</p>
+]]></content>
+      <categories>
+        <category>文学</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+        <tag>literature</tag>
+        <tag>dream</tag>
       </tags>
   </entry>
   <entry>
@@ -1195,24 +1239,6 @@ deploy:
       </tags>
   </entry>
   <entry>
-    <title>部署技巧</title>
-    <url>/post/c4266d98.html</url>
-    <content><![CDATA[<h1 id="hexo-clean-amp-amp-hexo-generate-amp-amp-hexo-deploy-三命令统一"><a href="#hexo-clean-amp-amp-hexo-generate-amp-amp-hexo-deploy-三命令统一" class="headerlink" title="hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy 三命令统一"></a>hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy 三命令统一</h1><p>可在根目录下建立bat文件，写入“hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy”或简洁点“hexo cl&amp;hexo g&amp;hexo d（注意：如果装了豆瓣插件则必须用hexo deploy）”。<br>以后部署只用在命令行敲入你bat的文件名即可执行。</p>
-<h1 id="关于deploy每次都要输入账号密码的问题"><a href="#关于deploy每次都要输入账号密码的问题" class="headerlink" title="关于deploy每次都要输入账号密码的问题"></a>关于deploy每次都要输入账号密码的问题</h1><p>博主已经尝试了SSH，但还是需要输入密码（账号可以不用输入）。</p>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>修改_config.yml，将部署方式从https方式修改为ssh方式。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;XXXXXX&#x2F;XXXXXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>修改为</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:XXXXXX&#x2F;XXXXXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<h2 id="教程已更新，可去更新贴查看其它操作。"><a href="#教程已更新，可去更新贴查看其它操作。" class="headerlink" title="教程已更新，可去更新贴查看其它操作。"></a>教程已更新，可去更新贴查看其它操作。</h2>]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>deploy</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>返校日记</title>
     <url>/post/b6589fc3.html</url>
     <content><![CDATA[<h1 id="大二下的返校有什么可说道的"><a href="#大二下的返校有什么可说道的" class="headerlink" title="大二下的返校有什么可说道的"></a>大二下的返校有什么可说道的</h1><h2 id="流水账一"><a href="#流水账一" class="headerlink" title="流水账一"></a>流水账一</h2><p>火车站安检的位置改了，改的挺合理，我觉得它本来就应该是这样子。在取票厅见到了很久不见的老同学，一见面其实没认出来，好家伙，那肯定认不出来，不过说了些话后感觉也还熟悉，可能是某些深处的记忆被拔出来了，整个相处还算不尴尬。我们五个人上四号车，结果却往相反的地方走，好在问了问工作人员，赶紧掉头走了很久很久才到。上车后我们坐在下铺攀谈了一会，主人过来了，于是我们便移步到道旁的位置上。没什么事干，我们决定打会牌，然而网络问题，磕磕绊绊进去之后，也就打了一把，还算有意思的结束。我坐在窗户旁边看周遭景致后撤，脑中并无任何想法。</p>
@@ -1279,6 +1305,38 @@ deploy:
       </tags>
   </entry>
   <entry>
+    <title>部署技巧</title>
+    <url>/post/c4266d98.html</url>
+    <content><![CDATA[<h1 id="hexo-clean-amp-amp-hexo-generate-amp-amp-hexo-deploy-三命令统一"><a href="#hexo-clean-amp-amp-hexo-generate-amp-amp-hexo-deploy-三命令统一" class="headerlink" title="hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy 三命令统一"></a>hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy 三命令统一</h1><p>可在根目录下建立bat文件，写入“hexo clean&amp;&amp;hexo generate&amp;&amp;hexo deploy”或简洁点“hexo cl&amp;hexo g&amp;hexo d（注意：如果装了豆瓣插件则必须用hexo deploy）”。<br>以后部署只用在命令行敲入你bat的文件名即可执行。</p>
+<h1 id="关于deploy每次都要输入账号密码的问题"><a href="#关于deploy每次都要输入账号密码的问题" class="headerlink" title="关于deploy每次都要输入账号密码的问题"></a>关于deploy每次都要输入账号密码的问题</h1><p>博主已经尝试了SSH，但还是需要输入密码（账号可以不用输入）。</p>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>修改_config.yml，将部署方式从https方式修改为ssh方式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;XXXXXX&#x2F;XXXXXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>修改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:XXXXXX&#x2F;XXXXXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h2 id="教程已更新，可去更新贴查看其它操作。"><a href="#教程已更新，可去更新贴查看其它操作。" class="headerlink" title="教程已更新，可去更新贴查看其它操作。"></a>教程已更新，可去更新贴查看其它操作。</h2>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>deploy</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>重生</title>
+    <url>/post/454cee63.html</url>
+    <content><![CDATA[<center>
+
+<p>这次打算认真处理一下这个网站了<br>从查找问题到一步步排除修正<br>相当于又从头布局了一下网站<br>butterfly更新了所以还遇到很多问题<br>主要是太久没管过了<br>总而言之<br>这次打算简洁点</p>
+</center>]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>部署robot+selenium的坑</title>
     <url>/post/90946297.html</url>
     <content><![CDATA[<h1 id="记录一下部署robot-selenium的坑"><a href="#记录一下部署robot-selenium的坑" class="headerlink" title="记录一下部署robot+selenium的坑"></a>记录一下部署robot+selenium的坑</h1><ol>
@@ -1297,420 +1355,6 @@ deploy:
         <tag>selenium</tag>
         <tag>muggle_ocr</tag>
         <tag>cv2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>重生</title>
-    <url>/post/454cee63.html</url>
-    <content><![CDATA[<center>
-
-<p>这次打算认真处理一下这个网站了<br>从查找问题到一步步排除修正<br>相当于又从头布局了一下网站<br>butterfly更新了所以还遇到很多问题<br>主要是太久没管过了<br>总而言之<br>这次打算简洁点</p>
-</center>]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>c++学习笔记</title>
-    <url>/post/258a2097.html</url>
-    <content><![CDATA[<h2 id="四大件"><a href="#四大件" class="headerlink" title="四大件"></a>四大件</h2><ol>
-<li>数据结构和算法</li>
-<li>计算机网络</li>
-<li>操作系统</li>
-<li>设计模式组成原理</li>
-</ol>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ol>
-<li>常量</li>
-</ol>
-<p>​    宏常量 #define</p>
-<p>​    const 修饰变量</p>
-<p>​    均不可修改</p>
-<ol>
-<li>字符串<ol>
-<li>char str[] = “ldksjfa”</li>
-<li>string str = “dlkjafd” 需要头文件<string></string></li>
-</ol>
-</li>
-</ol>
-<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ol>
-<li>三目运算符可以返回变量也可以返回变量值</li>
-</ol>
-<h2 id="控制结构"><a href="#控制结构" class="headerlink" title="控制结构"></a>控制结构</h2><ol>
-<li>if - else if - else</li>
-<li>switch - case break- case break-default break <strong>只能是int 或者 char，必须break</strong></li>
-<li>循环结构 while（）{},do{}while()，for(int i =0;i&lt;10;i++)</li>
-<li>goto FLAG; FLAG:</li>
-<li>continue</li>
-</ol>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><ol>
-<li><p>定义数组</p>
-<ol>
-<li>int a[10];</li>
-<li>int a[10] = {0,1,2,3,4,5,6,7,8,9}</li>
-<li>int a[] = {0,1,2,3}</li>
-</ol>
-</li>
-<li><p>特点</p>
-<ol>
-<li>数据类型相同</li>
-<li>内存空间连续</li>
-</ol>
-</li>
-<li><p>赋值</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>] = &#123;<span class="number">0</span>&#125;; <span class="comment">//初始化表长度小于要被初始化的数组的元素数目，剩余元素均为0；</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<ol start="4">
-<li><p><strong>注意</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"><span class="keyword">int</span> a[n]; <span class="comment">//这是错误的写法，尽管有些编译器可能不会报错</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> b[<span class="number">0</span>]; <span class="comment">//长度为0的数组没有任何意义</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> c[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;c[<span class="number">11</span>]; <span class="comment">//越界但可以输出</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>排序查找</p>
-<p>选择排序</p>
-<p>冒泡排序</p>
-</li>
-</ol>
-<h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><ol>
-<li><p>初始化赋值</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>][<span class="number">10</span>] = &#123;&#123;<span class="number">1</span>,<span class="number">2</span>&#125;, &#123;<span class="number">2</span>,<span class="number">3</span>&#125;, &#123;<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">4</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">int</span> a[][<span class="number">10</span>] = &#123;&#123;&#125;,&#123;&#125;&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<ol start="2">
-<li><strong>注意</strong><ol>
-<li>行数</li>
-<li>元素数目（用好sizeof())</li>
-<li>理解好变量名与地址的关系</li>
-</ol>
-</li>
-</ol>
-<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><ol>
-<li><p>初始化</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> ch[] = &#123;<span class="string">&#x27;h&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;l&#x27;</span>,<span class="string">&#x27;l&#x27;</span>,<span class="string">&#x27;o&#x27;</span>,<span class="string">&#x27;\0&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">char</span> ch[] = &#123;<span class="string">&quot;hello&quot;</span>&#125;;</span><br><span class="line"><span class="keyword">char</span> ch[] = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="keyword">char</span> ch[] = <span class="string">&quot;hello&quot;</span>; <span class="comment">//这是错误的</span></span><br><span class="line"><span class="keyword">char</span> ch[<span class="number">10</span>] = <span class="string">&quot;hello&quot;</span>; <span class="comment">//后面的字符都是&#x27;\0&#x27;,&#x27;\0&#x27;是不可显示的</span></span><br><span class="line"><span class="keyword">char</span> ch[<span class="number">6</span>] = &#123;<span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;o&#x27;</span>&#125; <span class="comment">//是字符串</span></span><br><span class="line"><span class="keyword">char</span> ch[<span class="number">5</span>] = &#123;<span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;o&#x27;</span>&#125; <span class="comment">//不是字符串</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>空字符串</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> ch[] = <span class="string">&quot;&quot;</span>; <span class="comment">//占用一个字节存储&#x27;\0&#x27;</span></span><br><span class="line"><span class="comment">//&#x27;a&#x27;与&quot;a&quot;，前者是简单的变量，后者是数组</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>遍历</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>（<span class="keyword">int</span> i = <span class="number">0</span>; str[i]!=<span class="string">&#x27;\0&#x27;</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;str[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入输出</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> str[<span class="number">6</span>];</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;str; <span class="comment">//空格字符会结束输入</span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;str; <span class="comment">//遇到第一个&#x27;\0&#x27;结束。</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cin</span>.get(str, length, endchar); <span class="comment">//结束字符默认是&#x27;\n&#x27;,结束字符会留在输入流中</span></span><br><span class="line"><span class="built_in">cin</span>.getline(stxr, length, endchar); <span class="comment">//结束字符默认是&#x27;\n&#x27;，结束字符不会留在输入流中,读入的字符是length减一，因为&#x27;\0&#x27;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>string</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="built_in">strlen</span>(str);<span class="comment">//可见字符串长度，不包括&#x27;\0&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">strcpy</span>(str1, str2); <span class="comment">//不能用str1 = str2赋值，str1 要 大于 str2，//字符串排序</span></span><br><span class="line"><span class="built_in">strcat</span>(str1, str2); <span class="comment">//拼接</span></span><br><span class="line"><span class="built_in">strcmp</span>(str1, str2); <span class="comment">//比较大小，挨个比较ascii码 返回值是-1，0，1</span></span><br><span class="line"><span class="comment">//以上三个都有n族，即strncpy,strncat,strncmp，即操作前n个字符</span></span><br><span class="line"></span><br><span class="line">strlwr(str); <span class="comment">//转换为小写</span></span><br><span class="line">strupr(str);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//应用</span></span><br><span class="line">len = <span class="built_in">strlen</span>(str1);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++)&#123; <span class="comment">//不推荐</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; str1[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ol>
-<li>声明可以写多次，定义只能写一次</li>
-<li>scanf返回值是读入的个数，<code>ctrl Z</code>返回-1</li>
-<li>cin返回值是<code>true</code>或<code>false</code></li>
-</ol>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><ol>
-<li><p>定义的时候如果不声明返回值类型，默认是<code>int</code></p>
-</li>
-<li><p>如果return类型和定义类型不同，则强转（以定义为准）</p>
-</li>
-<li><p>函数不可以嵌套定义，但可以嵌套调用。</p>
-</li>
-</ol>
-<h3 id="传参"><a href="#传参" class="headerlink" title="传参"></a>传参</h3><ol>
-<li>传入的类型不对时会发强转</li>
-</ol>
-<h3 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h3><ol>
-<li>复合语句内是局部变量</li>
-<li>复合语句是指大括号内，不一定是循环或者函数，大括号可以随时出现，组成复合语句。</li>
-</ol>
-<h3 id="变量存储类型"><a href="#变量存储类型" class="headerlink" title="变量存储类型"></a>变量存储类型</h3><blockquote>
-<p>每个变量都有两种属性，分别是<strong>数据类型</strong>和<strong>存储类型</strong>，因此标准的变量定义应该是<code>标准类型 数据类型 变量名</code></p>
-</blockquote>
-<ol>
-<li>auto（自动变量）</li>
-<li>register（寄存器变量）</li>
-<li>extern（外部变量）引用另外文件的函数前面的extern可以省略</li>
-<li>static（静态（外部）变量）其他文件引用不到</li>
-</ol>
-<h3 id="数组作为参数"><a href="#数组作为参数" class="headerlink" title="数组作为参数"></a>数组作为参数</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myFun</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myFun2</span><span class="params">(<span class="keyword">int</span> arr[][<span class="number">3</span>], <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> arr1[<span class="number">3</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> arr2[][<span class="number">3</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line">    myFun(arr1, <span class="number">3</span>); <span class="comment">//注意，函数不会重新创建新的数组</span></span><br><span class="line">    myFun2(arr2, <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="带默认值的函数"><a href="#带默认值的函数" class="headerlink" title="带默认值的函数"></a>带默认值的函数</h3><ol>
-<li>缺省形参值必须从右向左连续定义（自右向左入栈）</li>
-<li>如果省掉了某个实参，直到最右边的实参都要省</li>
-<li>缺省值应该在函数原型就给出</li>
-<li>同一作用域，不可以重复定义缺省值</li>
-<li>函数原型给出缺省值时，形参名可以省略</li>
-</ol>
-<h3 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">fun</span><span class="params">()</span></span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    fun(); <span class="comment">//本质是编译的时候将此处替换了，即变成了顺序执行，空间换取时间</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>仅在原型出加<code>inline</code>无效，内联函数的定义必须出现在调用之前，否则就是普通函数</strong></p>
-<p><strong>如果函数体积较大或者函数内有循环比较耗时，则不宜用内联</strong></p>
-<h3 id="重载函数"><a href="#重载函数" class="headerlink" title="重载函数"></a>重载函数</h3><ol>
-<li>c语言是不支持的</li>
-<li>仅仅是返回值不同是不行的，编译不通过</li>
-<li>编译器决定调用哪个函数的过程称之为<strong>绑定</strong></li>
-<li>绑定的优先级：精确-&gt;低转高-&gt;高转低</li>
-<li>带默认值的函数等可能引起二议性</li>
-</ol>
-<h3 id="函数模板"><a href="#函数模板" class="headerlink" title="函数模板"></a>函数模板</h3><ol>
-<li>泛型化（类型的参数化）</li>
-</ol>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;  <span class="comment">//也可以用class</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Swap</span><span class="params">(T&amp; a, T&amp; b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    T tmp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = tmp;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">    Swap(a, b);	<span class="comment">//自动推到调用</span></span><br><span class="line">    <span class="comment">//Swap&lt;int&gt;(a, b);//显示指定调用</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;a = &quot;</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;b = &quot;</span> &lt;&lt; b &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">float</span> c = <span class="number">12.3</span>;</span><br><span class="line">    <span class="keyword">float</span> d = <span class="number">23.4</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">//Swap(c, d); //自动推到调用</span></span><br><span class="line">    Swap&lt;<span class="keyword">float</span>&gt;(c, d); <span class="comment">//显示指定调用</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;c = &quot;</span> &lt;&lt; c &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;d = &quot;</span> &lt;&lt; d &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://blog.csdn.net/lms1008611/article/details/81985815">参考资料《C++中的函数模板》</a></p>
-<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> * p = &amp;a;</span><br><span class="line">cou&lt;&lt;*p; <span class="comment">//解引用，找到内存中的数据</span></span><br></pre></td></tr></table></figure>
-
-<p>任何类型的指针都占四个字节</p>
-<h3 id="空指针和野指针"><a href="#空指针和野指针" class="headerlink" title="空指针和野指针"></a>空指针和野指针</h3><blockquote>
-<p>当指针定义为0、NULL、或者不赋值，此时不能解引用，否则崩溃</p>
-</blockquote>
-<ol>
-<li>空指针：指向内存编号为0的指针，一般用来初始换（0-255）不可访问，系统占用。<code>int * p = NULL</code>或<code>int * p = 0</code></li>
-<li>野指针：指向非法空间（是一种错误），无法访问。</li>
-</ol>
-<h3 id="const修饰指针"><a href="#const修饰指针" class="headerlink" title="const修饰指针"></a>const修饰指针</h3><blockquote>
-<p>指针就是一种特殊的变量，专门用来存放地址。地址可以看作一个特殊的数据类型，地址不可以复制给int变量，但可以赋值给指针变量，int的地址，只能复制给int *。地址可以解引用，所以&amp;a和p的用法是一样的。</p>
-</blockquote>
-<h4 id="常量指针"><a href="#常量指针" class="headerlink" title="常量指针"></a>常量指针</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> * p = &amp;a;</span><br><span class="line">cou&lt;&lt;*p&lt;&lt;*&amp;a&lt;&lt;<span class="built_in">endl</span>; </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p %p&quot;</span>,&amp;a, p); <span class="comment">//地址的占位符应该用%p</span></span><br><span class="line">a = <span class="number">20</span>; <span class="comment">//这样是可以的</span></span><br><span class="line">*p = <span class="number">20</span>; <span class="comment">//不可以！！指针的指向可以修改，但不可以通过解引用来修改</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="指针常量"><a href="#指针常量" class="headerlink" title="指针常量"></a>指针常量</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> * <span class="keyword">const</span> p = &amp;a; <span class="comment">//指向不可以改，解引用可以改。</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="常量指针常量"><a href="#常量指针常量" class="headerlink" title="常量指针常量"></a>常量指针常量</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> p = &amp;a; <span class="comment">//都不可以改</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="指针和数组"><a href="#指针和数组" class="headerlink" title="指针和数组"></a>指针和数组</h3><blockquote>
-<p>此处，若那指针p指向数组首地址，那么此时的<strong>数组名</strong>和<strong>指针名</strong>的本质其实都是一个<strong>指针</strong>，访问数组的元素可以通过<u>方括号</u>来访问，也可以用<u>*</u>来访问。需要注意的是p和a的区别，p是变量，但a是常量指针，a不可以进行a++等运算。另外，指针相加无意义，相减有意义。</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> arr[<span class="number">3</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> * p = arr;</span><br><span class="line"></span><br><span class="line"><span class="comment">//利用指针遍历数组</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *p &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    p++; <span class="comment">//向后走四个字节，即到下个元素，p+1指向下一个元素，p-1指向上一个元素</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//通过指针引用数组元素</span></span><br><span class="line"><span class="comment">//下标法 和  指针法</span></span><br><span class="line">p[i];</span><br><span class="line">a[i];</span><br><span class="line">*(p+i);</span><br><span class="line">*(a+i);</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>利用指针进行排序，可以避免复杂的例如结构体、字符串的赋值，效率更高</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> arr[<span class="number">8</span>] = &#123;<span class="number">1</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">3</span>&#125;;</span><br><span class="line">  <span class="keyword">int</span> *p[<span class="number">8</span>];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i ++)&#123;</span><br><span class="line">      p[i] = &amp;arr[i];</span><br><span class="line">      </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i ++)&#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt; <span class="number">8</span>; j++)&#123;</span><br><span class="line">          <span class="keyword">if</span>(*p[i] &gt; *p[j])&#123;</span><br><span class="line">              <span class="keyword">int</span> *temp = p[i]; </span><br><span class="line">              p[i] = p[j];</span><br><span class="line">              p[j] = temp; <span class="comment">//只交换指针的指向，而不更改</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++)&#123;</span><br><span class="line">      <span class="built_in">cout</span>&lt;&lt;*p[i]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="指针与字符串"><a href="#指针与字符串" class="headerlink" title="指针与字符串"></a>指针与字符串</h3><blockquote>
-<p>指向字符串常量和指向字符数组的指针有什么区别呢？</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> *<span class="built_in">string</span>;</span><br><span class="line"><span class="built_in">string</span> = <span class="string">&quot;abcd&quot;</span>; <span class="comment">//string是常量区（数据段）里&quot;abcd&quot;的首地址，不可以修改*string2的值</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> *string2, ss[] = <span class="string">&quot;abcd&quot;</span>;</span><br><span class="line">string2 = ss; <span class="comment">//string2是栈里&quot;abcd&quot;的首地址，可以修改*string2的值</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="built_in">string</span>; <span class="comment">//即从string开始，知道&#x27;\0&#x27;结束，所以类推cout&lt;&lt;string+1即输出&quot;bcd&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>要搞清楚<code>string</code>、<code>string2</code>、<code>ss</code>三者的区别：</p>
-<ol>
-<li>*string不可以修改，两外两个可以</li>
-<li>ss不可以修改，两外两个可以</li>
-<li>三者都属于指针，第一个指向常量即<strong>常量指针</strong>，第二个正常指针，第三个本身是常量即<strong>指针常量</strong></li>
-</ol>
-<blockquote>
-<p>利用指针编程的实例（复制字符串）</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//把字符数组a赋值给b</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> a[] = <span class="string">&quot;abcd&quot;</span>,b[<span class="number">10</span>],*p1,*p2;</span><br><span class="line">    p1 = a;</span><br><span class="line">    p2 = b;</span><br><span class="line">    <span class="keyword">while</span>(*p1)</span><br><span class="line">        *p2++ = *p1++;</span><br><span class="line">    *p2 = <span class="string">&#x27;\0&#x27;</span>; <span class="comment">//不要忘了最后加上&#x27;\0&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="指针与函数（地址传递）"><a href="#指针与函数（地址传递）" class="headerlink" title="指针与函数（地址传递）"></a>指针与函数（地址传递）</h3><blockquote>
-<p>主要注意传递指针以及返回指针</p>
-</blockquote>
-<p><strong>值传递是文件复制，地址传递是建立快捷方式</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> * p1, <span class="keyword">int</span> * p2)</span></span>&#123;</span><br><span class="line"> <span class="keyword">return</span>(*p1 + *p2)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; add(&amp;a, &amp;b);</span><br></pre></td></tr></table></figure>
-
-<h3 id="引用传递"><a href="#引用传递" class="headerlink" title="引用传递"></a>引用传递</h3><blockquote>
-<p>与指针类似，但更安全、简单，主要用于函数的参数，不需要解引用，也不需要传参的时候传递地址</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> &amp;b = a; <span class="comment">//a,b地址一样，且定义的时候必须初始化，不能先定义再赋值，且以后b不能再修改</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> &amp; r)</span></span>&#123;</span><br><span class="line">    r = <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">3</span>;</span><br><span class="line">    f(x);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;x; <span class="comment">//5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p> 返回值为引用类型的引用</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> &amp; <span class="title">max</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]&gt;a[t]) t = i;</span><br><span class="line">        <span class="keyword">return</span> a[t]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> &amp; sum(<span class="keyword">int</span> a[], <span class="keyword">int</span> n)&#123;</span><br><span class="line">    <span class="keyword">int</span> s = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        s += a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> &amp; m1 = max(a, <span class="number">10</span>); <span class="comment">//此处m1即为a[4]</span></span><br><span class="line">    <span class="keyword">int</span> &amp; m2 = sum(a, <span class="number">10</span>); <span class="comment">//此处m2即为s，但是s为局部变量，s释放之后，m2是随机值。</span></span><br><span class="line">    </span><br><span class="line">    max(a, <span class="number">10</span>)++; <span class="comment">//返回值是引用的话可以对返回值直接进行运算操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>常引用：不能通过常引用来修改变量的值，所以常引用可以用来引用常量，表达式等，通常用来作为只读形参。传引用更快，但又不希望被改动，所以更安全</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> &amp; b = a; <span class="comment">//a，b地址相同，唯一区别是只能通过a来修改该地址的值</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp; x, <span class="keyword">int</span> &amp; y)</span></span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maing</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    f(<span class="number">100</span>, a); <span class="comment">// 第一个参数可以传常量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="动态内存"><a href="#动态内存" class="headerlink" title="动态内存"></a>动态内存</h3><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><blockquote>
-<p>先记录一个常见的错误</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">int</span> a[n]; <span class="comment">//不合法，应该使用动态数组 </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>动态数组</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *q;</span><br><span class="line">    q = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">10</span>]; <span class="comment">//new得到的是申请到的空间的地址，当系统用完时可能会失败，当失败时会返回空指针</span></span><br><span class="line">    <span class="keyword">if</span>(!q)&#123; <span class="comment">//检查new的结果</span></span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;failed&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">strcpy</span>(q, <span class="string">&quot;abcde&quot;</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;q&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">delete</span> []q;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a><strong>补充</strong></h4><blockquote>
-<p>关于内存分配的一些问题</p>
-</blockquote>
-<p><img src="https://pic.imgdb.cn/item/6112334a5132923bf840aea3.jpg" alt></p>
-<p>对于三个区域，<strong>数据段、栈、堆</strong>，全局变量存储在数据段，局部栈，动态分配堆。对于一些很大的例如<strong>大数组</strong>，不能直接在堆里创建，否则会崩溃，需要在堆里<code>new</code>，且用完之后一定要<code>delete</code>否则会不断累积，造成内存泄漏，但要注意<code>delete</code>之后不允许再操作此处内存；也可以放在数据段里，即定义全局变量。</p>
-<h2 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h2><h3 id="定义与使用"><a href="#定义与使用" class="headerlink" title="定义与使用"></a>定义与使用</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="built_in">string</span> name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">&#125;s3 <span class="comment">//这里可以在定义的时候直接创建一个实例，不建议用</span></span><br><span class="line"><span class="comment">//创建后赋值</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span> <span class="title">student1</span>;</span> <span class="comment">//struct可以省略</span></span><br><span class="line">student1.name = <span class="string">&quot;张三&quot;</span>;</span><br><span class="line">student1.age = <span class="number">10</span>;</span><br><span class="line"><span class="comment">//创建时赋值</span></span><br><span class="line">Student student1 = &#123;</span><br><span class="line">    <span class="string">&quot;张三&quot;</span>,<span class="number">10</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结构体数组"><a href="#结构体数组" class="headerlink" title="结构体数组"></a>结构体数组</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="built_in">string</span> name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span> <span class="title">arr</span>[3]=</span></span><br><span class="line">&#123;</span><br><span class="line">    &#123;<span class="string">&quot;张三&quot;</span>, <span class="number">10</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;李四&quot;</span>, <span class="number">20</span>&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结构体指针"><a href="#结构体指针" class="headerlink" title="结构体指针"></a>结构体指针</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="built_in">string</span> name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span> <span class="title">student</span> =</span> &#123;<span class="string">&quot;张三&quot;</span>, <span class="number">10</span>&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Student * p = student;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; p-&gt;name; <span class="comment">//相当于(*p).name</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="结构体嵌套"><a href="#结构体嵌套" class="headerlink" title="结构体嵌套"></a>结构体嵌套</h3><p>要在之前声明</p>
-<h3 id="结构体传参"><a href="#结构体传参" class="headerlink" title="结构体传参"></a>结构体传参</h3><h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p><code>private</code>（成员函数可以访问本类其它对象私有成员）、<code>public</code>、<code>protected</code>（该类以及子类）出现的次序和顺序可以任意，默认是private</p>
-<p>类本身并不占内存</p>
-<h3 id="数据成员"><a href="#数据成员" class="headerlink" title="数据成员"></a>数据成员</h3><p>可以使用已定义完整的类，但当前正在定义的类没有定义完整，所以不能实例化</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Grade</span>&#123;</span></span><br><span class="line">  <span class="keyword">int</span> a; <span class="comment">//不占用内存空间，不可以赋初值。新标准可以赋值，但其实是通过构造函数赋值。</span></span><br><span class="line">  Grade *p;</span><br><span class="line">  Grade &amp;r;	</span><br><span class="line">  Grade b; <span class="comment">//错误</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="函数成员"><a href="#函数成员" class="headerlink" title="函数成员"></a>函数成员</h3><ol>
-<li><p>类内定义的称为内联函数，若要在类外定义，必须在类里声明原型</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Clock::SetTime</span><span class="params">(<span class="keyword">int</span> h, <span class="keyword">int</span> m, <span class="keyword">int</span> s)</span></span>&#123; <span class="comment">//::是作用域分辨符</span></span><br><span class="line">    ... <span class="comment">//访问类里变量时直接访问就可以，写法和内联一样</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>默认形参可以放在原型里也可以放在定义处，不可都放，一般放原型</p>
-</li>
-<li><p>只有一份，不会给每个实例都放个函数</p>
-</li>
-</ol>
-<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><ol>
-<li>没有返回值类型，且不用void的，一般函数需要void</li>
-<li>构造函数只能被自动调用</li>
-<li>构造函数要放在<code>pubilc</code>里面，否则无法实例化</li>
-<li>构造函数可以重载</li>
-<li>只有在不定义构造函数的时候才会自动生成无参构造函数</li>
-<li>定义有参构造函数时最好再重载一个无参构造</li>
-</ol>
-<h3 id="对象数组"><a href="#对象数组" class="headerlink" title="对象数组"></a>对象数组</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Score</span>&#123;</span></span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Score ScoreArr[<span class="number">3</span>]; <span class="comment">//调用不带参数的构造函数</span></span><br><span class="line">    Score ScoreArr[<span class="number">3</span>] = &#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;,&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;,&#123;<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;&#125;; <span class="comment">//带参构造函数，两种都行，初值表</span></span><br><span class="line">    Score ScoreArr[<span class="number">3</span>] = &#123;</span><br><span class="line">        Score(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>),</span><br><span class="line">        Score(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>),</span><br><span class="line">        Score(<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><h4 id="常量对象"><a href="#常量对象" class="headerlink" title="常量对象"></a>常量对象</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> 类名 对象名；</span><br><span class="line">类名 <span class="keyword">const</span> 对象名；<span class="comment">//两种都可以</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>常对象只能调用常成员函数</li>
-<li>常对象本身以及其内部的属性等都不可以改变</li>
-</ol>
-<h4 id="常成员函数"><a href="#常成员函数" class="headerlink" title="常成员函数"></a>常成员函数</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="function"><span class="keyword">int</span> <span class="title">getx</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    	<span class="function"><span class="keyword">int</span> <span class="title">gety</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">A::gety</span><span class="params">()</span> <span class="keyword">const</span></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>原型和实现都要加<code>const</code></li>
-<li><code>const</code>可以用来重载函数</li>
-<li>不能修改数据成员</li>
-<li>不能调用非常成员函数</li>
-<li>普通对象可以调用常成员函数和非常成员函数</li>
-</ol>
-<h4 id="常数据成员"><a href="#常数据成员" class="headerlink" title="常数据成员"></a>常数据成员</h4><blockquote>
-<p> 定义和普通常量一样（注意：常量声明必须初始化），但是由于老标准中初始化类时不允许赋值，所以可以在构造函数里通过初始化表赋值</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>&#123;</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> SIZE;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> SIZE = <span class="number">3</span>; <span class="comment">//新标准才可以如此</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	A(<span class="keyword">int</span> size);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">A::A(<span class="keyword">int</span> size):SIZE	(size) <span class="comment">//后面为参数化表可以给一个常量或者变量赋值</span></span><br><span class="line">&#123;...&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="静态成员"><a href="#静态成员" class="headerlink" title="静态成员"></a>静态成员</h3><h4 id="静态数据成员"><a href="#静态数据成员" class="headerlink" title="静态数据成员"></a>静态数据成员</h4><blockquote>
-<p>静态成员只保留一次拷贝</p>
-<p>不能用构造函数初始化静态成员，必须在类外初始化</p>
-<p>定义对象时不会为静态成员分配空间</p>
-<p>调用时可以通过类调用也可以通过<code>obj.</code>调用，值相同</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">double</span> a;  </span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">int</span> b = <span class="number">2</span>;<span class="comment">//静态常数据成员可以在此初始化（非静态常数据成员老标准不支持在此初始化）</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">double</span> A::a = <span class="number">1.3</span>;<span class="comment">//不要忘记初始化，初始化的时候不加static</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="静态成员函数"><a href="#静态成员函数" class="headerlink" title="静态成员函数"></a>静态成员函数</h4><blockquote>
-<p>不依赖任何对象，用来访问静态数据成员，可以通过类直接调用，也可以通过对象调用。</p>
-<p>可以在类内声明原型，然后在类外定义，此时，类外不用加static</p>
-<p>普通函数可以访问静态变量，但是静态函数不可以直接访问普通变量，但可以访问自己创建的或是传进来的实例的变量</p>
-</blockquote>
-<h3 id="友元"><a href="#友元" class="headerlink" title="友元"></a>友元</h3><p>友元类</p>
-<p>友元函数</p>
-<p>友元成员函数</p>
-<h3 id="对象析构与拷贝构造"><a href="#对象析构与拷贝构造" class="headerlink" title="对象析构与拷贝构造"></a>对象析构与拷贝构造</h3><h4 id="析构函数"><a href="#析构函数" class="headerlink" title="析构函数"></a>析构函数</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">~构造函数名();</span><br></pre></td></tr></table></figure>
-
-<p>析构函数没有重载，没有参数，没有返回值</p>
-<p>如果没有定义，系统会生成空析构函数</p>
-<p>调用顺序和构造函数相反（出入栈）</p>
-<h4 id="拷贝构造函数"><a href="#拷贝构造函数" class="headerlink" title="拷贝构造函数"></a>拷贝构造函数</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//默认拷贝构造函数，可以用旧实例来初始化新实例。</span></span><br><span class="line"><span class="function">MyClass <span class="title">A2</span><span class="params">(A1)</span></span>;</span><br><span class="line">MyClass A2 = A1;</span><br></pre></td></tr></table></figure>
-
-<p>在初始化，函数传参，返回值的时候会自动调用拷贝构造函数。系统默认生成拷贝构造函数。但是先声明，再赋值不会调用，而是调用<code>=</code>。注意一定是传变量的时候才会调用，如果直接传递常量MyClass </p>
-<blockquote>
-<p>默认拷贝构造函数比较傻，只能浅拷贝（即直接赋值），这会导致，如果你的类用到了动态内存，那么两个指针指向会相同，所以需要自己重新定义拷贝构造函数，重新开辟内存。</p>
-<p>而当自己重新定义拷贝构造函数之后，默认的拷贝构造函数和构造函数都会消失，所以你还需要定义构造函数。</p>
-<p>但是如果你只是重新定义构造函数，默认的拷贝构造函数依旧完好。</p>
-</blockquote>
-<h3 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a>运算符重载</h3><blockquote>
-<p>构造函数涉及到动态内存一定要注意</p>
-<ul>
-<li>拷贝构造函数</li>
-<li>重新赋值运算符</li>
-<li>析构函数</li>
-</ul>
-</blockquote>
-<ul>
-<li>C++ 要求’=’、’[]’、’()’、’-&gt;’运算符必须被定义为类的成员函数，把这些运算符通过全局函数进行重载时会出现编译错误；</li>
-<li>如果有一个操作数是类类型（如 string 类），那么对于对称操作符（比如操作符“==”），最好通过全局函数的方式进行重载。</li>
-<li>如果一个重载运算符是类的成员函数，那么只有当与它一起使用的左操作数是该类的对象时，该运算符才会被调用；而如果该运算符的左操作数确定为其他的类型，则运算符必须被重载为全局函数；</li>
-<li>有一些运算符是不能重载的，如“sizeof”；</li>
-<li>不能创建新的运算符；</li>
-</ul>
-<h4 id="重载为全局函数"><a href="#重载为全局函数" class="headerlink" title="重载为全局函数"></a>重载为全局函数</h4><ul>
-<li>最好设置为友元函数</li>
-</ul>
-<h4 id="重载为成员函数"><a href="#重载为成员函数" class="headerlink" title="重载为成员函数"></a>重载为成员函数</h4><ul>
-<li>形参少一个        </li>
-</ul>
-<h4 id="常见的重载"><a href="#常见的重载" class="headerlink" title="常见的重载"></a>常见的重载</h4><ul>
-<li>=可以返回*this，这样就可以连等了！</li>
-<li>[]返回类型要加个&amp;，这样就可以通过[]修改了！</li>
-<li>前置++，重置为一元，后置为二元（加个新参int x 会默认传0）</li>
-<li>&gt;&gt; &lt;&lt; 必须是全局</li>
-</ul>
-<h3 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h3><p>如果成员类没有无参构造函数，那么组合类的构造函数的时候，必须携带初始化表。**初始化表不是在调用构造函数，构造函数的调用顺序和初始化表无关，它仅仅是提供参数。顺序应该是和数据成员里声明的顺序相同。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">B</span>;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	A(<span class="keyword">const</span> &amp;B1):B(B1)</span><br><span class="line">        &#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><blockquote>
-<p>一些名词：继承、派生。基类、父类，派生类、子类 ，单继承，单向继承，多继承，多重继承，多层派生，多层继承</p>
-</blockquote>
-<p><img src="https://pic.imgdb.cn/item/612e56ce44eaada73961cd6b.jpg" alt></p>
-<p>继承决定访问权限上限</p>
-<p>派生类不继承构造函数、析构函数、赋值运算符，但是可以调用基类的</p>
-<h2 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h2><h3 id="string"><a href="#string" class="headerlink" title="string"></a>string</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="built_in">string</span> s1; <span class="comment">//空串</span></span><br><span class="line"><span class="keyword">char</span> *str1 = <span class="string">&quot;hhh&quot;</span>;</span><br><span class="line"><span class="keyword">char</span> str2[] = <span class="string">&quot;hhh&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//构造函数</span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s1</span><span class="params">(str1)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s1</span><span class="params">(str2)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s1</span><span class="params">(<span class="string">&quot;hhh&quot;</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s1</span><span class="params">(str1, <span class="number">3</span>)</span></span>; <span class="comment">//前几个字符</span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(s1)</span></span>; <span class="comment">//拷贝构造</span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(s1, <span class="number">2</span>, <span class="number">3</span>)</span></span>; <span class="comment">//从2，拷贝3个。</span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(s1, <span class="number">2</span>)</span></span>; <span class="comment">//从2，拷贝到结束</span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(<span class="number">3</span>, <span class="string">&#x27;c&#x27;</span>)</span></span>; <span class="comment">///ccc</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//输入</span></span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;s1; <span class="comment">//开头空格不算，中间空格结束</span></span><br><span class="line">getline(<span class="built_in">cin</span>, s1, c); <span class="comment">//输入流、string、结束符（默认回车），且结束符会被丢弃。如果第一个就是结束符，那么就是空串，如果之前又输入字符，需要getchar()或者cin.get()吃掉回车。返回值是输入流</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//遍历</span></span><br><span class="line">s1[i]; <span class="comment">//下标，注意没有&#x27;\0&#x27;</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">char</span> ch:s);<span class="comment">//范围循环</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;ch:s);<span class="comment">//类型可以自动，&amp;可以修改源字符串，否则是副本</span></span><br><span class="line"><span class="comment">//迭代器iterator reverse_itrerator const_iterator，对于常量，必须用第三个</span></span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">string</span>::iterator it=s.begin(); it&lt;s.end(); it++)</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;*it&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//运算符重载</span></span><br><span class="line">+， =， +=， ==， ！=， &gt;, &gt;=....</span><br><span class="line">        </span><br><span class="line"><span class="comment">//方法(不写那么细致了)</span></span><br><span class="line">append();</span><br><span class="line">push_back();</span><br><span class="line">insert();</span><br><span class="line">erase();</span><br><span class="line">clear();</span><br><span class="line">replace();</span><br><span class="line">size();</span><br><span class="line">length();</span><br><span class="line">empty();</span><br><span class="line">compare();<span class="comment">//可以截取范围</span></span><br><span class="line">assign();<span class="comment">//赋值</span></span><br><span class="line">substr();<span class="comment">//子串</span></span><br><span class="line">swap();<span class="comment">//交换</span></span><br><span class="line">c_str();<span class="comment">//转换为c字符数粗</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="分文件编写"><a href="#分文件编写" class="headerlink" title="分文件编写"></a>分文件编写</h2><ol>
-<li>h写声明，.cpp写定义，最后新的cpp里引用.h即可</li>
-</ol>
-<h2 id="杂乱"><a href="#杂乱" class="headerlink" title="杂乱"></a>杂乱</h2><h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><ol>
-<li><ctime>
-</ctime></li>
-<li><iostream>
-
-</iostream></li>
-</ol>
-<h3 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h3><ol>
-<li><p>pow是浮点计算，貌似算出来的数可能导致不相等，可以加个(int)，加（int）会导致不准确，需要自己写函数（不同编译器不一样效果）</p>
-</li>
-<li><p>cout输出小数不会带后面的0；</p>
-</li>
-<li><p>当在循环的时候要找到最好的判断方式，在最合适的地方break，不然很容易超时！</p>
-</li>
-<li><p>cin&gt;&gt;char1不会读入空格，scanf可以</p>
-</li>
-<li><p>第一个cin.getline之前要放一个getchar</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">char</span> str[<span class="number">60</span>];</span><br><span class="line">        <span class="built_in">cin</span>.getline(str, <span class="number">60</span>);</span><br><span class="line">        <span class="keyword">int</span> len = <span class="built_in">strlen</span>(str);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; len<span class="number">-1</span>; j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(str[j] == <span class="string">&#x27; &#x27;</span> &amp;&amp; str[j+<span class="number">1</span>] != <span class="string">&#x27; &#x27;</span>) sum++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(str[<span class="number">0</span>] == <span class="string">&#x27; &#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            sum--;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;sum+<span class="number">1</span> &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<ol start="6">
-<li><p>如果定义了拷贝构造函数，记得要把其它属性赋值，不然你传参的时候就错了！！！</p>
-</li>
-<li><p>析构貌似不用delete[];</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>c++</tag>
       </tags>
   </entry>
   <entry>
