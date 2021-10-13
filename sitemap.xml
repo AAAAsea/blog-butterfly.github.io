@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://asea.fun/post/c0562e47.html</loc>
+    <loc>https://asea.fun/post/c8c632fe.html</loc>
     
     <lastmod>2021-10-13</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/post/c8c632fe.html</loc>
+    <loc>https://asea.fun/post/c0562e47.html</loc>
     
-    <lastmod>2021-10-06</lastmod>
+    <lastmod>2021-10-13</lastmod>
     
   </url>
   
@@ -485,14 +485,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/index.html</loc>
+    <loc>https://asea.fun/message/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/message/index.html</loc>
+    <loc>https://asea.fun/tags/index.html</loc>
     
     <lastmod>2020-11-24</lastmod>
     
@@ -550,13 +550,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/github/</loc>
-    <lastmod>2021-10-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://asea.fun/tags/notes/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
@@ -571,7 +564,7 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/electron/</loc>
+    <loc>https://asea.fun/tags/github/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -579,6 +572,13 @@
   
   <url>
     <loc>https://asea.fun/tags/deploy/</loc>
+    <lastmod>2021-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/electron/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -593,13 +593,6 @@
   
   <url>
     <loc>https://asea.fun/tags/node/</loc>
-    <lastmod>2021-10-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/tags/ADT/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -627,20 +620,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/linux/</loc>
-    <lastmod>2021-10-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/tags/robot/</loc>
-    <lastmod>2021-10-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://asea.fun/tags/vercel/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
@@ -655,14 +634,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/CDN/</loc>
+    <loc>https://asea.fun/tags/linux/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/Jupyter/</loc>
+    <loc>https://asea.fun/tags/robot/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -683,6 +662,20 @@
   </url>
   
   <url>
+    <loc>https://asea.fun/tags/CDN/</loc>
+    <lastmod>2021-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/Jupyter/</loc>
+    <lastmod>2021-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://asea.fun/tags/sources/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
@@ -691,6 +684,13 @@
   
   <url>
     <loc>https://asea.fun/tags/summary/</loc>
+    <lastmod>2021-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/ADT/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -846,14 +846,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://asea.fun/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://asea.fun/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://asea.fun/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
