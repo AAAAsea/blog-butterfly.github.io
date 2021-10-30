@@ -50,7 +50,7 @@
   },
   isPhotoFigcaption: false,
   islazyload: false,
-  isanchor: false
+  isanchor: true
 };
 
 var saveToLocal = {
@@ -221,7 +221,7 @@ if ('Valine' === 'Valine' || !false) {
     for (let i = 0; i < array.length; i++) {
       result += '<div class=\'aside-list-item\'>'
 
-      if (false) {
+      if (true) {
         result += `<a href='${array[i].url}' class="thumbnail"><img src='${getIcon(array[i].avatar, array[i].mail)}' alt='${array[i].nick}'></a>`
       }
 
