@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://asea.fun/"/>
-  <updated>2021-12-11T01:58:17.000Z</updated>
+  <updated>2021-12-12T15:01:00.000Z</updated>
   <id>https://asea.fun/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java期末复习</title>
+    <link href="https://asea.fun/post/adf6b9f0.html"/>
+    <id>https://asea.fun/post/adf6b9f0.html</id>
+    <published>2021-12-12T14:59:29.000Z</published>
+    <updated>2021-12-12T15:01:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>把这几百页的书从头到尾看一遍梳理一下期末考点吧！</p></blockquote><h2 id="基本数据类型与数组"><a href="#基本数据类型与数组" class="headerlink" title="基本数据类型与数组"></a>基本数据类型与数组</h2><h3 id="标识符和关键字"><a href="#标识符和关键字" class="headerlink" title="标识符和关键字"></a>标识符和关键字</h3><ol><li>字母、下划线、美元符号、和数字</li><li>第一个不能是数字</li><li>不能是关键字</li><li>不能是true false null（尽管他们不是关键字）</li><li>区分大小写</li></ol><h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><blockquote><p>8种基本数据类型</p><p>boolean</p><p>byte,short,int,long</p><p>char</p><p>float,double</p></blockquote><ol><li>int 四字节</li><li>byte一个字节</li><li>short两个字节</li><li>long八个字节</li><li>没有无符号即unsigned</li><li>char两个字节，没有负数</li><li>使用unicode字符集，前128个是ASCII</li><li>‘\u0041’表示A</li><li>（char)65 a</li><li>double  y = 0.4 小于 float x = 0.4f;</li></ol><h3 id="类型转换运算"><a href="#类型转换运算" class="headerlink" title="类型转换运算"></a>类型转换运算</h3><blockquote><p>低赋值给高会自动转换，反之需要强制转换</p></blockquote><p>低到高排序：byte short char int long float double</p><p>int x = (int)34.89</p><p>float x = 12.3 这是错误的，默认浮点数常量是double，如果不转换会报错“possible loss of precision”</p><h3 id="输入输出数据"><a href="#输入输出数据" class="headerlink" title="输入输出数据"></a>输入输出数据</h3><h4 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h4><p><code>Scanner reader = new Scanner(System.in);</code></p><p>reader调用以下方法，返回值就是读取的内容：</p><p><code>nextBoolean() nextByte() nextShort() nextInt() nextLong() nextFloat() nextDouble()</code></p><h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4><p><code>System.out.println() System.out.print() System.out.printf()</code></p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Syetem.out.println(<span class="string">&quot;hhh</span></span><br><span class="line"><span class="string">                   hhh</span></span><br><span class="line"><span class="string">                   hhh&quot;</span>); /这样是不正确的，不允许出现回车，print也是。可以通过加号连接</span><br><span class="line">Sout(<span class="string">&quot;hh&quot;</span>+</span><br><span class="line">    <span class="string">&quot;hhh&quot;</span>);                   </span><br></pre></td></tr></table></figure><p>printf用法类似C</p><p><code>System.out.printf(&quot;%d %f&quot;,12,1,3);</code></p><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p><code>int arr[]</code> <code>int[] arr</code></p><p><code>int arr[][]</code> <code>int[][] arr</code></p><blockquote><p>和c不同，这里只是生命数据类型，而不能定义其中多少个元素，所以必须</p><p>int arr[] = new int[10];</p><p>当然也可以分步</p></blockquote><ol><li>arr.length可以获取数组长度</li><li>二维数组中的每行长度可以不相同</li><li>sout输出数组会输出引用地址，而对于char数组会输出内容，可以用过<code>&quot;&quot;+arr</code>来输出引用</li></ol><h2 id="运算符、表达式和语句"><a href="#运算符、表达式和语句" class="headerlink" title="运算符、表达式和语句"></a>运算符、表达式和语句</h2><h3 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h3><ol><li>&amp;&amp; || !</li><li>=左边必须是变量</li><li>位运算符<ol><li>&amp;</li><li>|</li><li>~(单目)</li><li>^</li></ol></li><li>instanceof（左边是对象，右边是类，返回值是true false</li></ol><h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><ol><li><p>分号是空语句</p></li><li><p>for与数组</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i : arr)</span><br><span class="line">&#123;</span><br><span class="line">    System.out.println(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>应用（连续读入）</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(reader.hasNextDouble())</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">double</span> x=  reader.nextDouble();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol><h2 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h2><ol><li><p>包名第一部分不能是“java”</p></li><li><p>创建类不加public即默认为friend，不能使用protected和private</p></li><li><p>基本类型的类封装</p><p><code>Double Float Byte Short Integer Long Character</code></p><p>通过调用如<code>intValue() shortValue()</code>来获取基本类型值</p><p>可以调用这些类的一些方法例如</p><p><code>Character.toUpperCase() Character.isLowerCase()</code></p></li></ol><h2 id="子类与继承"><a href="#子类与继承" class="headerlink" title="子类与继承"></a>子类与继承</h2><ol><li><p>不持支多继承</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Parent</span></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>继承不会继承private，而且当不在一个包的时候也不会继承friend</p></li><li><p>尽管如private的变量不会被继承，但依然在创建对象的时候会分配内存，因为有可能会用方法调用这些变量</p></li><li><p>instanceof  如果左边的是右边或是右边子类创建的话就是true</p></li><li><p>重写（override）以后，想要调用父类的变量或者方法需要super</p></li><li><p>重写不允许降低访问权限但是可以提高</p></li><li><p>子类构造方法中如果明确调用哪一个父类的构造方法的话，就会调用Parent()这个无参的方法，但如果用super指出，就必须是子类构造方法中的第一句。</p></li><li><p>final修饰一个类，则该类不可以被继承</p></li><li><p>final修饰一个方法，则该方法不可以被重写</p></li><li><p>final修饰变量，则成为常量</p></li><li><p>上转型对象会失去一些子类的属性和方法，按时上转型对象会调用子类重写的（非静态）方法（多态….）</p></li><li><p>上转型对象可以再强制转化为子类对象</p></li><li><p>abstract所在的类必须是abstract类</p></li><li><p>抽象类不可以被new，必须被继承重写abstract方法</p></li></ol><h2 id="接口与实现"><a href="#接口与实现" class="headerlink" title="接口与实现"></a>接口与实现</h2><ol><li>接口包括常量（final）和抽象方法。</li><li>变量默认必须是 public final static ，所以可以省略</li><li>抽象方法可以省略（putlic abstrac）</li><li>实现接口implements xxx,xxx,xxx</li><li>必须重写所有方法，且必须用public修饰</li><li>接口回调，有点类似于向上转型吧（也就是接口的多态）</li><li>如果接口作为参数，那么可以将实现该接口的类的实例传进去</li></ol><h2 id="内部类和异常类"><a href="#内部类和异常类" class="headerlink" title="内部类和异常类"></a>内部类和异常类</h2><blockquote><p>所谓内部类就是在一个class里面再定义一个class，可以通过xxx.xxx来访问这个class</p></blockquote><ol><li>内部类可以用static修饰</li><li>异常类</li></ol><h2 id="常用实用类"><a href="#常用实用类" class="headerlink" title="常用实用类"></a>常用实用类</h2><h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><ol><li>创建 <code>String s = new String(&quot;hhhh&quot;)</code></li><li>还可以传入字符数组</li><li>可以引用常量<code>String s1,s2; s1 = &quot;hhh&quot;;s2 = &quot;ggg&quot;;s1 == s2(true);</code></li><li>字符串的并置，当两个常量并置时，得到的是在常量池，如果有变量则新生成变量</li><li>常用方法：<code>length() equals(String s) startsWith() endsWith() compareTo()大正小负 contains() indexOf() lastIndexOf() subString(int start, int end)</code></li><li>字符串与基本数据的转化<code>Integer.parseInt(s)其他类似</code><ol><li></li></ol></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;把这几百页的书从头到尾看一遍梳理一下期末考点吧！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;基本数据类型与数组&quot;&gt;&lt;a href=&quot;#基本数据类型与数组&quot; class=&quot;headerlink&quot; title=&quot;基本数据类型与数组&quot;&gt;&lt;/a&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://asea.fun/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="notes" scheme="https://asea.fun/tags/notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于为什么要谈恋爱</title>
+    <link href="https://asea.fun/post/8f75d213.html"/>
+    <id>https://asea.fun/post/8f75d213.html</id>
+    <published>2021-12-12T14:48:40.000Z</published>
+    <updated>2021-12-12T14:59:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>对于恋爱的一些思索</p></blockquote><p>在我成长这么多年，最值得一提的一点就是，我和家庭的和解。我一直不明白我是怎么从厌倦逃离家庭到现在想念和热爱我的家庭的，现在大概明白了，是恋爱教会我如何爱和感受爱。<br>其实每次有勇气面对眼前的这些问题的时候，我都会想，我为什么想要拉她回来，其实我在想一个什么样的问题呢，就是，为什么要恋爱，也就是说当我在学会怎么恋爱的时候，我始终没想明白，为什么要恋爱。这个问题其实可以很含糊的回答，比如两个喜欢的人在一起了，不需要理由。但我不喜欢这样糊弄，于是我开始认真地想为什么人要恋爱，仅仅是喜欢对方的好然后想要占有吗，仅仅是看到别人恋爱然后从众吗，或者是其中有很多很多原因。我觉得这个问题每个想要好好谈恋爱的人都要搞懂，或者说即便它是搞不懂的，也要深入想一想，然后深入浅出，不然就很难谈一场健康的恋爱。</p><p>一、恋爱可以让我发现自己的缺点<br>这点毋庸置疑，很多很多缺点是自己一个人没办法发现的，即便身边朋友感觉到也不会跟你提出，所以在恋爱的时候，我想变得更好，同时我也会暴露自己的缺点，这让对方感到不适，对方向你提出了你的问题，这些问题通常是你自己没有发现过但是一发现也会觉得确实是个问题，然后认真的反思改进，不断的互相成为更优秀的人，不只是为了对方，也是为了自己。</p><p>二、恋爱可以让人学会爱人<br>其实我一直觉得我自己很爱对方，但其实我一直不很会爱对方，这里说的不是说生活中的惊喜和浪漫，而是在说从心灵上如何去关爱对方，其中包括如何关心一个人的情绪、如何尊重一个人以及如何帮助一个人，这些都算是爱，但是要比那些表面的仪式感更难意识到。“我都是为了你好！”这些人往往都不会爱人。</p><p>三、恋爱可以让我学会感受爱<br>人其实都容易自私，喜欢索取容易变得贪婪。往往这个时候我们会对对方苛责，会极尽力气想让对方对自己好，我想说，这样的人不懂得被爱。被爱当然也是种能力，恋爱的过程中人们其实很难学会被爱，相反当恋爱出现问题，人才开始思考对方的好，才开始感受到原来对方其实真的对我很好了，这时候才会想起来当时自己的幼稚。就是这样一步步学会了感受到对方的爱意。其实对于家庭也是这样，感受家庭的爱和如何去爱家庭都是一件很难很难的事情。</p><p>四、恋爱可以让我变得勇敢<br>一个人的时候往往瞻前顾后在意别人的看法，恋爱让我有了依靠，可以不必太在意其他人看发，所以可以勇敢的尝试以前害怕的事情，恋爱让我变得勇敢起来。</p><p>五、恋爱让我认识自己<br>人最难的一个过程还是认识自己，成长就是不断地认识自己，但是往往一个人很难明白自己，日常生活中很难和其他人有深入灵魂的交流，但是恋爱让你走进对方深处的同时也看清自己内心深处。恋爱本身就是两个人的交融，人是复杂的，没有完美契合的两个人，所以这中间必定会有摩擦，但正是这些摩擦让你认识到自己的形状，认识到自己是一个怎样的人。</p><p>六、（还有很多，用心感悟吧）…</p><h2 id="最后想说的是，人类社会形态本就不是孤身一人的，除却极少数，大多数人都需要一个依靠，这个依靠不是绑定，也不是享乐的纽带，它最终极的要义就是使得两个人在幸福和痛苦中感受到人间的美好同时也变得更加勇敢坚强，大概这样的变化适合人类生存吧，大概这才是健康的恋爱吧。"><a href="#最后想说的是，人类社会形态本就不是孤身一人的，除却极少数，大多数人都需要一个依靠，这个依靠不是绑定，也不是享乐的纽带，它最终极的要义就是使得两个人在幸福和痛苦中感受到人间的美好同时也变得更加勇敢坚强，大概这样的变化适合人类生存吧，大概这才是健康的恋爱吧。" class="headerlink" title="最后想说的是，人类社会形态本就不是孤身一人的，除却极少数，大多数人都需要一个依靠，这个依靠不是绑定，也不是享乐的纽带，它最终极的要义就是使得两个人在幸福和痛苦中感受到人间的美好同时也变得更加勇敢坚强，大概这样的变化适合人类生存吧，大概这才是健康的恋爱吧。"></a>最后想说的是，人类社会形态本就不是孤身一人的，除却极少数，大多数人都需要一个依靠，这个依靠不是绑定，也不是享乐的纽带，它最终极的要义就是使得两个人在幸福和痛苦中感受到人间的美好同时也变得更加勇敢坚强，大概这样的变化适合人类生存吧，大概这才是健康的恋爱吧。</h2><p>反观自己，虽然甜蜜不少，但是真正去思考如何去谈恋爱，如何处理痛苦，如何反思进步共同成长却是想的很少，当然不是否认享乐的恋爱不好，只是，我们已经有过这样的阶段了，总是要到下一个阶段的。<br>爱总是会消失的，如果不转化为习惯、依赖、责任，那就很难以后了，没有人会永远保持新鲜感。所以，希望每个人都能认识到，自己为什么要谈恋爱，不要总是被推着走，这样才值得健康的恋爱，打开心结吧，我的朋友们。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;对于恋爱的一些思索&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在我成长这么多年，最值得一提的一点就是，我和家庭的和解。我一直不明白我是怎么从厌倦逃离家庭到现在想念和热爱我的家庭的，现在大概明白了，是恋爱教会我如何爱和感受爱。&lt;br&gt;其实每次有勇气面
+      
+    
+    </summary>
+    
+    
+      <category term="日常" scheme="https://asea.fun/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+      <category term="life" scheme="https://asea.fun/tags/life/"/>
+    
+  </entry>
   
   <entry>
     <title>疫情下的宿管阿姨</title>
@@ -49,14 +107,14 @@
     <published>2021-12-11T01:29:46.000Z</published>
     <updated>2021-12-11T01:34:07.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>前段时间看了乙一，感悟到故事以及写故事本身的魅力，所以想把闹钟很有意思的想法也写成故事来，尝试写了一部分，但是后面的故事情节自己很不满意，所以目前的框架还没搭起来，但是近期实在忙碌，就先停一停，我相信所有人都会理解的。</p></blockquote><h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>八月份的天流金铄石，这让我一直处于一种焦虑的状态里，每过正午，我坐在电脑面前盯着屏幕上密密麻麻的代码就会感到热浪从我的背后紧紧包裹着我。我明明开了空调，空调外机的声音已经响彻楼层，但我依然感到酷热难耐。我感觉那热像是化成了人形，就在我的周围走来走去，我挥舞胳膊却怎么也抓不到它，于是我决定出去走走。由于不知道要出去多久，或许几天几夜也不回来，出于安全我把寝室的电源断了，不过是拉下电闸那么简单。<br>刚走出宿舍门，我就感到我被前后夹击了，那化成人形的热跟着我溜了出来，和外面的热合起伙来收拾我。我猜测这会宿舍又凉快下来了，但我不愿再回去，我抱着自己做好防御工事，一边同热较量，一边踉踉跄跄下了楼，期间与正在上楼的工人师傅撞了满怀，我们互相沉默，匆忙走掉。宿管在值班的位置上一动不动，往常大家会向她问好，但这个时候我们都不想被打扰。我喜欢看见她睡着，这样我会很自在。</p><p>我走出了宿舍楼，成千上万的蝉鸣向我扑过来，我眯起眼睛看着四周，到处都是郁郁葱葱的树，我知道那可恶的蝉就藏在里面。白色的天空从树的缝隙间流到地上，汇聚成一滩滩大大小小的水洼。我拖着步子在这胶状的空气里行走，打算到便利店买瓶啤酒。前后左右到处都是热，他们太吵了，推搡着我，挤压着我，搞得我晕头转向。<br>便利店在学校不远处，自动门打开了，一股凉意从里面偷跑出来。自动门每开一次都要偷偷跑出来一些凉，就像我从宿舍里跑出来一样，而随后，也就是在自动门关上以后，还会有一些凉会被抓回便利店——空调就是这么残忍的家伙。<br>我对便利店的东西如数家珍，由于不喜欢在食堂的人群中乞求座位，我常常自己出来到便利店寻找能够填饱肚子的食物——这里总是空无一人。从冷柜里拿出来啤酒，结账，随后又坐在了靠玻璃墙的凳子上。囚禁着凉的液体从我的嘴唇灌进口腔流过食道到达我的胃部，每次吞咽，我都把凉从易拉罐里转移到了我的胃里，它们只不过是换个牢房罢了。我坐在那里四处张望，似乎这样可以给便利店增加点人气，这时自动门开了，伴随着轻快的音乐，我看见她走了进来。</p><p>我惊讶地看到她和我拿了一样的啤酒然后坐在了我的身边。我并不太喜欢和陌生人来往，坐在便利店也是因为这里很少有人驻留，这里已经成了我的私人领地，所以她的入侵顿时让我有点生气，于是我决定不再理她。<br>“你好，坐在这里你不会生气吧？”<br>手机屏幕亮了，我收到了这样一封Email，打开我的电子邮箱，这样短短的文字就这样肆意地躺在我面前。她怎么会知道我的邮箱，我往右边悄悄斜了一眼，并没有发现她的任何动静，我期待这个时候她看我一眼，那样只要我扭过头我们就会双目对视，这将是绝佳的交流时机。从这一刻我开始觉得她是个有趣的人。但是她并没有。她没有任何动静，就像我不存在一样。由于我不善于直视别人，所以一时没办法弄懂她具体在干什么，但我可以肯定的是她并没有看我。<br>我想了想还是决定给她回信，我并不确定这封邮件是谁发的，但直觉告诉我一定是她。</p><p>“随便，又不是我的地盘！”<br>我昧着心意回了邮件，虽然我同意了，但是由于我担心她会察觉不到我客气的背后还有一丝不满，所以加了叹号。但我不知道她会怎样解读这个感叹号，或许她会理解为我的热情好客，一想到这里我又感觉后悔。<br>“你在吃什么呀？”<br>我注意到她邮箱的昵称是“关”，或许是她的姓氏，也或许是她名字中最喜欢的一个字，但我更倾向于礼貌地叫她关小姐。<br>因为常常孤身一人，所以我格外珍惜这次交流，虽然我明明什么也没有吃，我也很不希望对话到我这里就戛然而止——尽管我一开始并不是很喜欢这个关小姐。而当我已经写好了要回复的内容时，手机却怎么也上不了网了。</p><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>本意决定在外面逗留几天的我又回到了宿舍，因为我无论如何也连不上便利店的网络，而移动网络在此刻也断了链子。不出所料，宿舍里果然凉了下来，空调还在轰隆隆的工作着，我这才意识到空调的电路是另外的，即便我切断了整个寝室的电源。<br>我将总闸重新推上去，随着“哔——”的一声，启辉器将日光灯管点亮。自从暑假室友都回家以后就没有关过灯，这样独自一人看着灯管从暗到亮还是第一次。但我顾不上灯管了，我的目光拽着我坐下打开电脑，但很不幸——我的电脑也连不上网络了。我觉得很诧异，我又拿起手机，网络旁边的叹号依然在，天哪，我居然没办法发出一封小小的邮件！<br>蝉忽然静了下来，我听到外面公交车到站的播报，楼上有人冲了厕所，还有不知道是几楼的水管不停地发出嘤嘤嘤的怪叫，那是空气柱在高压下不停震动产生的声音。我仿佛看到那声音和蝉鸣和热浪趁我不注意潜入宿舍将我的网线咬断，将便利店的网线咬断，又钻进我的手机将所有的天线网卡都一并咬断，它就是要我上不了网。</p><p>“谢谢你告诉我，听你说话的语气，你是一个好人<del>”<br>这时我又收到了邮件。<br>我看着那句似乎是赞赏我又似乎是讽刺我而且还有些让人摸不着头脑的话出现在手机通知栏里，和网络旁边的叹号一样，它切切实实的存在着。我试着点开通知，我仿佛听到关小姐在我身后对着我的耳朵说“你是一个好人</del>”。<br>她为什么还能发进来邮件呢？我什么也没告诉她呀！说话的语气是指我同意她坐下的语气吗？她是误解了我的感叹号吗？为什么要称我为一个好人呢，明明素不相识！我觉得很难理解，同时也很气愤。我不理解为何断网还能收到她的邮件，我气愤即便她是在夸我，我依然不喜欢一个陌生人称呼我为一个好人，正如我不喜欢随便称呼一个不认识的人为好人一样，哪能如此随意的就给对方套上好人的光环。我想象着假如我依然坐在便利店，她忽然站起来居高临下看着我，对我伸出右手说，你是一个好人。这样的事想想都有点恶心。</p><p>“原来你才大四啊？我已经研二了！”<br>邮件又来了，我拉过来室友的躺椅，将自己陷入柔软当中。夏日的炎热已经烟消云散，蝉鸣不再聒噪，我甚是感受到了风在我的头顶绕来绕去，清凉的雨从我脖间流下，滑过我出汗的脊背钻进衣服的沟壑里。我想象着她下一封邮件会发什么，我马上要大三了，我明白了她并不是在跟我聊天，这邮件一定是要发给另一个人的。这时的我有一种偷窥其他人秘密的快感，不过究竟是什么样的人会用邮件聊天呢。我在柔软中等着下一封邮件的到来，我似乎在像看一本小说一样不停地猜测接下来的情节走向，我想她可能是上个年代的人，那个时候或许他们还比较习惯用邮件交流；不过也可能是和我一个时代的人，要真的这样，那可就有趣起来了。我喜欢有趣的人，然而我太不擅长打交道，每次遇到有趣的人又经常把关系搞得一团糟，但是这次却有个有趣的人自己送上门来，我可以肆无忌惮的窥视着她的邮件而不用担心搞砸关系。一想到这些我又感觉很兴奋，要是有个人站在我旁边，一定会觉得我是个变态。你想想，一个独居的大三男生窝在躺椅上咧着嘴笑，脑子里还幻想着窥视其它女生的聊天，多么变态啊！<br>就这样想着，等了很久，邮件却迟迟不来。也许是最近学业压力太大了，或者是夏天的热让我很久没有睡过好觉了，我就这样躺着睡着了。</p><h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>我坐在便利店里，关小姐也坐在那里，我们看着太阳一点点地碎成各种各样的灯，夜色渐起，我们不知不觉坐了一整个下午。<br>你已经研二了吗？<br>过几天就研二了。<br>我们只有这么两句对话，然后举起手中的易拉罐干了杯，但里面早已滴酒未剩。纯生真的很苦，我想了半天才想出来这么一句话，但看她刚刚喝酒的时候并没有面露难色，也许她挺喜欢，所以还是作罢。我准备找个机会溜走，这样的气氛实在令我难受，我想坐到打烊，这样我就有合理的理由离开。可是随即想到我身处的便利店是全天营业，我又泄了气。那种坐立不安的感觉从我的脚趾蔓延到全身来，我感到麻酥酥的，冷冰冰的，我似乎出了很多汗，我又感到了粘稠的热。我突然看到她站起来走到我的背后，我感到她从背后抱住了我，一大片柔软覆盖在我的后背上。</p><p>醒来的时候已经是第二天凌晨五点钟了，最近养成的生物钟准时地将我从奇怪的梦中唤醒。日光灯粘在天花板上明晃晃的，我感觉自己的身体在不住地冒汗和战栗，我摸了摸额头，然后眯着眼睛摸到遥控器把空调关了。<br>不知道是中暑还是感冒了，上一次生病已经是很久以前的事，手边一点药物都没有。我撑着站了起来，日光灯洒下来的光就像白天的太阳一样，我一时分不清现在在哪里。我起身走到水管前，捧起一大捧凉水浇在脸上，顿时清醒不少。水管旁边是窗户，我向外面望去，现在已经是五点一刻了，天边泛起红色，仅有的一点云彩慵懒的飘着，也可能只是静静地呆在那，连飘也懒得飘。<br>缓过神来以后我又坐在电脑前，依旧连不上网，我才想起来睡前在等待着关小姐的邮件，这时梦里她从后面抱住我的情景才浮现出来。我打开手机查看有无新的邮件。</p><p>“早，又是新的一天，昨天和你聊得很开心。”<br>我刷新了好几次，没有网络，而且只收到了这一封邮件。从邮件的内容来看，我错过了很多对话，我猜想关小姐一直在和另一个人聊天，而且看样子聊的还不错，居然已经到了发早安的地步了。他们从昨天开始认识，然后聊了很久。我想在我陷入沉睡的时间里他们一定聊的热火朝天，一定觉得遇到了知己。他们谈天气，谈交通，谈研究生学业（尽管我不知道对方是谁，甚至性别都不知道），谈哪个大明星又被处理了，谈雪花要比纯生好喝，谈她身边坐了一个一言不发的人，谈过几天要去哪里玩……我很想知道他们到底聊了什么，和关小姐聊天的人到底是谁，为什么我只收到了部分邮件。我害怕她突然发现自己发错了邮件然后我的小说就成了太监，我想看，我想的不得了，我觉得他们俩已经在我的心里住下来了，他们甚至已经不是聊天，他们在我的心里认识、熟络、谈恋爱、结婚、做爱，甚至已经过了一辈子。空调停止运作以后周围都安静下来了，除了偶尔呼啸而过的飞机就再也听不到任何声响，我又躺在柔软里，开始思前想后。我躺不下去了，我在寝室里来回踱了几千步，我终于忍无可忍了，我决定再去一趟便利店。</p><h2 id="四"><a href="#四" class="headerlink" title="四"></a>四</h2><p>时间大概是六点钟，阿姨刚刚才把寝室楼大门打开不久，我向她问了好然后灰溜溜的出门了。夏天的清晨很舒适，朝霞出生但太阳还未完全升起，空气里氤氲着清爽的香气，天边的云在此时就像是燃烧的棉花，那是一种温润的红色，没有晚霞那么夺目。我感到舒服多了，尽管身体还带着病，但我一路小跑来到了便利店。店员看见我进来和我打了招呼，这个店员我从来没见过。想必我对她也是，但她笑得很开心，像是马上就要下班了一样。我犹豫了一下没有去拿啤酒，手边没有药物，我还是不乱喝东西了吧。我取了三明治拿给店员加热，然后和她攀谈起来——我从来没有主动找这些人聊过，但此时此刻就是想找她聊聊。<br>你知道关小姐吗？昨天在这坐着喝酒来着，昨天下午。<br>店员摇了摇头，并把加热好的三明治递给我，我又让她取了杯刚做好的豆浆。<br>我总是和人说不过两句话，我惴惴不安地回到窗户前，坐在了她昨天坐过的地方，然后手机亮了起来。<br>(未完待续…)</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>前段时间看了乙一，感悟到故事以及写故事本身的魅力，所以想把脑中很有意思的想法也写成故事来，尝试写了一部分，但是后面的故事情节自己很不满意，所以目前的框架还没搭起来，但是近期实在忙碌，就先停一停，我相信所有人都会理解的。</p></blockquote><h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>八月份的天流金铄石，这让我一直处于一种焦虑的状态里，每过正午，我坐在电脑面前盯着屏幕上密密麻麻的代码就会感到热浪从我的背后紧紧包裹着我。我明明开了空调，空调外机的声音已经响彻楼层，但我依然感到酷热难耐。我感觉那热像是化成了人形，就在我的周围走来走去，我挥舞胳膊却怎么也抓不到它，于是我决定出去走走。由于不知道要出去多久，或许几天几夜也不回来，出于安全我把寝室的电源断了，不过是拉下电闸那么简单。<br>刚走出宿舍门，我就感到我被前后夹击了，那化成人形的热跟着我溜了出来，和外面的热合起伙来收拾我。我猜测这会宿舍又凉快下来了，但我不愿再回去，我抱着自己做好防御工事，一边同热较量，一边踉踉跄跄下了楼，期间与正在上楼的工人师傅撞了满怀，我们互相沉默，匆忙走掉。宿管在值班的位置上一动不动，往常大家会向她问好，但这个时候我们都不想被打扰。我喜欢看见她睡着，这样我会很自在。</p><p>我走出了宿舍楼，成千上万的蝉鸣向我扑过来，我眯起眼睛看着四周，到处都是郁郁葱葱的树，我知道那可恶的蝉就藏在里面。白色的天空从树的缝隙间流到地上，汇聚成一滩滩大大小小的水洼。我拖着步子在这胶状的空气里行走，打算到便利店买瓶啤酒。前后左右到处都是热，他们太吵了，推搡着我，挤压着我，搞得我晕头转向。<br>便利店在学校不远处，自动门打开了，一股凉意从里面偷跑出来。自动门每开一次都要偷偷跑出来一些凉，就像我从宿舍里跑出来一样，而随后，也就是在自动门关上以后，还会有一些凉会被抓回便利店——空调就是这么残忍的家伙。<br>我对便利店的东西如数家珍，由于不喜欢在食堂的人群中乞求座位，我常常自己出来到便利店寻找能够填饱肚子的食物——这里总是空无一人。从冷柜里拿出来啤酒，结账，随后又坐在了靠玻璃墙的凳子上。囚禁着凉的液体从我的嘴唇灌进口腔流过食道到达我的胃部，每次吞咽，我都把凉从易拉罐里转移到了我的胃里，它们只不过是换个牢房罢了。我坐在那里四处张望，似乎这样可以给便利店增加点人气，这时自动门开了，伴随着轻快的音乐，我看见她走了进来。</p><p>我惊讶地看到她和我拿了一样的啤酒然后坐在了我的身边。我并不太喜欢和陌生人来往，坐在便利店也是因为这里很少有人驻留，这里已经成了我的私人领地，所以她的入侵顿时让我有点生气，于是我决定不再理她。<br>“你好，坐在这里你不会生气吧？”<br>手机屏幕亮了，我收到了这样一封Email，打开我的电子邮箱，这样短短的文字就这样肆意地躺在我面前。她怎么会知道我的邮箱，我往右边悄悄斜了一眼，并没有发现她的任何动静，我期待这个时候她看我一眼，那样只要我扭过头我们就会双目对视，这将是绝佳的交流时机。从这一刻我开始觉得她是个有趣的人。但是她并没有。她没有任何动静，就像我不存在一样。由于我不善于直视别人，所以一时没办法弄懂她具体在干什么，但我可以肯定的是她并没有看我。<br>我想了想还是决定给她回信，我并不确定这封邮件是谁发的，但直觉告诉我一定是她。</p><p>“随便，又不是我的地盘！”<br>我昧着心意回了邮件，虽然我同意了，但是由于我担心她会察觉不到我客气的背后还有一丝不满，所以加了叹号。但我不知道她会怎样解读这个感叹号，或许她会理解为我的热情好客，一想到这里我又感觉后悔。<br>“你在吃什么呀？”<br>我注意到她邮箱的昵称是“关”，或许是她的姓氏，也或许是她名字中最喜欢的一个字，但我更倾向于礼貌地叫她关小姐。<br>因为常常孤身一人，所以我格外珍惜这次交流，虽然我明明什么也没有吃，我也很不希望对话到我这里就戛然而止——尽管我一开始并不是很喜欢这个关小姐。而当我已经写好了要回复的内容时，手机却怎么也上不了网了。</p><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>本意决定在外面逗留几天的我又回到了宿舍，因为我无论如何也连不上便利店的网络，而移动网络在此刻也断了链子。不出所料，宿舍里果然凉了下来，空调还在轰隆隆的工作着，我这才意识到空调的电路是另外的，即便我切断了整个寝室的电源。<br>我将总闸重新推上去，随着“哔——”的一声，启辉器将日光灯管点亮。自从暑假室友都回家以后就没有关过灯，这样独自一人看着灯管从暗到亮还是第一次。但我顾不上灯管了，我的目光拽着我坐下打开电脑，但很不幸——我的电脑也连不上网络了。我觉得很诧异，我又拿起手机，网络旁边的叹号依然在，天哪，我居然没办法发出一封小小的邮件！<br>蝉忽然静了下来，我听到外面公交车到站的播报，楼上有人冲了厕所，还有不知道是几楼的水管不停地发出嘤嘤嘤的怪叫，那是空气柱在高压下不停震动产生的声音。我仿佛看到那声音和蝉鸣和热浪趁我不注意潜入宿舍将我的网线咬断，将便利店的网线咬断，又钻进我的手机将所有的天线网卡都一并咬断，它就是要我上不了网。</p><p>“谢谢你告诉我，听你说话的语气，你是一个好人~”<br>这时我又收到了邮件。<br>我看着那句似乎是赞赏我又似乎是讽刺我而且还有些让人摸不着头脑的话出现在手机通知栏里，和网络旁边的叹号一样，它切切实实的存在着。我试着点开通知，我仿佛听到关小姐在我身后对着我的耳朵说“你是一个好人~”。<br>她为什么还能发进来邮件呢？我什么也没告诉她呀！说话的语气是指我同意她坐下的语气吗？她是误解了我的感叹号吗？为什么要称我为一个好人呢，明明素不相识！我觉得很难理解，同时也很气愤。我不理解为何断网还能收到她的邮件，我气愤即便她是在夸我，我依然不喜欢一个陌生人称呼我为一个好人，正如我不喜欢随便称呼一个不认识的人为好人一样，哪能如此随意的就给对方套上好人的光环。我想象着假如我依然坐在便利店，她忽然站起来居高临下看着我，对我伸出右手说，你是一个好人。这样的事想想都有点恶心。</p><p>“原来你才大四啊？我已经研二了！”<br>邮件又来了，我拉过来室友的躺椅，将自己陷入柔软当中。夏日的炎热已经烟消云散，蝉鸣不再聒噪，我甚是感受到了风在我的头顶绕来绕去，清凉的雨从我脖间流下，滑过我出汗的脊背钻进衣服的沟壑里。我想象着她下一封邮件会发什么，我马上要大三了，我明白了她并不是在跟我聊天，这邮件一定是要发给另一个人的。这时的我有一种偷窥其他人秘密的快感，不过究竟是什么样的人会用邮件聊天呢。我在柔软中等着下一封邮件的到来，我似乎在像看一本小说一样不停地猜测接下来的情节走向，我想她可能是上个年代的人，那个时候或许他们还比较习惯用邮件交流；不过也可能是和我一个时代的人，要真的这样，那可就有趣起来了。我喜欢有趣的人，然而我太不擅长打交道，每次遇到有趣的人又经常把关系搞得一团糟，但是这次却有个有趣的人自己送上门来，我可以肆无忌惮的窥视着她的邮件而不用担心搞砸关系。一想到这些我又感觉很兴奋，要是有个人站在我旁边，一定会觉得我是个变态。你想想，一个独居的大三男生窝在躺椅上咧着嘴笑，脑子里还幻想着窥视其它女生的聊天，多么变态啊！<br>就这样想着，等了很久，邮件却迟迟不来。也许是最近学业压力太大了，或者是夏天的热让我很久没有睡过好觉了，我就这样躺着睡着了。</p><h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>我坐在便利店里，关小姐也坐在那里，我们看着太阳一点点地碎成各种各样的灯，夜色渐起，我们不知不觉坐了一整个下午。<br>你已经研二了吗？<br>过几天就研二了。<br>我们只有这么两句对话，然后举起手中的易拉罐干了杯，但里面早已滴酒未剩。纯生真的很苦，我想了半天才想出来这么一句话，但看她刚刚喝酒的时候并没有面露难色，也许她挺喜欢，所以还是作罢。我准备找个机会溜走，这样的气氛实在令我难受，我想坐到打烊，这样我就有合理的理由离开。可是随即想到我身处的便利店是全天营业，我又泄了气。那种坐立不安的感觉从我的脚趾蔓延到全身来，我感到麻酥酥的，冷冰冰的，我似乎出了很多汗，我又感到了粘稠的热。我突然看到她站起来走到我的背后，我感到她从背后抱住了我，一大片柔软覆盖在我的后背上。</p><p>醒来的时候已经是第二天凌晨五点钟了，最近养成的生物钟准时地将我从奇怪的梦中唤醒。日光灯粘在天花板上明晃晃的，我感觉自己的身体在不住地冒汗和战栗，我摸了摸额头，然后眯着眼睛摸到遥控器把空调关了。<br>不知道是中暑还是感冒了，上一次生病已经是很久以前的事，手边一点药物都没有。我撑着站了起来，日光灯洒下来的光就像白天的太阳一样，我一时分不清现在在哪里。我起身走到水管前，捧起一大捧凉水浇在脸上，顿时清醒不少。水管旁边是窗户，我向外面望去，现在已经是五点一刻了，天边泛起红色，仅有的一点云彩慵懒的飘着，也可能只是静静地呆在那，连飘也懒得飘。<br>缓过神来以后我又坐在电脑前，依旧连不上网，我才想起来睡前在等待着关小姐的邮件，这时梦里她从后面抱住我的情景才浮现出来。我打开手机查看有无新的邮件。</p><p>“早，又是新的一天，昨天和你聊得很开心。”<br>我刷新了好几次，没有网络，而且只收到了这一封邮件。从邮件的内容来看，我错过了很多对话，我猜想关小姐一直在和另一个人聊天，而且看样子聊的还不错，居然已经到了发早安的地步了。他们从昨天开始认识，然后聊了很久。我想在我陷入沉睡的时间里他们一定聊的热火朝天，一定觉得遇到了知己。他们谈天气，谈交通，谈研究生学业（尽管我不知道对方是谁，甚至性别都不知道），谈哪个大明星又被处理了，谈雪花要比纯生好喝，谈她身边坐了一个一言不发的人，谈过几天要去哪里玩……我很想知道他们到底聊了什么，和关小姐聊天的人到底是谁，为什么我只收到了部分邮件。我害怕她突然发现自己发错了邮件然后我的小说就成了太监，我想看，我想的不得了，我觉得他们俩已经在我的心里住下来了，他们甚至已经不是聊天，他们在我的心里认识、熟络、谈恋爱、结婚、做爱，甚至已经过了一辈子。空调停止运作以后周围都安静下来了，除了偶尔呼啸而过的飞机就再也听不到任何声响，我又躺在柔软里，开始思前想后。我躺不下去了，我在寝室里来回踱了几千步，我终于忍无可忍了，我决定再去一趟便利店。</p><h2 id="四"><a href="#四" class="headerlink" title="四"></a>四</h2><p>时间大概是六点钟，阿姨刚刚才把寝室楼大门打开不久，我向她问了好然后灰溜溜的出门了。夏天的清晨很舒适，朝霞出生但太阳还未完全升起，空气里氤氲着清爽的香气，天边的云在此时就像是燃烧的棉花，那是一种温润的红色，没有晚霞那么夺目。我感到舒服多了，尽管身体还带着病，但我一路小跑来到了便利店。店员看见我进来和我打了招呼，这个店员我从来没见过。想必我对她也是，但她笑得很开心，像是马上就要下班了一样。我犹豫了一下没有去拿啤酒，手边没有药物，我还是不乱喝东西了吧。我取了三明治拿给店员加热，然后和她攀谈起来——我从来没有主动找这些人聊过，但此时此刻就是想找她聊聊。<br>你知道关小姐吗？昨天在这坐着喝酒来着，昨天下午。<br>店员摇了摇头，并把加热好的三明治递给我，我又让她取了杯刚做好的豆浆。<br>我总是和人说不过两句话，我惴惴不安地回到窗户前，坐在了她昨天坐过的地方，然后手机亮了起来。<br>(未完待续…)</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;blockquote&gt;
-&lt;p&gt;前段时间看了乙一，感悟到故事以及写故事本身的魅力，所以想把闹钟很有意思的想法也写成故事来，尝试写了一部分，但是后面的故事情节自己很不满意，所以目前的框架还没搭起来，但是近期实在忙碌，就先停一停，我相信所有人都会理解的。&lt;/p&gt;
+&lt;p&gt;前段时间看了乙一，感悟到故事以及写故事本身的魅力，所以想把脑中很有意思的想法也写成故事来，尝试写了一部分，但是后面的故事情节自己很不满意，所以目前的框架还没搭起来，但是近期实在忙碌，就先停一停，我相信所有人都会理解的。&lt;/p&gt;
 &lt;/blockquo
       
     
@@ -523,59 +581,6 @@
     
     
       <category term="c++" scheme="https://asea.fun/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>初探Java</title>
-    <link href="https://asea.fun/post/eb0811b7.html"/>
-    <id>https://asea.fun/post/eb0811b7.html</id>
-    <published>2021-07-21T16:12:40.000Z</published>
-    <updated>2021-07-25T15:40:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h2><blockquote><p>推荐环境统一放在一个environment的文件夹下，最新的jdk的jre不用自己配置，只需要配置java_home以及path即可。<br>安装后移动jdk路径，会导致cmd无任何输出，可以重新安装一下（如果你想换位置的话）。</p></blockquote><h2 id="DOS命令"><a href="#DOS命令" class="headerlink" title="DOS命令"></a>DOS命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1. dir</span><br><span class="line">2. cd /d E:\xxx 跨盘操作</span><br><span class="line">3. cls (clear screen)</span><br><span class="line">4. exit</span><br><span class="line">5. ipconfig</span><br><span class="line">6. calc</span><br><span class="line">7. mspaint</span><br><span class="line">8. notepad</span><br><span class="line">9. ping + domain</span><br><span class="line">10. md test</span><br><span class="line">11. cd&gt;a.txt</span><br><span class="line">12. del a.txt</span><br><span class="line">13. rd test</span><br></pre></td></tr></table></figure><h2 id="基础知识点"><a href="#基础知识点" class="headerlink" title="基础知识点"></a>基础知识点</h2><ol><li><p>大小写敏感、强类型</p></li><li><p>char c  = ‘\u0061’</p></li><li><p>引用类型比较地址 基本类型比较值</p></li><li><p>高到低：强制转换；低到高：自动转换</p><ol><li>byte-&gt;short-&gt;hcar-&gt;int-&gt;long-&gt;float-&gt;double</li></ol></li><li><p>JDK7后数字可以用下划线分割</p></li><li><p>方法重载（参数类型、个数、排序不同）</p></li><li><p>数组</p><ol><li><p>int[] nums; （首选）</p></li><li><p>int nums[]; （C的风格）</p></li><li><p>int[] nums = new int[10];nums[0] = 1（动态初始化，先声明，后赋值）隐式初始化，int默认0，string默认null</p></li><li><p>int [] nums = {1,2,3}（静态初始化：创建直接赋值）</p></li><li><p>长度是确定的，不可更改，元素类型相同，可以是基本类型也可是引用类型</p></li><li><p>for-each:</p><ol><li><pre><code class="java"><span class="keyword">for</span>(<span class="keyword">int</span> array : arrays)&#123;    System.out.println(array);&#125;</code></pre></li></ol></li><li><p>Arrays类</p><ol><li>Arrays.sort()</li><li>Arrays.fill()</li><li>Arrays.tostring()</li></ol></li><li><p>稀疏数组</p><ol><li>总行 总列 有效值个数</li><li>行 列 值</li><li>…</li></ol></li></ol></li></ol><h2 id="面向对象（OOP）"><a href="#面向对象（OOP）" class="headerlink" title="面向对象（OOP）"></a>面向对象（OOP）</h2><ol><li><p>非静态方法需要实例化才能调用</p></li><li><p>引用传递、值传递</p></li><li><p>构造器（方法名和类名一致）,new本质是在调用构造器</p></li><li><p>无参构造再不定义任何构造时会自动生成，反之必须自己显示定义。</p></li><li><p>idea :  alt+insert 自动生成构造器</p></li><li><p>封装：属性私有，get，set</p></li><li><p>继承：实例化子类时，会先调用父类构造器，如果显式定义构造器，super（）必须在子类构造器的第一行。ctrl + h继承树</p></li><li><p>重写：方法名和参数列表必须一样</p></li><li><p>多态：能调用的方法只看引用类型，且如果子类重写父类方法，则运行子类方法。 多态是方法的多态</p></li><li><p>A instanceof B</p></li><li></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;踩坑&quot;&gt;&lt;a href=&quot;#踩坑&quot; class=&quot;headerlink&quot; title=&quot;踩坑&quot;&gt;&lt;/a&gt;踩坑&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;推荐环境统一放在一个environment的文件夹下，最新的jdk的jre不用自己配置，只需要配置java_hom
-      
-    
-    </summary>
-    
-    
-      <category term="笔记" scheme="https://asea.fun/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Java" scheme="https://asea.fun/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何搭建自己的网页编程（Jupyter）</title>
-    <link href="https://asea.fun/post/ecef5fd9.html"/>
-    <id>https://asea.fun/post/ecef5fd9.html</id>
-    <published>2021-07-19T10:04:48.000Z</published>
-    <updated>2021-07-19T12:17:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="关于如何利用Jupyter-Notebook搭建网页编程"><a href="#关于如何利用Jupyter-Notebook搭建网页编程" class="headerlink" title="关于如何利用Jupyter Notebook搭建网页编程"></a>关于如何利用Jupyter Notebook搭建网页编程</h1><h2 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h2><p><img src="https://pic.imgdb.cn/item/60f54fb95132923bf82d6ab0.jpg" alt></p><h2 id="安装jupyter"><a href="#安装jupyter" class="headerlink" title="安装jupyter"></a>安装jupyter</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install jupyter</span><br><span class="line"># 安装失败的可以考虑换阿里源</span><br><span class="line"># 修改.&#x2F;pip&#x2F;pip.ini 为</span><br><span class="line">[global]</span><br><span class="line">index-url &#x3D; https:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;pypi&#x2F;simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host &#x3D; mirrors.aliyun.com</span><br></pre></td></tr></table></figure><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><code>jupyter notebook --generate-config</code></p><ol><li>第一种密码配置<br><code>jupyter notebook password</code><br>确认密码后得到密文，复制。<br>在.py文件末尾填上如下几句<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">c.NotebookApp.password &#x3D; u&#39;这里填写密文&#39;       # 刚才复制的那个密文</span><br><span class="line">c.NotebookApp.open_browser &#x3D; False       # 禁止自动打开浏览器  </span><br><span class="line">c.NotebookApp.port &#x3D;8888                         #随便指定一个端口，默认就是8888，也可以不写</span><br><span class="line">c.NotebookApp.certfile &#x3D; u&#39;c:&#x2F;&#x2F;xxx&#x2F;&#x2F;xxx&#39;   # 根目录，一定要写转义符（我就是错在这里，要认真看报错）</span><br></pre></td></tr></table></figure></li><li>第二种密码配置<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> IPython</span><br><span class="line">IPython.lib.passwd()</span><br></pre></td></tr></table></figure>得到密文，修改.py文件<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">c.NotebookApp.password &#x3D; u&#39;这里填写密文&#39;       # 刚才复制的那个密文</span><br><span class="line">c.NotebookApp.open_browser &#x3D; False       # 禁止自动打开浏览器  </span><br><span class="line">c.NotebookApp.port &#x3D;8888                         #随便指定一个端口，默认就是8888，也可以不写</span><br><span class="line">c.NotebookApp.certfile &#x3D; u&#39;c:&#x2F;&#x2F;xxx&#x2F;&#x2F;xxx&#39;   # 根目录，一定要写转义符（我就是错在这里，要认真看报错）</span><br></pre></td></tr></table></figure></li></ol><h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p><code>jupyter notebook</code><br>注意启动后命令行弹出的运行地址包括token</p><h2 id="本地访问"><a href="#本地访问" class="headerlink" title="本地访问"></a>本地访问</h2><p>第一种密码配置：localhost:8888<br>第二种密码配置：localhost:8888?token=xxxx，登陆以后可以logout，通过token设置密码，然后可以正常登录，也可以重新启动一下，若提示.py和.json密码不匹配，可以重新采取第一种密码配置，强制修改密码。</p><h2 id="远端访问"><a href="#远端访问" class="headerlink" title="远端访问"></a>远端访问</h2><p>ip:8888<br>记得去控制台安全组实例把端口开放</p><p>到此结束</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;关于如何利用Jupyter-Notebook搭建网页编程&quot;&gt;&lt;a href=&quot;#关于如何利用Jupyter-Notebook搭建网页编程&quot; class=&quot;headerlink&quot; title=&quot;关于如何利用Jupyter Notebook搭建网页编程&quot;&gt;&lt;/a&gt;关于
-      
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://asea.fun/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Jupyter" scheme="https://asea.fun/tags/Jupyter/"/>
     
   </entry>
   
