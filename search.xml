@@ -62,6 +62,35 @@
       </tags>
   </entry>
   <entry>
+    <title>python + mysql</title>
+    <url>/post/1fc191f2.html</url>
+    <content><![CDATA[<blockquote>
+<p>其实大壳的后台管理非常的杂乱，也不是说本身多么复杂，只不过不管是配置文件，还是各个module，甚至是数据存储都在用文件式存储，以至于很多时候花了很多心思优化逻辑还是一塌糊涂。就拿教务处提醒为例，因为一直不想用数据库，所以一直拿文件存储，但是局限性太大了，最近老是出bug，所以决定上手数据库了。<br>由于服务器上还跑了很多东西，例如apache、jupyter等，所以phpstudy一直挂着，索性拿它提供的工具直接装mysql吧。毕竟一直在学数据库，但真正自己放到项目里还没实践过。</p>
+</blockquote>
+<h2 id="梳理项目结构"><a href="#梳理项目结构" class="headerlink" title="梳理项目结构"></a>梳理项目结构</h2><blockquote>
+<p>不得不吐槽的是，我的主文件里写了一大堆import，结构一塌糊涂，所以今天认真了解了一下python的package机制，把我自己写的模块封装到utils的package下，然后再package里建立<code>__init__.py</code>，将需要的模块放到<code>__all__</code>这个数组变量里，类型都是不带后缀的字符串，这样在主文件里只需要<code>from utils import *</code>就行，终于整齐了一些</p>
+</blockquote>
+<p><img src="https://pic.imgdb.cn/item/61bc96782ab3f51d9194d25a.jpg" alt></p>
+<h2 id="配置mysql"><a href="#配置mysql" class="headerlink" title="配置mysql"></a>配置mysql</h2><ol>
+<li>phpstudy里安装好mysql和可视化界面（我选的是sql_front)，其实也用不了几下，你也可以敲命令，都很快。</li>
+<li>创建自己的数据库，建表，设计结构。</li>
+<li>哦对了<code>mysql -uroot -pxxxx</code>，记一下命令，用来命令行连接数据库。</li>
+<li>基本配置好后，着手学习<code>pymysql</code>来连接python和mysql，很简单，这里直接放代码<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 连接MySQL获取游标</span></span><br><span class="line">  db = pymysql.connect(</span><br><span class="line">    host=<span class="string">&#x27;127.0.0.1&#x27;</span>, </span><br><span class="line">    port=<span class="number">3306</span>, </span><br><span class="line">    user=<span class="string">&#x27;root&#x27;</span>, </span><br><span class="line">    password=<span class="string">&#x27;xxxx&#x27;</span>, </span><br><span class="line">    db=<span class="string">&#x27;xxx&#x27;</span>, </span><br><span class="line">    charset=<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">  cur = db.cursor()</span><br><span class="line">  sql_select = <span class="string">&quot;select count(*) from tablename where title = &#x27;&quot;</span>+title+<span class="string">&quot;&#x27;;&quot;</span></span><br><span class="line">  cur.execute(sql_select)</span><br><span class="line">  result = cur.fetchone()</span><br><span class="line">  <span class="keyword">if</span> result[<span class="number">0</span>] &gt; <span class="number">0</span>: <span class="comment"># 如果存在就返回0</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    sql_insert = <span class="string">&quot;insert into tablename values(null,&quot;</span>+ <span class="string">&quot;&#x27;&quot;</span> + <span class="built_in">str</span>(date) + <span class="string">&quot;&#x27;,&#x27;&quot;</span> + title + <span class="string">&quot;&#x27;,&#x27;&quot;</span> + link + <span class="string">&quot;&#x27;);&quot;</span> <span class="comment"># id设置了自增</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">      cur.execute(sql_insert)</span><br><span class="line">      db.commit() <span class="comment"># 事务提交</span></span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">      db.rollback() <span class="comment"># 回滚</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">  cur.close()</span><br><span class="line">  db.close()</span><br></pre></td></tr></table></figure></li>
+<li>值得注意的是sql字符串的拼接注意单引号，以及每次查询（如果不频繁的话）就重新连接最后断开，因为隔一段时间不请求就自动断开了。</li>
+</ol>
+<blockquote>
+<p>我发现其实也没啥东西，但我就是弄了两个小时…可能因为一直想做没勇气做吧，虽然不是什么难事，但还是比较满意….考试周加油。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>丢失的邮件</title>
     <url>/post/894bb4e2.html</url>
     <content><![CDATA[<blockquote>
