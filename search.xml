@@ -62,86 +62,9 @@
       </tags>
   </entry>
   <entry>
-    <title>python + mysql</title>
-    <url>/post/1fc191f2.html</url>
-    <content><![CDATA[<blockquote>
-<p>其实大壳的后台管理非常的杂乱，也不是说本身多么复杂，只不过不管是配置文件，还是各个module，甚至是数据存储都在用文件式存储，以至于很多时候花了很多心思优化逻辑还是一塌糊涂。就拿教务处提醒为例，因为一直不想用数据库，所以一直拿文件存储，但是局限性太大了，最近老是出bug，所以决定上手数据库了。<br>由于服务器上还跑了很多东西，例如apache、jupyter等，所以phpstudy一直挂着，索性拿它提供的工具直接装mysql吧。毕竟一直在学数据库，但真正自己放到项目里还没实践过。</p>
-</blockquote>
-<h2 id="梳理项目结构"><a href="#梳理项目结构" class="headerlink" title="梳理项目结构"></a>梳理项目结构</h2><blockquote>
-<p>不得不吐槽的是，我的主文件里写了一大堆import，结构一塌糊涂，所以今天认真了解了一下python的package机制，把我自己写的模块封装到utils的package下，然后再package里建立<code>__init__.py</code>，将需要的模块放到<code>__all__</code>这个数组变量里，类型都是不带后缀的字符串，这样在主文件里只需要<code>from utils import *</code>就行，终于整齐了一些</p>
-</blockquote>
-<p><img src="https://pic.imgdb.cn/item/61bc96782ab3f51d9194d25a.jpg" alt></p>
-<h2 id="配置mysql"><a href="#配置mysql" class="headerlink" title="配置mysql"></a>配置mysql</h2><ol>
-<li>phpstudy里安装好mysql和可视化界面（我选的是sql_front)，其实也用不了几下，你也可以敲命令，都很快。</li>
-<li>创建自己的数据库，建表，设计结构。</li>
-<li>哦对了<code>mysql -uroot -pxxxx</code>，记一下命令，用来命令行连接数据库。</li>
-<li>基本配置好后，着手学习<code>pymysql</code>来连接python和mysql，很简单，这里直接放代码<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 连接MySQL获取游标</span></span><br><span class="line">  db = pymysql.connect(</span><br><span class="line">    host=<span class="string">&#x27;127.0.0.1&#x27;</span>, </span><br><span class="line">    port=<span class="number">3306</span>, </span><br><span class="line">    user=<span class="string">&#x27;root&#x27;</span>, </span><br><span class="line">    password=<span class="string">&#x27;xxxx&#x27;</span>, </span><br><span class="line">    db=<span class="string">&#x27;xxx&#x27;</span>, </span><br><span class="line">    charset=<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">  cur = db.cursor()</span><br><span class="line">  sql_select = <span class="string">&quot;select count(*) from tablename where title = &#x27;&quot;</span>+title+<span class="string">&quot;&#x27;;&quot;</span></span><br><span class="line">  cur.execute(sql_select)</span><br><span class="line">  result = cur.fetchone()</span><br><span class="line">  <span class="keyword">if</span> result[<span class="number">0</span>] &gt; <span class="number">0</span>: <span class="comment"># 如果存在就返回0</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    sql_insert = <span class="string">&quot;insert into tablename values(null,&quot;</span>+ <span class="string">&quot;&#x27;&quot;</span> + <span class="built_in">str</span>(date) + <span class="string">&quot;&#x27;,&#x27;&quot;</span> + title + <span class="string">&quot;&#x27;,&#x27;&quot;</span> + link + <span class="string">&quot;&#x27;);&quot;</span> <span class="comment"># id设置了自增</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">      cur.execute(sql_insert)</span><br><span class="line">      db.commit() <span class="comment"># 事务提交</span></span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">      db.rollback() <span class="comment"># 回滚</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">  cur.close()</span><br><span class="line">  db.close()</span><br></pre></td></tr></table></figure></li>
-<li>值得注意的是sql字符串的拼接注意单引号，以及每次查询（如果不频繁的话）就重新连接最后断开，因为隔一段时间不请求就自动断开了。</li>
-</ol>
-<blockquote>
-<p>我发现其实也没啥东西，但我就是弄了两个小时…可能因为一直想做没勇气做吧，虽然不是什么难事，但还是比较满意….考试周加油。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>mysql</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>丢失的邮件</title>
-    <url>/post/894bb4e2.html</url>
-    <content><![CDATA[<blockquote>
-<p>前段时间看了乙一，感悟到故事以及写故事本身的魅力，所以想把脑中很有意思的想法也写成故事来，尝试写了一部分，但是后面的故事情节自己很不满意，所以目前的框架还没搭起来，但是近期实在忙碌，就先停一停，我相信所有人都会理解的。</p>
-</blockquote>
-<h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>八月份的天流金铄石，这让我一直处于一种焦虑的状态里，每过正午，我坐在电脑面前盯着屏幕上密密麻麻的代码就会感到热浪从我的背后紧紧包裹着我。我明明开了空调，空调外机的声音已经响彻楼层，但我依然感到酷热难耐。我感觉那热像是化成了人形，就在我的周围走来走去，我挥舞胳膊却怎么也抓不到它，于是我决定出去走走。由于不知道要出去多久，或许几天几夜也不回来，出于安全我把寝室的电源断了，不过是拉下电闸那么简单。<br>刚走出宿舍门，我就感到我被前后夹击了，那化成人形的热跟着我溜了出来，和外面的热合起伙来收拾我。我猜测这会宿舍又凉快下来了，但我不愿再回去，我抱着自己做好防御工事，一边同热较量，一边踉踉跄跄下了楼，期间与正在上楼的工人师傅撞了满怀，我们互相沉默，匆忙走掉。宿管在值班的位置上一动不动，往常大家会向她问好，但这个时候我们都不想被打扰。我喜欢看见她睡着，这样我会很自在。</p>
-<p>我走出了宿舍楼，成千上万的蝉鸣向我扑过来，我眯起眼睛看着四周，到处都是郁郁葱葱的树，我知道那可恶的蝉就藏在里面。白色的天空从树的缝隙间流到地上，汇聚成一滩滩大大小小的水洼。我拖着步子在这胶状的空气里行走，打算到便利店买瓶啤酒。前后左右到处都是热，他们太吵了，推搡着我，挤压着我，搞得我晕头转向。<br>便利店在学校不远处，自动门打开了，一股凉意从里面偷跑出来。自动门每开一次都要偷偷跑出来一些凉，就像我从宿舍里跑出来一样，而随后，也就是在自动门关上以后，还会有一些凉会被抓回便利店——空调就是这么残忍的家伙。<br>我对便利店的东西如数家珍，由于不喜欢在食堂的人群中乞求座位，我常常自己出来到便利店寻找能够填饱肚子的食物——这里总是空无一人。从冷柜里拿出来啤酒，结账，随后又坐在了靠玻璃墙的凳子上。囚禁着凉的液体从我的嘴唇灌进口腔流过食道到达我的胃部，每次吞咽，我都把凉从易拉罐里转移到了我的胃里，它们只不过是换个牢房罢了。我坐在那里四处张望，似乎这样可以给便利店增加点人气，这时自动门开了，伴随着轻快的音乐，我看见她走了进来。</p>
-<p>我惊讶地看到她和我拿了一样的啤酒然后坐在了我的身边。我并不太喜欢和陌生人来往，坐在便利店也是因为这里很少有人驻留，这里已经成了我的私人领地，所以她的入侵顿时让我有点生气，于是我决定不再理她。<br>“你好，坐在这里你不会生气吧？”<br>手机屏幕亮了，我收到了这样一封Email，打开我的电子邮箱，这样短短的文字就这样肆意地躺在我面前。她怎么会知道我的邮箱，我往右边悄悄斜了一眼，并没有发现她的任何动静，我期待这个时候她看我一眼，那样只要我扭过头我们就会双目对视，这将是绝佳的交流时机。从这一刻我开始觉得她是个有趣的人。但是她并没有。她没有任何动静，就像我不存在一样。由于我不善于直视别人，所以一时没办法弄懂她具体在干什么，但我可以肯定的是她并没有看我。<br>我想了想还是决定给她回信，我并不确定这封邮件是谁发的，但直觉告诉我一定是她。</p>
-<p>“随便，又不是我的地盘！”<br>我昧着心意回了邮件，虽然我同意了，但是由于我担心她会察觉不到我客气的背后还有一丝不满，所以加了叹号。但我不知道她会怎样解读这个感叹号，或许她会理解为我的热情好客，一想到这里我又感觉后悔。<br>“你在吃什么呀？”<br>我注意到她邮箱的昵称是“关”，或许是她的姓氏，也或许是她名字中最喜欢的一个字，但我更倾向于礼貌地叫她关小姐。<br>因为常常孤身一人，所以我格外珍惜这次交流，虽然我明明什么也没有吃，我也很不希望对话到我这里就戛然而止——尽管我一开始并不是很喜欢这个关小姐。而当我已经写好了要回复的内容时，手机却怎么也上不了网了。</p>
-<h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>本意决定在外面逗留几天的我又回到了宿舍，因为我无论如何也连不上便利店的网络，而移动网络在此刻也断了链子。不出所料，宿舍里果然凉了下来，空调还在轰隆隆的工作着，我这才意识到空调的电路是另外的，即便我切断了整个寝室的电源。<br>我将总闸重新推上去，随着“哔——”的一声，启辉器将日光灯管点亮。自从暑假室友都回家以后就没有关过灯，这样独自一人看着灯管从暗到亮还是第一次。但我顾不上灯管了，我的目光拽着我坐下打开电脑，但很不幸——我的电脑也连不上网络了。我觉得很诧异，我又拿起手机，网络旁边的叹号依然在，天哪，我居然没办法发出一封小小的邮件！<br>蝉忽然静了下来，我听到外面公交车到站的播报，楼上有人冲了厕所，还有不知道是几楼的水管不停地发出嘤嘤嘤的怪叫，那是空气柱在高压下不停震动产生的声音。我仿佛看到那声音和蝉鸣和热浪趁我不注意潜入宿舍将我的网线咬断，将便利店的网线咬断，又钻进我的手机将所有的天线网卡都一并咬断，它就是要我上不了网。</p>
-<p>“谢谢你告诉我，听你说话的语气，你是一个好人~”<br>这时我又收到了邮件。<br>我看着那句似乎是赞赏我又似乎是讽刺我而且还有些让人摸不着头脑的话出现在手机通知栏里，和网络旁边的叹号一样，它切切实实的存在着。我试着点开通知，我仿佛听到关小姐在我身后对着我的耳朵说“你是一个好人~”。<br>她为什么还能发进来邮件呢？我什么也没告诉她呀！说话的语气是指我同意她坐下的语气吗？她是误解了我的感叹号吗？为什么要称我为一个好人呢，明明素不相识！我觉得很难理解，同时也很气愤。我不理解为何断网还能收到她的邮件，我气愤即便她是在夸我，我依然不喜欢一个陌生人称呼我为一个好人，正如我不喜欢随便称呼一个不认识的人为好人一样，哪能如此随意的就给对方套上好人的光环。我想象着假如我依然坐在便利店，她忽然站起来居高临下看着我，对我伸出右手说，你是一个好人。这样的事想想都有点恶心。</p>
-<p>“原来你才大四啊？我已经研二了！”<br>邮件又来了，我拉过来室友的躺椅，将自己陷入柔软当中。夏日的炎热已经烟消云散，蝉鸣不再聒噪，我甚是感受到了风在我的头顶绕来绕去，清凉的雨从我脖间流下，滑过我出汗的脊背钻进衣服的沟壑里。我想象着她下一封邮件会发什么，我马上要大三了，我明白了她并不是在跟我聊天，这邮件一定是要发给另一个人的。这时的我有一种偷窥其他人秘密的快感，不过究竟是什么样的人会用邮件聊天呢。我在柔软中等着下一封邮件的到来，我似乎在像看一本小说一样不停地猜测接下来的情节走向，我想她可能是上个年代的人，那个时候或许他们还比较习惯用邮件交流；不过也可能是和我一个时代的人，要真的这样，那可就有趣起来了。我喜欢有趣的人，然而我太不擅长打交道，每次遇到有趣的人又经常把关系搞得一团糟，但是这次却有个有趣的人自己送上门来，我可以肆无忌惮的窥视着她的邮件而不用担心搞砸关系。一想到这些我又感觉很兴奋，要是有个人站在我旁边，一定会觉得我是个变态。你想想，一个独居的大三男生窝在躺椅上咧着嘴笑，脑子里还幻想着窥视其它女生的聊天，多么变态啊！<br>就这样想着，等了很久，邮件却迟迟不来。也许是最近学业压力太大了，或者是夏天的热让我很久没有睡过好觉了，我就这样躺着睡着了。</p>
-<h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>我坐在便利店里，关小姐也坐在那里，我们看着太阳一点点地碎成各种各样的灯，夜色渐起，我们不知不觉坐了一整个下午。<br>你已经研二了吗？<br>过几天就研二了。<br>我们只有这么两句对话，然后举起手中的易拉罐干了杯，但里面早已滴酒未剩。纯生真的很苦，我想了半天才想出来这么一句话，但看她刚刚喝酒的时候并没有面露难色，也许她挺喜欢，所以还是作罢。我准备找个机会溜走，这样的气氛实在令我难受，我想坐到打烊，这样我就有合理的理由离开。可是随即想到我身处的便利店是全天营业，我又泄了气。那种坐立不安的感觉从我的脚趾蔓延到全身来，我感到麻酥酥的，冷冰冰的，我似乎出了很多汗，我又感到了粘稠的热。我突然看到她站起来走到我的背后，我感到她从背后抱住了我，一大片柔软覆盖在我的后背上。</p>
-<p>醒来的时候已经是第二天凌晨五点钟了，最近养成的生物钟准时地将我从奇怪的梦中唤醒。日光灯粘在天花板上明晃晃的，我感觉自己的身体在不住地冒汗和战栗，我摸了摸额头，然后眯着眼睛摸到遥控器把空调关了。<br>不知道是中暑还是感冒了，上一次生病已经是很久以前的事，手边一点药物都没有。我撑着站了起来，日光灯洒下来的光就像白天的太阳一样，我一时分不清现在在哪里。我起身走到水管前，捧起一大捧凉水浇在脸上，顿时清醒不少。水管旁边是窗户，我向外面望去，现在已经是五点一刻了，天边泛起红色，仅有的一点云彩慵懒的飘着，也可能只是静静地呆在那，连飘也懒得飘。<br>缓过神来以后我又坐在电脑前，依旧连不上网，我才想起来睡前在等待着关小姐的邮件，这时梦里她从后面抱住我的情景才浮现出来。我打开手机查看有无新的邮件。</p>
-<p>“早，又是新的一天，昨天和你聊得很开心。”<br>我刷新了好几次，没有网络，而且只收到了这一封邮件。从邮件的内容来看，我错过了很多对话，我猜想关小姐一直在和另一个人聊天，而且看样子聊的还不错，居然已经到了发早安的地步了。他们从昨天开始认识，然后聊了很久。我想在我陷入沉睡的时间里他们一定聊的热火朝天，一定觉得遇到了知己。他们谈天气，谈交通，谈研究生学业（尽管我不知道对方是谁，甚至性别都不知道），谈哪个大明星又被处理了，谈雪花要比纯生好喝，谈她身边坐了一个一言不发的人，谈过几天要去哪里玩……我很想知道他们到底聊了什么，和关小姐聊天的人到底是谁，为什么我只收到了部分邮件。我害怕她突然发现自己发错了邮件然后我的小说就成了太监，我想看，我想的不得了，我觉得他们俩已经在我的心里住下来了，他们甚至已经不是聊天，他们在我的心里认识、熟络、谈恋爱、结婚、做爱，甚至已经过了一辈子。空调停止运作以后周围都安静下来了，除了偶尔呼啸而过的飞机就再也听不到任何声响，我又躺在柔软里，开始思前想后。我躺不下去了，我在寝室里来回踱了几千步，我终于忍无可忍了，我决定再去一趟便利店。</p>
-<h2 id="四"><a href="#四" class="headerlink" title="四"></a>四</h2><p>时间大概是六点钟，阿姨刚刚才把寝室楼大门打开不久，我向她问了好然后灰溜溜的出门了。夏天的清晨很舒适，朝霞出生但太阳还未完全升起，空气里氤氲着清爽的香气，天边的云在此时就像是燃烧的棉花，那是一种温润的红色，没有晚霞那么夺目。我感到舒服多了，尽管身体还带着病，但我一路小跑来到了便利店。店员看见我进来和我打了招呼，这个店员我从来没见过。想必我对她也是，但她笑得很开心，像是马上就要下班了一样。我犹豫了一下没有去拿啤酒，手边没有药物，我还是不乱喝东西了吧。我取了三明治拿给店员加热，然后和她攀谈起来——我从来没有主动找这些人聊过，但此时此刻就是想找她聊聊。<br>你知道关小姐吗？昨天在这坐着喝酒来着，昨天下午。<br>店员摇了摇头，并把加热好的三明治递给我，我又让她取了杯刚做好的豆浆。<br>我总是和人说不过两句话，我惴惴不安地回到窗户前，坐在了她昨天坐过的地方，然后手机亮了起来。<br>(未完待续…)</p>
-]]></content>
-      <categories>
-        <category>文学</category>
-      </categories>
-      <tags>
-        <tag>literature</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于为什么要谈恋爱</title>
-    <url>/post/8f75d213.html</url>
-    <content><![CDATA[<blockquote>
-<p>对于恋爱的一些思索</p>
-</blockquote>
-<p>在我成长这么多年，最值得一提的一点就是，我和家庭的和解。我一直不明白我是怎么从厌倦逃离家庭到现在想念和热爱我的家庭的，现在大概明白了，是恋爱教会我如何爱和感受爱。<br>其实每次有勇气面对眼前的这些问题的时候，我都会想，我为什么想要拉她回来，其实我在想一个什么样的问题呢，就是，为什么要恋爱，也就是说当我在学会怎么恋爱的时候，我始终没想明白，为什么要恋爱。这个问题其实可以很含糊的回答，比如两个喜欢的人在一起了，不需要理由。但我不喜欢这样糊弄，于是我开始认真地想为什么人要恋爱，仅仅是喜欢对方的好然后想要占有吗，仅仅是看到别人恋爱然后从众吗，或者是其中有很多很多原因。我觉得这个问题每个想要好好谈恋爱的人都要搞懂，或者说即便它是搞不懂的，也要深入想一想，然后深入浅出，不然就很难谈一场健康的恋爱。</p>
-<p>一、恋爱可以让我发现自己的缺点<br>这点毋庸置疑，很多很多缺点是自己一个人没办法发现的，即便身边朋友感觉到也不会跟你提出，所以在恋爱的时候，我想变得更好，同时我也会暴露自己的缺点，这让对方感到不适，对方向你提出了你的问题，这些问题通常是你自己没有发现过但是一发现也会觉得确实是个问题，然后认真的反思改进，不断的互相成为更优秀的人，不只是为了对方，也是为了自己。</p>
-<p>二、恋爱可以让人学会爱人<br>其实我一直觉得我自己很爱对方，但其实我一直不很会爱对方，这里说的不是说生活中的惊喜和浪漫，而是在说从心灵上如何去关爱对方，其中包括如何关心一个人的情绪、如何尊重一个人以及如何帮助一个人，这些都算是爱，但是要比那些表面的仪式感更难意识到。“我都是为了你好！”这些人往往都不会爱人。</p>
-<p>三、恋爱可以让我学会感受爱<br>人其实都容易自私，喜欢索取容易变得贪婪。往往这个时候我们会对对方苛责，会极尽力气想让对方对自己好，我想说，这样的人不懂得被爱。被爱当然也是种能力，恋爱的过程中人们其实很难学会被爱，相反当恋爱出现问题，人才开始思考对方的好，才开始感受到原来对方其实真的对我很好了，这时候才会想起来当时自己的幼稚。就是这样一步步学会了感受到对方的爱意。其实对于家庭也是这样，感受家庭的爱和如何去爱家庭都是一件很难很难的事情。</p>
-<p>四、恋爱可以让我变得勇敢<br>一个人的时候往往瞻前顾后在意别人的看法，恋爱让我有了依靠，可以不必太在意其他人看发，所以可以勇敢的尝试以前害怕的事情，恋爱让我变得勇敢起来。</p>
-<p>五、恋爱让我认识自己<br>人最难的一个过程还是认识自己，成长就是不断地认识自己，但是往往一个人很难明白自己，日常生活中很难和其他人有深入灵魂的交流，但是恋爱让你走进对方深处的同时也看清自己内心深处。恋爱本身就是两个人的交融，人是复杂的，没有完美契合的两个人，所以这中间必定会有摩擦，但正是这些摩擦让你认识到自己的形状，认识到自己是一个怎样的人。</p>
-<p>六、（还有很多，用心感悟吧）…</p>
-<p>最后想说的是，人类社会形态本就不是孤身一人的，除却极少数，大多数人都需要一个依靠，这个依靠不是绑定，也不是享乐的纽带，它最终极的要义就是使得两个人在幸福和痛苦中感受到人间的美好同时也变得更加勇敢坚强，大概这样的变化适合人类生存吧，大概这才是健康的恋爱吧。</p>
-<p>反观自己，虽然甜蜜不少，但是真正去思考如何去谈恋爱，如何处理痛苦，如何反思进步共同成长却是想的很少，当然不是否认享乐的恋爱不好，只是，我们已经有过这样的阶段了，总是要到下一个阶段的。<br>爱总是会消失的，如果不转化为习惯、依赖、责任，那就很难以后了，没有人会永远保持新鲜感。所以，希望每个人都能认识到，自己为什么要谈恋爱，不要总是被推着走，这样才值得健康的恋爱，打开心结吧，我的朋友们。</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java期末复习</title>
     <url>/post/adf6b9f0.html</url>
-    <content><![CDATA[<blockquote>
+    <content><![CDATA[<h1 id="java期末复习"><a href="#java期末复习" class="headerlink" title="java期末复习"></a>java期末复习</h1><blockquote>
 <p>把这几百页的书从头到尾看一遍梳理一下期末考点吧！</p>
 </blockquote>
 <h2 id="基本数据类型与数组"><a href="#基本数据类型与数组" class="headerlink" title="基本数据类型与数组"></a>基本数据类型与数组</h2><h3 id="标识符和关键字"><a href="#标识符和关键字" class="headerlink" title="标识符和关键字"></a>标识符和关键字</h3><ol>
@@ -279,14 +202,92 @@
 <li>异常类</li>
 </ol>
 <h2 id="常用实用类"><a href="#常用实用类" class="headerlink" title="常用实用类"></a>常用实用类</h2><h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><ol>
-<li>创建 <code>String s = new String(&quot;hhhh&quot;)</code></li>
-<li>还可以传入字符数组</li>
-<li>可以引用常量<code>String s1,s2; s1 = &quot;hhh&quot;;s2 = &quot;ggg&quot;;s1 == s2(true);</code></li>
-<li>字符串的并置，当两个常量并置时，得到的是在常量池，如果有变量则新生成变量</li>
-<li>常用方法：<code>length() equals(String s) startsWith() endsWith() compareTo()大正小负 contains() indexOf() lastIndexOf() subString(int start, int end)</code></li>
-<li>字符串与基本数据的转化<code>Integer.parseInt(s)其他类似</code><ol>
-<li></li>
+<li><p>创建 <code>String s = new String(&quot;hhhh&quot;)</code></p>
+</li>
+<li><p>还可以传入字符数组</p>
+</li>
+<li><p>可以引用常量<code>String s1,s2; s1 = &quot;hhh&quot;;s2 = &quot;ggg&quot;;s1 == s2(true);</code></p>
+</li>
+<li><p>字符串的并置，当两个常量并置时，得到的是在常量池，如果有变量则新生成变量</p>
+</li>
+<li><p>常用方法：<code>length() equals(String s) startsWith() endsWith() compareTo()大正小负 contains() indexOf() lastIndexOf() subString( int start, int end ) trim()</code></p>
+</li>
+<li><p>字符串与基本数据的转化<code>Integer.parseInt(s)其他类似</code></p>
+</li>
+<li><p>String类不可以有子类</p>
+</li>
+<li><p>符串与基本数据的相互转化</p>
+<ol>
+<li><code>public static int parseInt(String s)</code></li>
+<li><code>String str = String.valueOf(12313.9876);</code></li>
 </ol>
+</li>
+<li><p>字符串与字符数组</p>
+<ol>
+<li><code>void getChars()</code></li>
+<li><code>char[] toCharArray()</code></li>
+</ol>
+</li>
+<li><p>正则</p>
+</li>
+</ol>
+<h3 id="Scanner"><a href="#Scanner" class="headerlink" title="Scanner"></a>Scanner</h3><ol>
+<li><p>默认将字符串按照空格分隔，调用<code>next()</code>或者<code>nextInt()</code>等方法一个一个返回，知道<code>hasNext()</code>返回false</p>
+ <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String NBA = <span class="string">&quot;I Love This Game&quot;</span>;</span><br><span class="line">Scanner scanner = <span class="keyword">new</span> Scanner(NBA);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用正则表达式作为分隔标记解析字符串 </p>
+</li>
+</ol>
+<h3 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer()"></a>StringBuffer()</h3><p>StringBuffer是可更改的，<code>append()</code>追加</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">char</span> <span class="title">charAt</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCharAt</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">char</span> ch)</span></span>;</span><br><span class="line"><span class="function">StringBuffer <span class="title">insert</span><span class="params">(<span class="keyword">int</span> index, String str)</span></span>;</span><br><span class="line">reverse</span><br><span class="line">delete</span><br><span class="line">replace</span><br></pre></td></tr></table></figure>
+
+<h3 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Date time = <span class="keyword">new</span> Date();</span><br><span class="line">print(time);</span><br><span class="line">Date time = <span class="keyword">new</span> Date(<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="数字格式化"><a href="#数字格式化" class="headerlink" title="数字格式化"></a>数字格式化</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String s = String.format(<span class="string">&quot;%.2f&quot;</span>,<span class="number">3.1415</span>);</span><br><span class="line"><span class="comment">//以下为修饰符</span></span><br><span class="line">%d;</span><br><span class="line">%o;</span><br><span class="line">%x;</span><br><span class="line">%X;</span><br><span class="line">%+d;</span><br><span class="line">%,d;</span><br><span class="line">%-<span class="number">8d</span>;</span><br><span class="line">%f(<span class="number">6</span>位);</span><br><span class="line">%e(%E)科学计数法;</span><br></pre></td></tr></table></figure>
+
+<h2 id="输入、输出流"><a href="#输入、输出流" class="headerlink" title="输入、输出流"></a>输入、输出流</h2><blockquote>
+<p>FileInputStream、FileOutputSteam</p>
+<p>FileReader、FileWriter</p>
+<p>BufferedReader、BufferedWriter</p>
+</blockquote>
+<p>对于缓冲流：</p>
+<ol>
+<li><p>构造方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">BufferedReader(Reader in);</span><br><span class="line">BufferedWriter(Writer out);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">FileReader inOne = <span class="keyword">new</span> FileReader(<span class="string">&quot;student.txt&quot;</span>);</span><br><span class="line">BufferedReader inTwo = BufferedReader(inOne);</span><br><span class="line"></span><br><span class="line">String strLine = inTwo.readLine();</span><br><span class="line"></span><br><span class="line">FileWriter tofile = <span class="keyword">new</span> FileWriter(<span class="string">&quot;hello.txt&quot;</span>);</span><br><span class="line">BufferedWriter out = BufferedWriter(tofile);</span><br><span class="line"></span><br><span class="line">out.write(str);</span><br><span class="line">out.newLine();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意要先关闭缓冲流，再关闭输入输出</p>
+</li>
+</ol>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><ol>
+<li><p>创建</p>
+<ol>
+<li><code>extends Thread</code>，然后重写run方法</li>
+<li><code>new Thread（Runnable target）</code>，构造函数的参数是implement Runnable的实例，该实例也需要重写run方法</li>
+</ol>
+</li>
+<li><p>运行</p>
+<p><code>start()</code></p>
+</li>
+<li><p>常用方法</p>
+<p><code>sleep(int millsecond)</code></p>
+<p><code>isAlive()</code></p>
+<p><code>currentThread()</code></p>
+</li>
+<li><p>目标对象和线程间的关系（完全解耦和弱耦合）</p>
+</li>
+<li><p>线程同步</p>
+<p>用<code>synchronized</code>修饰的方法必须遵守同步机制，即当一个线程正在使用时，其他线程若要使用则必须等待</p>
+</li>
+<li><p>协调同步</p>
+<p><code>wait()</code>来中断当前线程</p>
+<p><code>notifyAll()</code>通知中断的线程继续执行，先中断先继续</p>
+</li>
+<li><p>Timer</p>
+<p>该类在<code>javax.swing</code></p>
+<p>我太困了……..-_-……..</p>
 </li>
 </ol>
 ]]></content>
@@ -295,6 +296,83 @@
       </categories>
       <tags>
         <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python + mysql</title>
+    <url>/post/1fc191f2.html</url>
+    <content><![CDATA[<blockquote>
+<p>其实大壳的后台管理非常的杂乱，也不是说本身多么复杂，只不过不管是配置文件，还是各个module，甚至是数据存储都在用文件式存储，以至于很多时候花了很多心思优化逻辑还是一塌糊涂。就拿教务处提醒为例，因为一直不想用数据库，所以一直拿文件存储，但是局限性太大了，最近老是出bug，所以决定上手数据库了。<br>由于服务器上还跑了很多东西，例如apache、jupyter等，所以phpstudy一直挂着，索性拿它提供的工具直接装mysql吧。毕竟一直在学数据库，但真正自己放到项目里还没实践过。</p>
+</blockquote>
+<h2 id="梳理项目结构"><a href="#梳理项目结构" class="headerlink" title="梳理项目结构"></a>梳理项目结构</h2><blockquote>
+<p>不得不吐槽的是，我的主文件里写了一大堆import，结构一塌糊涂，所以今天认真了解了一下python的package机制，把我自己写的模块封装到utils的package下，然后再package里建立<code>__init__.py</code>，将需要的模块放到<code>__all__</code>这个数组变量里，类型都是不带后缀的字符串，这样在主文件里只需要<code>from utils import *</code>就行，终于整齐了一些</p>
+</blockquote>
+<p><img src="https://pic.imgdb.cn/item/61bc96782ab3f51d9194d25a.jpg" alt></p>
+<h2 id="配置mysql"><a href="#配置mysql" class="headerlink" title="配置mysql"></a>配置mysql</h2><ol>
+<li>phpstudy里安装好mysql和可视化界面（我选的是sql_front)，其实也用不了几下，你也可以敲命令，都很快。</li>
+<li>创建自己的数据库，建表，设计结构。</li>
+<li>哦对了<code>mysql -uroot -pxxxx</code>，记一下命令，用来命令行连接数据库。</li>
+<li>基本配置好后，着手学习<code>pymysql</code>来连接python和mysql，很简单，这里直接放代码<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 连接MySQL获取游标</span></span><br><span class="line">  db = pymysql.connect(</span><br><span class="line">    host=<span class="string">&#x27;127.0.0.1&#x27;</span>, </span><br><span class="line">    port=<span class="number">3306</span>, </span><br><span class="line">    user=<span class="string">&#x27;root&#x27;</span>, </span><br><span class="line">    password=<span class="string">&#x27;xxxx&#x27;</span>, </span><br><span class="line">    db=<span class="string">&#x27;xxx&#x27;</span>, </span><br><span class="line">    charset=<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">  cur = db.cursor()</span><br><span class="line">  sql_select = <span class="string">&quot;select count(*) from tablename where title = &#x27;&quot;</span>+title+<span class="string">&quot;&#x27;;&quot;</span></span><br><span class="line">  cur.execute(sql_select)</span><br><span class="line">  result = cur.fetchone()</span><br><span class="line">  <span class="keyword">if</span> result[<span class="number">0</span>] &gt; <span class="number">0</span>: <span class="comment"># 如果存在就返回0</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    sql_insert = <span class="string">&quot;insert into tablename values(null,&quot;</span>+ <span class="string">&quot;&#x27;&quot;</span> + <span class="built_in">str</span>(date) + <span class="string">&quot;&#x27;,&#x27;&quot;</span> + title + <span class="string">&quot;&#x27;,&#x27;&quot;</span> + link + <span class="string">&quot;&#x27;);&quot;</span> <span class="comment"># id设置了自增</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">      cur.execute(sql_insert)</span><br><span class="line">      db.commit() <span class="comment"># 事务提交</span></span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">      db.rollback() <span class="comment"># 回滚</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">  cur.close()</span><br><span class="line">  db.close()</span><br></pre></td></tr></table></figure></li>
+<li>值得注意的是sql字符串的拼接注意单引号，以及每次查询（如果不频繁的话）就重新连接最后断开，因为隔一段时间不请求就自动断开了。</li>
+</ol>
+<blockquote>
+<p>我发现其实也没啥东西，但我就是弄了两个小时…可能因为一直想做没勇气做吧，虽然不是什么难事，但还是比较满意….考试周加油。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>丢失的邮件</title>
+    <url>/post/894bb4e2.html</url>
+    <content><![CDATA[<blockquote>
+<p>前段时间看了乙一，感悟到故事以及写故事本身的魅力，所以想把脑中很有意思的想法也写成故事来，尝试写了一部分，但是后面的故事情节自己很不满意，所以目前的框架还没搭起来，但是近期实在忙碌，就先停一停，我相信所有人都会理解的。</p>
+</blockquote>
+<h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>八月份的天流金铄石，这让我一直处于一种焦虑的状态里，每过正午，我坐在电脑面前盯着屏幕上密密麻麻的代码就会感到热浪从我的背后紧紧包裹着我。我明明开了空调，空调外机的声音已经响彻楼层，但我依然感到酷热难耐。我感觉那热像是化成了人形，就在我的周围走来走去，我挥舞胳膊却怎么也抓不到它，于是我决定出去走走。由于不知道要出去多久，或许几天几夜也不回来，出于安全我把寝室的电源断了，不过是拉下电闸那么简单。<br>刚走出宿舍门，我就感到我被前后夹击了，那化成人形的热跟着我溜了出来，和外面的热合起伙来收拾我。我猜测这会宿舍又凉快下来了，但我不愿再回去，我抱着自己做好防御工事，一边同热较量，一边踉踉跄跄下了楼，期间与正在上楼的工人师傅撞了满怀，我们互相沉默，匆忙走掉。宿管在值班的位置上一动不动，往常大家会向她问好，但这个时候我们都不想被打扰。我喜欢看见她睡着，这样我会很自在。</p>
+<p>我走出了宿舍楼，成千上万的蝉鸣向我扑过来，我眯起眼睛看着四周，到处都是郁郁葱葱的树，我知道那可恶的蝉就藏在里面。白色的天空从树的缝隙间流到地上，汇聚成一滩滩大大小小的水洼。我拖着步子在这胶状的空气里行走，打算到便利店买瓶啤酒。前后左右到处都是热，他们太吵了，推搡着我，挤压着我，搞得我晕头转向。<br>便利店在学校不远处，自动门打开了，一股凉意从里面偷跑出来。自动门每开一次都要偷偷跑出来一些凉，就像我从宿舍里跑出来一样，而随后，也就是在自动门关上以后，还会有一些凉会被抓回便利店——空调就是这么残忍的家伙。<br>我对便利店的东西如数家珍，由于不喜欢在食堂的人群中乞求座位，我常常自己出来到便利店寻找能够填饱肚子的食物——这里总是空无一人。从冷柜里拿出来啤酒，结账，随后又坐在了靠玻璃墙的凳子上。囚禁着凉的液体从我的嘴唇灌进口腔流过食道到达我的胃部，每次吞咽，我都把凉从易拉罐里转移到了我的胃里，它们只不过是换个牢房罢了。我坐在那里四处张望，似乎这样可以给便利店增加点人气，这时自动门开了，伴随着轻快的音乐，我看见她走了进来。</p>
+<p>我惊讶地看到她和我拿了一样的啤酒然后坐在了我的身边。我并不太喜欢和陌生人来往，坐在便利店也是因为这里很少有人驻留，这里已经成了我的私人领地，所以她的入侵顿时让我有点生气，于是我决定不再理她。<br>“你好，坐在这里你不会生气吧？”<br>手机屏幕亮了，我收到了这样一封Email，打开我的电子邮箱，这样短短的文字就这样肆意地躺在我面前。她怎么会知道我的邮箱，我往右边悄悄斜了一眼，并没有发现她的任何动静，我期待这个时候她看我一眼，那样只要我扭过头我们就会双目对视，这将是绝佳的交流时机。从这一刻我开始觉得她是个有趣的人。但是她并没有。她没有任何动静，就像我不存在一样。由于我不善于直视别人，所以一时没办法弄懂她具体在干什么，但我可以肯定的是她并没有看我。<br>我想了想还是决定给她回信，我并不确定这封邮件是谁发的，但直觉告诉我一定是她。</p>
+<p>“随便，又不是我的地盘！”<br>我昧着心意回了邮件，虽然我同意了，但是由于我担心她会察觉不到我客气的背后还有一丝不满，所以加了叹号。但我不知道她会怎样解读这个感叹号，或许她会理解为我的热情好客，一想到这里我又感觉后悔。<br>“你在吃什么呀？”<br>我注意到她邮箱的昵称是“关”，或许是她的姓氏，也或许是她名字中最喜欢的一个字，但我更倾向于礼貌地叫她关小姐。<br>因为常常孤身一人，所以我格外珍惜这次交流，虽然我明明什么也没有吃，我也很不希望对话到我这里就戛然而止——尽管我一开始并不是很喜欢这个关小姐。而当我已经写好了要回复的内容时，手机却怎么也上不了网了。</p>
+<h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>本意决定在外面逗留几天的我又回到了宿舍，因为我无论如何也连不上便利店的网络，而移动网络在此刻也断了链子。不出所料，宿舍里果然凉了下来，空调还在轰隆隆的工作着，我这才意识到空调的电路是另外的，即便我切断了整个寝室的电源。<br>我将总闸重新推上去，随着“哔——”的一声，启辉器将日光灯管点亮。自从暑假室友都回家以后就没有关过灯，这样独自一人看着灯管从暗到亮还是第一次。但我顾不上灯管了，我的目光拽着我坐下打开电脑，但很不幸——我的电脑也连不上网络了。我觉得很诧异，我又拿起手机，网络旁边的叹号依然在，天哪，我居然没办法发出一封小小的邮件！<br>蝉忽然静了下来，我听到外面公交车到站的播报，楼上有人冲了厕所，还有不知道是几楼的水管不停地发出嘤嘤嘤的怪叫，那是空气柱在高压下不停震动产生的声音。我仿佛看到那声音和蝉鸣和热浪趁我不注意潜入宿舍将我的网线咬断，将便利店的网线咬断，又钻进我的手机将所有的天线网卡都一并咬断，它就是要我上不了网。</p>
+<p>“谢谢你告诉我，听你说话的语气，你是一个好人~”<br>这时我又收到了邮件。<br>我看着那句似乎是赞赏我又似乎是讽刺我而且还有些让人摸不着头脑的话出现在手机通知栏里，和网络旁边的叹号一样，它切切实实的存在着。我试着点开通知，我仿佛听到关小姐在我身后对着我的耳朵说“你是一个好人~”。<br>她为什么还能发进来邮件呢？我什么也没告诉她呀！说话的语气是指我同意她坐下的语气吗？她是误解了我的感叹号吗？为什么要称我为一个好人呢，明明素不相识！我觉得很难理解，同时也很气愤。我不理解为何断网还能收到她的邮件，我气愤即便她是在夸我，我依然不喜欢一个陌生人称呼我为一个好人，正如我不喜欢随便称呼一个不认识的人为好人一样，哪能如此随意的就给对方套上好人的光环。我想象着假如我依然坐在便利店，她忽然站起来居高临下看着我，对我伸出右手说，你是一个好人。这样的事想想都有点恶心。</p>
+<p>“原来你才大四啊？我已经研二了！”<br>邮件又来了，我拉过来室友的躺椅，将自己陷入柔软当中。夏日的炎热已经烟消云散，蝉鸣不再聒噪，我甚是感受到了风在我的头顶绕来绕去，清凉的雨从我脖间流下，滑过我出汗的脊背钻进衣服的沟壑里。我想象着她下一封邮件会发什么，我马上要大三了，我明白了她并不是在跟我聊天，这邮件一定是要发给另一个人的。这时的我有一种偷窥其他人秘密的快感，不过究竟是什么样的人会用邮件聊天呢。我在柔软中等着下一封邮件的到来，我似乎在像看一本小说一样不停地猜测接下来的情节走向，我想她可能是上个年代的人，那个时候或许他们还比较习惯用邮件交流；不过也可能是和我一个时代的人，要真的这样，那可就有趣起来了。我喜欢有趣的人，然而我太不擅长打交道，每次遇到有趣的人又经常把关系搞得一团糟，但是这次却有个有趣的人自己送上门来，我可以肆无忌惮的窥视着她的邮件而不用担心搞砸关系。一想到这些我又感觉很兴奋，要是有个人站在我旁边，一定会觉得我是个变态。你想想，一个独居的大三男生窝在躺椅上咧着嘴笑，脑子里还幻想着窥视其它女生的聊天，多么变态啊！<br>就这样想着，等了很久，邮件却迟迟不来。也许是最近学业压力太大了，或者是夏天的热让我很久没有睡过好觉了，我就这样躺着睡着了。</p>
+<h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>我坐在便利店里，关小姐也坐在那里，我们看着太阳一点点地碎成各种各样的灯，夜色渐起，我们不知不觉坐了一整个下午。<br>你已经研二了吗？<br>过几天就研二了。<br>我们只有这么两句对话，然后举起手中的易拉罐干了杯，但里面早已滴酒未剩。纯生真的很苦，我想了半天才想出来这么一句话，但看她刚刚喝酒的时候并没有面露难色，也许她挺喜欢，所以还是作罢。我准备找个机会溜走，这样的气氛实在令我难受，我想坐到打烊，这样我就有合理的理由离开。可是随即想到我身处的便利店是全天营业，我又泄了气。那种坐立不安的感觉从我的脚趾蔓延到全身来，我感到麻酥酥的，冷冰冰的，我似乎出了很多汗，我又感到了粘稠的热。我突然看到她站起来走到我的背后，我感到她从背后抱住了我，一大片柔软覆盖在我的后背上。</p>
+<p>醒来的时候已经是第二天凌晨五点钟了，最近养成的生物钟准时地将我从奇怪的梦中唤醒。日光灯粘在天花板上明晃晃的，我感觉自己的身体在不住地冒汗和战栗，我摸了摸额头，然后眯着眼睛摸到遥控器把空调关了。<br>不知道是中暑还是感冒了，上一次生病已经是很久以前的事，手边一点药物都没有。我撑着站了起来，日光灯洒下来的光就像白天的太阳一样，我一时分不清现在在哪里。我起身走到水管前，捧起一大捧凉水浇在脸上，顿时清醒不少。水管旁边是窗户，我向外面望去，现在已经是五点一刻了，天边泛起红色，仅有的一点云彩慵懒的飘着，也可能只是静静地呆在那，连飘也懒得飘。<br>缓过神来以后我又坐在电脑前，依旧连不上网，我才想起来睡前在等待着关小姐的邮件，这时梦里她从后面抱住我的情景才浮现出来。我打开手机查看有无新的邮件。</p>
+<p>“早，又是新的一天，昨天和你聊得很开心。”<br>我刷新了好几次，没有网络，而且只收到了这一封邮件。从邮件的内容来看，我错过了很多对话，我猜想关小姐一直在和另一个人聊天，而且看样子聊的还不错，居然已经到了发早安的地步了。他们从昨天开始认识，然后聊了很久。我想在我陷入沉睡的时间里他们一定聊的热火朝天，一定觉得遇到了知己。他们谈天气，谈交通，谈研究生学业（尽管我不知道对方是谁，甚至性别都不知道），谈哪个大明星又被处理了，谈雪花要比纯生好喝，谈她身边坐了一个一言不发的人，谈过几天要去哪里玩……我很想知道他们到底聊了什么，和关小姐聊天的人到底是谁，为什么我只收到了部分邮件。我害怕她突然发现自己发错了邮件然后我的小说就成了太监，我想看，我想的不得了，我觉得他们俩已经在我的心里住下来了，他们甚至已经不是聊天，他们在我的心里认识、熟络、谈恋爱、结婚、做爱，甚至已经过了一辈子。空调停止运作以后周围都安静下来了，除了偶尔呼啸而过的飞机就再也听不到任何声响，我又躺在柔软里，开始思前想后。我躺不下去了，我在寝室里来回踱了几千步，我终于忍无可忍了，我决定再去一趟便利店。</p>
+<h2 id="四"><a href="#四" class="headerlink" title="四"></a>四</h2><p>时间大概是六点钟，阿姨刚刚才把寝室楼大门打开不久，我向她问了好然后灰溜溜的出门了。夏天的清晨很舒适，朝霞出生但太阳还未完全升起，空气里氤氲着清爽的香气，天边的云在此时就像是燃烧的棉花，那是一种温润的红色，没有晚霞那么夺目。我感到舒服多了，尽管身体还带着病，但我一路小跑来到了便利店。店员看见我进来和我打了招呼，这个店员我从来没见过。想必我对她也是，但她笑得很开心，像是马上就要下班了一样。我犹豫了一下没有去拿啤酒，手边没有药物，我还是不乱喝东西了吧。我取了三明治拿给店员加热，然后和她攀谈起来——我从来没有主动找这些人聊过，但此时此刻就是想找她聊聊。<br>你知道关小姐吗？昨天在这坐着喝酒来着，昨天下午。<br>店员摇了摇头，并把加热好的三明治递给我，我又让她取了杯刚做好的豆浆。<br>我总是和人说不过两句话，我惴惴不安地回到窗户前，坐在了她昨天坐过的地方，然后手机亮了起来。<br>(未完待续…)</p>
+]]></content>
+      <categories>
+        <category>文学</category>
+      </categories>
+      <tags>
+        <tag>literature</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于为什么要谈恋爱</title>
+    <url>/post/8f75d213.html</url>
+    <content><![CDATA[<blockquote>
+<p>对于恋爱的一些思索</p>
+</blockquote>
+<p>在我成长这么多年，最值得一提的一点就是，我和家庭的和解。我一直不明白我是怎么从厌倦逃离家庭到现在想念和热爱我的家庭的，现在大概明白了，是恋爱教会我如何爱和感受爱。<br>其实每次有勇气面对眼前的这些问题的时候，我都会想，我为什么想要拉她回来，其实我在想一个什么样的问题呢，就是，为什么要恋爱，也就是说当我在学会怎么恋爱的时候，我始终没想明白，为什么要恋爱。这个问题其实可以很含糊的回答，比如两个喜欢的人在一起了，不需要理由。但我不喜欢这样糊弄，于是我开始认真地想为什么人要恋爱，仅仅是喜欢对方的好然后想要占有吗，仅仅是看到别人恋爱然后从众吗，或者是其中有很多很多原因。我觉得这个问题每个想要好好谈恋爱的人都要搞懂，或者说即便它是搞不懂的，也要深入想一想，然后深入浅出，不然就很难谈一场健康的恋爱。</p>
+<p>一、恋爱可以让我发现自己的缺点<br>这点毋庸置疑，很多很多缺点是自己一个人没办法发现的，即便身边朋友感觉到也不会跟你提出，所以在恋爱的时候，我想变得更好，同时我也会暴露自己的缺点，这让对方感到不适，对方向你提出了你的问题，这些问题通常是你自己没有发现过但是一发现也会觉得确实是个问题，然后认真的反思改进，不断的互相成为更优秀的人，不只是为了对方，也是为了自己。</p>
+<p>二、恋爱可以让人学会爱人<br>其实我一直觉得我自己很爱对方，但其实我一直不很会爱对方，这里说的不是说生活中的惊喜和浪漫，而是在说从心灵上如何去关爱对方，其中包括如何关心一个人的情绪、如何尊重一个人以及如何帮助一个人，这些都算是爱，但是要比那些表面的仪式感更难意识到。“我都是为了你好！”这些人往往都不会爱人。</p>
+<p>三、恋爱可以让我学会感受爱<br>人其实都容易自私，喜欢索取容易变得贪婪。往往这个时候我们会对对方苛责，会极尽力气想让对方对自己好，我想说，这样的人不懂得被爱。被爱当然也是种能力，恋爱的过程中人们其实很难学会被爱，相反当恋爱出现问题，人才开始思考对方的好，才开始感受到原来对方其实真的对我很好了，这时候才会想起来当时自己的幼稚。就是这样一步步学会了感受到对方的爱意。其实对于家庭也是这样，感受家庭的爱和如何去爱家庭都是一件很难很难的事情。</p>
+<p>四、恋爱可以让我变得勇敢<br>一个人的时候往往瞻前顾后在意别人的看法，恋爱让我有了依靠，可以不必太在意其他人看发，所以可以勇敢的尝试以前害怕的事情，恋爱让我变得勇敢起来。</p>
+<p>五、恋爱让我认识自己<br>人最难的一个过程还是认识自己，成长就是不断地认识自己，但是往往一个人很难明白自己，日常生活中很难和其他人有深入灵魂的交流，但是恋爱让你走进对方深处的同时也看清自己内心深处。恋爱本身就是两个人的交融，人是复杂的，没有完美契合的两个人，所以这中间必定会有摩擦，但正是这些摩擦让你认识到自己的形状，认识到自己是一个怎样的人。</p>
+<p>六、（还有很多，用心感悟吧）…</p>
+<p>最后想说的是，人类社会形态本就不是孤身一人的，除却极少数，大多数人都需要一个依靠，这个依靠不是绑定，也不是享乐的纽带，它最终极的要义就是使得两个人在幸福和痛苦中感受到人间的美好同时也变得更加勇敢坚强，大概这样的变化适合人类生存吧，大概这才是健康的恋爱吧。</p>
+<p>反观自己，虽然甜蜜不少，但是真正去思考如何去谈恋爱，如何处理痛苦，如何反思进步共同成长却是想的很少，当然不是否认享乐的恋爱不好，只是，我们已经有过这样的阶段了，总是要到下一个阶段的。<br>爱总是会消失的，如果不转化为习惯、依赖、责任，那就很难以后了，没有人会永远保持新鲜感。所以，希望每个人都能认识到，自己为什么要谈恋爱，不要总是被推着走，这样才值得健康的恋爱，打开心结吧，我的朋友们。</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
       </tags>
   </entry>
   <entry>
