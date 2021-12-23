@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://asea.fun/"/>
-  <updated>2021-12-17T14:03:11.000Z</updated>
+  <updated>2021-12-23T16:45:32.000Z</updated>
   <id>https://asea.fun/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库系统原理期末复习</title>
+    <link href="https://asea.fun/post/f3c8943e.html"/>
+    <id>https://asea.fun/post/f3c8943e.html</id>
+    <published>2021-12-23T16:43:38.000Z</published>
+    <updated>2021-12-23T16:45:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>梳理一下数据库的考点，梳理顺序大概是考题的顺序吧</p></blockquote><h2 id="第二章-关系模型、关系代数"><a href="#第二章-关系模型、关系代数" class="headerlink" title="第二章 关系模型、关系代数"></a>第二章 关系模型、关系代数</h2><ol><li>用二维表格表示实体集，用关键码进行数据导航的数据模型称为关系模型</li><li>在关系模型中，字段称为属性，字段值称为属性值，记录类型称为关系模式</li><li>元组的集合称为关系（relation）或实例（instance）</li><li>关系中属性个数称为“元数”（arity），元组个数为“基数”(cardinality)。 </li><li>关系是一个属性数目相同的元组的集合。 </li><li><strong>实体完整性规则</strong>在组成主键的属性上不能有空值</li><li><strong>参照完整性规则</strong>不允许引用不存在的实体</li><li>关系模型有三个重要组成部分：数据结构，数据操纵，数据完整性规则。</li><li>关系型数据库优点<ol><li>单一的数据结构形式</li><li>高度的数据独立性</li><li>建立在比较坚实的数学基础上</li><li>….记不住</li></ol></li></ol><h2 id="第四章-规范化设计"><a href="#第四章-规范化设计" class="headerlink" title="第四章 规范化设计"></a>第四章 规范化设计</h2><ol><li>关系模型具有外延和内涵两个部分的内容</li><li>数据冗余是指同一数据在系统中多次重复出现</li><li>属性集闭包</li><li>2NF去除了非主键的局部依赖，3NF去除了非主键的传递依赖，BCNF去除了主键的以上两个依赖</li><li>无损分解的测试方法（chase）以及定理（R1∩R2）→（R1－R2）</li></ol><h2 id="第五章-ER"><a href="#第五章-ER" class="headerlink" title="第五章 ER"></a>第五章 ER</h2><ol><li><strong>数据库设计步骤</strong><ul><li>规划</li><li>需求分析</li><li>概念设计</li><li>逻辑设计</li><li>物理设计</li><li>实现</li><li>运行维护</li></ul></li><li><strong>ER图要点</strong>：标出1:N还是M:N的对应关系，以及主键。</li><li>转化为关系模式时，每个实体单独是一个关系模式，对于1:N，在N端加上外键，引用1端的主键；对于M:N，单独拎出来一个关系模式主键是两端的主键的并集，两个外键分别对应两个主键，以及独有的属性。</li><li><strong>陈品山</strong></li></ol><h2 id="第三章-SQL"><a href="#第三章-SQL" class="headerlink" title="第三章 SQL"></a>第三章 SQL</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">用户</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">user</span> xxx</span><br><span class="line"><span class="keyword">identified</span> <span class="keyword">by</span> xxx;</span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">user</span> xxx</span><br><span class="line"><span class="keyword">identified</span> <span class="keyword">by</span> xxx</span><br><span class="line"><span class="keyword">replace</span> xxx;</span><br><span class="line"></span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">connect</span></span><br><span class="line"><span class="keyword">to</span> xxx;</span><br><span class="line"></span><br><span class="line">建表</span><br><span class="line"><span class="keyword">create</span> talbe xxx(</span><br><span class="line">xxx xxx,</span><br><span class="line">xxx xxx,</span><br><span class="line"><span class="keyword">constraint</span> xxx primary <span class="keyword">key</span>(xx,xx),</span><br><span class="line"><span class="keyword">constraint</span> xxx <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id)</span><br><span class="line">    <span class="keyword">references</span> customer(customer_id)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> dept80</span><br><span class="line">  <span class="keyword">AS</span> </span><br><span class="line">    <span class="keyword">SELECT</span> ...;</span><br><span class="line"></span><br><span class="line">修改表</span><br><span class="line"><span class="keyword">rename</span> <span class="keyword">table</span> <span class="keyword">to</span> xxx;</span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> customer</span><br><span class="line"><span class="keyword">add</span> (address <span class="built_in">varchar</span>(<span class="number">50</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> customer</span><br><span class="line"><span class="keyword">drop</span> (memo);</span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> customer</span><br><span class="line"><span class="keyword">modify</span> (address <span class="built_in">varchar</span>(<span class="number">40</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> customer</span><br><span class="line"><span class="keyword">add</span> <span class="keyword">constraint</span> xxx <span class="keyword">check</span>(sale_num &gt; <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">删除表</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> xxx;</span><br><span class="line"></span><br><span class="line">插入</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> product <span class="keyword">values</span>(<span class="string">&#x27;001001&#x27;</span>,<span class="string">&#x27;玩具熊&#x27;</span>,<span class="number">25.50</span>,<span class="number">900</span>,<span class="keyword">to_date</span>(<span class="string">&#x27;2008-12-20&#x27;</span>,<span class="string">&#x27;YYYY-MM-DD&#x27;</span>));</span><br><span class="line"></span><br><span class="line">更新</span><br><span class="line"><span class="keyword">update</span> product</span><br><span class="line"><span class="keyword">set</span> price = <span class="number">22</span></span><br><span class="line"><span class="keyword">where</span> product_id = <span class="string">&#x27;001&#x27;</span>;</span><br><span class="line"></span><br><span class="line">删除</span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> product</span><br><span class="line"><span class="keyword">where</span> ...;</span><br><span class="line"></span><br><span class="line">索引</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">index</span> idx_name</span><br><span class="line"><span class="keyword">on</span> customer(customer_name);</span><br><span class="line"></span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">index</span> idx_name;</span><br><span class="line"></span><br><span class="line">查询</span><br><span class="line"><span class="keyword">select</span> product_id,product_name</span><br><span class="line"><span class="keyword">from</span> product;</span><br><span class="line">where round(months_between(sysdate,product_date))&lt;12;</span><br><span class="line"></span><br><span class="line">视图</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> vu_p1 </span><br><span class="line"><span class="keyword">as</span> <span class="keyword">select</span> product_name,<span class="keyword">sum</span>(sale_num*price)</span><br><span class="line"><span class="keyword">from</span> product p,sale_detail s</span><br><span class="line"><span class="keyword">where</span> p.product_id = s.product_id</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> p.product_name;</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">or</span> <span class="keyword">replace</span> <span class="keyword">view</span> vu_p1</span><br><span class="line"><span class="keyword">as</span> ...;</span><br><span class="line"></span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">view</span> vu_p1;</span><br><span class="line"></span><br><span class="line">事务</span><br><span class="line"><span class="keyword">commit</span>;</span><br><span class="line"><span class="keyword">rollback</span>;</span><br><span class="line"><span class="keyword">savepoint</span> flag;</span><br><span class="line"><span class="keyword">rollback</span> <span class="keyword">to</span> flag;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="第七章-事务、锁"><a href="#第七章-事务、锁" class="headerlink" title="第七章 事务、锁"></a>第七章 事务、锁</h2><h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><ol><li>事务(transaction)是构成单一逻辑工作单元的操作集合 。</li><li>事务四个特性：原子、一致、隔离、持久</li><li>块：内外存数据交换的基本单位</li></ol><h3 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h3><ol><li><p>X锁（Exclusive Lock）：对数据R解除封锁之前，不允许其他事务T再对该数据加任何类型的锁。</p></li><li><p>S锁（Shared Lock）：仍允许其他事务再对该数据加 S锁，但在对该数据的所有S锁都解除之前不允许任何事务对该数据加X锁。</p></li><li><p>封锁相容矩阵</p><p><img src="https://pic.imgdb.cn/item/61c4957e2ab3f51d91b55cb8.jpg" alt></p></li><li><p>封锁对象的大小称为<strong>封锁的粒度</strong></p></li></ol><h2 id="第二章-查询优化"><a href="#第二章-查询优化" class="headerlink" title="第二章 查询优化"></a>第二章 查询优化</h2><p>我好困…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;梳理一下数据库的考点，梳理顺序大概是考题的顺序吧&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;第二章-关系模型、关系代数&quot;&gt;&lt;a href=&quot;#第二章-关系模型、关系代数&quot; class=&quot;headerlink&quot; title=&quot;第二章 关系模
+      
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://asea.fun/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="DB" scheme="https://asea.fun/tags/DB/"/>
+    
+      <category term="note" scheme="https://asea.fun/tags/note/"/>
+    
+  </entry>
   
   <entry>
     <title>python + mysql</title>
@@ -558,27 +589,6 @@
     
     
       <category term="life" scheme="https://asea.fun/tags/life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>留言本</title>
-    <link href="https://asea.fun/post/5d8c0cb2.html"/>
-    <id>https://asea.fun/post/5d8c0cb2.html</id>
-    <published>2021-08-03T13:18:45.000Z</published>
-    <updated>2021-08-03T13:22:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">  <script id="hbeData" type="hbeData" data-hmacdigest="0732eaedc4eb733fa9418f3f5c2830fbcb4b0dd981ec7c3e90a187ee22bebce9">574b1481c95b9d13566c06ed649275dfa0dcd4a557eb09a03d605f102811239c26ebe9ec0fc5a0e7c03356a08fd08ac840ae03afa68566b4f7f64743ed3f206dc80a4f8f39e903e885a3cc46708651e07bd723ba3cda18322470bd46bd6e304cb4ed4ae5f98fc42242aa72e0bbc943165e348871d0dbe79c56793bf3498e58fa0dd0f1ea62a1a369b519090d74b622ab10e40769132e7552b8a5c260739bd21f310a0b0d20c978c4ddb4c316739ed44e09350f1f4f251d8c70f55727e8b1bd7736471bc92fd1e97fe742998791a90d07c30df8315fe91d8f4bb7c614b9a0715186012945dc46b32980e5b2521869e3922274842e5641c418b3fd613fca64ddb7e62ee60d3837331530fb584a9872ede09da80582924099246bf7587127bf8136dcb44ad9d4616f07fae1996cea4e88b458b533350ed949136bbceac585703bd6b17c0cb00c0ec518b9ec0f976e2e736b8cb603452c119f569a6c596416b3a431ea764ccd6250174e16bba56dba35f334aa91cdd537883d25e4969e5b08a80bf665aed3a63c72e0b064dfc4aa15842543cb2abbed29c9f7c51e59f7367b5ce4ce85c43a2c939f681473e81f36b3ccd7b8d4ff39aaf6052a639ea2a63f5b0c9a93ea9fcc67378bbb710a2fc3e6cd8228a1c4acf529dee469bd33dfcd2757fc181b8d53280b89656bc979b6c2cc1542d2423e781561f8bc6a83b8c74263e2768c223dbe46ea1bf76f4091a21f2cf82263f36d905cb0b9d764fd6a71f88f26440f8457cbb64e8c4770047e18f18ae11d1258bb1f6be75de472085c7b552b9e5f6acdf871262e6aa81613effcc359879ba56de9d8dd62bae162cf602eab9e6c7053815deef9b47dfc03331ee2faa8032e0c91b5f83e3d0d7a97191402d112ad92b56faf867574f90f478eca9df0c55ac677209fa3f449daa79bffbfd86a80ae8ae91e5d57641e7e8cc24a3ca420685e9b7b896a94b7a7ad7b4e3f3824326f36b40ee9e08204c1592c357655cc1c2ce11e827bcf09255ee9e7e01cd4e288262e53eb197364b8573abd3cc88390f9fc4a3a69661fbaa4b29cf3d55f42055e81f22da2470cfdc9df53b0ec78e786050d7338e173be0f07fee3d31c53fa8f99b32dd60ba7ce830f453172b88f21ade33a3b36239cf68a6ab0627f67ae6ccc4c332cd56a56a862b89ea83845ef9952922b6bfe7dd5aa2bc41da59e59e42e9dbc1722d05f6de145049c17983f03c7aade2d45996732adb57eba56422987c2ee041e821ea0e6791e84d64b66fd85deb779ac324e9227946c57b0f45a8c5782533459f2551c84cfeed045bcc37a3139b6e83c7328f48d223b4734ef216d96bcbfd4bb826989cb97037679096ecad230ad8efeabc0469a6c04d34c58ef0fb5d55920bf0f02cd1588bc3a611c61d426dcf4189d8be2af90dca3f433fac365ae3f487b7a47184c400c56c00f3c86180742e0b2b5ad5c8dadaec58da689e00061a5d5e724c5c2bfb0cd2ce51be329d860cc312b5100347863fcb7e3208a13668243cb98205fa750e2131bc3350d3678309eeb5f74c2cfb0b3ee46d732aca82e8584aa5e933d7abde5e097c1741d92ecc4b3a120ce6c7ca850177ac5910af967c00ae31991d7752fd6a3b54fbaa5853676f3d57c08630cac1c1772b7aecd0071410c8b6ccc807891b7a7d675788ed9e7042c1417d5dc96148d90bbd08f782bf6cb2a8574d83918b347e3770ccd210250b1ed9f0d91974fcbdb0744c008f9dab6138a6b0e5ac1a14487cc3945caaaa4fa1a0109e0eb658510b609e8da0b9dbe713f091bc3899101a188a3b9fe3a67b6dfc5935436c06bec6c4b751039263c94255537164899a00b5ddf8e4edf1a44e6b15dc7fa3f75b24eb4998047e77e1e516caac94b64834e23aa9bb4c84ceab013fa9a6e70a6bb5256477efe2864a5332c298da42e7412237bf20278ecc05f139c9efa44eb05b5a32b9c7ee8a7f9ea71047079d733acbb4ad7bcc25ce7725e492b9e7cf7994e6db758f38929469d570695f585e02be60b3c95424ee5060e5c6cf55ab117bfb11b680c49c13e8866bfaaf823ff46ab34c99250ded50bdb1bd32c4db0d14610a39d46424f0fb9db8dc176e80725577632bc48c23d9a71584defb4bf4c447486d211df814e81794b5f373f3431de969f1b16a7db441ca08775f8c7c7de649e64b098294b1b660d52cccff50003bd485f757701eef9b4fe2c932e1c99342194afc123f0bdc2484a2d39108871b81c6cb2803d4d6928364c62f2aeefa15dafda5b6194a4bfa5674049f4acaa55ead9f3b71f422584baf6febdda55247693b29856d40a3bb2ac809cf6d4a5e8b512840189fa1e4599700454e5e2ce4069a1f2206d71ccfab6ac878057284a6836616689a32cc03d4cef079cb30ae029c663cfcdd1945a6c80440ae87b03d45f154ed5bc17b2aef9c23e99f1ef8b7527ef8f5355f162349f9c1b3d3df5e24a5e12e2c5555defdc79c95855c80b07a2da92d0c9447f3b535d91cf5c750d5f7c9cceee932f4800e196ca883a75611ee4f7e7ade350aa9032e20b64362934709fd5617d0ed4fa1710bc4614e15186e7688648d19d76725fc3a07c74521b7f9bc219164b01fddab9828656a935acc7830752fd94d7c4311a9abc5da2e351fe18d5b905c88db88f6d03b2b8eb1bc7cdc6009e0d3604975a148e2735ebca</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">已加密，请在这里密码.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    <summary type="html">
-    
-      这里有东西被加密了，需要输入密码查看哦。
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://asea.fun/categories/%E6%8A%80%E6%9C%AF/"/>
-    
     
   </entry>
   
