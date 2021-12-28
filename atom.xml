@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://asea.fun/"/>
-  <updated>2021-12-23T16:45:32.000Z</updated>
+  <updated>2021-12-28T04:01:08.000Z</updated>
   <id>https://asea.fun/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一次奇葩的试错</title>
+    <link href="https://asea.fun/post/3884ab12.html"/>
+    <id>https://asea.fun/post/3884ab12.html</id>
+    <published>2021-12-28T03:58:22.000Z</published>
+    <updated>2021-12-28T04:01:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>提交了21次oj试出来的问题（本地运行无问题）</p></blockquote><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//返回G中指定顶点的位置</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">TypeOfVer</span>, <span class="keyword">class</span> <span class="title">TypeOfEdge</span>&gt;</span></span><br><span class="line"><span class="keyword">int</span> adjlist_graph&lt;TypeOfVer, TypeOfEdge&gt;::LocateVer(TypeOfVer &amp;data)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; Vers; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(verList[i].getVer() == data)</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>错误原因：</strong>传TypeOfVer没有传递引用（fu*k)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;提交了21次oj试出来的问题（本地运行无问题）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://asea.fun/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="oj" scheme="https://asea.fun/tags/oj/"/>
+    
+      <category term="c++" scheme="https://asea.fun/tags/c/"/>
+    
+  </entry>
   
   <entry>
     <title>数据库系统原理期末复习</title>
@@ -560,35 +591,6 @@
     
     
       <category term="CDN" scheme="https://asea.fun/tags/CDN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一天的快乐</title>
-    <link href="https://asea.fun/post/97862041.html"/>
-    <id>https://asea.fun/post/97862041.html</id>
-    <published>2021-08-06T14:51:27.000Z</published>
-    <updated>2021-08-06T15:15:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>一天会有多少快乐</p></blockquote><h2 id="早上起来去吃了早饭"><a href="#早上起来去吃了早饭" class="headerlink" title="早上起来去吃了早饭"></a>早上起来去吃了早饭</h2><p><img src="https://pic.imgdb.cn/item/610d50165132923bf8dfb49a.jpg" alt><br><img src="https://pic.imgdb.cn/item/610d50165132923bf8dfb4ad.jpg" alt><br><img src="https://pic.imgdb.cn/item/610d50165132923bf8dfb487.jpg" alt></p><hr><h2 id="回来后完成并且不断优化了挂件"><a href="#回来后完成并且不断优化了挂件" class="headerlink" title="回来后完成并且不断优化了挂件"></a>回来后完成并且不断优化了挂件</h2><p><img src="https://pic.imgdb.cn/item/610d4e805132923bf8dbc490.jpg" alt></p><hr><h2 id="躺下睡了个小觉"><a href="#躺下睡了个小觉" class="headerlink" title="躺下睡了个小觉"></a>躺下睡了个小觉</h2><hr><h2 id="拍云的时候找到了丢失已久的钥匙"><a href="#拍云的时候找到了丢失已久的钥匙" class="headerlink" title="拍云的时候找到了丢失已久的钥匙"></a>拍云的时候找到了丢失已久的钥匙</h2><p><img src="https://pic.imgdb.cn/item/610d4e085132923bf8daa73b.jpg" alt></p><hr><h2 id="给钥匙挂在了一个小钥匙串上（这样比较大，不容易丢吧）"><a href="#给钥匙挂在了一个小钥匙串上（这样比较大，不容易丢吧）" class="headerlink" title="给钥匙挂在了一个小钥匙串上（这样比较大，不容易丢吧）"></a>给钥匙挂在了一个小钥匙串上（这样比较大，不容易丢吧）</h2><p><img src="https://pic.imgdb.cn/item/610d4e465132923bf8db3ef7.jpg" alt></p><hr><h2 id="去试🔑的时候看到猫猫，于是上楼拿了充气宝和猫粮，一边给车胎打气，一边喂猫猫，三只猫，太可爱了"><a href="#去试🔑的时候看到猫猫，于是上楼拿了充气宝和猫粮，一边给车胎打气，一边喂猫猫，三只猫，太可爱了" class="headerlink" title="去试🔑的时候看到猫猫，于是上楼拿了充气宝和猫粮，一边给车胎打气，一边喂猫猫，三只猫，太可爱了"></a>去试🔑的时候看到猫猫，于是上楼拿了充气宝和猫粮，一边给车胎打气，一边喂猫猫，三只猫，太可爱了</h2><p><img src="https://pic.imgdb.cn/item/610d4e075132923bf8daa439.jpg" alt></p><hr><h2 id="洗了个澡吃完饭看男团比赛"><a href="#洗了个澡吃完饭看男团比赛" class="headerlink" title="洗了个澡吃完饭看男团比赛"></a>洗了个澡吃完饭看男团比赛</h2><hr><h2 id="心动的加更，甜！"><a href="#心动的加更，甜！" class="headerlink" title="心动的加更，甜！"></a>心动的加更，甜！</h2><p><img src="https://pic.imgdb.cn/item/610d50525132923bf8e051c2.jpg" alt></p><hr><h2 id="骑了会车，最后干脆下来推车走了一圈，凉风真不错"><a href="#骑了会车，最后干脆下来推车走了一圈，凉风真不错" class="headerlink" title="骑了会车，最后干脆下来推车走了一圈，凉风真不错"></a>骑了会车，最后干脆下来推车走了一圈，凉风真不错</h2><p><img src="https://pic.imgdb.cn/item/610d4e085132923bf8daa716.jpg" alt></p><hr><h2 id="支付宝红包！买东西的时候突然想起来啦哈哈哈哈，居然真的有用！"><a href="#支付宝红包！买东西的时候突然想起来啦哈哈哈哈，居然真的有用！" class="headerlink" title="支付宝红包！买东西的时候突然想起来啦哈哈哈哈，居然真的有用！"></a>支付宝红包！买东西的时候突然想起来啦哈哈哈哈，居然真的有用！</h2><p><img src="https://pic.imgdb.cn/item/610d507f5132923bf8e0ce19.jpg" alt></p><hr><h2 id="看了无间道！"><a href="#看了无间道！" class="headerlink" title="看了无间道！"></a>看了无间道！</h2><p><img src="https://pic.imgdb.cn/item/610d50a15132923bf8e1246c.jpg" alt></p><hr><h2 id="和老同学打了个电话"><a href="#和老同学打了个电话" class="headerlink" title="和老同学打了个电话"></a>和老同学打了个电话</h2><h2 id="最后就是还买了几件衣服！"><a href="#最后就是还买了几件衣服！" class="headerlink" title="最后就是还买了几件衣服！"></a>最后就是还买了几件衣服！</h2><hr><blockquote><p>快乐来自内心，而烦扰源于他人，每一天都快乐</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;一天会有多少快乐&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;早上起来去吃了早饭&quot;&gt;&lt;a href=&quot;#早上起来去吃了早饭&quot; class=&quot;headerlink&quot; title=&quot;早上起来去吃了早饭&quot;&gt;&lt;/a&gt;早上起来去吃了早饭&lt;/h2&gt;&lt;p
-      
-    
-    </summary>
-    
-    
-      <category term="日常" scheme="https://asea.fun/categories/%E6%97%A5%E5%B8%B8/"/>
-    
-    
-      <category term="life" scheme="https://asea.fun/tags/life/"/>
     
   </entry>
   
