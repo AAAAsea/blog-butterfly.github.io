@@ -177,14 +177,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/post/2ee0f961.html</loc>
+    <loc>https://asea.fun/post/cf7f39c3.html</loc>
     
     <lastmod>2021-08-08</lastmod>
     
   </url>
   
   <url>
-    <loc>https://asea.fun/post/cf7f39c3.html</loc>
+    <loc>https://asea.fun/post/2ee0f961.html</loc>
     
     <lastmod>2021-08-08</lastmod>
     
@@ -641,7 +641,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/Linux/</loc>
+    <loc>https://asea.fun/tags/notes/</loc>
+    <lastmod>2022-02-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/php/</loc>
     <lastmod>2022-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -655,14 +662,7 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/notes/</loc>
-    <lastmod>2022-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://asea.fun/tags/php/</loc>
+    <loc>https://asea.fun/tags/Linux/</loc>
     <lastmod>2022-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -683,13 +683,6 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/mysql/</loc>
-    <lastmod>2022-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://asea.fun/tags/node/</loc>
     <lastmod>2022-02-17</lastmod>
     <changefreq>daily</changefreq>
@@ -698,6 +691,13 @@
   
   <url>
     <loc>https://asea.fun/tags/python/</loc>
+    <lastmod>2022-02-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://asea.fun/tags/mysql/</loc>
     <lastmod>2022-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -781,14 +781,14 @@
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/Jupyter/</loc>
+    <loc>https://asea.fun/tags/CDN/</loc>
     <lastmod>2022-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://asea.fun/tags/CDN/</loc>
+    <loc>https://asea.fun/tags/Jupyter/</loc>
     <lastmod>2022-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
