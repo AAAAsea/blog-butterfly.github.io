@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://asea.fun/"/>
-  <updated>2022-02-17T04:40:04.000Z</updated>
+  <updated>2022-02-25T09:13:20.000Z</updated>
   <id>https://asea.fun/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>idea下servlet+tomcat+maven的踩坑记录</title>
+    <link href="https://asea.fun/post/3694c985.html"/>
+    <id>https://asea.fun/post/3694c985.html</id>
+    <published>2022-02-25T07:58:56.000Z</published>
+    <updated>2022-02-25T09:13:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>使用JavaBean + Servlet + JSP实现MVC模式的留言板系统</p></blockquote><h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><blockquote><p>由于本项目使用了maven，在<code>pom.xml</code>里配置好依赖后，maven会自动在本地仓库查找jar包，若没有会自动去中央仓库下载。配置格式到<code>https://mvnrepository.com/</code>找，粘贴到<code>pom.xml</code>里即可。其它类似不再赘述。下面是本项目中的依赖</p></blockquote><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.11<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>8.0.28<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javax.servlet-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.1.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><p><code>pom.xml</code>配置好后，首先要在本机需要启动mysql服务，至于JDBC的代码到处都是…记得配置好用户名和密码</p><h2 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h2><blockquote><p>说起tomcat得提一下servlet，简单来说servlet是一套规范，具体细节参考<a href="https://www.cnblogs.com/whgk/p/6399262.html">Java Web(一) Servlet详解！！</a></p></blockquote><p>首先下载tomcat的包，地址：<a href="https://tomcat.apache.org/">Apache Tomcat</a>，在左侧download选择版本进行下载、解压，放好地方。</p><p>在<code>run configurations</code>里选择<code>tomcat-&gt;local</code></p><p><img src="https://pic.imgdb.cn/item/6218986f2ab3f51d91a663f9.jpg" alt></p><p>具体操作懒得截图了，网上到处都是，大概就是选择一下你刚下载的tomcat包，名字随便起，URL想配就配，下一步比较关键，点击<code>Deployment</code>，点加号-&gt;Artifact，选择exploed的一项，这一步是为了部署这个项目到tomcat。</p><p><img src="https://pic.imgdb.cn/item/621899772ab3f51d91a8c7d2.jpg" alt></p><p>好了。。哦对了，可以在这里修改默认访问路径的，我改成了<code>/</code>，也就是8080端口直接映射到index.jsp，别的也没啥</p><h2 id="关于tomcat和servlet的坑"><a href="#关于tomcat和servlet的坑" class="headerlink" title="关于tomcat和servlet的坑"></a>关于tomcat和servlet的坑</h2><p>今天一直报<code>java.lang.NoClassDefFoundError: javax/servlet/http/HttpServlet</code>的错，查了半天原来是tomcat10和servlet3不兼容，好像4也不兼容？所以只好换成了tomcat9，一切正常了！</p><hr><p>刚开始对于各种依赖和框架很不了解，所以遇到了很多问题，但是到了最后其实用了maven，很多东西也不用操心了。idea也集成有可视化的数据库管理工具，不得不说很贴心。只不过最开始摸索需要耐着性子…</p><p>很多纸老虎，以为JavaBean是什么呢，不过是一套编写类的规范，只是第一次写jsp，看到jsp中用到了JavaBean，一头雾水，其实也就那么回事。</p><p>另外还有个小问题，似乎不影响，但是它报红</p><p><img src="https://pic.imgdb.cn/item/62189c952ab3f51d91afb5d5.jpg" alt></p><p>查了一下解决方法：<a href="https://blog.csdn.net/kangdi957/article/details/81504870">点我</a></p><p>试了试第一个方法，貌似出错了….下次再说下次再说。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;使用JavaBean + Servlet + JSP实现MVC模式的留言板系统&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;mysql&quot;&gt;&lt;a href=&quot;#mysql&quot; class=&quot;headerlink&quot; title=&quot;mysql&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://asea.fun/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="java" scheme="https://asea.fun/tags/java/"/>
+    
+      <category term="tomcat" scheme="https://asea.fun/tags/tomcat/"/>
+    
+      <category term="servlet" scheme="https://asea.fun/tags/servlet/"/>
+    
+      <category term="maven" scheme="https://asea.fun/tags/maven/"/>
+    
+      <category term="idea" scheme="https://asea.fun/tags/idea/"/>
+    
+      <category term="J2EE" scheme="https://asea.fun/tags/J2EE/"/>
+    
+      <category term="JavaBean" scheme="https://asea.fun/tags/JavaBean/"/>
+    
+      <category term="JDBC" scheme="https://asea.fun/tags/JDBC/"/>
+    
+  </entry>
   
   <entry>
     <title>风雪夜归人</title>
@@ -205,9 +248,9 @@
       <category term="技术" scheme="https://asea.fun/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="python" scheme="https://asea.fun/tags/python/"/>
-    
       <category term="mysql" scheme="https://asea.fun/tags/mysql/"/>
+    
+      <category term="python" scheme="https://asea.fun/tags/python/"/>
     
   </entry>
   
@@ -263,9 +306,9 @@
       <category term="笔记" scheme="https://asea.fun/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="notes" scheme="https://asea.fun/tags/notes/"/>
-    
       <category term="java" scheme="https://asea.fun/tags/java/"/>
+    
+      <category term="notes" scheme="https://asea.fun/tags/notes/"/>
     
   </entry>
   
@@ -543,38 +586,6 @@
     
     
       <category term="assembler" scheme="https://asea.fun/tags/assembler/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记录一次机器人更新的问题</title>
-    <link href="https://asea.fun/post/ef959c76.html"/>
-    <id>https://asea.fun/post/ef959c76.html</id>
-    <published>2021-09-11T07:51:14.000Z</published>
-    <updated>2021-09-12T03:03:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>由于这几天图片有时候发不出了，怀疑版本问题，但好久没有重启了，结果一重启mcl，然后自动更新让我彻底崩盘；<br>记录一下目前各包的版本号</p></blockquote><table><thead><tr><th>package</th><th>tag</th></tr></thead><tbody><tr><td>mcl</td><td>1.2.1</td></tr><tr><td>mah</td><td>1.12.0</td></tr><tr><td>gam</td><td>0.19.1</td></tr><tr><td>gb</td><td>0.8.11</td></tr></tbody></table><p><strong>以上缩写</strong>：<br>mirai-console-loader<br>mirai-api-http<br>girai-application-mirai<br>girai-broadcast</p><p><strong>中间有个坑：mah版本怎么切换？</strong><br>需要先移除原来的包</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mcl -r net.mamoe:mirai-api-http</span><br></pre></td></tr></table></figure><p>然后下载需要的版本，放到plugins即可。</p><p>如果不想自动更新的话可以<code>mcl -u</code>启动。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;由于这几天图片有时候发不出了，怀疑版本问题，但好久没有重启了，结果一重启mcl，然后自动更新让我彻底崩盘；&lt;br&gt;记录一下目前各包的版本号&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;package&lt;/th
-      
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://asea.fun/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="robot" scheme="https://asea.fun/tags/robot/"/>
     
   </entry>
   
